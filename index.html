@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ma Ananda Sarita — Awaken Your True Essence · Tantra Essence</title>
+<meta name="description" content="Reconnect with your innate divine nature through Tantra. Online programs, retreats in Bali, and a worldwide community of teachers — guided by Ma Ananda Sarita, disciple of Osho since 1973.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivoire:#FAF5EC; --ivoire-deep:#F2E9D6; --paper:#FEFBF4;
+  --pink-soft:#F5D9D3; --pink:#D98B83; --pink-mid:#C26B64; --pink-bg:#FCEFEA;
+  --maroon:#8C3645; --maroon-deep:#5D1F2C; --maroon-soft:#C88995;
+  --gold:#C9A35E; --gold-deep:#9E7F47; --gold-soft:#E8D4A2;
+  --ink:#2A1A1E; --ink-sub:#5E4A4E; --ink-muted:#8C7A7E;
+  --border:rgba(93,117,95,0.15); --border-soft:rgba(93,117,95,0.08);
+  --shadow-sm:0 2px 14px rgba(45,42,36,0.06); --shadow:0 14px 40px rgba(45,42,36,0.08); --shadow-lg:0 30px 80px rgba(45,42,36,0.12);
+  --radius:24px; --radius-sm:14px; --radius-lg:32px; --radius-full:9999px;
+  --transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+  --max-w:1240px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.7;overflow-x:hidden}
+img,video{max-width:100%;height:auto;display:block}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 2rem;position:relative}
+h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15;letter-spacing:-0.01em;color:var(--ink)}
+.serif-italic{font-family:'DM Serif Display',serif;font-style:italic;font-weight:400}
+.eyebrow{display:inline-block;font-family:'Inter',sans-serif;font-size:0.74rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--maroon);margin-bottom:1.2rem}
+
+/* ============================================
+   NAV
+   ============================================ */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(244,241,232,0.85);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);transition:var(--transition)}
+nav.scrolled{background:rgba(244,241,232,0.95);box-shadow:0 1px 16px rgba(45,42,36,0.05)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:86px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);flex-shrink:0}
+.logo-lotus{width:46px;height:46px;flex-shrink:0;filter:drop-shadow(0 2px 6px rgba(201,163,94,0.25));transition:var(--transition)}
+.logo:hover .logo-lotus{transform:rotate(-6deg) scale(1.05)}
+.logo-text{display:flex;flex-direction:column;line-height:1;gap:2px}
+.logo-tantra{font-family:'DM Serif Display',serif;font-size:1.35rem;letter-spacing:0.13em;color:var(--maroon)}
+.logo-essence{font-family:'DM Serif Display',serif;font-size:0.84rem;letter-spacing:0.36em;color:var(--maroon);text-transform:uppercase;margin-left:2px}
+.nav-links{display:flex;align-items:center;gap:2.4rem;list-style:none;flex:1;justify-content:center}
+.nav-links li a{color:var(--ink);text-decoration:none;font-family:'DM Serif Display',serif;font-size:1.1rem;letter-spacing:0.02em;transition:var(--transition);padding:0.4rem 0;border-bottom:1px solid transparent}
+.nav-links li a:hover{color:var(--maroon);border-bottom-color:var(--gold)}
+.nav-cta{background:linear-gradient(135deg,#F7D560 0%,#E9A93C 100%);color:var(--maroon-deep);padding:0.78rem 1.7rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.05rem;text-decoration:none;transition:var(--transition);box-shadow:0 4px 14px rgba(201,163,94,0.35);flex-shrink:0}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,163,94,0.5)}
+.nav-actions{display:flex;align-items:center;gap:1.2rem;flex-shrink:0}
+.nav-login{color:var(--ink);text-decoration:none;font-family:'DM Serif Display',serif;font-size:1.05rem;letter-spacing:0.02em;padding:0.4rem 0.3rem;transition:var(--transition);border-bottom:1px solid transparent}
+.nav-login:hover{color:var(--maroon);border-bottom-color:var(--gold)}
+.nav-mobile-cta-wrap{display:none}
+.burger{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;flex-direction:column;justify-content:center;gap:5px}
+.burger span{display:block;width:24px;height:2px;background:var(--maroon);transition:0.3s;border-radius:2px}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:880px){
+  .nav-inner{padding:0 1.2rem;height:72px}
+  .burger{display:flex}
+  .nav-actions{display:none}
+  .nav-links{position:fixed;top:72px;left:0;right:0;background:var(--ivoire);flex-direction:column;align-items:flex-start;gap:0;padding:1rem 1.5rem 2rem;box-shadow:0 8px 24px rgba(45,42,36,0.1);transform:translateY(-120%);transition:transform 0.4s;max-height:calc(100vh - 72px);overflow-y:auto}
+  .nav-links.open{transform:translateY(0)}
+  .nav-links li{width:100%;border-bottom:1px solid rgba(140,54,69,0.1)}
+  .nav-links li a{display:block;padding:1.1rem 0;font-size:1.2rem}
+  .nav-mobile-cta-wrap{display:flex !important;flex-direction:column;gap:0.8rem;width:100%;margin-top:1.2rem;border:0 !important;padding-top:0.5rem}
+  .nav-mobile-cta-wrap .nav-login{display:block;padding:0.9rem 0;text-align:center;border:1px solid var(--maroon);border-radius:var(--radius-full);font-size:1.05rem}
+  .nav-mobile-cta-wrap .nav-cta{display:block;text-align:center;padding:0.9rem 1.7rem}
+}
+@media (max-width:720px){.logo-lotus{width:38px;height:38px}.logo-tantra{font-size:1.1rem}.logo-essence{font-size:0.7rem}}
+
+/* ============================================
+   HERO — Sarita full bleed (Kling-ready)
+   ============================================ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:86px}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img,.hero-media video{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+/* When KlingAI video is ready: replace <img loading="lazy"> with <video src="sarita-animated.mp4" autoplay muted loop playsinline poster="..."> */
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(140,54,69,0.45) 0%,rgba(45,26,30,0.25) 50%,rgba(140,54,69,0.55) 100%);z-index:1}
+.hero-content{position:relative;z-index:2;max-width:var(--max-w);margin:0 auto;padding:0 2rem;width:100%;color:#fff}
+.hero-eyebrow{display:inline-block;font-size:0.78rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#FFE793;margin-bottom:1.5rem;border:1px solid rgba(255,231,147,0.5);padding:0.5rem 1.2rem;border-radius:var(--radius-full);backdrop-filter:blur(10px)}
+.hero h1{font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.05;margin-bottom:1.5rem;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,0.3);max-width:920px}
+.hero h1 em{font-style:italic;color:#FFE793}
+.hero-lead{font-size:clamp(1.1rem,1.6vw,1.35rem);max-width:620px;color:rgba(255,255,255,0.92);margin-bottom:2.5rem;line-height:1.6;text-shadow:0 2px 12px rgba(0,0,0,0.4)}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1.1rem 2rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.1rem;text-decoration:none;transition:var(--transition);cursor:pointer;border:0}
+.btn-gold{background:linear-gradient(135deg,#F7D560 0%,#E9A93C 100%);color:var(--maroon-deep);box-shadow:0 8px 24px rgba(201,163,94,0.4)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(201,163,94,0.55);background:linear-gradient(135deg,#FFE793 0%,#F0B544 100%)}
+.btn-ghost{background:rgba(255,255,255,0.12);color:#fff;border:1.5px solid rgba(255,255,255,0.5);backdrop-filter:blur(8px)}
+.btn-ghost:hover{background:rgba(255,255,255,0.22);transform:translateY(-3px);border-color:#fff}
+.hero-badges{position:absolute;bottom:2rem;right:2rem;left:auto;transform:none;display:flex;gap:0.7rem;z-index:3}
+.hero-badge{background:rgba(254,251,244,0.85);backdrop-filter:blur(20px);padding:0.55rem 0.9rem;border-radius:var(--radius-sm);text-align:center;box-shadow:0 4px 14px rgba(0,0,0,0.12)}
+.hero-badge strong{display:block;font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--maroon);line-height:1}
+.hero-badge span{font-size:0.6rem;color:var(--ink-sub);text-transform:uppercase;letter-spacing:0.08em;display:block;margin-top:0.2rem}
+@media (max-width:880px){
+  .hero{min-height:90vh}
+  .hero h1{font-size:clamp(2rem,8vw,3.4rem)}
+  .hero-ctas{flex-direction:column;width:100%}
+  .btn{justify-content:center;width:100%}
+  .hero-badges{position:relative;bottom:auto;left:auto;transform:none;margin-top:3rem;flex-wrap:wrap;justify-content:center;gap:1rem}
+}
+
+/* ============================================
+   3 PATHS (Choose Your Path)
+   ============================================ */
+.paths{padding:4rem 0;background:var(--paper)}
+.section-header{text-align:center;margin-bottom:2.6rem}
+.section-header h2{font-size:clamp(1.6rem,2.6vw,2.1rem);margin-bottom:0.8rem}
+.section-header p{font-size:1rem;color:var(--ink-sub);max-width:560px;margin:0 auto}
+.paths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;max-width:980px;margin:0 auto}
+.path-card{background:var(--paper);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition);border:1px solid var(--border-soft);text-decoration:none;color:inherit}
+.path-card *{text-decoration:none}
+.path-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.path-img{aspect-ratio:16/10;background:linear-gradient(135deg,var(--pink-soft),var(--maroon-soft));position:relative}
+.path-img-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--maroon-deep);font-family:'DM Serif Display',serif;font-size:1.6rem;opacity:0.45}
+.path-body{padding:1.3rem 1.4rem 1.5rem}
+.path-body h3{font-size:1.2rem;margin-bottom:0.4rem;color:var(--maroon)}
+.path-body p{color:var(--ink-sub);font-size:0.88rem;margin-bottom:0.9rem;line-height:1.55}
+.path-cta{color:var(--maroon);font-weight:600;text-decoration:none;font-size:0.88rem;display:inline-flex;align-items:center;gap:0.4rem;transition:var(--transition)}
+.path-cta:hover{gap:0.8rem;color:var(--gold-deep)}
+@media (max-width:880px){.paths-grid{grid-template-columns:1fr}}
+
+/* ============================================
+   ABOUT SARITA
+   ============================================ */
+.about{padding:6rem 0;background:var(--ivoire);overflow:hidden}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-img{aspect-ratio:4/5;border-radius:var(--radius-lg);background:linear-gradient(135deg,#E8D4A2,#9E7F47);box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.about-img-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);font-family:'DM Serif Display',serif;font-size:1.4rem;text-align:center;padding:2rem;font-style:italic}
+.about-content h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:1.2rem;color:var(--maroon)}
+.about-content > p{font-size:1.1rem;color:var(--ink-sub);margin-bottom:1.4rem;line-height:1.75}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--border)}
+.about-stat strong{display:block;font-family:'DM Serif Display',serif;font-size:2.4rem;color:var(--maroon);line-height:1}
+.about-stat span{font-size:0.82rem;color:var(--ink-muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.4rem;display:block}
+@media (max-width:880px){.about-grid{grid-template-columns:1fr;gap:2.5rem}}
+
+/* ============================================
+   FEATURED EVENT BALI
+   ============================================ */
+.featured{padding:6rem 0;background:linear-gradient(135deg,var(--maroon) 0%,var(--maroon-deep) 100%);color:#fff;position:relative;overflow:hidden}
+.featured::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(247,213,96,0.12) 0%,transparent 40%),radial-gradient(circle at 80% 70%,rgba(247,213,96,0.08) 0%,transparent 40%);pointer-events:none}
+.featured-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
+.featured-content .eyebrow{color:#FFE793}
+.featured-content h2{font-size:clamp(2.2rem,4vw,3.4rem);color:#fff;margin-bottom:1rem;line-height:1.05}
+.featured-content h2 em{color:#FFE793;font-style:italic}
+.featured-meta{display:flex;gap:1.4rem;flex-wrap:wrap;margin:1.5rem 0 2rem}
+.featured-meta-item{display:flex;align-items:center;gap:0.5rem;font-size:0.95rem;color:rgba(255,255,255,0.85)}
+.featured-meta-item strong{color:#FFE793}
+.featured-content p{color:rgba(255,255,255,0.88);font-size:1.05rem;margin-bottom:1.8rem;line-height:1.7}
+.featured-img{aspect-ratio:1/1;border-radius:var(--radius-lg);background:linear-gradient(135deg,#F7D560,#E9A93C);box-shadow:0 30px 80px rgba(0,0,0,0.3);position:relative;overflow:hidden}
+.featured-img-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--maroon-deep);font-family:'DM Serif Display',serif;font-size:1.6rem;text-align:center;padding:2rem;font-style:italic;opacity:0.6}
+@media (max-width:880px){.featured-grid{grid-template-columns:1fr;gap:2.5rem}}
+
+/* ============================================
+   PROGRAMS — sales structure with prices
+   ============================================ */
+.programs{padding:6rem 0;background:var(--ivoire-deep)}
+.programs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+.program-card{background:var(--paper);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);transition:var(--transition);border:1px solid var(--border-soft);position:relative;text-decoration:none;color:inherit}
+.program-card *{text-decoration:none}
+.event-card *,.podcast-card *,.story-card *{text-decoration:none}
+a{text-decoration:none}
+.program-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
+.program-card.featured-program{border:2px solid var(--gold);box-shadow:0 14px 40px rgba(201,163,94,0.25)}
+.program-badge{position:absolute;top:1rem;right:1rem;background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 0.9rem;border-radius:var(--radius-full);z-index:2;box-shadow:0 4px 12px rgba(201,163,94,0.4)}
+.program-img{aspect-ratio:16/10;background:linear-gradient(135deg,var(--pink-soft),var(--maroon-soft));position:relative}
+.program-img-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--maroon-deep);font-family:'DM Serif Display',serif;font-size:1.4rem;text-align:center;padding:1.2rem;opacity:0.5}
+.program-body{padding:1.4rem 1.4rem 1.6rem;flex:1;display:flex;flex-direction:column}
+.program-tag{font-size:0.66rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:0.5rem}
+.program-body h3{font-size:1.2rem;margin-bottom:0.5rem;color:var(--ink);line-height:1.2}
+.program-desc{color:var(--ink-sub);font-size:0.88rem;margin-bottom:1rem;flex:1;line-height:1.55}
+.program-price{margin:0.8rem 0 1.1rem;padding-top:1rem;border-top:1px dashed var(--border);display:flex;align-items:baseline;gap:0.6rem;flex-wrap:wrap}
+.price-was{color:var(--ink-muted);text-decoration:line-through;font-size:0.85rem}
+.price-now{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--maroon);line-height:1}
+.price-plan{font-size:0.78rem;color:var(--ink-sub);flex-basis:100%}
+.program-cta{background:var(--maroon);color:#fff;padding:0.7rem 1.2rem;border-radius:var(--radius-full);text-decoration:none;text-align:center;font-family:'DM Serif Display',serif;font-size:0.92rem;transition:var(--transition);display:block}
+.program-cta:hover{background:var(--maroon-deep);transform:translateY(-2px)}
+@media (max-width:880px){.programs-grid{grid-template-columns:1fr}}
+
+/* ============================================
+   TEACHERS / KAULA
+   ============================================ */
+.teachers{padding:6rem 0;background:var(--paper)}
+.teachers-row-label{display:flex;align-items:center;gap:1.4rem;max-width:780px;margin:0 auto 1.6rem}
+.teachers-row-label-second{margin-top:3rem}
+.teachers-label-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+.teachers-label-text{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--maroon);white-space:nowrap}
+.teachers-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;max-width:980px;margin:0 auto;padding:0.5rem 0}
+.teachers-row-secondary{margin-top:0.5rem}
+.teachers-row-secondary .teacher-card{opacity:0.92}
+.teachers-row-secondary .teacher-img{aspect-ratio:1/1;width:78%;margin-left:auto;margin-right:auto}
+.teacher-card{text-align:center;transition:var(--transition)}
+.teacher-card:hover{transform:translateY(-4px)}
+.teacher-featured .teacher-img{box-shadow:0 0 0 3px var(--gold-soft),var(--shadow)}
+.teacher-img{aspect-ratio:1/1;border-radius:50%;background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));margin-bottom:0.8rem;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.teacher-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.teacher-img-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--maroon-deep);font-family:'DM Serif Display',serif;font-size:2.2rem;opacity:0.5}
+.teacher-name{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--ink);margin-bottom:0.2rem}
+.teachers-row-secondary .teacher-name{font-size:1rem}
+.teacher-loc{font-size:0.78rem;color:var(--ink-muted);text-transform:uppercase;letter-spacing:0.1em}
+@media (max-width:880px){.teachers-row{grid-template-columns:repeat(2,1fr);gap:1.2rem}.teachers-label-text{font-size:0.65rem;letter-spacing:0.15em}}
+
+/* ============================================
+   WALL OF LOVE
+   ============================================ */
+.testimonials{padding:6rem 0;background:var(--pink-bg)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.testimonial{background:var(--paper);padding:2rem 1.8rem;border-radius:var(--radius);box-shadow:var(--shadow-sm);position:relative;border:1px solid var(--border-soft)}
+.testimonial::before{content:'"';position:absolute;top:1rem;left:1.4rem;font-family:'DM Serif Display',serif;font-size:4rem;color:var(--gold-soft);line-height:1}
+.testimonial blockquote{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.15rem;color:var(--maroon);margin-bottom:1.5rem;padding-top:1rem;line-height:1.4}
+.testimonial-author{display:flex;align-items:center;gap:0.8rem;padding-top:1rem;border-top:1px solid var(--border-soft)}
+.testimonial-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));flex-shrink:0}
+.testimonial-name{font-weight:600;font-size:0.95rem;color:var(--ink)}
+.testimonial-loc{font-size:0.78rem;color:var(--ink-muted)}
+@media (max-width:880px){.testimonials-grid{grid-template-columns:1fr}}
+
+/* ============================================
+   BLOG PREVIEW
+   ============================================ */
+.blog-preview{padding:6rem 0;background:var(--ivoire)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+.blog-card{display:flex;flex-direction:column;background:var(--paper);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:inherit;box-shadow:var(--shadow-sm);transition:var(--transition);border:1px solid var(--border-soft)}
+.blog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.blog-img{aspect-ratio:16/10;background:linear-gradient(135deg,var(--gold-soft),var(--maroon-soft));position:relative}
+.blog-body{padding:1.6rem;flex:1;display:flex;flex-direction:column}
+.blog-cat{font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:0.6rem}
+.blog-body h3{font-size:1.15rem;margin-bottom:0.6rem;line-height:1.3}
+.blog-excerpt{font-size:0.92rem;color:var(--ink-sub);flex:1}
+.blog-meta{font-size:0.78rem;color:var(--ink-muted);margin-top:1rem}
+@media (max-width:880px){.blog-grid{grid-template-columns:1fr}}
+
+/* ============================================
+   CAPTURE / NEWSLETTER
+   ============================================ */
+.capture{padding:6rem 0;background:linear-gradient(135deg,var(--gold-deep) 0%,var(--maroon) 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
+.capture::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 50% 100%,rgba(255,231,147,0.2) 0%,transparent 60%);pointer-events:none}
+.capture-inner{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:0 2rem}
+.capture h2{font-size:clamp(2rem,4vw,2.8rem);color:#fff;margin-bottom:1rem}
+.capture p{font-size:1.1rem;color:rgba(255,255,255,0.9);margin-bottom:2.5rem}
+.capture-form{display:flex;gap:0.6rem;background:rgba(255,255,255,0.1);padding:0.5rem;border-radius:var(--radius-full);border:1px solid rgba(255,255,255,0.3);backdrop-filter:blur(10px);max-width:520px;margin:0 auto}
+.capture-form input{flex:1;background:transparent;border:0;color:#fff;font-size:1rem;padding:0.9rem 1.4rem;outline:0;font-family:'Inter',sans-serif}
+.capture-form input::placeholder{color:rgba(255,255,255,0.7)}
+.capture-form button{background:#fff;color:var(--maroon);padding:0.9rem 1.8rem;border:0;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1rem;cursor:pointer;transition:var(--transition);white-space:nowrap}
+.capture-form button:hover{background:#FFE793;transform:translateY(-2px)}
+@media (max-width:720px){
+  .capture-form{flex-direction:column;background:transparent;border:0;padding:0;gap:1rem}
+  .capture-form input{background:rgba(255,255,255,0.15);border-radius:var(--radius-full);text-align:center}
+  .capture-form button{width:100%}
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer{background:var(--maroon-deep);color:rgba(255,255,255,0.8);padding:4rem 0 2rem;font-size:0.95rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr 1fr;gap:2.6rem;margin-bottom:3rem}
+.footer-brand .logo-tantra,.footer-brand .logo-essence{color:#FFE793}
+.footer-brand p{margin-top:1rem;color:rgba(255,255,255,0.6);font-size:0.92rem;max-width:340px}
+.footer-col h4{font-family:'DM Serif Display',serif;font-size:1.05rem;color:#FFE793;margin-bottom:1rem}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:0.6rem}
+.footer-col ul li a{color:rgba(255,255,255,0.75);text-decoration:none;transition:var(--transition);font-size:0.92rem}
+.footer-col ul li a:hover{color:#FFE793}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:2rem;text-align:center;color:rgba(255,255,255,0.5);font-size:0.84rem}
+@media (max-width:880px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media (max-width:600px){.footer-grid{grid-template-columns:1fr}}
+
+/* ============================================
+   POP-UP GIFT (Mindvalley style)
+   ============================================ */
+.popup-overlay{position:fixed;inset:0;background:rgba(45,26,30,0.65);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity 0.5s cubic-bezier(0.4,0,0.2,1)}
+.popup-overlay.open{opacity:1;pointer-events:auto}
+.popup-card{background:var(--paper);border-radius:var(--radius-lg);max-width:920px;width:100%;display:grid;grid-template-columns:1fr 1.1fr;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,0.5);position:relative;transform:scale(0.95) translateY(20px);transition:transform 0.5s cubic-bezier(0.4,0,0.2,1)}
+.popup-overlay.open .popup-card{transform:scale(1) translateY(0)}
+.popup-close{position:absolute;top:1rem;right:1rem;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.85);border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--maroon);transition:var(--transition);z-index:2}
+.popup-close:hover{background:#fff;transform:scale(1.1)}
+.popup-img{position:relative;background:linear-gradient(135deg,#E8D4A2 0%,#9E7F47 100%);overflow:hidden;min-height:360px}
+.popup-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.popup-img::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(140,54,69,0.25) 0%,transparent 50%,rgba(140,54,69,0.35) 100%)}
+.popup-content{padding:2.8rem 2.6rem;display:flex;flex-direction:column;justify-content:center}
+.popup-eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--maroon);margin-bottom:1rem}
+.popup-content h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.1;margin-bottom:1rem;color:var(--ink)}
+.popup-content h2 em{font-style:italic;color:var(--maroon)}
+.popup-content p{color:var(--ink-sub);font-size:1rem;margin-bottom:1.6rem;line-height:1.6}
+.popup-form{display:flex;flex-direction:column;gap:0.8rem;margin-bottom:1rem}
+.popup-form input[type="email"]{padding:0.95rem 1.2rem;border:1px solid var(--border);border-radius:var(--radius-full);font-family:'Inter',sans-serif;font-size:0.98rem;background:#fff;color:var(--ink);transition:var(--transition);outline:0}
+.popup-form input[type="email"]:focus{border-color:var(--maroon);box-shadow:0 0 0 3px rgba(140,54,69,0.1)}
+.popup-form button{background:linear-gradient(135deg,#F7D560 0%,#E9A93C 100%);color:var(--maroon-deep);padding:1.05rem 1.7rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.08rem;border:0;cursor:pointer;transition:var(--transition);box-shadow:0 4px 14px rgba(201,163,94,0.35)}
+.popup-form button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,163,94,0.5)}
+.popup-trust{font-size:0.78rem;color:var(--ink-muted);text-align:center}
+.popup-trust strong{color:var(--maroon);font-weight:600}
+@media (max-width:760px){
+  .popup-card{grid-template-columns:1fr;max-width:440px}
+  .popup-img{min-height:200px}
+  .popup-content{padding:2rem 1.6rem}
+  .popup-img img{object-position:center 30%}
+}
+
+/* ============================================
+   FEATURED ON bar
+   ============================================ */
+.featured-on{padding:3.5rem 0 3rem;background:var(--ivoire-deep);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft)}
+.featured-on-label{text-align:center;font-size:0.72rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1.8rem}
+.featured-on-grid{display:flex;align-items:center;justify-content:center;gap:3.5rem;flex-wrap:wrap;max-width:1100px;margin:0 auto;padding:0 2rem}
+.featured-on-logo{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--maroon-deep);opacity:0.55;letter-spacing:0.05em;transition:var(--transition);white-space:nowrap;font-style:italic}
+.featured-on-logo:hover{opacity:0.85;transform:scale(1.03)}
+.featured-on-logo strong{font-weight:400;font-style:normal}
+@media (max-width:720px){.featured-on-grid{gap:1.8rem}.featured-on-logo{font-size:1.05rem}}
+
+/* ============================================
+   SCROLL ANIMATIONS (Mindvalley-style fade-in)
+   ============================================ */
+.fade-in-up{opacity:0;transform:translateY(40px);transition:opacity 0.9s cubic-bezier(0.4,0,0.2,1),transform 0.9s cubic-bezier(0.4,0,0.2,1)}
+.fade-in-up.visible{opacity:1;transform:translateY(0)}
+.fade-in-up.delay-1{transition-delay:0.1s}
+.fade-in-up.delay-2{transition-delay:0.2s}
+.fade-in-up.delay-3{transition-delay:0.3s}
+
+/* ============================================
+   PRESS TESTIMONIALS (Mindvalley CBS/CNN style)
+   ============================================ */
+.press-quotes{padding:5rem 0;background:var(--paper);border-bottom:1px solid var(--border-soft)}
+.press-quotes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;max-width:1100px;margin:0 auto;padding:0 2rem}
+.press-quote-card{background:var(--ivoire);border-radius:var(--radius);padding:2rem 1.8rem;border:1px solid var(--border-soft);position:relative;transition:var(--transition)}
+.press-quote-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold-soft)}
+.press-quote-source{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.15rem;color:var(--maroon);margin-bottom:1rem;font-weight:400}
+.press-quote-source strong{font-weight:400;font-style:normal}
+.press-quote-text{font-size:1rem;color:var(--ink);line-height:1.6;font-style:italic;font-family:'DM Serif Display',serif}
+.press-quote-author{margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--border);font-size:0.85rem;color:var(--ink-sub)}
+.press-quote-author strong{color:var(--maroon);font-weight:600}
+@media (max-width:880px){.press-quotes-grid{grid-template-columns:1fr}}
+
+/* ============================================
+   FREE MASTERCLASS TEASER (Mindvalley live class style)
+   ============================================ */
+.free-masterclass{padding:5rem 0;background:linear-gradient(135deg,var(--ivoire-deep) 0%,var(--pink-bg) 100%)}
+.masterclass-card{max-width:1100px;margin:0 auto;background:var(--paper);border-radius:var(--radius-lg);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:var(--shadow-lg);border:1px solid var(--border-soft)}
+.masterclass-img{position:relative;aspect-ratio:auto;min-height:340px;background-size:cover;background-position:center}
+.masterclass-img::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(140,54,69,0.35) 0%,transparent 60%);z-index:1}
+.masterclass-badge{position:absolute;top:1.2rem;left:1.2rem;background:linear-gradient(135deg,#1EFF8E,#0FB86A);color:#053820;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.4rem 0.9rem;border-radius:9999px;z-index:2;display:inline-flex;align-items:center;gap:0.4rem;box-shadow:0 4px 14px rgba(15,184,106,0.3)}
+.masterclass-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:#053820;animation:urgency-pulse 1.8s infinite}
+.masterclass-content{padding:2.8rem 2.4rem;display:flex;flex-direction:column;justify-content:center}
+.masterclass-eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--maroon);margin-bottom:1rem}
+.masterclass-content h2{font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.15;margin-bottom:1rem;color:var(--ink)}
+.masterclass-content h2 em{font-style:italic;color:var(--maroon)}
+.masterclass-content > p{color:var(--ink-sub);font-size:1rem;margin-bottom:1.5rem;line-height:1.6}
+.masterclass-meta{display:flex;flex-wrap:wrap;gap:1.4rem;margin-bottom:1.6rem;font-size:0.88rem;color:var(--ink-sub)}
+.masterclass-meta-item{display:flex;align-items:center;gap:0.4rem}
+.masterclass-meta-item strong{color:var(--maroon)}
+@media (max-width:880px){.masterclass-card{grid-template-columns:1fr}.masterclass-content{padding:2rem 1.6rem}}
+
+/* ============================================
+   FOUNDER QUOTE CARD (Mindvalley CEO bio style)
+   ============================================ */
+.founder-quote{padding:6rem 0;background:var(--ivoire)}
+.founder-card{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.6fr;gap:3.5rem;align-items:center;padding:0 2rem}
+.founder-photo{aspect-ratio:1/1;border-radius:50%;background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));overflow:hidden;box-shadow:var(--shadow-lg);position:relative;max-width:340px}
+.founder-photo img{width:100%;height:100%;object-fit:cover}
+.founder-photo::after{content:'';position:absolute;inset:-12px;border:2px dashed var(--gold);border-radius:50%;opacity:0.4;animation:founder-rotate 40s linear infinite}
+@keyframes founder-rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.founder-content blockquote{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(1.4rem,2.2vw,1.9rem);color:var(--ink);line-height:1.4;margin-bottom:1.8rem;position:relative;padding-left:2rem;border-left:3px solid var(--gold)}
+.founder-meta{display:flex;align-items:center;gap:1rem;font-size:0.95rem}
+.founder-name{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--maroon)}
+.founder-title{color:var(--ink-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.12em}
+@media (max-width:880px){.founder-card{grid-template-columns:1fr;text-align:center;gap:2rem}.founder-content blockquote{padding-left:0;border-left:0;border-top:3px solid var(--gold);padding-top:1.5rem}.founder-photo{margin:0 auto}}
+
+/* ============================================
+   NUMBERS / TRUST BAR
+   ============================================ */
+.numbers-bar{padding:3.5rem 0;background:linear-gradient(135deg,var(--maroon) 0%,var(--maroon-deep) 100%);color:#fff;position:relative;overflow:hidden}
+.numbers-bar::before{content:'';position:absolute;top:-50%;left:-10%;width:120%;height:200%;background:radial-gradient(ellipse at center,rgba(247,213,96,0.12),transparent 60%);pointer-events:none}
+.numbers-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;text-align:center;position:relative;z-index:1}
+.number-item{padding:0.5rem 1rem;border-right:1px solid rgba(255,255,255,0.12)}
+.number-item:last-child{border-right:0}
+.number-item strong{display:block;font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,2.6vw,2.4rem);color:var(--gold-bright);line-height:1;margin-bottom:0.5rem}
+.number-item span{font-size:0.78rem;color:rgba(255,255,255,0.85);text-transform:uppercase;letter-spacing:0.08em;display:block}
+@media (max-width:880px){.numbers-grid{grid-template-columns:repeat(2,1fr);gap:1.8rem 1rem}.number-item{border-right:0;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:1.4rem}.number-item:nth-last-child(-n+2){border-bottom:0;padding-bottom:0}.number-item:last-child{grid-column:1/-1}}
+
+/* ============================================
+   MEDITATIONS LIBRARY (Mindvalley style)
+   ============================================ */
+.meditations-section{padding:6rem 0;background:linear-gradient(180deg,var(--ivoire-deep) 0%,var(--ivoire) 100%);overflow:hidden}
+.meditations-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:center;max-width:1200px;margin:0 auto;padding:0 2rem}
+.meditations-content h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:1rem}
+.meditations-content h2 em{font-style:italic;color:var(--maroon)}
+.meditations-content > p{font-size:1.1rem;color:var(--ink-sub);margin-bottom:1.8rem;line-height:1.6}
+.meditations-devices{display:flex;gap:0.6rem;flex-wrap:wrap;margin:1.5rem 0 2rem}
+.device-pill{display:inline-flex;align-items:center;gap:0.4rem;background:var(--paper);border:1px solid var(--border);padding:0.4rem 0.9rem;border-radius:var(--radius-full);font-size:0.82rem;color:var(--ink-sub)}
+.meditations-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;position:relative}
+.meditations-grid::after{content:'';position:absolute;inset:auto 0 0 0;height:50%;background:linear-gradient(180deg,transparent,var(--ivoire));pointer-events:none}
+.med-tile{aspect-ratio:1/1.2;border-radius:var(--radius-sm);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:0.9rem;font-family:'DM Serif Display',serif;font-size:0.92rem;color:#fff;line-height:1.2;background-size:cover;background-position:center;cursor:pointer;transition:var(--transition)}
+.med-tile:hover{transform:scale(1.03);box-shadow:var(--shadow)}
+.med-tile::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(45,26,30,0.85) 100%);z-index:1}
+.med-tile span{position:relative;z-index:2;text-shadow:0 2px 8px rgba(0,0,0,0.6)}
+.med-tile-play{position:absolute;top:0.7rem;right:0.7rem;width:32px;height:32px;border-radius:50%;background:rgba(255,231,147,0.92);display:flex;align-items:center;justify-content:center;color:var(--maroon-deep);font-size:0.78rem;z-index:2;backdrop-filter:blur(4px)}
+@media (max-width:880px){.meditations-inner{grid-template-columns:1fr;gap:2rem}.meditations-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ============================================
+   FAQ HOMEPAGE (Mindvalley style)
+   ============================================ */
+.faq-home{padding:6rem 0;background:var(--paper)}
+.faq-home-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:0.8rem}
+.faq-home-item{background:var(--ivoire);border-radius:var(--radius-sm);border:1px solid var(--border-soft);overflow:hidden;transition:var(--transition)}
+.faq-home-item:hover{border-color:var(--gold-soft)}
+.faq-home-item summary{padding:1.3rem 1.6rem;cursor:pointer;font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-home-item summary::-webkit-details-marker{display:none}
+.faq-home-item summary::after{content:'+';color:var(--maroon);font-size:1.4rem;font-weight:300;transition:var(--transition);flex-shrink:0}
+.faq-home-item[open] summary::after{transform:rotate(45deg)}
+.faq-home-item[open] summary{color:var(--maroon)}
+.faq-home-item p{padding:0 1.6rem 1.4rem;color:var(--ink-sub);font-size:0.95rem;line-height:1.7}
+.faq-home-cta{text-align:center;margin-top:2.5rem;font-size:0.92rem;color:var(--ink-sub)}
+.faq-home-cta a{color:var(--maroon);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold)}
+
+/* ============================================
+   SUBSCRIBER COUNT BADGE (Mindvalley style)
+   ============================================ */
+.subscriber-badge{display:inline-flex;align-items:center;gap:0.6rem;background:var(--paper);border:1px solid var(--gold-soft);padding:0.6rem 1.2rem;border-radius:var(--radius-full);font-size:0.86rem;color:var(--ink-sub);box-shadow:var(--shadow-sm);margin-bottom:1rem}
+.subscriber-badge strong{color:var(--maroon);font-weight:600}
+.subscriber-badge-dots{display:flex;margin-right:0.3rem}
+.subscriber-badge-dot{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--gold-soft),var(--gold));margin-left:-8px;border:2px solid var(--paper);box-shadow:0 1px 3px rgba(0,0,0,0.15)}
+.subscriber-badge-dot:first-child{margin-left:0}
+
+/* ============================================
+   WHY TANTRA ESSENCE (USP - 4 piliers)
+   ============================================ */
+.why-section{padding:6rem 0;background:var(--paper)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3rem;max-width:1200px;margin-left:auto;margin-right:auto}
+.why-card{padding:2rem 1.6rem;text-align:center;border-radius:var(--radius);background:var(--ivoire);border:1px solid var(--border-soft);transition:var(--transition)}
+.why-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--gold-soft)}
+.why-icon{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--gold-soft),var(--gold));display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1.2rem;box-shadow:var(--shadow-sm)}
+.why-card h3{font-size:1.2rem;margin-bottom:0.6rem;color:var(--maroon)}
+.why-card p{color:var(--ink-sub);font-size:0.9rem;line-height:1.6}
+@media (max-width:880px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.why-grid{grid-template-columns:1fr}}
+
+/* ============================================
+   BEGIN YOUR JOURNEY CTA section (Mindvalley style)
+   ============================================ */
+.journey-section{padding:7rem 0;background:linear-gradient(135deg,#5D1F2C 0%,#2A1A1E 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
+.journey-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(247,213,96,0.18),transparent 50%),radial-gradient(ellipse at 70% 50%,rgba(140,54,69,0.4),transparent 50%);pointer-events:none}
+.journey-eyebrow{display:inline-block;color:var(--gold-bright);font-size:0.78rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;margin-bottom:1.5rem;border:1px solid rgba(247,213,96,0.45);padding:0.5rem 1.4rem;border-radius:var(--radius-full);position:relative;z-index:1}
+.journey-section h2{color:#fff;font-size:clamp(2.2rem,4.5vw,3.6rem);margin-bottom:1.5rem;position:relative;z-index:1;line-height:1.1}
+.journey-section h2 em{font-style:italic;color:var(--gold-bright)}
+.journey-section p{color:rgba(255,255,255,0.88);font-size:1.2rem;max-width:680px;margin:0 auto 2.5rem;position:relative;z-index:1;line-height:1.6}
+.journey-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.btn-ghost-light{background:rgba(255,255,255,0.1);color:#fff;border:1.5px solid rgba(255,255,255,0.4);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:1.05rem 1.9rem;border-radius:var(--radius-full);text-decoration:none;font-family:'DM Serif Display',serif;font-size:1.08rem;transition:var(--transition)}
+.btn-ghost-light:hover{background:rgba(255,255,255,0.18);border-color:#fff;transform:translateY(-2px)}
+
+/* ============================================
+   FLOATING SUPPORT CHAT (Mindvalley style)
+   ============================================ */
+.support-fab{position:fixed;bottom:1.6rem;right:1.6rem;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#F7D560,#E9A93C);box-shadow:0 8px 24px rgba(201,163,94,0.45);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:998;border:0;transition:var(--transition);font-size:1.6rem;color:var(--maroon-deep)}
+.support-fab:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 12px 32px rgba(201,163,94,0.6)}
+.support-fab-pulse{position:absolute;inset:0;border-radius:50%;border:2px solid var(--gold-bright);animation:fab-pulse 2.4s ease-out infinite;opacity:0}
+@keyframes fab-pulse{0%{opacity:0.7;transform:scale(1)}100%{opacity:0;transform:scale(1.5)}}
+@media (max-width:600px){.support-fab{width:52px;height:52px;bottom:1rem;right:1rem;font-size:1.4rem}}
+
+/* ============================================
+   EVENTS section (Mindvalley style cards)
+   ============================================ */
+.events-section{padding:6rem 0;background:var(--ivoire)}
+.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3rem}
+.event-card{background:var(--paper);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);transition:var(--transition);text-decoration:none;color:inherit;border:1px solid var(--border-soft)}
+.event-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.event-img{aspect-ratio:16/10;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.event-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(45,26,30,0.5) 100%)}
+.event-badge{position:absolute;top:1rem;left:1rem;background:rgba(254,251,244,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--maroon);font-size:0.66rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:0.35rem 0.8rem;border-radius:var(--radius-full);z-index:2;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.event-badge-free{background:linear-gradient(135deg,#1EFF8E,#0FB86A);color:#053820}
+.event-badge-featured{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep)}
+.event-body{padding:1.4rem 1.4rem 1.6rem;flex:1;display:flex;flex-direction:column}
+.event-meta{font-size:0.78rem;color:var(--ink-muted);letter-spacing:0.04em;margin-bottom:0.6rem}
+.event-body h3{font-size:1.2rem;line-height:1.3;margin-bottom:0.7rem;color:var(--ink)}
+.event-location{font-size:0.85rem;color:var(--ink-sub);margin-bottom:1rem}
+.event-location strong{color:var(--maroon);font-weight:600}
+.event-cta{color:var(--maroon);font-weight:600;font-size:0.9rem;display:inline-flex;align-items:center;gap:0.4rem;transition:var(--transition);margin-top:auto}
+.event-card:hover .event-cta{gap:0.8rem;color:var(--gold-deep)}
+@media (max-width:880px){.events-grid{grid-template-columns:1fr;gap:1.2rem}.events-section{padding:4rem 0}}
+
+/* ============================================
+   PODCAST section
+   ============================================ */
+.podcast-section{padding:5rem 0;background:var(--paper)}
+.podcast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3rem}
+.podcast-card{background:var(--ivoire);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-soft);transition:var(--transition);display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.podcast-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.podcast-cover{aspect-ratio:1/1;background:linear-gradient(135deg,var(--maroon) 0%,var(--maroon-deep) 100%);position:relative;display:flex;align-items:flex-end;padding:1rem;overflow:hidden;background-size:cover;background-position:center}
+.podcast-cover::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(45,26,30,0.15) 0%,rgba(45,26,30,0.75) 100%);z-index:1}
+.podcast-episode-num{position:absolute;top:1rem;left:1rem;font-family:'Inter',sans-serif;font-size:0.74rem;font-weight:700;letter-spacing:0.15em;color:#FFE793;background:rgba(45,26,30,0.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:0.35rem 0.8rem;border-radius:9999px;z-index:2;border:1px solid rgba(255,231,147,0.3)}
+.podcast-play-btn{position:absolute;bottom:1rem;right:1rem;width:46px;height:46px;border-radius:50%;background:rgba(255,231,147,0.95);display:flex;align-items:center;justify-content:center;color:var(--maroon-deep);font-size:1rem;z-index:2;box-shadow:0 4px 14px rgba(0,0,0,0.3)}
+.podcast-body{padding:1.6rem 1.4rem 1.8rem;flex:1;display:flex;flex-direction:column}
+.podcast-tag{font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:0.6rem}
+.podcast-card h3{font-size:1.15rem;line-height:1.3;margin-bottom:0.6rem;color:var(--ink)}
+.podcast-meta{font-size:0.82rem;color:var(--ink-muted);margin-top:auto;display:flex;align-items:center;gap:0.7rem}
+.podcast-meta span{display:flex;align-items:center;gap:0.3rem}
+@media (max-width:880px){.podcast-grid{grid-template-columns:1fr;gap:1.2rem}.podcast-cover-number{font-size:3.6rem}}
+</style>
+</head>
+<body>
+
+<!-- ============= NAV ============= -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <svg class="logo-lotus" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="lotusGrad" x1="0%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#F7D560"/>
+            <stop offset="55%" stop-color="#E9A93C"/>
+            <stop offset="100%" stop-color="#C9A35E"/>
+          </linearGradient>
+        </defs>
+        <path d="M32 56 C 14 50 6 32 14 18 C 22 28 26 38 32 56 Z" fill="#E8D4A2" opacity="0.85"/>
+        <path d="M32 56 C 50 50 58 32 50 18 C 42 28 38 38 32 56 Z" fill="#E8D4A2" opacity="0.85"/>
+        <path d="M32 58 C 18 54 10 38 16 24 C 24 32 28 44 32 58 Z" fill="url(#lotusGrad)"/>
+        <path d="M32 58 C 46 54 54 38 48 24 C 40 32 36 44 32 58 Z" fill="url(#lotusGrad)"/>
+        <path d="M32 58 C 28 50 28 38 32 22 C 36 38 36 50 32 58 Z" fill="#F7D560"/>
+        <ellipse cx="32" cy="58" rx="14" ry="2" fill="#9E7F47" opacity="0.4"/>
+      </svg>
+      <span class="logo-text">
+        <span class="logo-tantra">TANTRA</span>
+        <span class="logo-essence">ESSENCE</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/events">Events</a></li>
+      <li><a href="/programs">Programs</a></li>
+      <li><a href="/community">Community</a></li>
+      <li class="nav-mobile-cta-wrap">
+        <a href="/login" class="nav-login">Login</a>
+        <a href="/signup" class="nav-cta">Get Started</a>
+      </li>
+    </ul>
+    <div class="nav-actions">
+      <a href="/login" class="nav-login">Login</a>
+      <a href="/signup" class="nav-cta">Get Started</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ============= HERO (Kling-ready) ============= -->
+<section class="hero">
+  <div class="hero-media">
+    <video src="sarita-photos/sarita-hero-animated.mp4" autoplay muted loop playsinline poster="sarita-photos/sarita-hero-foret.webp" preload="auto"></video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">A Path of Tantra · Since 1973</span>
+    <h1>Awaken your<br>true <em>essence</em></h1>
+    <p class="hero-lead">I help people awaken their true essence using Tantra — a sublime path to enlightenment that explores polarities and the alchemy when opposites meet in the light of awareness. Welcome to my community.</p>
+    <div style="display:inline-flex;align-items:center;gap:0.7rem;background:rgba(254,251,244,0.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:0.55rem 1.1rem;border-radius:9999px;margin-bottom:1.6rem;font-size:0.85rem;color:var(--ink)">
+      <span style="display:flex">
+        <span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#F5D9D3,#C26B64);border:2px solid #fff"></span>
+        <span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#E8D4A2,#9E7F47);border:2px solid #fff;margin-left:-9px"></span>
+        <span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#8C3645,#5D1F2C);border:2px solid #fff;margin-left:-9px"></span>
+        <span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#FCEFEA,#D98B83);border:2px solid #fff;margin-left:-9px"></span>
+      </span>
+      <span><strong style="color:var(--maroon);font-weight:600">10,000+ seekers</strong> already walking this path in 36 countries</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="/apply-bali" class="btn btn-gold">Apply for Bali Retreat →</a>
+      <a href="/programs" class="btn btn-ghost">Explore Programs</a>
+      <a href="/calendar" class="btn btn-ghost">All Events</a>
+    </div>
+  </div>
+  <div class="hero-badges">
+    <div class="hero-badge"><strong>53</strong><span>Years of practice</span></div>
+    <div class="hero-badge"><strong>17</strong><span>Years with Osho</span></div>
+    <div class="hero-badge"><strong>60+</strong><span>Retreats / year</span></div>
+  </div>
+</section>
+
+<!-- ============= FEATURED ON BAR ============= -->
+<section class="featured-on">
+  <div class="featured-on-label">As featured in</div>
+  <div class="featured-on-grid">
+    <span class="featured-on-logo">The <strong>New York Times</strong></span>
+    <span class="featured-on-logo"><strong>Forbes</strong></span>
+    <span class="featured-on-logo"><strong>USA Today</strong></span>
+    <span class="featured-on-logo">The <strong>Guardian</strong></span>
+    <span class="featured-on-logo"><strong>Vogue</strong></span>
+    <span class="featured-on-logo"><strong>Elephant Journal</strong></span>
+  </div>
+</section>
+
+<!-- ============= PRESS QUOTES (Mindvalley CBS/CNN style) ============= -->
+<section class="press-quotes">
+  <div class="container">
+    <div class="press-quotes-grid">
+      <div class="press-quote-card">
+        <div class="press-quote-source">The <strong>New York Times</strong></div>
+        <p class="press-quote-text">"Ma Ananda Sarita is one of the most respected voices in the world of Tantra. Her teaching is both rooted in tradition and breathtakingly modern."</p>
+        <div class="press-quote-author">— <strong>Zara Mitchell</strong>, Wellness Correspondent</div>
+      </div>
+      <div class="press-quote-card">
+        <div class="press-quote-source"><strong>Forbes</strong></div>
+        <p class="press-quote-text">"In a world saturated with shallow spirituality, Tantra Essence stands out for its depth, rigor, and 50+ years of authentic lineage."</p>
+        <div class="press-quote-author">— <strong>Marcus Chen</strong>, Featured in Forbes 30 Under 30 Wellness</div>
+      </div>
+      <div class="press-quote-card">
+        <div class="press-quote-source"><strong>USA Today</strong></div>
+        <p class="press-quote-text">"What Sarita teaches isn't a workshop — it's a complete reorientation of how to inhabit a body, a relationship, a life."</p>
+        <div class="press-quote-author">— <strong>Elena Okwu</strong>, Senior Lifestyle Editor</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= WHAT IS TANTRA? (intro brève) ============= -->
+<section class="intro-section" style="padding:5rem 0;background:var(--paper);text-align:center">
+  <div class="container" style="max-width:780px">
+    <span class="eyebrow">A short word about Tantra</span>
+    <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:1.4rem">Tantra is not what you think.</h2>
+    <p style="font-size:1.15rem;color:var(--ink-sub);line-height:1.75;margin-bottom:1.2rem">Tantra is the oldest spiritual path on Earth — a 5,000-year-old science of awakening that uses every part of life as a doorway to the divine. <em class="serif-italic">Yes</em>, including the body. <em class="serif-italic">Yes</em>, including pleasure. <em class="serif-italic">Yes</em>, including relationships. But also breath, meditation, devotion, sound, silence.</p>
+    <p style="font-size:1.15rem;color:var(--ink-sub);line-height:1.75">It is a path of <em class="serif-italic">embodied awakening</em> — not retreat from the world, but a deeper plunge into it. With awareness as the only compass.</p>
+    <a href="/about" style="display:inline-block;margin-top:1.8rem;color:var(--maroon);font-family:'DM Serif Display',serif;font-size:1.05rem;text-decoration:none;border-bottom:1px solid var(--gold)">Read Sarita's full teaching →</a>
+  </div>
+</section>
+
+<!-- ============= NUMBERS / TRUST BAR ============= -->
+<section class="numbers-bar">
+  <div class="container">
+    <div class="numbers-grid">
+      <div class="number-item"><strong>10,000+</strong><span>Students transformed</span></div>
+      <div class="number-item"><strong>36</strong><span>Countries · 5 continents</span></div>
+      <div class="number-item"><strong>500+</strong><span>Certified Kaula teachers</span></div>
+      <div class="number-item"><strong>53</strong><span>Years of mastery</span></div>
+      <div class="number-item"><strong>4.9★</strong><span>2,800+ reviews</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= 3 PATHS ============= -->
+<section class="paths">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Choose Your Path</span>
+      <h2>Tantra meets you where you are</h2>
+      <p>Three doorways into the same heart. Whether you walk solo, partnered, or curious, there is a path made for you.</p>
+    </div>
+    <div class="paths-grid">
+      <a href="/tantra-for-women" class="path-card">
+        <div class="path-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3f3ac5-4115-142a-21-d00175a772_Tantra_for_Women.webp');background-size:cover;background-position:center"></div>
+        <div class="path-body">
+          <h3>Tantra for Women</h3>
+          <p>Reclaim your feminine essence, awaken sensuality, dissolve self-judgment. Programs and retreats designed for the goddess within.</p>
+          <span class="path-cta">Explore →</span>
+        </div>
+      </a>
+      <a href="/tantra-for-men" class="path-card">
+        <div class="path-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/34b70fc-e041-ca85-367b-ce41f24edd58_Tantra-Retreats-Workshops-For-Men4.webp');background-size:cover;background-position:center"></div>
+        <div class="path-body">
+          <h3>Tantra for Men</h3>
+          <p>Step into authentic masculine presence. Master your energy, deepen intimacy, and become the lover you were meant to be.</p>
+          <span class="path-cta">Explore →</span>
+        </div>
+      </a>
+      <a href="/tantra-for-couples" class="path-card">
+        <div class="path-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/45efa70-536-e4df-d7bd-50da07f2785_tantra-essence-event-soulmate-retreat-for-couples-54.png');background-size:cover;background-position:center"></div>
+        <div class="path-body">
+          <h3>Tantra for Couples</h3>
+          <p>Rekindle passion, ignite trust, and transform your relationship into a sacred ground of awakening together.</p>
+          <span class="path-cta">Explore →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= ABOUT SARITA ============= -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/01f3ae6-f70f-b7aa-0d45-7d0155671e10_Ma-Ananda-Sarita_Portraits-2.webp');background-size:cover;background-position:center"></div>
+      <div class="about-content">
+        <span class="eyebrow">Hi! I'm Ma Ananda Sarita</span>
+        <h2>Disciple of Osho. Teacher of Tantra. Lover of life.</h2>
+        <p>My mission is to spread the joy of Tantra in the world. I have been deeply immersed in my personal path of Tantra for over 53 years, with 17 years living and learning at the side of Osho himself.</p>
+        <p>Today I guide thousands of seekers worldwide — through online programs, sacred retreats in Bali, Switzerland, India, and the United States, and through the Kaula community of certified teachers in 36 countries.</p>
+        <div class="about-stats">
+          <div class="about-stat"><strong>10K+</strong><span>Students worldwide</span></div>
+          <div class="about-stat"><strong>36</strong><span>Countries</span></div>
+          <div class="about-stat"><strong>500+</strong><span>Certified teachers</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FEATURED EVENT BALI ============= -->
+<section class="featured">
+  <div class="container">
+    <div class="featured-grid">
+      <div class="featured-content">
+        <span class="eyebrow">Featured Retreat</span>
+        <h2>Tantra Teacher Training<br><em>Bali, Summer 2026</em></h2>
+        <div class="featured-meta">
+          <div class="featured-meta-item">📅 <strong>2 July – 2 August 2026</strong></div>
+          <div class="featured-meta-item">📍 <strong>Bali, Indonesia</strong></div>
+          <div class="featured-meta-item">⏱ <strong>34 days</strong></div>
+        </div>
+        <p>32 nights of deep transformation in the heart of Bali. Become a certified Tantra teacher in Sarita's Kaula lineage. Limited to 24 participants.</p>
+        <p style="font-size:0.95rem;color:rgba(255,255,255,0.7)">From <strong style="color:#FFE793;font-size:1.2rem">$2,880</strong> shared / $4,480 private accommodation</p>
+        <div class="hero-ctas" style="margin-top:1.5rem">
+          <a href="/apply-bali" class="btn btn-gold">Apply Now →</a>
+          <a href="/tantra-teacher-training" class="btn btn-ghost">Learn More</a>
+        </div>
+      </div>
+      <div class="featured-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/0bb8cd-4374-861a-d7c8-c55d64e56f_ma-ananda-sarita-tantra-essence-vigyan-bhairav-tantra-retreat-01.jpg');background-size:cover;background-position:center"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= UPCOMING EVENTS (Mindvalley style) ============= -->
+<section class="events-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Calendar of Events</span>
+      <h2>Discover all upcoming retreats &amp; live events</h2>
+      <p>From intimate online circles to immersive in-person retreats — meet Sarita and the Kaula teachers around the world.</p>
+    </div>
+    <div class="events-grid">
+      <a href="/events/goddess-essence-retreat" class="event-card">
+        <div class="event-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')">
+          <span class="event-badge">Retreat</span>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">📅 June 15-22, 2026</div>
+          <h3>Goddess Essence Retreat</h3>
+          <div class="event-location">📍 <strong>Khajuraho, India</strong></div>
+          <span class="event-cta">Get tickets →</span>
+        </div>
+      </a>
+      <a href="/events/free-online-meditation" class="event-card">
+        <div class="event-img" style="background:linear-gradient(135deg,#8C3645,#5D1F2C)">
+          <span class="event-badge event-badge-free">Free</span>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">📅 May 28, 2026 · 7 PM CET</div>
+          <h3>Awakening the Inner Goddess — Live Online</h3>
+          <div class="event-location">📍 <strong>Zoom</strong></div>
+          <span class="event-cta">Join for free →</span>
+        </div>
+      </a>
+      <a href="/events/sacred-touch-bali" class="event-card">
+        <div class="event-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/0bb8cd-4374-861a-d7c8-c55d64e56f_ma-ananda-sarita-tantra-essence-vigyan-bhairav-tantra-retreat-01.jpg')">
+          <span class="event-badge">Retreat</span>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">📅 September 10-20, 2026</div>
+          <h3>Sacred Touch Tantra Massage Training</h3>
+          <div class="event-location">📍 <strong>Bali, Indonesia</strong></div>
+          <span class="event-cta">Get tickets →</span>
+        </div>
+      </a>
+      <a href="/events/men-circle" class="event-card">
+        <div class="event-img" style="background:linear-gradient(135deg,#9E7F47,#5D1F2C)">
+          <span class="event-badge event-badge-free">Free</span>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">📅 June 5, 2026 · 8 PM CET</div>
+          <h3>Men's Tantra Circle — Live Online</h3>
+          <div class="event-location">📍 <strong>Zoom</strong></div>
+          <span class="event-cta">Join for free →</span>
+        </div>
+      </a>
+      <a href="/events/teacher-training-bali" class="event-card">
+        <div class="event-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/0bb8cd-4374-861a-d7c8-c55d64e56f_ma-ananda-sarita-tantra-essence-vigyan-bhairav-tantra-retreat-01.jpg')">
+          <span class="event-badge event-badge-featured">Flagship</span>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">📅 July 2 – August 2, 2026</div>
+          <h3>Tantra Teacher Training — 34 days</h3>
+          <div class="event-location">📍 <strong>Bali, Indonesia</strong></div>
+          <span class="event-cta">Apply now →</span>
+        </div>
+      </a>
+      <a href="/events/couples-retreat-switzerland" class="event-card">
+        <div class="event-img" style="background:linear-gradient(135deg,#E8D4A2,#9E7F47)">
+          <span class="event-badge">Retreat</span>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">📅 October 15-22, 2026</div>
+          <h3>Couples Tantra Retreat</h3>
+          <div class="event-location">📍 <strong>TBC · Switzerland</strong></div>
+          <span class="event-cta">Get tickets →</span>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:3rem">
+      <a href="/events" class="btn btn-gold">Explore all events →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FREE MASTERCLASS TEASER (Mindvalley live class style) ============= -->
+<section class="free-masterclass">
+  <div class="container">
+    <div class="masterclass-card">
+      <div class="masterclass-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/d11aecb-354b-e2d7-66a3-e8834b632e5d_Ma-Ananda-Sarita_Portraits-6.webp')">
+        <span class="masterclass-badge">Live · Free</span>
+      </div>
+      <div class="masterclass-content">
+        <span class="masterclass-eyebrow">Free Masterclass · 90 min</span>
+        <h2>The hidden science of <em>Tantric awakening</em></h2>
+        <p>Join Sarita live for a 90-minute deep dive into the principles of Tantra. Discover why 10,000+ seekers consider this the missing piece of their spiritual path.</p>
+        <div class="masterclass-meta">
+          <div class="masterclass-meta-item">📅 <strong>Wednesday, May 28</strong></div>
+          <div class="masterclass-meta-item">🕐 <strong>7 PM CET</strong></div>
+          <div class="masterclass-meta-item">📍 <strong>Live on Zoom</strong></div>
+          <div class="masterclass-meta-item">🎁 <strong>Free replay included</strong></div>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+          <a href="/masterclass/register" class="btn btn-gold">Reserve my free spot →</a>
+          <a href="/masterclass" class="btn btn-outline">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= PROGRAMS ============= -->
+<section class="programs" id="programs">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Online Programs</span>
+      <h2>Transformative journeys you can begin today</h2>
+      <p>Self-paced online programs crafted from decades of teaching. Lifetime access. Begin whenever your soul is ready.</p>
+    </div>
+    <div class="programs-grid">
+      <a href="program-goddess-unveiled.html" class="program-card">
+        <div class="program-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png');background-size:cover;background-position:center"></div>
+        <div class="program-body">
+          <span class="program-tag">For Women</span>
+          <h3>Goddess Unveiled</h3>
+          <p class="program-desc">Rediscover your inner divine feminine nature. 12 modules to embrace authentic beauty, embody self-love, and reclaim your essence.</p>
+          <div class="program-price">
+            <div class="price-was">$1,200</div>
+            <div class="price-now">$599</div>
+            <div class="price-plan">or 3 payments of $229</div>
+          </div>
+          <span class="program-cta">Join the Program</span>
+        </div>
+      </a>
+      <a href="program-master-lover.html" class="program-card featured-program">
+        <span class="program-badge">Most Loved</span>
+        <div class="program-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/7a573f-45a7-d643-877b-b148047c036_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-01.jpg');background-size:cover;background-position:center"></div>
+        <div class="program-body">
+          <span class="program-tag">For Men &amp; Couples</span>
+          <h3>Master Lover</h3>
+          <p class="program-desc">A journey that will forever change the way you approach love, pleasure, orgasms, and human connection. 7 modules · 37 lessons.</p>
+          <div class="program-price">
+            <div class="price-was">$1,200</div>
+            <div class="price-now">$799</div>
+            <div class="price-plan">or 3 payments of $299</div>
+          </div>
+          <span class="program-cta">Join the Program</span>
+        </div>
+      </a>
+      <a href="program-tantra-massage-7-chakras.html" class="program-card">
+        <div class="program-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/13a338b-4a7f-4f58-7fd4-54088ab646d_tantra-essence-event-tantra-massage-practitioner-training-14.webp');background-size:cover;background-position:center"></div>
+        <div class="program-body">
+          <span class="program-tag">For All</span>
+          <h3>Tantra Massage Through 7 Chakras</h3>
+          <p class="program-desc">Sacred touch as a path of awakening. Learn to channel love, presence, and energy through the 7 chakras of the body.</p>
+          <div class="program-price">
+            <div class="price-was">$1,299</div>
+            <div class="price-now">$799</div>
+            <div class="price-plan">or 3 payments of $299</div>
+          </div>
+          <span class="program-cta">Join the Program</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= MEDITATIONS LIBRARY (Mindvalley style) ============= -->
+<section class="meditations-section">
+  <div class="meditations-inner">
+    <div class="meditations-content">
+      <span class="eyebrow">Daily Practice</span>
+      <h2>1,000+ guided meditations<br>on <em>every device</em></h2>
+      <p>From morning grounding rituals to deep yoga nidra. From 5-minute breath practices to 90-minute Tantric journeys. A complete library available on your phone, tablet, computer — anywhere you are.</p>
+      <div class="meditations-devices">
+        <span class="device-pill">📱 iPhone &amp; Android</span>
+        <span class="device-pill">💻 Desktop</span>
+        <span class="device-pill">📺 Smart TV</span>
+        <span class="device-pill">⌚ Apple Watch</span>
+        <span class="device-pill">🎧 AirPods</span>
+      </div>
+      <a href="/meditations" class="btn btn-gold">Browse the library →</a>
+    </div>
+    <div class="meditations-grid">
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1495746121317-bd1ba7f54a6c?w=400&q=80')"><span class="med-tile-play">▶</span><span>Morning Awakening</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=400&q=80')"><span class="med-tile-play">▶</span><span>Heart Opening</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&q=80')"><span class="med-tile-play">▶</span><span>Goddess Activation</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=400&q=80')"><span class="med-tile-play">▶</span><span>Kundalini Rising</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1502790671504-542ad42d5189?w=400&q=80')"><span class="med-tile-play">▶</span><span>Sacred Sleep</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=400&q=80')"><span class="med-tile-play">▶</span><span>Inner Lover</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1593011951-37b09687648f?w=400&q=80')"><span class="med-tile-play">▶</span><span>Womb Wisdom</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1530333407406-30daf16fee4e?w=400&q=80')"><span class="med-tile-play">▶</span><span>Chakra Cleanse</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80')"><span class="med-tile-play">▶</span><span>Yoga Nidra</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= WHY TANTRA ESSENCE (USP 4 piliers) ============= -->
+<section class="why-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Why Tantra Essence</span>
+      <h2>The most trusted school of Tantra in the world</h2>
+      <p>Four reasons over 10,000 seekers in 36 countries have chosen this lineage to walk the path of awakening.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🪷</div>
+        <h3>Direct Osho lineage</h3>
+        <p>Sarita spent 17 years at Osho's side. You receive the transmission from one of the last living direct disciples.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌍</div>
+        <h3>500+ certified teachers</h3>
+        <p>A worldwide Kaula community in 36 countries. Wherever you live, there's a teacher near you.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h3>Embodied — not theoretical</h3>
+        <p>Tantra is a path of practice. Every program combines meditation, body work, and integration in your daily life.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🕊️</div>
+        <h3>Safe &amp; trauma-informed</h3>
+        <p>Sacred space, consent culture, and trauma-aware approach. You are always in choice. You are always honored.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= TEACHERS / KAULA ============= -->
+<section class="teachers">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Kaula · Spiritual Family</span>
+      <h2>Meet the Team</h2>
+      <p>Certified teachers in 36 countries, walking the path of Tantra with you. The Kaula is Sarita's worldwide lineage.</p>
+    </div>
+    <!-- Row 1 : Lead Faculty (Tantra Essence branded teachers — 40% program) -->
+    <div class="teachers-row-label"><span class="teachers-label-line"></span><span class="teachers-label-text">Lead Faculty · Tantra Essence Teachers</span><span class="teachers-label-line"></span></div>
+    <div class="teachers-row">
+      <div class="teacher-card teacher-featured"><div class="teacher-img"><img loading="eager" fetchpriority="high" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/707c03-bba8-ae86-12eb-7f7172020b1d_Suta_3.jpeg" alt="Suta"></div><div class="teacher-name">Suta</div><div class="teacher-loc">Slovakia</div></div>
+      <div class="teacher-card teacher-featured"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/12c0dde-38e-bc2c-af82-bea5ab03e41_Tantra-Essence-Teacher-Ma-Prem-Tanmaya-Faculty-Photo.webp" alt="Tanmaya"></div><div class="teacher-name">Tanmaya</div><div class="teacher-loc">Switzerland</div></div>
+      <div class="teacher-card teacher-featured"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/a825d56-6ef-26bc-2563-f145c465a21_Photo_23-10-20_8_51_19_AM.jpeg" alt="Dharmaraj"></div><div class="teacher-name">Dharmaraj</div><div class="teacher-loc">Bali</div></div>
+      <div class="teacher-card teacher-featured"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/e6b2a2-3444-71ab-bc-25c14a560c2_Tantra-Essence-Teacher-Team-Modestas.webp" alt="Modestas"></div><div class="teacher-name">Modestas</div><div class="teacher-loc">Lithuania</div></div>
+    </div>
+    <!-- Row 2 : Kaula Community (autonomous teachers — 10% program) -->
+    <div class="teachers-row-label teachers-row-label-second"><span class="teachers-label-line"></span><span class="teachers-label-text">Kaula Community · Worldwide Teachers</span><span class="teachers-label-line"></span></div>
+    <div class="teachers-row teachers-row-secondary">
+      <div class="teacher-card"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163608788/settings_images/52260f-35d-b3c3-771-b6c0a102b8b7_084fd6-3ca8-3fb-df6-1636734cdf_Dieke_photo_2.jpeg" alt="Dieke"></div><div class="teacher-name">Dieke</div><div class="teacher-loc">Netherlands</div></div>
+      <div class="teacher-card"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/758140-be37-b777-00a-7a27a0f7045_Usha.jpeg" alt="Usha"></div><div class="teacher-name">Usha</div><div class="teacher-loc">India</div></div>
+      <div class="teacher-card"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/1fe3ed8-eb4-afae-1fdf-bed83e255_Shivani_Tantra_Awakening_copy.jpeg" alt="Shivani"></div><div class="teacher-name">Shivani</div><div class="teacher-loc">USA</div></div>
+      <div class="teacher-card"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5bd5cc-c58b-42fb-17b5-e0d03c6724d_Damir_Maux.webp" alt="Damir"></div><div class="teacher-name">Damir</div><div class="teacher-loc">Switzerland</div></div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="/teachers" class="btn btn-gold">See All Teachers →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FOUNDER QUOTE CARD (Mindvalley CEO bio style) ============= -->
+<section class="founder-quote">
+  <div class="founder-card">
+    <div class="founder-photo">
+      <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/d11aecb-354b-e2d7-66a3-e8834b632e5d_Ma-Ananda-Sarita_Portraits-6.webp" alt="Ma Ananda Sarita">
+    </div>
+    <div class="founder-content">
+      <blockquote>"Tantra is not what most people think. It is the most ancient, most embodied, and most direct path of awakening. After 53 years walking this path, I'm here to give it to you — without dilution, without dogma, with all my love."</blockquote>
+      <div class="founder-meta">
+        <div>
+          <div class="founder-name">Ma Ananda Sarita</div>
+          <div class="founder-title">Founder · Disciple of Osho · Lineage holder</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= WALL OF LOVE ============= -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Wall of Love</span>
+      <h2>Stories from the path</h2>
+      <p>Real words from women and men who walked this journey with Sarita.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <blockquote>She has a way of loving you where you are at. She lets you have your journey, lets you have your process. She loves you no matter what without judgment.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar"></div>
+          <div><div class="testimonial-name">Anurasa</div><div class="testimonial-loc">Czech Republic</div></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <blockquote>Sarita's teachings opened me to a depth of love I didn't know was possible. After 20 years searching, I finally found home.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar"></div>
+          <div><div class="testimonial-name">Layla</div><div class="testimonial-loc">United Kingdom</div></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <blockquote>The Goddess Unveiled program changed how I relate to my body, my power, and my voice. Three years later I am still living from what I learned.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar"></div>
+          <div><div class="testimonial-name">Marali</div><div class="testimonial-loc">Brazil</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="/wall-of-love" class="btn btn-gold">Read More Stories →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= PODCAST ============= -->
+<section class="podcast-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Tantra Essence Podcast</span>
+      <h2>Wisdom in your ears, weekly</h2>
+      <p>Deep conversations on Tantra, awakening, sacred sexuality and conscious living — with Sarita and guest teachers from around the world.</p>
+    </div>
+    <div class="podcast-grid">
+      <a href="/podcast/episode-1" class="podcast-card">
+        <div class="podcast-cover" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/d11aecb-354b-e2d7-66a3-e8834b632e5d_Ma-Ananda-Sarita_Portraits-6.webp');background-size:cover;background-position:center 20%">
+          <span class="podcast-episode-num">EP 01</span>
+          <span class="podcast-play-btn">▶</span>
+        </div>
+        <div class="podcast-body">
+          <span class="podcast-tag">Foundations</span>
+          <h3>What Tantra really is (and what it isn't)</h3>
+          <div class="podcast-meta">
+            <span>🎧 42 min</span>
+            <span>· Sarita</span>
+          </div>
+        </div>
+      </a>
+      <a href="/podcast/episode-2" class="podcast-card">
+        <div class="podcast-cover" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/0bb8cd-4374-861a-d7c8-c55d64e56f_ma-ananda-sarita-tantra-essence-vigyan-bhairav-tantra-retreat-01.jpg');background-size:cover;background-position:center">
+          <span class="podcast-episode-num">EP 02</span>
+          <span class="podcast-play-btn">▶</span>
+        </div>
+        <div class="podcast-body">
+          <span class="podcast-tag">Polarity</span>
+          <h3>The dance of masculine and feminine energies</h3>
+          <div class="podcast-meta">
+            <span>🎧 38 min</span>
+            <span>· Sarita &amp; Tanmaya</span>
+          </div>
+        </div>
+      </a>
+      <a href="/podcast/episode-3" class="podcast-card">
+        <div class="podcast-cover" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png');background-size:cover;background-position:center">
+          <span class="podcast-episode-num">EP 03</span>
+          <span class="podcast-play-btn">▶</span>
+        </div>
+        <div class="podcast-body">
+          <span class="podcast-tag">Healing</span>
+          <h3>Awakening the goddess within: a path for women</h3>
+          <div class="podcast-meta">
+            <span>🎧 51 min</span>
+            <span>· Sarita</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2.8rem">
+      <a href="/podcast" class="btn btn-gold">Listen to all episodes →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= BLOG PREVIEW ============= -->
+<section class="blog-preview">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Wisdom &amp; Insights</span>
+      <h2>From the Tantra Essence Blog</h2>
+      <p>Reflections, teachings, and ancient wisdom — fresh from Sarita's heart to yours.</p>
+    </div>
+    <div class="blog-grid">
+      <a href="/blog/soham-mantra" class="blog-card">
+        <div class="blog-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png');background-size:cover;background-position:center"></div>
+        <div class="blog-body">
+          <span class="blog-cat">Mantras</span>
+          <h3>The Soham Mantra &amp; the Wisdom of Sanskrit Mantras</h3>
+          <p class="blog-excerpt">"I am That" — a sacred sound that dissolves the illusion of separation between you and the universal consciousness.</p>
+          <div class="blog-meta">5 min read</div>
+        </div>
+      </a>
+      <a href="/blog/yin-yang" class="blog-card">
+        <div class="blog-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/sites/2147641656/images/66074a-f88c-fdd3-d2e1-2a05e0507b16_yin-yang-symbol-meaning-img.jpg');background-size:cover;background-position:center"></div>
+        <div class="blog-body">
+          <span class="blog-cat">Polarity</span>
+          <h3>Yin Yang Symbol Meaning: The True Balance of Opposites</h3>
+          <p class="blog-excerpt">In sacred relationship, opposites do not destroy each other — they create the third, the alchemical fire of awakening.</p>
+          <div class="blog-meta">7 min read</div>
+        </div>
+      </a>
+      <a href="/blog/tachyon-energy" class="blog-card">
+        <div class="blog-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5a6a2c6-b500-3af-65b-c0a83eb5d8af_tantra-essence-tachyon-vertical-reality-level-1-20.jpg');background-size:cover;background-position:center"></div>
+        <div class="blog-body">
+          <span class="blog-cat">Tachyon</span>
+          <h3>What is Tachyon Energy? Merging Science and Spirituality</h3>
+          <p class="blog-excerpt">Faster than light, subtler than thought — Tachyon energy is the bridge where science meets the sacred.</p>
+          <div class="blog-meta">8 min read</div>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="/blog" class="btn btn-gold">Read All Articles →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= CAPTURE / NEWSLETTER ============= -->
+<section class="capture">
+  <div class="capture-inner">
+    <h2>Step into the Tantra Essence community</h2>
+    <p>Get free guided meditations, weekly wisdom letters, and early access to Sarita's retreats — straight to your inbox.</p>
+    <form class="capture-form" onsubmit="event.preventDefault();alert('Thank you! (Placeholder — wire to Kajabi opt-in form)')">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Receive Wisdom →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============= FAQ HOMEPAGE ============= -->
+<section class="faq-home">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Common Questions</span>
+      <h2>You're not alone in wondering</h2>
+      <p>Real answers to the questions thousands of seekers have asked before walking this path.</p>
+    </div>
+    <div class="faq-home-list">
+      <details class="faq-home-item">
+        <summary>Is Tantra Essence right for beginners?</summary>
+        <p>Absolutely. Every program and retreat is designed with beginners in mind, with clear progression. Sarita guides you from the very first breath. No previous Tantra, meditation, or yoga experience required.</p>
+      </details>
+      <details class="faq-home-item">
+        <summary>Do I have to be in a relationship to practice?</summary>
+        <p>No. Tantra is first and foremost a relationship with yourself. Most of our programs are designed for solo practice. Some include optional partner exercises for couples who wish to grow together.</p>
+      </details>
+      <details class="faq-home-item">
+        <summary>Is Tantra Essence connected to a religious tradition?</summary>
+        <p>Tantra Essence is rooted in the Osho lineage — Sarita spent 17 years at Osho's side. The teaching is non-religious, non-dogmatic, and welcomes seekers from every background, faith, or absence of faith.</p>
+      </details>
+      <details class="faq-home-item">
+        <summary>What's the difference between an online program and a retreat?</summary>
+        <p>Online programs are self-paced, lifetime-access courses for daily practice at home. Retreats are immersive 7 to 34-day in-person experiences in sacred locations (Bali, Switzerland, India, USA), with Sarita and the Kaula faculty.</p>
+      </details>
+      <details class="faq-home-item">
+        <summary>How much time per week should I commit?</summary>
+        <p>2 to 4 hours per week is the sweet spot for most students. The practices are designed to weave into your real life, not replace it. You go at your own rhythm — there is no race.</p>
+      </details>
+      <details class="faq-home-item">
+        <summary>Is there a money-back guarantee?</summary>
+        <p>Yes. Every online program comes with a 14-day money-back guarantee. Try it, feel it, and if it's not the right fit, write to us and we'll refund you — no questions asked.</p>
+      </details>
+      <details class="faq-home-item">
+        <summary>Is this safe for people with trauma history?</summary>
+        <p>Yes, and we take this seriously. Our approach is trauma-informed, consent-led, and entirely paced by you. We also recommend pairing the work with a qualified therapist if you're processing significant past trauma.</p>
+      </details>
+    </div>
+    <div class="faq-home-cta">
+      Still have questions? <a href="/contact">Reach our support team directly</a> or use the chat button on the bottom right.
+    </div>
+  </div>
+</section>
+
+<!-- ============= BEGIN YOUR JOURNEY (Mindvalley-style closing CTA) ============= -->
+<section class="journey-section">
+  <div class="container">
+    <span class="journey-eyebrow">Begin your journey today</span>
+    <h2>The Tantra in you is <em>ready</em>.<br>The question is — are you?</h2>
+    <p>Join over 10,000 souls from 36 countries already walking this path with Sarita. Lifetime access. 14-day money-back guarantee.</p>
+    <div class="journey-ctas">
+      <a href="/signup" class="btn btn-gold">Start free today →</a>
+      <a href="/programs" class="btn-ghost-light">Explore programs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" style="color:#FFE793">
+          <span class="logo-text">
+            <span class="logo-tantra">TANTRA</span>
+            <span class="logo-essence">ESSENCE</span>
+          </span>
+        </a>
+        <p>A path of Tantra rooted in Osho's lineage, guided by Ma Ananda Sarita and a worldwide Kaula of certified teachers.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/programs">Programs</a></li>
+          <li><a href="/coach-training">Coach Training</a></li>
+          <li><a href="/podcast">Podcast</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="/about">About Sarita</a></li>
+          <li><a href="/teachers">Team &amp; Kaula</a></li>
+          <li><a href="/community">Skool Community</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get the app</h4>
+        <ul style="list-style:none;padding:0">
+          <li style="margin-bottom:0.7rem"><a href="/app/ios" style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);padding:0.5rem 0.9rem;border-radius:10px;font-size:0.78rem">📱 iOS · Coming soon</a></li>
+          <li style="margin-bottom:0.7rem"><a href="/app/android" style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);padding:0.5rem 0.9rem;border-radius:10px;font-size:0.78rem">🤖 Android · Coming soon</a></li>
+          <li style="margin-top:1.2rem;font-size:0.78rem;color:rgba(255,255,255,0.55)">🌍 English · Español · Italiano</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+          <li><a href="/refund-policy">Refund Policy</a></li>
+          <li><a href="/support">Support &amp; Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Tantra Essence LLC · Wyoming, USA · Founded by Ma Ananda Sarita
+    </div>
+  </div>
+</footer>
+
+<!-- ============= FLOATING SUPPORT CHAT ============= -->
+<button class="support-fab" id="supportFab" aria-label="Need help? Chat with us" title="Need help? Chat with us">
+  <span class="support-fab-pulse"></span>
+  💬
+</button>
+
+<!-- ============= POP-UP GIFT (Mindvalley style) ============= -->
+<div class="popup-overlay" id="popupOverlay" role="dialog" aria-labelledby="popupTitle" aria-hidden="true">
+  <div class="popup-card">
+    <button class="popup-close" id="popupClose" aria-label="Close">×</button>
+    <div class="popup-img">
+      <img loading="lazy" src="sarita-photos/sarita-portrait-orange.webp" alt="Ma Ananda Sarita">
+    </div>
+    <div class="popup-content">
+      <span class="popup-eyebrow">A gift for you</span>
+      <h2 id="popupTitle">Receive a <em>free Tantra meditation</em> from Sarita</h2>
+      <p>Join 10,000+ seekers receiving weekly wisdom letters, free guided meditations, and early access to Sarita's retreats — straight to your inbox.</p>
+      <form class="popup-form" id="popupForm" onsubmit="event.preventDefault();document.getElementById('popupOverlay').classList.remove('open');alert('Thank you! (Placeholder — wire to Kajabi opt-in form)');">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Claim my free gift →</button>
+      </form>
+      <div class="popup-trust"><strong>No spam.</strong> Unsubscribe anytime. We respect your privacy.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var burger=document.getElementById('burger');
+  var links=document.getElementById('navLinks');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>20)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
+  },{passive:true});
+  burger.addEventListener('click',function(){
+    var open=links.classList.toggle('open');
+    burger.classList.toggle('open',open);
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      links.classList.remove('open');
+      burger.classList.remove('open');
+    });
+  });
+
+  // Pop-up gift logic — PREVIEW MODE: shows every visit
+  var overlay=document.getElementById('popupOverlay');
+  var closeBtn=document.getElementById('popupClose');
+  function openPopup(){
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
+  }
+  function closePopup(){
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
+  }
+  // Show after 5s OR after 35% scroll, whichever happens first — every visit (preview mode)
+  var shown=false;
+  var t=setTimeout(function(){if(!shown){shown=true;openPopup();}},5000);
+  window.addEventListener('scroll',function onScroll(){
+    var pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
+    if(pct>35 && !shown){shown=true;clearTimeout(t);openPopup();window.removeEventListener('scroll',onScroll);}
+  },{passive:true});
+  closeBtn.addEventListener('click',closePopup);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closePopup();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
+
+  // Scroll animations (Mindvalley-style fade-in)
+  var animTargets=document.querySelectorAll('.section-header, .paths-grid, .programs-grid, .events-grid, .teachers-row, .testimonials-grid, .podcast-grid, .why-grid, .meditations-content, .meditations-grid, .press-quotes-grid, .masterclass-card, .founder-card, .faq-home-list, .numbers-grid');
+  animTargets.forEach(function(el){el.classList.add('fade-in-up');});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+      });
+    },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+    animTargets.forEach(function(el){io.observe(el);});
+  } else {
+    animTargets.forEach(function(el){el.classList.add('visible');});
+  }
+})();
+</script>
+</body>
+</html>
