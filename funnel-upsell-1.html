@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="A signature program offer reserved for new students of Tantra Essence.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One-Click Upgrade · Tantra Essence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ivoire:#FAF5EC;--ivoire-deep:#F2E9D6;--paper:#FEFBF4;--pink-soft:#F5D9D3;--pink:#D98B83;--pink-bg:#FCEFEA;--maroon:#8C3645;--maroon-deep:#5D1F2C;--gold:#C9A35E;--gold-deep:#9E7F47;--gold-soft:#E8D4A2;--ink:#2A1A1E;--ink-sub:#5E4A4E;--ink-muted:#8C7A7E;--border:rgba(93,42,46,0.12);--shadow:0 14px 40px rgba(45,26,30,0.10);--radius:20px;--radius-full:9999px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.65;font-size:16px}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15}
+em{color:var(--maroon);font-style:italic}
+a{color:inherit;text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 1.5rem}
+.demo-banner{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--ink);color:var(--gold-soft);font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;text-align:center;padding:0.45rem;font-weight:600}
+.demo-banner a{color:var(--gold-soft);text-decoration:underline}
+
+.success-bar{background:#1a5d3a;color:white;padding:1rem;text-align:center;font-size:0.92rem;margin-top:32px;letter-spacing:0.04em}
+.success-bar strong{font-family:'DM Serif Display',serif;font-size:1.05rem}
+
+.upsell{padding:3rem 0}
+.upsell-head{text-align:center;margin-bottom:2.5rem}
+.eyebrow{display:inline-block;font-size:0.74rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--maroon);padding:0.4rem 1rem;background:var(--pink-bg);border-radius:var(--radius-full);margin-bottom:1rem}
+.upsell-head h1{font-size:clamp(2rem,5vw,3rem);max-width:20ch;margin:0 auto 1rem}
+.upsell-head .lead{font-size:1.1rem;color:var(--ink-sub);max-width:60ch;margin:0 auto}
+
+.offer-block{display:grid;grid-template-columns:1fr 1.3fr;gap:2.5rem;background:var(--paper);border:2px solid var(--gold);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);margin:2rem 0;align-items:center}
+.offer-img{aspect-ratio:1;border-radius:var(--radius);background:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/87804b-f7-b558-35ca-f4e4f4c6f8c8_19061057-efd3-4bc0-9899-c34e268516a9.webp') center/cover}
+.offer-content h2{font-size:1.8rem;margin-bottom:0.7rem}
+.offer-content p{color:var(--ink-sub);margin-bottom:1rem;font-size:0.96rem}
+.offer-features{list-style:none;padding:0;margin:1.2rem 0}
+.offer-features li{position:relative;padding:0.5rem 0 0.5rem 1.6rem;font-size:0.92rem;color:var(--ink-sub);border-bottom:1px dashed var(--border)}
+.offer-features li::before{content:'✦';position:absolute;left:0;top:0.55rem;color:var(--gold-deep)}
+
+.price-row{display:flex;align-items:baseline;gap:1rem;padding:1rem 0;border-top:1px solid var(--border)}
+.price-old{color:var(--ink-muted);text-decoration:line-through;font-size:1.1rem}
+.price-now{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--maroon)}
+.price-save{font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;background:var(--gold-soft);padding:0.3rem 0.8rem;border-radius:var(--radius-full)}
+
+.cta-stack{display:flex;flex-direction:column;gap:0.6rem;margin-top:1.4rem}
+.btn-yes{padding:1.2rem;background:var(--maroon);color:var(--paper);font-family:inherit;font-size:1.05rem;font-weight:600;border:none;border-radius:var(--radius-full);cursor:pointer;box-shadow:0 6px 20px rgba(140,54,69,0.35);transition:all 0.3s}
+.btn-yes:hover{background:var(--maroon-deep);transform:translateY(-1px)}
+.btn-no{padding:0.8rem;background:transparent;color:var(--ink-muted);font-family:inherit;font-size:0.86rem;font-weight:400;border:none;cursor:pointer;text-decoration:underline;transition:color 0.3s}
+.btn-no:hover{color:var(--ink)}
+
+.no-cc-row{text-align:center;color:var(--ink-muted);font-size:0.82rem;margin-top:0.5rem;letter-spacing:0.05em}
+.no-cc-row::before{content:'⚡  '}
+
+.testi-strip{background:var(--maroon-deep);color:var(--paper);padding:2.5rem;border-radius:var(--radius);text-align:center;margin:2rem 0}
+.testi-strip blockquote{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:var(--gold-soft);max-width:38ch;margin:0 auto 1rem;line-height:1.45}
+.testi-strip cite{font-size:0.82rem;letter-spacing:0.14em;text-transform:uppercase;opacity:0.85;font-style:normal}
+
+.guarantee{padding:1.5rem;background:var(--ivoire-deep);border-radius:12px;text-align:center;margin-top:1.5rem;font-size:0.9rem;color:var(--ink-sub);line-height:1.5}
+.guarantee strong{display:block;color:var(--maroon-deep);margin-bottom:0.4rem;font-family:'DM Serif Display',serif;font-size:1.05rem}
+
+@media (max-width:880px){.offer-block{grid-template-columns:1fr;padding:1.4rem;gap:1.5rem}}
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO STRUCTURE · Upsell #1 (One-Click) · Step 4 of 6 · <a href="ananda-v3-temple-garden.html">← back to home</a></div>
+
+<div class="success-bar">
+  ✓  <strong>Order confirmed.</strong>  Your access has been emailed. Now — one exclusive offer just for you.
+</div>
+
+<section class="upsell">
+  <div class="container">
+    <div class="upsell-head">
+      <span class="eyebrow">Maria, this offer is only on this page</span>
+      <h1>Add the <em>signature program</em> at 60% off</h1>
+      <p class="lead">Sarita's most-loved 6-week immersion. Available only at this moment, only for students who just joined. Once you leave this page, the offer disappears.</p>
+    </div>
+
+    <div class="offer-block">
+      <div class="offer-img" role="img" aria-label="Sacred Touch program"></div>
+      <div class="offer-content">
+        <span class="eyebrow">6 weeks · 24 lessons · 12h video</span>
+        <h2>Sacred Touch · couples journey</h2>
+        <p>The most-loved six-week immersion in Sarita's catalog. From breath to touch to communion — a full map for partners (or solo practice).</p>
+        <ul class="offer-features">
+          <li>24 video lessons (12h total) with Sarita and lead facilitator</li>
+          <li>Weekly live Q&amp;A circle (90 min, included for 6 weeks)</li>
+          <li>Audio guided meditations (8 tracks)</li>
+          <li>Private community of Sacred Touch students</li>
+          <li>Lifetime access — couples or solo</li>
+        </ul>
+        <div class="price-row">
+          <span class="price-old">$497</span>
+          <span class="price-now">$197</span>
+          <span class="price-save">−60% · this page only</span>
+        </div>
+        <div class="cta-stack">
+          <button class="btn-yes" onclick="window.location.href='funnel-upsell-2.html?session='+sessionStorage.getItem('tantra_funnel_session')+'&u1=yes'">Yes! Add Sacred Touch — $197 →</button>
+          <button class="btn-no" onclick="window.location.href='funnel-upsell-2.html?session='+sessionStorage.getItem('tantra_funnel_session')+'&u1=no'">No thanks — continue without it</button>
+          <div class="no-cc-row">One click · we use the card on file · no re-typing</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-strip">
+      <blockquote>"Sacred Touch saved our marriage. We had stopped seeing each other. Now we can't look away."</blockquote>
+      <cite>— Julien &amp; Camille · Paris · Sacred Touch graduates</cite>
+    </div>
+
+    <div class="guarantee">
+      <strong>30-day money-back · same as before</strong>
+      Try it for 30 days. If it doesn't unlock something for you, email us. Refunded.
+    </div>
+  </div>
+</section>
+
+<script>
+sessionStorage.setItem('tantra_funnel_step', 'upsell-1');
+</script>
+</body>
+</html>

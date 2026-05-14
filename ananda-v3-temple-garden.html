@@ -1,0 +1,4910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ma Ananda Sarita — Return to Your Essence · Temple Garden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   ANANDA SARITA — V3 TEMPLE GARDEN
+   Natural · Botanical · Zen-modern
+   Fonts: DM Serif Display + Inter
+   Palette: ivoire + sage + terracotta + stone
+   ============================================ */
+
+:root {
+  /* Brief Sarita 22/04/2026 · Feminine warm · Pink + Gold + Maroon */
+  --ivoire: #FAF5EC;
+  --ivoire-deep: #F2E9D6;
+  --paper: #FEFBF4;
+  --pink-soft: #F5D9D3;
+  --pink: #D98B83;
+  --pink-mid: #C26B64;
+  --pink-bg: #FCEFEA;
+  --maroon: #8C3645;
+  --maroon-deep: #5D1F2C;
+  --maroon-soft: #C88995;
+  --gold: #C9A35E;
+  --gold-deep: #9E7F47;
+  --gold-soft: #E8D4A2;
+  /* Legacy aliases — keep existing references working (remap to new palette) */
+  --sage: var(--pink-mid);
+  --sage-deep: var(--maroon);
+  --sage-soft: var(--pink-soft);
+  --sage-bg: var(--pink-bg);
+  --terracotta: var(--pink);
+  --terracotta-deep: var(--pink-mid);
+  --terracotta-soft: var(--pink-soft);
+  --stone: #A89A8F;
+  --stone-deep: #6B5A4E;
+  --ink: #2A1A1E;
+  --ink-sub: #5E4A4E;
+  --ink-muted: #8C7A7E;
+  --gold-subtle: var(--gold);
+  --border: rgba(93,117,95,0.15);
+  --border-soft: rgba(93,117,95,0.08);
+  --shadow-sm: 0 2px 14px rgba(45,42,36,0.06);
+  --shadow: 0 14px 40px rgba(45,42,36,0.08);
+  --shadow-lg: 0 30px 80px rgba(45,42,36,0.12);
+  --radius: 24px;
+  --radius-sm: 14px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --max-w: 1240px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--ivoire);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img, video { max-width: 100%; height: auto; display: block; }
+
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; position: relative; }
+
+h1, h2, h3, h4 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.serif-italic { font-family: 'DM Serif Display', serif; font-style: italic; font-weight: 400; }
+
+.eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  margin-bottom: 1.2rem;
+}
+
+/* Leaf / botanical subtle background texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(143,166,142,0.06) 0%, transparent 25%),
+    radial-gradient(circle at 85% 75%, rgba(201,123,94,0.04) 0%, transparent 25%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(244,241,232,0.85);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition: var(--transition);
+}
+nav.scrolled {
+  background: rgba(244,241,232,0.95);
+  box-shadow: 0 1px 16px rgba(45,42,36,0.05);
+}
+.nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 86px;
+}
+.logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+.logo-lotus {
+  width: 46px; height: 46px;
+  display: block;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(201,163,94,0.25));
+  transition: var(--transition);
+}
+.logo:hover .logo-lotus { transform: rotate(-6deg) scale(1.05); }
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 2px;
+}
+.logo-tantra {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.13em;
+  color: var(--maroon);
+  font-weight: 400;
+}
+.logo-essence {
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.84rem;
+  letter-spacing: 0.36em;
+  color: var(--maroon);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 2px;
+}
+@media (max-width: 720px) {
+  .logo-lotus { width: 38px; height: 38px; }
+  .logo-tantra { font-size: 1.1rem; letter-spacing: 0.1em; }
+  .logo-essence { font-size: 0.7rem; letter-spacing: 0.28em; }
+}
+
+.nav-links {
+  display: flex; align-items: center; gap: 2.4rem;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+}
+.nav-links li { position: relative; }
+.nav-links > li > a {
+  color: var(--ink);
+  text-decoration: none;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.nav-links > li > a:hover {
+  color: var(--maroon);
+  border-bottom-color: var(--gold);
+}
+.nav-chevron {
+  display: inline-block;
+  width: 14px; height: 14px;
+  transition: transform 0.3s;
+  color: var(--ink-sub);
+  font-size: 0.7em;
+}
+.nav-links li:hover .nav-chevron { transform: rotate(180deg); }
+
+/* Dropdown "More" — beautiful panel */
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  min-width: 560px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 99;
+}
+.nav-links li:hover .nav-dropdown,
+.nav-links li:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--ink);
+  transition: var(--transition);
+}
+.nav-dropdown-item:hover { background: var(--ivoire-deep); }
+.nav-dropdown-icon {
+  width: 22px; height: 22px;
+  flex-shrink: 0;
+  color: var(--maroon);
+  margin-top: 2px;
+}
+.nav-dropdown-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  display: block;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+.nav-dropdown-desc {
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+  display: block;
+  line-height: 1.35;
+}
+
+/* Donate CTA — gold, distinctive (like original site) */
+.nav-cta {
+  background: linear-gradient(135deg, #F7D560 0%, #E9A93C 100%);
+  color: var(--maroon-deep);
+  padding: 0.78rem 1.7rem;
+  border-radius: var(--radius-full);
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(201,163,94,0.35);
+  flex-shrink: 0;
+}
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201,163,94,0.5);
+  background: linear-gradient(135deg, #FFE793 0%, #F0B544 100%);
+}
+
+@media (max-width: 980px) {
+  .nav-links { gap: 1.4rem; }
+  .nav-links > li > a { font-size: 1rem; }
+  .nav-dropdown { min-width: 320px; grid-template-columns: 1fr; }
+  .nav-cta { padding: 0.6rem 1.2rem; font-size: 0.95rem; }
+}
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+}
+
+/* ===== HERO (split 2 columns : copy left · video right) ===== */
+.hero {
+  min-height: 88vh;
+  padding-top: 86px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background:
+    radial-gradient(ellipse at top left, var(--pink-bg) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom right, rgba(217,139,131,0.18) 0%, transparent 60%),
+    var(--ivoire);
+  position: relative;
+  overflow: hidden;
+}
+.hero-copy {
+  display: flex;
+  align-items: center;
+  padding: 3rem 3.5rem 3rem 4rem;
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+.hero-copy-inner {
+  max-width: 540px;
+  width: 100%;
+  animation: heroFade 1.6s ease-out;
+}
+.hero-copy .eyebrow {
+  color: var(--maroon);
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+  display: inline-block;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 4.6vw, 4rem);
+  font-weight: 400;
+  line-height: 1.05;
+  margin-bottom: 1.4rem;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  font-family: 'DM Serif Display', serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--pink-mid);
+  font-weight: 400;
+}
+.hero p.lead {
+  font-size: 1.05rem;
+  color: var(--ink-sub);
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
+  font-weight: 400;
+  max-width: 480px;
+}
+.hero-ctas { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+
+/* Hero badges (stats inline below CTAs) */
+.hero-badges {
+  display: flex;
+  gap: 2.4rem;
+  margin-top: 2.6rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.hero-badge { display: flex; flex-direction: column; font-size: 0.74rem; }
+.hero-badge strong {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.7rem;
+  color: var(--maroon);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+}
+.hero-badge span {
+  color: var(--ink-muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+/* Right visual — contains the video */
+.hero-visual {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, var(--pink-soft) 0%, var(--maroon-soft) 100%),
+    url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=85&auto=format&fit=crop') center/cover;
+  background-blend-mode: multiply;
+}
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 35%;
+  z-index: 0;
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  z-index: 1;
+}
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(90deg, var(--ivoire) 0%, transparent 18%),
+    linear-gradient(180deg, transparent 70%, rgba(45,26,30,0.18) 100%);
+  pointer-events: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.9rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.93rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  font-family: inherit;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn-primary:hover {
+  background: var(--sage-deep);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.btn-sage {
+  background: var(--sage-deep);
+  color: var(--paper);
+}
+.btn-sage:hover {
+  background: var(--ink);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.btn-outline:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn-terracotta {
+  background: var(--terracotta);
+  color: var(--paper);
+}
+.btn-terracotta:hover {
+  background: var(--terracotta-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(201,123,94,0.3);
+}
+
+.hero-visual {
+  position: relative;
+  overflow: hidden;
+  background: var(--sage-bg);
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(244,241,232,0.3) 0%, transparent 30%),
+    linear-gradient(180deg, transparent 60%, rgba(45,42,36,0.3) 100%);
+  z-index: 2;
+}
+
+/* Organic shape decoration */
+.hero-blob {
+  position: absolute;
+  bottom: -100px;
+  left: 45%;
+  width: 300px;
+  height: 300px;
+  background: var(--terracotta-soft);
+  border-radius: 50% 30% 60% 40%;
+  opacity: 0.15;
+  z-index: 0;
+  animation: blobFloat 16s ease-in-out infinite;
+}
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(20px, -30px) rotate(60deg); }
+  66% { transform: translate(-30px, 20px) rotate(120deg); }
+}
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero badges — on ivoire background */
+.hero-badges {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.hero-badge {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.78rem;
+}
+.hero-badge strong {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.7rem;
+  color: var(--sage-deep);
+  font-weight: 400;
+  line-height: 1;
+}
+.hero-badge span {
+  color: var(--ink-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 0.35rem;
+}
+
+/* ===== SECTION BASE ===== */
+.section { padding: 7rem 0; position: relative; z-index: 1; }
+.section-head { text-align: center; max-width: 720px; margin: 0 auto 4.5rem; }
+.section h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+.section h2 em { font-style: italic; color: var(--terracotta); }
+.section-lead {
+  font-size: 1.1rem;
+  color: var(--ink-sub);
+  line-height: 1.75;
+}
+
+/* ===== PATHS ===== */
+.paths { background: var(--paper); }
+.paths-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+.path {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 0;
+  text-align: center;
+  border: 1px solid var(--border-soft);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.path-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center 20%;
+  position: relative;
+  background-color: var(--pink-bg);
+}
+.path-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(45,26,30,0.25) 100%);
+}
+.path-content {
+  padding: 2.2rem 1.8rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.path-content h3 {
+  color: var(--maroon);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.path-content p {
+  flex: 1;
+  color: var(--ink-sub);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  margin-bottom: 1.4rem;
+}
+.path-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #F7D560 0%, #E9A93C 100%);
+  color: var(--maroon-deep);
+  padding: 0.95rem 1.8rem;
+  border-radius: var(--radius-full);
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(201,163,94,0.35);
+  letter-spacing: 0.01em;
+  width: 100%;
+  text-align: center;
+}
+.path-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201,163,94,0.5);
+  background: linear-gradient(135deg, #FFE793 0%, #F0B544 100%);
+}
+@media (max-width: 880px) {
+  .paths-grid { grid-template-columns: 1fr; }
+  .path-image { aspect-ratio: 16 / 9; }
+}
+.path::before {
+  content: '';
+  position: absolute;
+  top: -50px; right: -50px;
+  width: 160px; height: 160px;
+  background: var(--sage-soft);
+  border-radius: 50%;
+  opacity: 0.2;
+  transition: var(--transition);
+}
+.path-2::before { background: var(--terracotta-soft); opacity: 0.25; }
+.path-3::before { background: var(--sage); opacity: 0.15; }
+.path:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+.path:hover::before { transform: scale(1.2); }
+.path-symbol {
+  width: 78px; height: 78px;
+  margin: 0 auto 1.6rem;
+  border-radius: 50%;
+  background: var(--paper);
+  display: grid;
+  place-items: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  color: var(--sage-deep);
+  border: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+.path-2 .path-symbol { color: var(--terracotta); }
+.path h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.7rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+.path p {
+  color: var(--ink-sub);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+.path-link {
+  display: inline-block;
+  margin-top: 1.4rem;
+  color: var(--terracotta);
+  font-size: 0.88rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+}
+.path:hover .path-link { color: var(--terracotta-deep); transform: translateX(4px); }
+
+/* ===== PROGRAMS (Netflix-style rows) ===== */
+.programs {
+  background: linear-gradient(180deg, var(--ivoire) 0%, var(--pink-bg) 100%);
+}
+.programs .section-head { text-align: left; max-width: none; margin-bottom: 3rem; }
+.nf-row { margin-bottom: 3.2rem; position: relative; }
+.nf-row-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  padding: 0 0.2rem;
+}
+.nf-row-head h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--ink);
+}
+.nf-row-head h3 em { font-style: italic; color: var(--pink-mid); }
+.nf-row-head a {
+  color: var(--maroon);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+.nf-row-head a:hover { color: var(--pink-mid); letter-spacing: 0.18em; }
+.nf-scroll {
+  display: flex;
+  gap: 0.9rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.6rem 0.2rem 1.4rem;
+  margin: 0 -0.2rem;
+}
+.nf-scroll::-webkit-scrollbar { display: none; }
+.nf-card {
+  flex: 0 0 260px;
+  background: var(--paper);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+  border: 1px solid var(--border-soft);
+  position: relative;
+}
+.nf-card:hover {
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 18px 42px rgba(140,54,69,0.18);
+  z-index: 2;
+}
+.nf-thumb {
+  aspect-ratio: 16/10;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--pink-soft);
+  background-size: cover !important;
+  background-position: center !important;
+}
+.nf-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(45,26,30,0.6) 0%, transparent 50%);
+}
+.nf-num {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.2rem;
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 5.2rem;
+  color: rgba(255,255,255,0.92);
+  font-weight: 500;
+  line-height: 1;
+  -webkit-text-stroke: 2px rgba(45,26,30,0.45);
+  text-stroke: 2px rgba(45,26,30,0.45);
+  z-index: 2;
+  letter-spacing: -0.02em;
+}
+.nf-dur {
+  position: absolute;
+  top: 0.7rem; left: 0.7rem;
+  background: rgba(45,26,30,0.72);
+  color: var(--paper);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+.nf-body { padding: 0.85rem 1rem 1.1rem; }
+.nf-cat {
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pink-mid);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.nf-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.02rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+.nf-meta { font-size: 0.72rem; color: var(--ink-muted); }
+
+/* keep legacy prog-card-v3 (used elsewhere) */
+.prog-card-v3 {
+  background: var(--paper);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  transition: var(--transition);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.prog-card-v3:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+.prog-card-v3 .prog-img {
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, var(--sage-soft) 0%, var(--terracotta-soft) 100%);
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.prog-feat .prog-img { aspect-ratio: 4/5; }
+.prog-card-v3 .prog-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(45,42,36,0.25) 0%, transparent 45%);
+}
+.prog-tag {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background: var(--paper);
+  color: var(--terracotta);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--terracotta-soft);
+}
+.prog-card-v3 .prog-body { padding: 1.6rem 1.4rem; flex: 1; display: flex; flex-direction: column; }
+.prog-card-v3 .prog-cat {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.prog-card-v3 h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 0.7rem;
+  color: var(--ink);
+}
+.prog-feat h3 { font-size: 1.7rem; }
+.prog-card-v3 .prog-desc {
+  color: var(--ink-sub);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  flex: 1;
+}
+.prog-card-v3 .prog-meta {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  display: flex;
+  gap: 1rem;
+}
+
+/* ===== RETREAT ===== */
+.retreat {
+  background: var(--paper);
+}
+.retreat-wrap {
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, var(--sage-deep) 0%, var(--ink) 100%);
+  color: var(--paper);
+  overflow: hidden;
+  padding: 5rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.retreat-wrap::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -150px;
+  width: 500px; height: 500px;
+  background: var(--terracotta);
+  border-radius: 50%;
+  opacity: 0.12;
+}
+.retreat-content h2 { color: var(--paper); }
+.retreat-content h2 em { color: var(--terracotta-soft); }
+.retreat-content .eyebrow { color: var(--terracotta-soft); }
+.retreat-content p {
+  color: rgba(244,241,232,0.85);
+  font-size: 1.08rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+.retreat-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2.2rem 0 2.5rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid rgba(244,241,232,0.18);
+  border-bottom: 1px solid rgba(244,241,232,0.18);
+}
+.retreat-meta-item span:first-child {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta-soft);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.retreat-meta-item span:last-child {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.25rem;
+  color: var(--paper);
+}
+.retreat-image {
+  aspect-ratio: 4/5;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(0deg, rgba(45,42,36,0.3) 0%, transparent 40%),
+    url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&q=80&auto=format&fit=crop') center/cover,
+    linear-gradient(135deg, var(--terracotta) 0%, var(--sage-deep) 100%);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(45,42,36,0.3);
+}
+
+/* ===== ABOUT ===== */
+.about { background: var(--ivoire); }
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.about-img-wrap {
+  position: relative;
+}
+.about-img {
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-lg);
+  background:
+    url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=900&q=80&auto=format&fit=crop') center/cover,
+    linear-gradient(135deg, var(--sage-soft) 0%, var(--terracotta-soft) 100%);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(45,42,36,0.2);
+}
+.about-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 50%, rgba(45,42,36,0.3) 100%);
+}
+.about-badge {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background: var(--paper);
+  padding: 1.4rem 1.8rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-soft);
+}
+.about-badge-num {
+  display: block;
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.5rem;
+  color: var(--terracotta);
+  font-style: italic;
+  line-height: 1;
+}
+.about-badge-lbl {
+  display: block;
+  font-size: 0.74rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+.about-content p {
+  font-size: 1.06rem;
+  color: var(--ink-sub);
+  line-height: 1.78;
+  margin-bottom: 1rem;
+}
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.about-stat {
+  text-align: left;
+}
+.about-stat-num {
+  display: block;
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  color: var(--sage-deep);
+  line-height: 1;
+}
+.about-stat-lbl {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+
+/* ===== PILLARS (what we offer) ===== */
+.pillars { background: var(--sage-bg); }
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.pillar {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 2.2rem 1.6rem;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid var(--border-soft);
+}
+.pillar:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--sage-soft);
+}
+.pillar-icon {
+  width: 56px; height: 56px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  background: var(--sage-bg);
+  display: grid;
+  place-items: center;
+  color: var(--sage-deep);
+  border: 1px solid var(--sage-soft);
+}
+.pillar:nth-child(2) .pillar-icon { background: rgba(201,123,94,0.1); color: var(--terracotta); border-color: var(--terracotta-soft); }
+.pillar:nth-child(3) .pillar-icon { background: rgba(184,150,88,0.1); color: var(--gold-subtle); border-color: rgba(184,150,88,0.3); }
+.pillar:nth-child(4) .pillar-icon { background: var(--ivoire-deep); color: var(--stone-deep); border-color: var(--border); }
+.pillar-icon svg { width: 26px; height: 26px; }
+.pillar h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.pillar p {
+  color: var(--ink-sub);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+/* ===== TESTIMONIAL ===== */
+.testimonial {
+  background: var(--paper);
+  text-align: center;
+}
+.testimonial-quote {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.testimonial-quote p {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+.testimonial-quote p::before {
+  content: '"';
+  font-family: 'DM Serif Display', serif;
+  font-size: 5rem;
+  line-height: 0;
+  display: block;
+  color: var(--terracotta);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+.testimonial-author {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.testimonial-author strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--ink);
+  letter-spacing: 0;
+  text-transform: none;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+/* ===== CAPTURE ===== */
+.capture {
+  background: var(--ivoire-deep);
+  position: relative;
+  overflow: hidden;
+}
+.capture::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: -200px;
+  width: 500px; height: 500px;
+  background: var(--sage-soft);
+  border-radius: 50%;
+  opacity: 0.25;
+  transform: translateY(-50%);
+}
+.capture::after {
+  content: '';
+  position: absolute;
+  top: 50%; right: -200px;
+  width: 400px; height: 400px;
+  background: var(--terracotta-soft);
+  border-radius: 50%;
+  opacity: 0.25;
+  transform: translateY(-50%);
+}
+.capture-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.capture h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); }
+.capture p {
+  color: var(--ink-sub);
+  font-size: 1.1rem;
+  margin-bottom: 2.4rem;
+  line-height: 1.7;
+}
+.capture-form {
+  display: flex;
+  gap: 0.6rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.capture-form input {
+  flex: 1;
+  padding: 1rem 1.4rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+.capture-form input:focus { border-color: var(--terracotta); box-shadow: 0 0 0 3px rgba(201,123,94,0.15); }
+.capture-form button {
+  padding: 1rem 1.8rem;
+  border-radius: var(--radius-full);
+  border: none;
+  background: var(--terracotta);
+  color: var(--paper);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+.capture-form button:hover {
+  background: var(--terracotta-deep);
+  transform: translateY(-1px);
+}
+.capture-trust {
+  margin-top: 1.4rem;
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.03em;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--ink);
+  color: rgba(244,241,232,0.7);
+  padding: 5rem 0 2rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+.footer-brand .logo { color: var(--paper); margin-bottom: 1.4rem; }
+.footer-brand .logo-name { color: var(--paper); }
+.footer-brand .logo-mark {
+  background: rgba(244,241,232,0.08);
+  color: var(--terracotta-soft);
+  border-color: rgba(244,241,232,0.2);
+}
+.footer-brand p {
+  color: rgba(244,241,232,0.6);
+  line-height: 1.8;
+  margin-bottom: 1.8rem;
+  max-width: 340px;
+  font-size: 0.95rem;
+}
+.footer-social {
+  display: flex;
+  gap: 0.6rem;
+}
+.footer-social a {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(244,241,232,0.08);
+  display: grid;
+  place-items: center;
+  color: var(--paper);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.footer-social a:hover {
+  background: var(--terracotta);
+  color: var(--paper);
+}
+.footer-social svg { width: 16px; height: 16px; }
+.footer-col h4 {
+  color: var(--paper);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.3rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.7rem; }
+.footer-col a {
+  color: rgba(244,241,232,0.55);
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: var(--transition);
+}
+.footer-col a:hover { color: var(--terracotta-soft); }
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(244,241,232,0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: rgba(244,241,232,0.4);
+}
+.footer-bottom a { color: rgba(244,241,232,0.55); text-decoration: none; margin: 0 0.8rem; }
+.footer-bottom a:hover { color: var(--terracotta-soft); }
+
+/* ============================================
+   NEW SECTIONS (Brief 22/04)
+   ============================================ */
+
+/* ── EVENTS HUB ───────────────────────────── */
+.events { background: var(--pink-bg); }
+/* Filters — grouped & labeled for clarity */
+.events-filters-wrap {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.events-filters-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.6rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px dashed var(--border-soft);
+}
+.events-filters-row:last-child { border-bottom: none; }
+.events-filters-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  min-width: 96px;
+  margin-right: 0.4rem;
+}
+.events-filter {
+  padding: 0.45rem 1rem;
+  background: var(--ivoire);
+  color: var(--ink-sub);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.events-filter:hover {
+  background: var(--pink-soft);
+  color: var(--maroon);
+  border-color: var(--pink);
+}
+.events-filter.active {
+  background: var(--maroon);
+  color: var(--paper);
+  border-color: var(--maroon);
+  box-shadow: 0 4px 12px rgba(140,54,69,0.25);
+}
+.events-results {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-bottom: 2rem;
+  letter-spacing: 0.04em;
+}
+.events-results strong {
+  color: var(--maroon);
+  font-weight: 600;
+}
+.events-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+@media (max-width: 720px) {
+  .events-filters-wrap { padding: 1rem; }
+  .events-filters-label { min-width: 100%; margin-bottom: 0.3rem; font-size: 0.62rem; }
+  .events-filter { font-size: 0.72rem; padding: 0.35rem 0.8rem; }
+}
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+}
+@media (max-width: 880px) { .events-grid { grid-template-columns: 1fr; } }
+.event-card {
+  position: relative;
+  background: var(--paper);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  transition: var(--transition);
+  cursor: pointer;
+  aspect-ratio: 16/10;
+  min-height: 360px;
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
+}
+.event-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(45,26,30,0) 30%, rgba(45,26,30,0.55) 65%, rgba(45,26,30,0.92) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.event-card:hover::after {
+  background: linear-gradient(180deg, rgba(45,26,30,0.05) 25%, rgba(45,26,30,0.65) 60%, rgba(45,26,30,0.95) 100%);
+}
+.event-img {
+  display: none;
+}
+.event-date {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background: var(--paper);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.92rem;
+  color: var(--maroon);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  min-width: 50px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+.event-date span:first-child {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 500;
+}
+.event-date span:last-child {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.64rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+.event-type {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: rgba(140,54,69,0.92);
+  color: var(--paper);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.event-body {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1.4rem 1.6rem 1.4rem;
+  z-index: 2;
+  color: var(--paper);
+}
+.event-card .event-loc { color: var(--gold-soft); }
+.event-card h3 { color: var(--paper) !important; font-size: 1.55rem !important; line-height: 1.15 !important; margin-bottom: 0.5rem !important; }
+.event-card .event-meta { color: rgba(255,255,255,0.85); font-size: 0.85rem; margin-bottom: 0.7rem; }
+.event-card .event-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 0.6rem; border-top: 1px solid rgba(255,255,255,0.2); }
+.event-card .event-price { color: var(--gold-soft); font-family: 'DM Serif Display', serif; font-size: 1rem; font-style: italic; }
+.event-card .event-cta { color: var(--paper); font-weight: 600; font-size: 0.86rem; letter-spacing: 0.04em; }
+.event-type { z-index: 3 !important; }
+.event-date { z-index: 3 !important; }
+.event-loc {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--pink-mid);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.event-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+}
+.event-meta {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.event-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.event-price {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--maroon);
+  font-weight: 500;
+}
+.event-cta {
+  color: var(--maroon);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* ── TEACHERS ──────────────────────────────── */
+.teachers { background: var(--paper); }
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+  margin-bottom: 3rem;
+}
+.teacher {
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.teacher:hover { transform: translateY(-4px); }
+.teacher-photo {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--pink-soft);
+  background-size: cover !important;
+  background-position: center !important;
+  border: 3px solid var(--paper);
+  box-shadow: var(--shadow);
+  margin-bottom: 1.2rem;
+  transition: var(--transition);
+}
+.teacher:hover .teacher-photo {
+  border-color: var(--gold);
+  box-shadow: 0 14px 40px rgba(140,54,69,0.2);
+}
+.teacher h4 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
+}
+.teacher-country {
+  font-size: 0.8rem;
+  color: var(--pink-mid);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.teacher-spec {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+.teacher-cta-row {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-soft);
+}
+
+/* ── GLOBAL PRESENCE ───────────────────────── */
+.global {
+  background:
+    linear-gradient(135deg, var(--maroon-deep) 0%, var(--maroon) 100%);
+  color: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+.global::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(201,163,94,0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(217,139,131,0.15) 0%, transparent 50%);
+}
+.global .section-head h2 { color: var(--paper); }
+.global .section-head h2 em { color: var(--gold-soft); }
+.global .eyebrow { color: var(--gold-soft); }
+.global .section-lead { color: rgba(250,245,236,0.8); max-width: 640px; }
+.global-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 820px;
+  position: relative;
+  z-index: 1;
+}
+.global-stat {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: var(--radius);
+  background: rgba(250,245,236,0.05);
+  border: 1px solid rgba(250,245,236,0.12);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.global-stat-num {
+  display: block;
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+  color: var(--gold-soft);
+  font-style: italic;
+  line-height: 1;
+}
+.global-stat-lbl {
+  display: block;
+  font-size: 0.78rem;
+  color: rgba(250,245,236,0.7);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 0.6rem;
+  font-weight: 500;
+}
+.countries-cloud {
+  text-align: center;
+  padding: 2.4rem 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+.country-chip {
+  display: inline-block;
+  margin: 0.3rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(250,245,236,0.08);
+  color: rgba(250,245,236,0.85);
+  border: 1px solid rgba(250,245,236,0.2);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ── BLOG + PODCAST ────────────────────────── */
+.blog { background: var(--ivoire); }
+.blog-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.blog-main { display: grid; gap: 1.2rem; grid-template-columns: 1fr 1fr; }
+.blog-card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.blog-img {
+  aspect-ratio: 16/10;
+  background-color: var(--pink-soft);
+  background-size: cover !important;
+  background-position: center !important;
+}
+.blog-body { padding: 1.4rem; flex: 1; display: flex; flex-direction: column; }
+.blog-cat {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--pink-mid);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.blog-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.18rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+}
+.blog-meta {
+  margin-top: auto;
+  padding-top: 0.8rem;
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+.podcast-side {
+  background: var(--maroon);
+  border-radius: var(--radius);
+  padding: 2rem;
+  color: var(--paper);
+}
+.podcast-side h3 {
+  font-family: 'DM Serif Display', serif;
+  color: var(--gold-soft);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.podcast-side h3 em { font-style: italic; color: var(--paper); }
+.podcast-side > p {
+  color: rgba(250,245,236,0.8);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+}
+.podcast-ep {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(250,245,236,0.15);
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+.podcast-ep:first-of-type { border-top: 1px solid rgba(250,245,236,0.2); }
+.podcast-play {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: grid;
+  place-items: center;
+  color: var(--maroon-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.podcast-ep-body { flex: 1; }
+.podcast-ep-body strong {
+  display: block;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--paper);
+  line-height: 1.3;
+  margin-bottom: 0.15rem;
+}
+.podcast-ep-body span {
+  font-size: 0.75rem;
+  color: rgba(250,245,236,0.6);
+}
+.podcast-cta {
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: var(--gold-soft);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ── COMMUNITY & MEMBERSHIP ────────────────── */
+.community { background: var(--ivoire); }
+.community-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+}
+.community-card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 3rem 2.5rem;
+  border: 1px solid var(--border-soft);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.community-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.community-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  color: var(--ink);
+}
+.community-card h3 em { font-style: italic; color: var(--pink-mid); }
+.community-card p {
+  color: var(--ink-sub);
+  line-height: 1.7;
+  margin-bottom: 1.4rem;
+}
+.community-features {
+  list-style: none;
+  margin-bottom: 1.8rem;
+}
+.community-features li {
+  padding: 0.45rem 0;
+  color: var(--ink-sub);
+  font-size: 0.94rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.community-features li::before {
+  content: '✓';
+  color: var(--maroon);
+  font-weight: 700;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--pink-soft);
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+.community-price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+.community-price strong {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  color: var(--maroon);
+  font-weight: 500;
+  line-height: 1;
+}
+.community-price span {
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}
+.community-card.premium {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-deep) 100%);
+  color: var(--paper);
+  border: none;
+}
+.community-card.premium h3 { color: var(--paper); }
+.community-card.premium h3 em { color: var(--gold-soft); }
+.community-card.premium p { color: rgba(250,245,236,0.8); }
+.community-card.premium .community-features li { color: rgba(250,245,236,0.9); }
+.community-card.premium .community-features li::before {
+  color: var(--maroon-deep);
+  background: var(--gold-soft);
+}
+.community-card.premium .community-price strong { color: var(--gold-soft); }
+.community-card.premium .community-price span { color: rgba(250,245,236,0.7); }
+.community-badge {
+  position: absolute;
+  top: 1.4rem; right: 1.4rem;
+  background: var(--gold);
+  color: var(--maroon-deep);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-copy { padding: 3rem 2rem; }
+  .hero-visual { min-height: 420px; }
+  .paths-grid,
+  .programs-layout { grid-template-columns: 1fr; }
+  .pillars-grid { grid-template-columns: 1fr 1fr; }
+  .retreat-wrap,
+  .about-layout { grid-template-columns: 1fr; gap: 3rem; padding: 3rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-brand { grid-column: 1 / -1; }
+  .section { padding: 4.5rem 0; }
+}
+@media (max-width: 600px) {
+  .container { padding: 0 1.4rem; }
+  .hero-copy { padding: 2rem 1.4rem; }
+  .hero-ctas { flex-direction: column; }
+  .btn { width: 100%; justify-content: center; }
+  .pillars-grid { grid-template-columns: 1fr; }
+  .retreat-meta,
+  .about-stats { grid-template-columns: 1fr; }
+  .retreat-wrap { padding: 2rem; }
+}
+
+/* ============================================
+   NAV ICÔNES MANDALA — bandeau secondaire animé
+   inspiration tantrayogaibiza.com
+   ============================================ */
+/* NAV unifiée — une seule barre : logo + icônes mandala au centre + CTA
+   Style tantrayogaibiza.com : icônes animées intégrées dans la nav principale */
+.nav-icons-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2.4vw, 2.2rem);
+  flex: 1;
+  margin: 0 1.5rem;
+}
+.nav-icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  color: var(--ink-sub);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: var(--transition);
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+.nav-icon-link:hover { color: var(--maroon); transform: translateY(-1px); }
+.nav-icon-svg {
+  width: 28px;
+  height: 28px;
+  color: var(--gold-deep);
+  transition: transform 1.2s cubic-bezier(0.4,0,0.2,1), color 0.4s;
+  display: block;
+}
+.nav-icon-link:hover .nav-icon-svg {
+  transform: rotate(180deg) scale(1.08);
+  color: var(--maroon);
+}
+.nav-icon-svg.spin { animation: mandala-spin 30s linear infinite; }
+.nav-icon-link:hover .nav-icon-svg.spin { animation-play-state: paused; }
+@keyframes mandala-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media (max-width: 1100px) {
+  .nav-icons-row { gap: 0.7rem; margin: 0 0.8rem; }
+  .nav-icon-svg { width: 24px; height: 24px; }
+  .nav-icon-link { font-size: 0.6rem; }
+}
+@media (max-width: 880px) {
+  /* Mobile : on cache les icônes dans la nav, on garde juste logo + CTA */
+  .nav-icons-row { display: none; }
+}
+
+/* ============================================
+   DETAIL PANEL — slide-in droite
+   pour Programs + Events cliquables
+   ============================================ */
+.detail-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(45,26,30,0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+  z-index: 998;
+}
+.detail-overlay.open { opacity: 1; visibility: visible; }
+.detail-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(720px, 100%);
+  height: 100vh;
+  background: var(--paper);
+  box-shadow: -30px 0 80px rgba(45,26,30,0.25);
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  z-index: 999;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.detail-panel.open { transform: translateX(0); }
+.detail-close {
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ivoire);
+  border: 1px solid var(--border);
+  color: var(--ink);
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin: 1.5rem 1.5rem 0 auto;
+  transition: var(--transition);
+  z-index: 5;
+}
+.detail-close:hover { background: var(--maroon); color: white; transform: rotate(90deg); }
+.detail-hero {
+  position: relative;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  margin-top: -68px;
+}
+.detail-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(45,26,30,0.85) 100%);
+}
+.detail-hero-inner {
+  position: absolute;
+  bottom: 2rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  color: white;
+  z-index: 2;
+}
+.detail-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+.detail-hero h2 {
+  color: white;
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+.detail-hero h2 em { color: var(--gold-soft); font-family: 'DM Serif Display', serif; font-style: italic; }
+.detail-loc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  letter-spacing: 0.05em;
+}
+.detail-body {
+  padding: 2.5rem;
+}
+.detail-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--ivoire-deep);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+.detail-stat strong {
+  display: block;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.4rem;
+  color: var(--maroon);
+  margin-bottom: 0.2rem;
+}
+.detail-stat span {
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+.detail-section { margin-bottom: 2.2rem; }
+.detail-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.9rem;
+  color: var(--maroon-deep);
+}
+.detail-section p {
+  color: var(--ink-sub);
+  line-height: 1.75;
+  margin-bottom: 0.9rem;
+}
+.detail-section ul { list-style: none; padding: 0; }
+.detail-section li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.8rem;
+  color: var(--ink-sub);
+  border-bottom: 1px dashed var(--border);
+}
+.detail-section li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  color: var(--gold-deep);
+  font-size: 0.9rem;
+}
+.detail-section li:last-child { border-bottom: none; }
+.detail-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.detail-cta .btn { flex: 1; min-width: 200px; justify-content: center; }
+.detail-price {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  color: var(--maroon);
+  margin-bottom: 0.3rem;
+}
+.detail-price small {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  margin-left: 0.4rem;
+}
+@media (max-width: 720px) {
+  .detail-panel { width: 100%; }
+  .detail-hero { height: 240px; }
+  .detail-hero-inner { left: 1.5rem; right: 1.5rem; bottom: 1.2rem; }
+  .detail-body { padding: 1.5rem; }
+  .detail-stats { padding: 1rem; }
+}
+
+/* ============================================
+   FREE CLASSES section (HUNTER · lead magnets)
+   ============================================ */
+.freeclasses {
+  background: linear-gradient(180deg, var(--ivoire) 0%, var(--pink-bg) 100%);
+}
+.freeclasses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-bottom: 2.5rem;
+}
+.freeclass-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.freeclass-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: var(--gold);
+}
+.freeclass-featured {
+  grid-column: span 3;
+  background: linear-gradient(135deg, var(--paper) 0%, var(--gold-soft) 100%);
+  border: 2px solid var(--gold);
+  padding: 2rem 1.8rem;
+}
+.freeclass-tag {
+  display: inline-block;
+  background: var(--maroon);
+  color: var(--paper);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  align-self: flex-start;
+}
+.freeclass-card h3 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+  color: var(--ink);
+}
+.freeclass-featured h3 { font-size: 1.7rem; }
+.freeclass-card h3 em { color: var(--maroon); font-style: italic; }
+.freeclass-card p {
+  color: var(--ink-sub);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+.freeclass-meta {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+.freeclass-link {
+  color: var(--maroon);
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  margin-top: auto;
+  align-self: flex-start;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+}
+.freeclass-link:hover { border-bottom-color: var(--maroon); }
+.freeclasses-cta-bar {
+  text-align: center;
+  padding: 2rem;
+  background: var(--paper);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border);
+}
+.freeclasses-cta-bar p {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink-sub);
+  margin-bottom: 1rem;
+}
+@media (max-width: 880px) {
+  .freeclasses-grid { grid-template-columns: 1fr; }
+  .freeclass-featured { grid-column: span 1; padding: 1.6rem; }
+}
+
+/* ============================================
+   ABOUT — enrichments (lead, quote, ctas)
+   ============================================ */
+.about-lead {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  font-family: 'DM Serif Display', serif;
+}
+.about-quote {
+  border-left: 3px solid var(--gold);
+  padding: 0.6rem 1rem;
+  margin: 1.4rem 0;
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  color: var(--maroon-deep);
+  font-size: 1.02rem;
+  line-height: 1.55;
+  background: var(--ivoire-deep);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.about-ctas {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+}
+
+/* ============================================
+   WALL OF LOVE — testimonials grid
+   ============================================ */
+.walloflove {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--ivoire-deep) 100%);
+}
+.wol-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+.wol-card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.5rem;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+.wol-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow: var(--shadow);
+}
+.wol-featured {
+  grid-column: span 2;
+  background: linear-gradient(135deg, var(--paper) 0%, var(--gold-soft) 100%);
+  border: 2px solid var(--gold);
+}
+.wol-stars {
+  font-size: 0.9rem;
+  letter-spacing: 0.5em;
+  color: var(--gold-deep);
+}
+.wol-card blockquote {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--ink);
+  border: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+.wol-featured blockquote { font-size: 1.3rem; }
+.wol-author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--border);
+}
+.wol-avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: var(--paper);
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.3);
+}
+.wol-author strong {
+  display: block;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.1;
+}
+.wol-author span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  margin-top: 2px;
+}
+@media (max-width: 880px) {
+  .wol-grid { grid-template-columns: 1fr; }
+  .wol-featured { grid-column: span 1; }
+  .wol-featured blockquote { font-size: 1.1rem; }
+}
+
+/* Cards cliquables — feedback visuel */
+.nf-card, .event-card { cursor: pointer; }
+.nf-card:focus-visible, .event-card:focus-visible {
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 4px;
+}
+
+/* Hero photo — Ma Ananda Sarita portrait (Ken Burns lent) */
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/01f3ae6-f70f-b7aa-0d45-7d0155671e10_Ma-Ananda-Sarita_Portraits-2.webp');
+  background-size: cover;
+  background-position: center 30%;
+  z-index: 1;
+  animation: heroKenBurns 22s ease-in-out infinite alternate;
+}
+@keyframes heroKenBurns {
+  0%   { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1%, -1%); }
+}
+.hero-visual::before {
+  background-image: linear-gradient(135deg, var(--pink-soft) 0%, var(--maroon-soft) 60%, var(--gold-soft) 100%) !important;
+  background-position: center !important;
+  background-size: cover !important;
+  opacity: 0.3;
+}
+.hero-visual::after {
+  background: linear-gradient(90deg, rgba(250,245,236,0.4) 0%, transparent 30%, transparent 70%, rgba(45,26,30,0.15) 100%) !important;
+  z-index: 2;
+}
+
+/* AUDIENCE SECTIONS (Tantra for Women/Men/Couples integrated in home) */
+.audience-section { padding: 4rem 0; }
+.audience-section.alt { background: var(--paper); }
+.audience-hero { display: grid; grid-template-columns: 1fr 1.1fr; gap: 2.5rem; align-items: center; margin-bottom: 2.5rem; }
+.audience-hero.reverse { grid-template-columns: 1.1fr 1fr; }
+.audience-hero.reverse .audience-hero-img { order: 2; }
+.audience-hero-img { aspect-ratio: 4/5; border-radius: var(--radius); background-size: cover; background-position: center; box-shadow: var(--shadow-lg); }
+.audience-hero-content h2 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 1rem; line-height: 1.1; color: var(--maroon); }
+.audience-hero-content h2 em { color: var(--maroon-deep); font-style: italic; }
+.audience-hero-content .lead { font-style: italic; font-family: 'DM Serif Display', serif; font-size: 1.18rem; color: var(--maroon-deep); margin-bottom: 1rem; }
+.audience-hero-content p { color: var(--ink-sub); margin-bottom: 1rem; }
+.audience-retreats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+.audience-retreat { position: relative; aspect-ratio: 3/4; background-size: cover; background-position: center; border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: var(--transition); display: block; text-decoration: none; }
+.audience-retreat:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.audience-retreat::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(45,26,30,0) 30%, rgba(45,26,30,0.55) 65%, rgba(45,26,30,0.95) 100%); }
+.ar-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem 1.1rem; color: var(--paper); z-index: 2; }
+.ar-tag { display: block; font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-soft); font-weight: 600; margin-bottom: 0.3rem; }
+.ar-overlay h4 { color: var(--paper); font-size: 1.05rem; line-height: 1.2; margin-bottom: 0.2rem; font-family: 'DM Serif Display', serif; font-weight: 400; }
+.ar-meta { font-size: 0.78rem; color: rgba(255,255,255,0.85); }
+.audience-cta { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+@media (max-width: 880px) {
+  .audience-hero { grid-template-columns: 1fr !important; }
+  .audience-hero.reverse .audience-hero-img { order: 0; }
+  .audience-retreats { grid-template-columns: repeat(2, 1fr); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV unifiée : logo + icônes mandala au centre + CTA (style tantrayogaibiza) -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo" aria-label="Tantra Essence — Ma Ananda Sarita">
+      <svg class="logo-lotus" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="lotusGrad" x1="0%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#F7D560"/>
+            <stop offset="55%" stop-color="#E9A93C"/>
+            <stop offset="100%" stop-color="#C9A35E"/>
+          </linearGradient>
+          <linearGradient id="lotusGradBack" x1="0%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#E8D4A2"/>
+            <stop offset="100%" stop-color="#9E7F47"/>
+          </linearGradient>
+        </defs>
+        <!-- back petals -->
+        <path d="M32 56 C 14 50 6 32 14 18 C 22 28 26 38 32 56 Z" fill="url(#lotusGradBack)" opacity="0.85"/>
+        <path d="M32 56 C 50 50 58 32 50 18 C 42 28 38 38 32 56 Z" fill="url(#lotusGradBack)" opacity="0.85"/>
+        <!-- mid petals -->
+        <path d="M32 58 C 18 54 10 38 16 24 C 24 32 28 44 32 58 Z" fill="url(#lotusGrad)"/>
+        <path d="M32 58 C 46 54 54 38 48 24 C 40 32 36 44 32 58 Z" fill="url(#lotusGrad)"/>
+        <!-- side petals -->
+        <path d="M32 58 C 22 56 14 44 18 30 C 26 38 30 48 32 58 Z" fill="url(#lotusGrad)" opacity="0.95"/>
+        <path d="M32 58 C 42 56 50 44 46 30 C 38 38 34 48 32 58 Z" fill="url(#lotusGrad)" opacity="0.95"/>
+        <!-- center petal -->
+        <path d="M32 58 C 28 50 28 38 32 22 C 36 38 36 50 32 58 Z" fill="#F7D560"/>
+        <path d="M32 58 C 30 52 30 40 32 28 C 34 40 34 52 32 58 Z" fill="#FFE793"/>
+        <!-- base -->
+        <ellipse cx="32" cy="58" rx="14" ry="2" fill="#9E7F47" opacity="0.4"/>
+      </svg>
+      <span class="logo-text">
+        <span class="logo-tantra">TANTRA</span>
+        <span class="logo-essence">ESSENCE</span>
+      </span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#events">Events</a></li>
+      <li><a href="#freeclasses">Free Classes</a></li>
+      <li>
+        <a href="#about">More <span class="nav-chevron">▾</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="#programs" class="nav-dropdown-item">
+            <svg class="nav-dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 3v6M3 12h6M12 21v-6M21 12h-6"/></svg>
+            <span><strong class="nav-dropdown-title">Online Programs</strong><span class="nav-dropdown-desc">Self-paced journeys & retreats</span></span>
+          </a>
+          <a href="#about" class="nav-dropdown-item">
+            <svg class="nav-dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+            <span><strong class="nav-dropdown-title">About Sarita</strong><span class="nav-dropdown-desc">Disciple of Osho · Since 1973</span></span>
+          </a>
+          <a href="#teachers" class="nav-dropdown-item">
+            <svg class="nav-dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M14 15h3a4 4 0 0 1 4 4v2"/></svg>
+            <span><strong class="nav-dropdown-title">Team & Teachers</strong><span class="nav-dropdown-desc">Certified guides in 36 countries</span></span>
+          </a>
+          <a href="#library" class="nav-dropdown-item">
+            <svg class="nav-dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 6h20v14H2zM6 6V3h12v3"/></svg>
+            <span><strong class="nav-dropdown-title">My Library</strong><span class="nav-dropdown-desc">Members access portal</span></span>
+          </a>
+          <a href="#blog" class="nav-dropdown-item">
+            <svg class="nav-dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span><strong class="nav-dropdown-title">Blog & Podcast</strong><span class="nav-dropdown-desc">Weekly wisdom · 3 min reads</span></span>
+          </a>
+          <a href="#walloflove" class="nav-dropdown-item">
+            <svg class="nav-dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span><strong class="nav-dropdown-title">Wall of Love</strong><span class="nav-dropdown-desc">Stories from past students</span></span>
+          </a>
+          <a href="#pillars" class="nav-dropdown-item">
+            <svg class="nav-dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+            <span><strong class="nav-dropdown-title">Sacred Shop</strong><span class="nav-dropdown-desc">Tachyon · Music · Books</span></span>
+          </a>
+          <a href="#capture" class="nav-dropdown-item">
+            <svg class="nav-dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h16v16H4zM4 8h16M8 4v16"/></svg>
+            <span><strong class="nav-dropdown-title">Contact</strong><span class="nav-dropdown-desc">Reach the team directly</span></span>
+          </a>
+        </div>
+      </li>
+    </ul>
+
+    <a href="#capture" class="nav-cta">Donate</a>
+  </div>
+
+  <!-- Bandeau icônes mandala — 8 motifs uniques (chacun différent, pas de copier-coller) -->
+  <div class="nav-icons-row">
+    <a href="#paths" class="nav-icon-link" aria-label="Tantra paths">
+      <svg class="nav-icon-svg spin" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="32" cy="32" r="22"/>
+        <circle cx="32" cy="32" r="13"/>
+        <path d="M32 10c-7 8-7 16 0 22 7-6 7-14 0-22zM32 54c-7-8-7-16 0-22 7 6 7 14 0 22zM10 32c8-7 16-7 22 0-6 7-14 7-22 0zM54 32c-8 7-16 7-22 0 6-7 14-7 22 0z"/>
+        <circle cx="32" cy="32" r="3" fill="currentColor"/>
+      </svg>
+      <span>Tantra</span>
+    </a>
+
+    <a href="#programs" class="nav-icon-link" aria-label="Online Programs">
+      <svg class="nav-icon-svg spin" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M32 6l8 16 18 2-13 12 4 18-17-9-17 9 4-18-13-12 18-2z"/>
+        <circle cx="32" cy="32" r="6"/>
+        <circle cx="32" cy="32" r="2" fill="currentColor"/>
+      </svg>
+      <span>Programs</span>
+    </a>
+
+    <a href="#retreats" class="nav-icon-link" aria-label="Retreats">
+      <svg class="nav-icon-svg spin" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 50h40M16 50V32l16-14 16 14v18"/>
+        <path d="M28 50V38h8v12"/>
+        <path d="M32 18l-4-6h8z"/>
+        <circle cx="32" cy="14" r="2" fill="currentColor"/>
+      </svg>
+      <span>Retreats</span>
+    </a>
+
+    <a href="#events" class="nav-icon-link" aria-label="Calendar">
+      <svg class="nav-icon-svg spin" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="10" y="14" width="44" height="42" rx="3"/>
+        <path d="M10 26h44"/>
+        <path d="M22 8v12M42 8v12"/>
+        <circle cx="20" cy="38" r="2" fill="currentColor"/>
+        <circle cx="32" cy="38" r="2" fill="currentColor"/>
+        <circle cx="44" cy="38" r="2" fill="currentColor"/>
+        <circle cx="20" cy="48" r="2" fill="currentColor"/>
+        <circle cx="32" cy="48" r="2" fill="currentColor"/>
+      </svg>
+      <span>Calendar</span>
+    </a>
+
+    <a href="#teachers" class="nav-icon-link" aria-label="Teachers">
+      <svg class="nav-icon-svg spin" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="32" cy="20" r="9"/>
+        <circle cx="14" cy="42" r="7"/>
+        <circle cx="50" cy="42" r="7"/>
+        <path d="M22 32a14 14 0 0 0 20 0"/>
+        <path d="M32 29v5"/>
+      </svg>
+      <span>Teachers</span>
+    </a>
+
+    <a href="#blog" class="nav-icon-link" aria-label="Wisdom">
+      <svg class="nav-icon-svg spin" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="32" cy="32" r="22" stroke-dasharray="4 3"/>
+        <path d="M32 12C24 22 24 42 32 52"/>
+        <path d="M32 12C40 22 40 42 32 52"/>
+        <path d="M12 32h40"/>
+        <circle cx="32" cy="32" r="3" fill="currentColor"/>
+      </svg>
+      <span>Wisdom</span>
+    </a>
+
+    <a href="#community" class="nav-icon-link" aria-label="Community">
+      <svg class="nav-icon-svg spin" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M32 8v48M32 8l8 8M32 8l-8 8"/>
+        <path d="M20 22c4 0 8 3 12 8 4-5 8-8 12-8M14 32c5 0 12 4 18 12 6-8 13-12 18-12"/>
+        <ellipse cx="32" cy="56" rx="14" ry="3"/>
+      </svg>
+      <span>Community</span>
+    </a>
+
+    <a href="#freeclasses" class="nav-icon-link" aria-label="Free Classes">
+      <svg class="nav-icon-svg spin" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="32" cy="32" r="22"/>
+        <path d="M26 22l16 10-16 10z" fill="currentColor"/>
+      </svg>
+      <span>Free Class</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO (split : copy left · video right) -->
+<section class="hero">
+  <div class="hero-copy">
+    <div class="hero-copy-inner">
+      <div class="eyebrow">A Path Of Tantra · Since 1973</div>
+      <h1>Awaken your<br>true <em>essence</em></h1>
+      <p class="lead">I help people awaken their true essence using Tantra. A sublime path to enlightenment that explores polarities and the alchemical transformation when opposites meet in the light of awareness. Welcome to my community.</p>
+      <div class="hero-ctas">
+        <a href="#capture" class="btn btn-terracotta">Join the community →</a>
+        <a href="#events" class="btn btn-outline">Upcoming retreats</a>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge">
+          <strong>53</strong>
+          <span>Years of practice</span>
+        </div>
+        <div class="hero-badge">
+          <strong>17</strong>
+          <span>Years with Osho</span>
+        </div>
+        <div class="hero-badge">
+          <strong>60+</strong>
+          <span>Retreats / year</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+           poster="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/01f3ae6-f70f-b7aa-0d45-7d0155671e10_Ma-Ananda-Sarita_Portraits-2.webp">
+      <source src="yoga-sunrise.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<!-- PATHS — Tantra for Women / Men / Couples (real Sandra positioning) -->
+<section class="section paths" id="paths">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Begin Your Journey</div>
+      <h2>Three <em>sacred paths</em></h2>
+      <p class="section-lead">Tantra meets each soul where it is. Choose the gate that calls you and step through.</p>
+    </div>
+    <div class="paths-grid">
+      <div class="path path-1">
+        <div class="path-image" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3f3ac5-4115-142a-21-d00175a772_Tantra_for_Women.webp');"></div>
+        <div class="path-content">
+          <h3>Tantra for Women</h3>
+          <p>Embrace your divine feminine essence by reclaiming your sensuality and manifest a life full of love, connection and abundance.</p>
+          <a href="tantra-for-women.html" class="path-cta">Tantra for Women</a>
+        </div>
+      </div>
+      <div class="path path-2">
+        <div class="path-image" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/34b70fc-e041-ca85-367b-ce41f24edd58_Tantra-Retreats-Workshops-For-Men4.webp');"></div>
+        <div class="path-content">
+          <h3>Tantra for Men</h3>
+          <p>Unleash your masculine spirit, awaken the life-force within you and embody the loving strength of the sacred masculine.</p>
+          <a href="tantra-for-men.html" class="path-cta">Tantra for Men</a>
+        </div>
+      </div>
+      <div class="path path-3">
+        <div class="path-image" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/1ef4608-c2d-b7b-aeb-c3fac11c6088_Soulmate-Training-Tantra-Essence-Retreats-7.webp');"></div>
+        <div class="path-content">
+          <h3>Tantra for Couples</h3>
+          <p>Explore the depths of your relationship with practices that focus on evolution — Master Lover, Soulmate Levels 1 to 5.</p>
+          <a href="tantra-for-couples.html" class="path-cta">Tantra for Couples</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- PROGRAMS — 5 rows Netflix-style, real Sandra catalog -->
+<section class="section programs" id="programs">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">The Living Path</div>
+      <h2>Transmissions <em>from the teacher</em></h2>
+      <p class="section-lead">Retreats, certifications and immersions crafted by Ma Ananda Sarita and her lineage of certified guides — across Bali, India, Europe and the Americas.</p>
+    </div>
+    <!-- TOP RECOMMENDATIONS — flagship Sarita programs -->
+    <div class="nf-row">
+      <div class="nf-row-head">
+        <h3>Top <em>recommendations</em></h3>
+        <a href="#events">Show all →</a>
+      </div>
+      <div class="nf-scroll">
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">32 days</span>
+            <span class="nf-num">1</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Certification · Bali</div>
+            <div class="nf-title">Tantra Teacher Training</div>
+            <div class="nf-meta">Sarita &amp; Dharmaraj · Jul 2026</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">22 days</span>
+            <span class="nf-num">2</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Teacher Path · Women</div>
+            <div class="nf-title">Goddess Essence Teacher Training</div>
+            <div class="nf-meta">Sarita &amp; Usha Regina · May 2027</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">30 days</span>
+            <span class="nf-num">3</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Massage Certification</div>
+            <div class="nf-title">Mystic Tantra Massage Practitioner</div>
+            <div class="nf-meta">Sarita &amp; Modestas · Apr 2027</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">15 days</span>
+            <span class="nf-num">4</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Sacred Origins</div>
+            <div class="nf-title">Vigyan Bhairav Tantra</div>
+            <div class="nf-meta">Dharamshala · Oct 2026</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1508050919630-b135583b29e8?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">14 days</span>
+            <span class="nf-num">5</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Pilgrimage</div>
+            <div class="nf-title">Sacred Mt Kailash &amp; Kora Pilgrimage</div>
+            <div class="nf-meta">Sarita, Amandeep &amp; Antar Rahi · Sep 2026</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">9 days</span>
+            <span class="nf-num">6</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Temple Tantra · India</div>
+            <div class="nf-title">Khajuraho Tantra Retreat</div>
+            <div class="nf-meta">Sarita, Modestas &amp; Swami Ganga · Nov 2026</div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- FOR WOMEN — real Sandra women catalog -->
+    <div class="nf-row">
+      <div class="nf-row-head">
+        <h3>Tantra for <em>women</em></h3>
+        <a href="#events">Show all →</a>
+      </div>
+      <div class="nf-scroll">
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">7 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Retreat · Bali</div>
+            <div class="nf-title">Goddess Essence Retreat 1&amp;2</div>
+            <div class="nf-meta">Awaken your inner divine feminine</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">5 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Retreat · Bali</div>
+            <div class="nf-title">Menodawn — New Era</div>
+            <div class="nf-meta">A Tantric approach to Menopause</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">4 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Retreat · Bali</div>
+            <div class="nf-title">Alchemy of Her</div>
+            <div class="nf-meta">Embodied feminine awakening</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">4 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Retreat · Switzerland</div>
+            <div class="nf-title">Goddess Essence — Part 3</div>
+            <div class="nf-meta">Tap into your inner divine feminine</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">22 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Teacher Path</div>
+            <div class="nf-title">Goddess Essence Teacher Training</div>
+            <div class="nf-meta">Become a guide for other women</div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- FOR COUPLES — Master Lover + Soulmate Levels -->
+    <div class="nf-row">
+      <div class="nf-row-head">
+        <h3>Tantra for <em>couples</em></h3>
+        <a href="#events">Show all →</a>
+      </div>
+      <div class="nf-scroll">
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1526800651728-b339a11ffd02?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">7 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Retreat · Bali</div>
+            <div class="nf-title">Master Lover Retreat</div>
+            <div class="nf-meta">Secrets of Tantric love-making</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1516589091380-5d8e87df6999?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">7 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Retreat · Bali</div>
+            <div class="nf-title">Soulmate — Level 1</div>
+            <div class="nf-meta">Where lovers turn into Soulmates</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">8 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Retreat · Bali</div>
+            <div class="nf-title">Soulmate — Level 2</div>
+            <div class="nf-meta">For Level 1 graduates</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">7 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Retreat · Bali</div>
+            <div class="nf-title">Soulmate Level 3</div>
+            <div class="nf-meta">For Level 2 graduates</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">2 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Initiation · London</div>
+            <div class="nf-title">Initiation Into Tantra</div>
+            <div class="nf-meta">Singles &amp; couples · Suta &amp; Marali</div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- FOR MEN — Shivoham + masculine path -->
+    <div class="nf-row">
+      <div class="nf-row-head">
+        <h3>Tantra for <em>men</em></h3>
+        <a href="#events">Show all →</a>
+      </div>
+      <div class="nf-scroll">
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">5 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Training · Mexico</div>
+            <div class="nf-title">Shivoham Level 1</div>
+            <div class="nf-meta">Unleash your true masculine power</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1528164344705-47542687000d?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">8 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Training · Dharamshala</div>
+            <div class="nf-title">Shivoham Level 2</div>
+            <div class="nf-meta">Awaken your Solar Plexus power</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">7 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Retreat · Bali</div>
+            <div class="nf-title">Tantra Transformation</div>
+            <div class="nf-meta">Rewrite your life story</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1508050919630-b135583b29e8?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">4 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Training · Czechia</div>
+            <div class="nf-title">Inner Mastery — Anahata</div>
+            <div class="nf-meta">Awaken your Heart Chakra</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">4 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Training · Bali</div>
+            <div class="nf-title">Inner Mastery — Muladhara</div>
+            <div class="nf-meta">Awaken your Root Chakra</div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- TRAININGS & TACHYON — specialised certifications -->
+    <div class="nf-row">
+      <div class="nf-row-head">
+        <h3>Healing &amp; <em>certifications</em></h3>
+        <a href="#events">Show all →</a>
+      </div>
+      <div class="nf-scroll">
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">8 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Retreat · Bali / Greece</div>
+            <div class="nf-title">Tantra Sacred Touch</div>
+            <div class="nf-meta">Chakra Massage, Meditation, Ritual</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">8 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Training · Bali</div>
+            <div class="nf-title">Colour Light Therapy Training</div>
+            <div class="nf-meta">Medicine of Colour &amp; Frequency</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">2 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Training · Bali</div>
+            <div class="nf-title">Tachyon Vertical Reality — Level 1</div>
+            <div class="nf-meta">Tachyon healing — first gate</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1528164344705-47542687000d?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">7 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Training · Bali</div>
+            <div class="nf-title">Tachyon Vertical Reality — Level 3</div>
+            <div class="nf-meta">For Level 2 graduates</div>
+          </div>
+        </article>
+        <article class="nf-card">
+          <div class="nf-thumb" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80&auto=format&fit=crop');">
+            <span class="nf-dur">6 days</span>
+          </div>
+          <div class="nf-body">
+            <div class="nf-cat">Massage · Austin</div>
+            <div class="nf-title">Kashmiri Massage Practitioner</div>
+            <div class="nf-meta">Art of Tantra Massage</div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RETREAT -->
+<section class="section retreat" id="retreats">
+  <div class="container">
+    <div class="retreat-wrap">
+      <div class="retreat-image"></div>
+      <div class="retreat-content">
+        <div class="eyebrow">Featured Retreat · 2026</div>
+        <h2>Tantra Transformation<br><em>Bali</em></h2>
+        <p>Twenty-one days of deep immersion in the sacred jungle of Ubud. Daily practice, ceremony, breathwork, and direct transmission with Ma Ananda Sarita.</p>
+        <div class="retreat-meta">
+          <div class="retreat-meta-item">
+            <span>Dates</span><span>15 Jun — 6 Jul</span>
+          </div>
+          <div class="retreat-meta-item">
+            <span>Location</span><span>Ubud, Bali</span>
+          </div>
+          <div class="retreat-meta-item">
+            <span>Spots left</span><span>12 of 20</span>
+          </div>
+        </div>
+        <a href="#" class="btn btn-terracotta">Apply for Bali →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS HUB — REAL Sandra calendar 2026-2027 (sourced from anandasarita.com) -->
+<section class="section events" id="events">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Events Hub · 60+ retreats</div>
+      <h2>Upcoming <em>retreats &amp; trainings</em></h2>
+      <p class="section-lead">Retreats, initiations, and teacher trainings across the world. From Bali jungle to Mt Kailash pilgrimage, from Khajuraho temples to Ibiza shores — find the gathering that calls your soul.</p>
+    </div>
+    <div class="events-filters-wrap">
+      <div class="events-filters-row">
+        <span class="events-filters-label">Type</span>
+        <button type="button" class="events-filter active" data-filter-group="type" data-filter="all">All events</button>
+        <button type="button" class="events-filter" data-filter-group="type" data-filter="retreat">Retreats</button>
+        <button type="button" class="events-filter" data-filter-group="type" data-filter="training">Trainings</button>
+        <button type="button" class="events-filter" data-filter-group="type" data-filter="initiation">Initiations</button>
+      </div>
+      <div class="events-filters-row">
+        <span class="events-filters-label">Audience</span>
+        <button type="button" class="events-filter active" data-filter-group="audience" data-filter="all">Everyone</button>
+        <button type="button" class="events-filter" data-filter-group="audience" data-filter="women">Women</button>
+        <button type="button" class="events-filter" data-filter-group="audience" data-filter="men">Men</button>
+        <button type="button" class="events-filter" data-filter-group="audience" data-filter="couples">Couples</button>
+        <button type="button" class="events-filter" data-filter-group="audience" data-filter="singles">Singles</button>
+      </div>
+      <div class="events-filters-row">
+        <span class="events-filters-label">Location</span>
+        <button type="button" class="events-filter active" data-filter-group="location" data-filter="all">Worldwide</button>
+        <button type="button" class="events-filter" data-filter-group="location" data-filter="bali">Bali</button>
+        <button type="button" class="events-filter" data-filter-group="location" data-filter="india">India</button>
+        <button type="button" class="events-filter" data-filter-group="location" data-filter="europe">Europe</button>
+        <button type="button" class="events-filter" data-filter-group="location" data-filter="usa">USA</button>
+        <button type="button" class="events-filter" data-filter-group="location" data-filter="mexico">Mexico</button>
+      </div>
+    </div>
+    <div class="events-results"><strong id="eventsCount">12</strong> events shown · <span id="eventsTotal">12</span> total in calendar</div>
+    <div class="events-grid">
+
+      <a href="tantra-sacred-touch-bali.html" class="event-card" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163646077/settings_images/f563a53-2440-b4fe-38ac-1c158d1283_sacred_touch.jpg');">
+        <div class="event-date"><span>11</span><span>May</span></div>
+        <div class="event-type">Retreat</div>
+        <div class="event-body">
+          <div class="event-loc">Bali · Indonesia</div>
+          <h3>Tantra Sacred Touch</h3>
+          <p class="event-meta">8 days · Sarita &amp; Modestas · For everyone</p>
+          <div class="event-footer">
+            <span class="event-price">11–18 May 2026</span>
+            <span class="event-cta">Apply →</span>
+          </div>
+        </div>
+      </a>
+
+      <article class="event-card" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163646077/settings_images/0ca5fe6-1ca0-4c8-86c-b7cd803ce810_web_copy.jpg');">
+        <div class="event-date"><span>17</span><span>May</span></div>
+        <div class="event-type">Retreat</div>
+        <div class="event-body">
+          <div class="event-loc">Bali · Indonesia</div>
+          <h3>Menodawn — New Era</h3>
+          <p class="event-meta">5 days · Amma Usha Regina · Women only</p>
+          <div class="event-footer">
+            <span class="event-price">17–21 May 2026</span>
+            <span class="event-cta">Apply →</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="event-card" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163646077/settings_images/aa818d-0e04-e0a-a1d-31c03f8c4f26_FB_copy.jpg');">
+        <div class="event-date"><span>21</span><span>May</span></div>
+        <div class="event-type">Retreat</div>
+        <div class="event-body">
+          <div class="event-loc">Bali · Indonesia</div>
+          <h3>Soulmate — Level 2</h3>
+          <p class="event-meta">8 days · Ma Ananda Sarita &amp; Modestas · Level 1 graduates</p>
+          <div class="event-footer">
+            <span class="event-price">21–28 May 2026</span>
+            <span class="event-cta">Apply →</span>
+          </div>
+        </div>
+      </article>
+
+      <a href="master-lover-retreat-bali.html" class="event-card" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163646077/settings_images/844e80e-cb50-a6e0-edd-7812c0a445_ML_poster.jpg');">
+        <div class="event-date"><span>01</span><span>Jun</span></div>
+        <div class="event-type">Retreat</div>
+        <div class="event-body">
+          <div class="event-loc">Bali · Indonesia</div>
+          <h3>Master Lover Retreat</h3>
+          <p class="event-meta">7 days · Ma Ananda Sarita &amp; Modestas · Singles &amp; couples</p>
+          <div class="event-footer">
+            <span class="event-price">1–7 Jun 2026</span>
+            <span class="event-cta">Apply →</span>
+          </div>
+        </div>
+      </a>
+
+      <article class="event-card" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163646077/settings_images/e0baa57-2444-c72-cced-f2fe55b0d5b_Square_copy.jpg');">
+        <div class="event-date"><span>13</span><span>Jun</span></div>
+        <div class="event-type">Initiation</div>
+        <div class="event-body">
+          <div class="event-loc">London · UK</div>
+          <h3>Initiation Into Tantra</h3>
+          <p class="event-meta">2 days · Suta &amp; Marali · Singles &amp; couples</p>
+          <div class="event-footer">
+            <span class="event-price">13–14 Jun 2026</span>
+            <span class="event-cta">Reserve →</span>
+          </div>
+        </div>
+      </article>
+
+      <a href="tantra-teacher-training.html" class="event-card" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163646077/settings_images/7ce630-1b43-244-81a7-68d88f0d124_web_ma_copy.jpg');">
+        <div class="event-date"><span>02</span><span>Jul</span></div>
+        <div class="event-type">Training</div>
+        <div class="event-body">
+          <div class="event-loc">Bali · Indonesia</div>
+          <h3>Tantra Teacher Training — Part 1</h3>
+          <p class="event-meta">32 days · Ma Ananda Sarita &amp; Dharmaraj · Top recommendation</p>
+          <div class="event-footer">
+            <span class="event-price">2 Jul – 2 Aug 2026</span>
+            <span class="event-cta">Apply →</span>
+          </div>
+        </div>
+      </a>
+
+      <article class="event-card" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163646077/settings_images/cff548-3e03-07-77e6-e8bab5b7ef84_facebook_copy.jpg');">
+        <div class="event-date"><span>18</span><span>Jul</span></div>
+        <div class="event-type">Retreat</div>
+        <div class="event-body">
+          <div class="event-loc">Corfu · Greece</div>
+          <h3>Tantra Sacred Touch (Greece)</h3>
+          <p class="event-meta">8 days · Prabuddha &amp; Samya · For everyone</p>
+          <div class="event-footer">
+            <span class="event-price">18–25 Jul 2026</span>
+            <span class="event-cta">Apply →</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="event-card" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163646077/settings_images/ddf1d-a0d-e2a0-eb0b-24ad752bcc3b_facebook_may_copy.jpg');">
+        <div class="event-date"><span>06</span><span>Aug</span></div>
+        <div class="event-type">Retreat</div>
+        <div class="event-body">
+          <div class="event-loc">Bali · Indonesia</div>
+          <h3>Alchemy of Her</h3>
+          <p class="event-meta">4 days · Sira &amp; Christa · Women only</p>
+          <div class="event-footer">
+            <span class="event-price">6–9 Aug 2026</span>
+            <span class="event-cta">Apply →</span>
+          </div>
+        </div>
+      </article>
+
+      <a href="sacred-mt-kailash-pilgrimage.html" class="event-card" style="background-image: url('https://images.unsplash.com/photo-1508050919630-b135583b29e8?w=1400&q=85&auto=format&fit=crop');">
+        <div class="event-date"><span>01</span><span>Sep</span></div>
+        <div class="event-type">Retreat</div>
+        <div class="event-body">
+          <div class="event-loc">Mt Kailash · Tibet</div>
+          <h3>Sacred Mt Kailash &amp; Kora Pilgrimage</h3>
+          <p class="event-meta">14 days · Sarita, Amandeep &amp; Antar Rahi · For everyone</p>
+          <div class="event-footer">
+            <span class="event-price">1–14 Sep 2026</span>
+            <span class="event-cta">Apply →</span>
+          </div>
+        </div>
+      </a>
+
+      <article class="event-card" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1400&q=85&auto=format&fit=crop');">
+        <div class="event-date"><span>24</span><span>Oct</span></div>
+        <div class="event-type">Retreat</div>
+        <div class="event-body">
+          <div class="event-loc">Dharamshala · India</div>
+          <h3>Vigyan Bhairav Tantra</h3>
+          <p class="event-meta">15 days · Ma Ananda Sarita &amp; Modestas · For everyone</p>
+          <div class="event-footer">
+            <span class="event-price">24 Oct – 7 Nov 2026</span>
+            <span class="event-cta">Apply →</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="event-card" style="background-image: url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1400&q=85&auto=format&fit=crop');">
+        <div class="event-date"><span>15</span><span>Nov</span></div>
+        <div class="event-type">Retreat</div>
+        <div class="event-body">
+          <div class="event-loc">Khajuraho · India</div>
+          <h3>Khajuraho Tantra Retreat</h3>
+          <p class="event-meta">9 days · Sarita, Modestas &amp; Swami Ganga · For everyone</p>
+          <div class="event-footer">
+            <span class="event-price">15–23 Nov 2026</span>
+            <span class="event-cta">Apply →</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="event-card" style="background-image: url('https://images.unsplash.com/photo-1528164344705-47542687000d?w=1400&q=85&auto=format&fit=crop');">
+        <div class="event-date"><span>09</span><span>Dec</span></div>
+        <div class="event-type">Retreat</div>
+        <div class="event-body">
+          <div class="event-loc">Austin · USA</div>
+          <h3>Tantra Transformation (Austin)</h3>
+          <p class="event-meta">8 days · Dharmaraj &amp; Sira · For everyone</p>
+          <div class="event-footer">
+            <span class="event-price">9–16 Dec 2026</span>
+            <span class="event-cta">Apply →</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <div style="text-align:center; margin-top: 3rem;">
+      <a href="#" class="btn btn-outline">View full 60-event calendar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FREE CLASSES — lead magnets (HUNTER · 0€ to entry)
+     ============================================ -->
+<section class="section freeclasses" id="freeclasses">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Free Wisdom · Begin Now</div>
+      <h2>Free <em>classes</em> &amp; gifts</h2>
+      <p class="section-lead">Begin the path without paying a thing. Six free transmissions handpicked by Sarita to give you a real taste — not a teaser.</p>
+    </div>
+
+    <div class="freeclasses-grid">
+      <article class="freeclass-card freeclass-featured" data-key="Free Tantra Masterclass">
+        <div class="freeclass-tag">Featured · 60 min</div>
+        <h3>Free Tantra <em>Masterclass</em></h3>
+        <p>A complete 60-minute video transmission from Sarita on the foundations of authentic Tantra. The doorway most students walk through to the path.</p>
+        <div class="freeclass-meta">
+          <span>📹 Video · HD</span>
+          <span>🌍 60+ countries</span>
+          <span>⭐ 4.9 / 12k students</span>
+        </div>
+        <a href="#capture" class="btn btn-terracotta">Watch free now →</a>
+      </article>
+
+      <article class="freeclass-card" data-key="Morning Light Activation">
+        <div class="freeclass-tag">Daily practice · 10 min</div>
+        <h3>Morning Light <em>Activation</em></h3>
+        <p>A 10-minute morning practice given freely to every member. Wake up the body, set the heart, meet the day from your essence.</p>
+        <a href="#capture" class="freeclass-link">Listen now →</a>
+      </article>
+
+      <article class="freeclass-card" data-key="Womb Wisdom Sample">
+        <div class="freeclass-tag">For Women · 22 min</div>
+        <h3>Womb Wisdom <em>Sample</em></h3>
+        <p>The first chapter of the women's path — a 22-minute guided journey into the wisdom of the body. Free, unlocked, yours forever.</p>
+        <a href="#capture" class="freeclass-link">Receive the gift →</a>
+      </article>
+
+      <article class="freeclass-card" data-key="Sacred Touch Preview">
+        <div class="freeclass-tag">For Couples · 18 min</div>
+        <h3>Sacred Touch <em>Preview</em></h3>
+        <p>The opening practice of the most-loved couples' program. Eye-gazing, breath synchronization — taught in 18 minutes.</p>
+        <a href="#capture" class="freeclass-link">Preview now →</a>
+      </article>
+
+      <article class="freeclass-card" data-key="Weekly Wisdom Newsletter">
+        <div class="freeclass-tag">Newsletter · 3 min/week</div>
+        <h3>Weekly <em>wisdom</em> in your inbox</h3>
+        <p>Three minutes of Tantric wisdom every Sunday. Free — and the doorway most students walk through to the deeper path.</p>
+        <a href="#capture" class="freeclass-link">Subscribe free →</a>
+      </article>
+
+      <article class="freeclass-card" data-key="Tantra Transformation Application">
+        <div class="freeclass-tag">Application · personal</div>
+        <h3>Tantra <em>Transformation</em> Application</h3>
+        <p>Tell us where you stand on the path. Free 1:1 application review by a senior teacher — they'll point you to the right next step.</p>
+        <a href="#capture" class="freeclass-link">Apply free →</a>
+      </article>
+    </div>
+
+    <div class="freeclasses-cta-bar">
+      <p>Want everything in one place?</p>
+      <a href="#capture" class="btn btn-outline">Get full free library →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHERS -->
+<section class="section teachers" id="teachers">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Certified Teachers</div>
+      <h2>Guided by those who<br>walk the <em>living path</em></h2>
+      <p class="section-lead">Meet the global circle of certified Tantra teachers trained in Sarita's lineage — teaching retreats, holding space, and carrying the transmission in 36 countries.</p>
+    </div>
+    <div class="teachers-grid">
+      <div class="teacher">
+        <div class="teacher-photo" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&q=80&auto=format&fit=crop');"></div>
+        <h4>Svenja K.</h4>
+        <div class="teacher-country">Berlin · Germany</div>
+        <p class="teacher-spec">Goddess Essence · Red Tent · Women's circles</p>
+      </div>
+      <div class="teacher">
+        <div class="teacher-photo" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&q=80&auto=format&fit=crop');"></div>
+        <h4>Amélia L.</h4>
+        <div class="teacher-country">London · UK</div>
+        <p class="teacher-spec">Sacred Touch · Couples Tantra · Sound healing</p>
+      </div>
+      <div class="teacher">
+        <div class="teacher-photo" style="background-image: url('https://images.unsplash.com/photo-1463453091185-61582044d556?w=500&q=80&auto=format&fit=crop');"></div>
+        <h4>Marcus T.</h4>
+        <div class="teacher-country">Sydney · Australia</div>
+        <p class="teacher-spec">Masculine Path · Breathwork · Men's circles</p>
+      </div>
+      <div class="teacher">
+        <div class="teacher-photo" style="background-image: url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=80&auto=format&fit=crop');"></div>
+        <h4>Priya S.</h4>
+        <div class="teacher-country">Mumbai · India</div>
+        <p class="teacher-spec">Tantra Essentials · Meditation · Yoga Nidra</p>
+      </div>
+    </div>
+    <div class="teacher-cta-row">
+      <a href="#" class="btn btn-terracotta" style="margin-right:0.6rem;">Browse full directory</a>
+      <a href="#" class="btn btn-outline">Become a certified teacher →</a>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL PRESENCE -->
+<section class="section global">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Global Sangha</div>
+      <h2>Present in <em>36 countries</em><br>across five continents</h2>
+      <p class="section-lead">From the jungles of Bali to the mountains of Sedona, the Ananda Sarita lineage breathes in circles of practice on every inhabited continent.</p>
+    </div>
+    <div class="global-stats">
+      <div class="global-stat">
+        <span class="global-stat-num">36+</span>
+        <span class="global-stat-lbl">Countries</span>
+      </div>
+      <div class="global-stat">
+        <span class="global-stat-num">25k+</span>
+        <span class="global-stat-lbl">Students</span>
+      </div>
+      <div class="global-stat">
+        <span class="global-stat-num">120+</span>
+        <span class="global-stat-lbl">Certified Teachers</span>
+      </div>
+      <div class="global-stat">
+        <span class="global-stat-num">30+</span>
+        <span class="global-stat-lbl">Years of Lineage</span>
+      </div>
+    </div>
+    <div class="countries-cloud">
+      <span class="country-chip">🇬🇧 UK</span>
+      <span class="country-chip">🇺🇸 USA</span>
+      <span class="country-chip">🇩🇪 Germany</span>
+      <span class="country-chip">🇫🇷 France</span>
+      <span class="country-chip">🇮🇹 Italy</span>
+      <span class="country-chip">🇪🇸 Spain</span>
+      <span class="country-chip">🇳🇱 Netherlands</span>
+      <span class="country-chip">🇦🇹 Austria</span>
+      <span class="country-chip">🇨🇭 Switzerland</span>
+      <span class="country-chip">🇮🇩 Indonesia</span>
+      <span class="country-chip">🇮🇳 India</span>
+      <span class="country-chip">🇯🇵 Japan</span>
+      <span class="country-chip">🇦🇺 Australia</span>
+      <span class="country-chip">🇳🇿 New Zealand</span>
+      <span class="country-chip">🇧🇷 Brazil</span>
+      <span class="country-chip">🇲🇽 Mexico</span>
+      <span class="country-chip">🇨🇦 Canada</span>
+      <span class="country-chip">🇨🇷 Costa Rica</span>
+      <span class="country-chip">🇿🇦 South Africa</span>
+      <span class="country-chip">🇵🇹 Portugal</span>
+      <span class="country-chip">🇮🇪 Ireland</span>
+      <span class="country-chip">🇱🇰 Sri Lanka</span>
+      <span class="country-chip">+14 more</span>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG + PODCAST -->
+<section class="section blog" id="blog">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Wisdom Library</div>
+      <h2>Blog &amp; <em>podcast</em></h2>
+      <p class="section-lead">Long-form essays, interviews, and recorded transmissions. Over 11 000 seekers read the journal every month — subscribe to walk with us.</p>
+    </div>
+    <div class="blog-layout">
+      <div class="blog-main">
+        <article class="blog-card">
+          <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1528164344705-47542687000d?w=800&q=80&auto=format&fit=crop');"></div>
+          <div class="blog-body">
+            <div class="blog-cat">Essence · 8 min read</div>
+            <h3>The seven gates of Tantra, explained without mystery</h3>
+            <div class="blog-meta">By Ma Ananda Sarita · 12 April 2026</div>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1516589091380-5d8e87df6999?w=800&q=80&auto=format&fit=crop');"></div>
+          <div class="blog-body">
+            <div class="blog-cat">Couples · 6 min read</div>
+            <h3>Why intimacy collapses after year three — and how to return</h3>
+            <div class="blog-meta">By Svenja K. · 2 April 2026</div>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1508050919630-b135583b29e8?w=800&q=80&auto=format&fit=crop');"></div>
+          <div class="blog-body">
+            <div class="blog-cat">Practice · 4 min read</div>
+            <h3>A 10-minute evening practice for when you feel scattered</h3>
+            <div class="blog-meta">By Priya S. · 28 March 2026</div>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80&auto=format&fit=crop');"></div>
+          <div class="blog-body">
+            <div class="blog-cat">Women · 11 min read</div>
+            <h3>The sacred rage no one taught you how to hold</h3>
+            <div class="blog-meta">By Amélia L. · 19 March 2026</div>
+          </div>
+        </article>
+      </div>
+      <aside class="podcast-side">
+        <h3>The <em>Living Path</em> Podcast</h3>
+        <p>Weekly conversations with teachers, students, and elders of the path. Subscribe on Spotify, Apple, or wherever you listen.</p>
+        <div class="podcast-ep">
+          <div class="podcast-play">▶</div>
+          <div class="podcast-ep-body">
+            <strong>Episode 42 · On devotion and discipline</strong>
+            <span>Ma Ananda Sarita &amp; Marcus T. · 54 min</span>
+          </div>
+        </div>
+        <div class="podcast-ep">
+          <div class="podcast-play">▶</div>
+          <div class="podcast-ep-body">
+            <strong>Episode 41 · The mother wound, revisited</strong>
+            <span>Amélia L. · 47 min</span>
+          </div>
+        </div>
+        <div class="podcast-ep">
+          <div class="podcast-play">▶</div>
+          <div class="podcast-ep-body">
+            <strong>Episode 40 · What Osho never said aloud</strong>
+            <span>Ma Ananda Sarita solo · 1h 12 min</span>
+          </div>
+        </div>
+        <a href="#" class="podcast-cta">All episodes →</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<!-- ABOUT SARITA — real authentic story (1973, Osho 17 years, mission) -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-img-wrap">
+        <div class="about-img" style="background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/fa815e1-416-5a6-638e-8ee238e1fe_Ma_Ananda_Sarita_Potrait.webp'); background-position: center 20%;"></div>
+        <div class="about-badge">
+          <span class="about-badge-num">1973</span>
+          <span class="about-badge-lbl">Path begins</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="eyebrow">Meet Ma Ananda Sarita</div>
+        <h2>My mission is to spread<br>the joy of <em>Tantra</em> in the world.</h2>
+        <p class="about-lead">My personal path of Tantra began in 1973, when I first stepped onto the journey of awakening.</p>
+        <p>I had the immense privilege to learn directly from the enlightened mystic <strong>Osho for 17 invaluable years</strong>. That time allowed me to absorb his wisdom and dive deeper into the realms of meditation, love, and Tantric awareness.</p>
+        <p>Since 1989, I have committed myself to practising and teaching authentic Tantra, rooted in <strong>Meditation</strong> and <strong>Love</strong>.</p>
+        <p class="about-quote">"Tantra is a sublime path to enlightenment which explores polarities and the alchemical transformation that takes place when opposites meet in the light of awareness."</p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <span class="about-stat-num">53</span>
+            <span class="about-stat-lbl">Years on the path</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">17</span>
+            <span class="about-stat-lbl">Years with Osho</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">36+</span>
+            <span class="about-stat-lbl">Countries</span>
+          </div>
+        </div>
+        <div class="about-ctas">
+          <a href="#programs" class="btn btn-terracotta">Explore the path →</a>
+          <a href="#walloflove" class="btn btn-outline">Read student stories</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WALL OF LOVE — real testimonials from anandasarita.com -->
+<section class="section walloflove" id="walloflove">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Wall of Love · Real voices</div>
+      <h2>Stories from <em>those who walked</em></h2>
+      <p class="section-lead">Words from teachers, retreat alumni, and students whose lives have been touched by the lineage.</p>
+    </div>
+    <div class="wol-grid">
+      <article class="wol-card wol-featured">
+        <div class="wol-stars">✦ ✦ ✦ ✦ ✦</div>
+        <blockquote>"Sarita is really loving and compassionate. She has tools that work for modern people and can light up a room full of students."</blockquote>
+        <div class="wol-author">
+          <div class="wol-avatar" style="background-image: linear-gradient(135deg, var(--pink-soft), var(--gold-soft));">LM</div>
+          <div>
+            <strong>Layla Martin</strong>
+            <span>Tantra Teacher · Bestselling author</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="wol-card">
+        <div class="wol-stars">✦ ✦ ✦ ✦ ✦</div>
+        <blockquote>"She has unique wisdom about life. It's a privilege to live at the same time as Sarita."</blockquote>
+        <div class="wol-author">
+          <div class="wol-avatar" style="background: linear-gradient(135deg, var(--maroon-soft), var(--maroon));">DA</div>
+          <div>
+            <strong>Swami Deva Ashik</strong>
+            <span>Tantra Teacher · Lineage holder</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="wol-card">
+        <div class="wol-stars">✦ ✦ ✦ ✦ ✦</div>
+        <blockquote>"The Bali Tantra Transformation rewrote my life. I came carrying twenty years of stories. I left holding only the next step."</blockquote>
+        <div class="wol-author">
+          <div class="wol-avatar" style="background: linear-gradient(135deg, var(--gold), var(--gold-deep));">AS</div>
+          <div>
+            <strong>Anna S.</strong>
+            <span>Berlin · Bali 2024 graduate</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="wol-card">
+        <div class="wol-stars">✦ ✦ ✦ ✦ ✦</div>
+        <blockquote>"Goddess Essence gave me back my body. I didn't know I had been gone."</blockquote>
+        <div class="wol-author">
+          <div class="wol-avatar" style="background: linear-gradient(135deg, var(--pink), var(--maroon-soft));">MR</div>
+          <div>
+            <strong>Marina R.</strong>
+            <span>Lisbon · Goddess Essence Pt 1&amp;2</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="wol-card">
+        <div class="wol-stars">✦ ✦ ✦ ✦ ✦</div>
+        <blockquote>"Sacred Touch saved our marriage. We had stopped seeing each other. Now we can't look away."</blockquote>
+        <div class="wol-author">
+          <div class="wol-avatar" style="background: linear-gradient(135deg, var(--pink-soft), var(--maroon));">J&amp;C</div>
+          <div>
+            <strong>Julien &amp; Camille</strong>
+            <span>Paris · Sacred Touch Couples Retreat</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="wol-card">
+        <div class="wol-stars">✦ ✦ ✦ ✦ ✦</div>
+        <blockquote>"The Mt Kailash pilgrimage was the hardest and the most beautiful thing I've ever done. Something in me cracked open at the Drolma La pass."</blockquote>
+        <div class="wol-author">
+          <div class="wol-avatar" style="background: linear-gradient(135deg, var(--ink-sub), var(--ink));">DK</div>
+          <div>
+            <strong>David K.</strong>
+            <span>Toronto · Kailash Kora 2024</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS / SHOP -->
+<section class="section pillars" id="pillars">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Sacred Shop</div>
+      <h2>Tools for the <em>daily practice</em></h2>
+      <p class="section-lead">Carefully curated objects, music, and wisdom to support your path home.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <h3>Tachyon</h3>
+        <p>Healing frequency tools and sacred geometry pieces.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <h3>Sacred Music</h3>
+        <p>Mantras, ceremonial sounds, and tantric chants.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <h3>Books</h3>
+        <p>Written teachings and illuminated wisdom texts.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Community Gift</h3>
+        <p>Donate to the vision. Your gift opens the path for others.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY & MEMBERSHIP -->
+<section class="section community" id="community">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Global Sangha · Members</div>
+      <h2>Walk the path <em>together</em></h2>
+      <p class="section-lead">Two ways to belong — join the free global community circle, or unlock the full premium membership with unlimited access to every program, meditation, and live transmission.</p>
+    </div>
+    <div class="community-grid">
+      <div class="community-card">
+        <h3>Free <em>Community</em></h3>
+        <p>A gentle first step — join thousands of seekers around the world in our free monthly circle.</p>
+        <ul class="community-features">
+          <li>Monthly live meditation with Sarita</li>
+          <li>Weekly wisdom email + podcast</li>
+          <li>Private sangha forum access</li>
+          <li>Free Tantra Essentials masterclass</li>
+        </ul>
+        <div class="community-price">
+          <strong>Free</strong>
+          <span>forever</span>
+        </div>
+        <a href="#capture" class="btn btn-outline">Join the circle</a>
+      </div>
+      <div class="community-card premium">
+        <div class="community-badge">Most loved</div>
+        <h3>Premium <em>Membership</em></h3>
+        <p>The full library — every program, every meditation, every live call. For those who have chosen the living path.</p>
+        <ul class="community-features">
+          <li>All online programs unlocked (value $4k+)</li>
+          <li>200+ guided meditations + 80+ music tracks</li>
+          <li>Weekly live cohort calls with certified teachers</li>
+          <li>Early access + discount on retreats</li>
+          <li>Private monthly Q&amp;A with Sarita</li>
+          <li>Cancel anytime — 14-day full refund</li>
+        </ul>
+        <div class="community-price">
+          <strong>$99</strong>
+          <span>/ month</span>
+        </div>
+        <a href="#" class="btn btn-terracotta">Begin membership →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section testimonial">
+  <div class="container">
+    <div class="testimonial-quote">
+      <p>Sarita opened a door in me I did not know existed. After Bali, my relationship to my own body, to love, to life — everything shifted. This is the real thing.</p>
+      <div class="testimonial-author">
+        <strong>Amelia L.</strong>
+        Bali Retreat 2025 · London
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPTURE -->
+<section class="section capture" id="capture">
+  <div class="container">
+    <div class="capture-inner">
+      <div class="eyebrow">Free Masterclass</div>
+      <h2>The Seven Gates<br>of <em>Tantra</em></h2>
+      <p>Receive instant access to a 45-minute transmission by Ma Ananda Sarita.</p>
+      <form class="capture-form" onsubmit="event.preventDefault(); alert('Demo — connect to ESP.');">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit">Get Access →</button>
+      </form>
+      <p class="capture-trust">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark">a</span>
+          <span class="logo-name">ananda <em>sarita</em></span>
+        </a>
+        <p>Awakening the sacred essence through the living path of Tantra. Retreats, programs, and community since 1989.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5s-.2-1.6-.9-2.3c-.8-.9-1.8-.9-2.2-1C16.8 4 12 4 12 4s-4.8 0-7.9.2c-.4 0-1.4.1-2.2 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.8c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.8.9 1.9.8 2.4.9 1.8.2 7.5.2 7.5.2s4.8 0 7.9-.3c.4 0 1.4-.1 2.2-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.8c0-1.9-.2-3.8-.2-3.8zM9.7 15.2V8.5l6.2 3.4-6.2 3.3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Paths</h4>
+        <ul><li><a href="#">For Women</a></li><li><a href="#">For Men</a></li><li><a href="#">For Couples</a></li><li><a href="#">Teacher Training</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Experiences</h4>
+        <ul><li><a href="#">Programs</a></li><li><a href="#">Retreats</a></li><li><a href="#">Free Classes</a></li><li><a href="#">Library</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul><li><a href="#">Tachyon</a></li><li><a href="#">Music</a></li><li><a href="#">Books</a></li><li><a href="#">Community Gift</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul><li><a href="#">Ma Ananda Sarita</a></li><li><a href="#">Our Team</a></li><li><a href="#">Blog</a></li><li><a href="#">Contact</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Ma Ananda Sarita</div>
+      <div><a href="#">Privacy</a> · <a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- DETAIL PANEL — slide-in droite pour Programs + Events -->
+<div class="detail-overlay" id="detailOverlay" aria-hidden="true"></div>
+<aside class="detail-panel" id="detailPanel" role="dialog" aria-modal="true" aria-labelledby="detailTitle" aria-hidden="true">
+  <button class="detail-close" id="detailClose" aria-label="Close detail">×</button>
+  <div class="detail-hero" id="detailHero">
+    <div class="detail-hero-inner">
+      <span class="detail-tag" id="detailTag"></span>
+      <h2 id="detailTitle"></h2>
+      <div class="detail-loc" id="detailLoc"></div>
+    </div>
+  </div>
+  <div class="detail-body" id="detailBody"></div>
+</aside>
+
+<script>
+/* ============================================
+   NAV scroll behavior
+   ============================================ */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+/* ============================================
+   PROGRAMS + EVENTS DATA — Sandra Essence (REAL)
+   Source : anandasarita.com (scraped 30/04/2026)
+   60+ retreats & trainings 2026-2027
+   ============================================ */
+const SANDRA_DATA_REAL = {
+
+  /* ===== TOP RECOMMENDATIONS (flagship) ===== */
+  "Tantra Teacher Training": {
+    type: "training",
+    tag: "Certification · Bali · Top recommendation",
+    loc: "Bali · 32 days · Sarita & Dharmaraj · 2 Jul – 2 Aug 2026",
+    img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "32-day certification · application required",
+    stats: [["32d","Container"],["Bali","Indonesia"],["Yes","Lineage"],["Yes","Certified"]],
+    intro: "Become a certified Tantra Teacher and spread the joy of Tantra in the world. The flagship training of Sarita's lineage — a 32-day immersion that turns devoted seekers into transmitters of the path.",
+    sections: [
+      { h: "What unfolds", p: "Days woven with theory and direct practice — the philosophy of Tantra (rooted in Vigyan Bhairav and the Osho lineage), meditation methods (active and silent), sacred touch foundations, energy work, ethics for teachers, and the art of holding space for others. Evenings flow with kirtan, integration circles, and silent contemplation under Bali stars." },
+      { h: "What you receive", list: [
+        "Lifetime certification (recognised across Sarita's global community)",
+        "Direct transmission from Ma Ananda Sarita & Dharmaraj",
+        "Full curriculum manual + recorded lectures (lifetime access)",
+        "Mentorship circle (alumni, ongoing post-graduation)",
+        "Permission to teach within Sarita's certified-teachers network",
+        "Pre-training preparation pack + post-training integration support"
+      ]},
+      { h: "Application", p: "Open to dedicated practitioners with at least 2 years of personal Tantra/meditation practice. Application essay + interview with our lead facilitator. We read every word and reply within 7 days." }
+    ],
+    cta: ["Apply for July 2026 →", "Download brochure"]
+  },
+
+  "Goddess Essence Teacher Training": {
+    type: "training",
+    tag: "Teacher Path · Women · Top recommendation",
+    loc: "Bali · 22 days · Sarita & Amma Usha Regina · May 2027",
+    img: "https://images.unsplash.com/photo-1545389336-cf090694435e?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "22-day certification · women only",
+    stats: [["22d","Container"],["Women","Only"],["Yes","Lineage"],["50","Cohort"]],
+    intro: "Become a guide for other women. A 22-day initiation into the lineage of feminine wisdom carried by Ma Ananda Sarita and Amma Usha Regina — and an invitation to carry it forward.",
+    sections: [
+      { h: "The path", p: "Twenty-two days that weave together womb meditation, sacred dance, cycle wisdom, sister-circle facilitation, and the embodied transmission of the divine feminine essence. You leave certified, but more importantly — you leave knowing what you carry, and what you're meant to give." },
+      { h: "Required", list: [
+        "Completion of Goddess Essence Retreat (or equivalent)",
+        "Application essay + 1:1 interview",
+        "Commitment to teaching practice during the year following",
+        "Personal therapeutic support during training",
+        "Devotion — to the path, the lineage, and the women you'll meet"
+      ]}
+    ],
+    cta: ["Apply for May 2027 →", "Download curriculum"]
+  },
+
+  "Mystic Tantra Massage Practitioner": {
+    type: "training",
+    tag: "Massage Certification · Bali",
+    loc: "Bali · 30 days · Sarita & Modestas · 2 Apr – 1 May 2027",
+    img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "30-day certification",
+    stats: [["30d","In-person"],["Yes","Certified"],["1:1","Practice"],["Hands","On"]],
+    intro: "Become a certified Mystic Tantra Massage Practitioner. Thirty Bali days of hands-on training where touch becomes prayer, presence becomes the medicine, and your hands learn the oldest language.",
+    sections: [
+      { h: "Curriculum", list: [
+        "Subtle anatomy — chakras, nadis, marma points",
+        "14 core sequences mastered with peer practice",
+        "Sacred touch ethics & consent framework (rigorous)",
+        "Energetic boundaries for practitioners",
+        "Client intake & integration practice",
+        "Final certification with lineage transmission"
+      ]},
+      { h: "Application", p: "Open to bodyworkers, therapists, healers, and serious practitioners. Minimum 6 months of personal Tantra practice required. Application + 1:1 interview." }
+    ],
+    cta: ["Apply for April 2027 →", "Download syllabus"]
+  },
+
+  "Vigyan Bhairav Tantra": {
+    type: "retreat",
+    tag: "Sacred Origins · Dharamshala",
+    loc: "Dharamshala · 15 days · Sarita & Modestas · 24 Oct – 7 Nov 2026",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "15-day immersion",
+    stats: [["15d","Days"],["112","Sutras"],["India","Dharamshala"],["Sarita","Lead"]],
+    intro: "A sacred journey to the origins of Tantra. Fifteen days in the Himalayan foothills working with the 112 meditation sutras of the Vigyan Bhairav — the seminal text Shiva offered to Devi as the gateway to enlightenment.",
+    sections: [
+      { h: "The transmission", p: "Each day unpacks a handful of sutras through teaching, demonstration, group practice, and silent integration. Sarita and Modestas have spent decades inside this text — what they offer is not theory, but a living map you can follow into your own depths." },
+      { h: "Included", list: [
+        "15 nights mountain retreat accommodation",
+        "All meals (vegetarian, sattvic)",
+        "Daily teachings + practice (5-6h)",
+        "Sutra study guide + recorded talks",
+        "Pre-retreat preparation pack",
+        "Post-retreat 90-day integration container"
+      ]}
+    ],
+    cta: ["Apply for October →", "Pre-retreat reading"]
+  },
+
+  "Sacred Mt Kailash & Kora Pilgrimage": {
+    type: "retreat",
+    tag: "Pilgrimage · Mt Kailash · For everyone",
+    loc: "Mt Kailash · 14 days · Sarita, Amandeep & Antar Rahi · 1–14 Sep 2026",
+    img: "https://images.unsplash.com/photo-1508050919630-b135583b29e8?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "14-day pilgrimage",
+    stats: [["14d","Pilgrimage"],["52km","Kora trek"],["5630m","Pass"],["Sacred","Mountain"]],
+    intro: "A pilgrimage where meditation meets adventure. Fourteen days circling the most sacred mountain on earth — Mt Kailash — abode of Shiva, source of the four great rivers of Asia, and the stillness at the centre of the spinning world.",
+    sections: [
+      { h: "What unfolds", p: "Days of approach through the Tibetan plateau, three days of the Kora circumambulation (52km, crossing the 5630m Drolma La pass), and integration days where the silence of the mountain integrates into the body. Held by Sarita and senior facilitators with deep knowledge of the lineage." },
+      { h: "Practical", list: [
+        "Full ground logistics from Lhasa or Kathmandu (specified at booking)",
+        "Permits, transport, accommodation, all meals",
+        "Pilgrimage guides familiar with sacred protocols",
+        "Pre-pilgrimage altitude & physical preparation guidance",
+        "Daily teachings, mantra practice, and silent walking"
+      ]},
+      { h: "Required", p: "Reasonable physical fitness for high-altitude trekking. Medical clearance recommended. This is a pilgrimage, not a tourist tour — readiness of heart matters as much as readiness of body." }
+    ],
+    cta: ["Apply for September →", "Read trek details"]
+  },
+
+  "Khajuraho Tantra Retreat": {
+    type: "retreat",
+    tag: "Temple Tantra · India",
+    loc: "Khajuraho · 9 days · Sarita, Modestas & Swami Ganga · 15–23 Nov 2026",
+    img: "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "9-day temple retreat",
+    stats: [["9d","Days"],["1000y","Temples"],["UNESCO","Heritage"],["India","Khajuraho"]],
+    intro: "A nine-day retreat woven through the thousand-year-old Tantric temples of Khajuraho — UNESCO heritage, Devi-Shiva carvings still alive with energy, sacred rituals at sites where the path was taught when it had no name.",
+    sections: [
+      { h: "The journey", p: "Mornings in the temple complexes — guided readings of the carvings (the world's oldest Tantric mandala), meditation in the inner sanctums when accessible. Afternoons in the retreat space — practice, teaching, integration. Evenings with sound, kirtan, and the soft Indian dusk." },
+      { h: "Included", list: [
+        "9 nights heritage hotel (private rooms)",
+        "All meals (vegetarian, Indian + international)",
+        "Daily temple visits with private guides",
+        "Practice & teaching sessions with Sarita",
+        "Closing puja at a sacred site",
+        "Post-retreat integration call"
+      ]}
+    ],
+    cta: ["Apply for November →", "Read temple details"]
+  },
+
+  /* ===== FOR WOMEN ===== */
+  "Goddess Essence Retreat 1&2": {
+    type: "retreat",
+    tag: "Retreat · Women only · Bali",
+    loc: "Bali · 7 days · Sarita & Amma Usha Regina",
+    img: "https://images.unsplash.com/photo-1545389336-cf090694435e?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "7-day immersion",
+    stats: [["7d","Bali"],["Women","Only"],["Sarita","Lead"],["Yes","Live"]],
+    intro: "Awaken your inner divine feminine. Seven Bali days held by Ma Ananda Sarita and Amma Usha Regina — the most-attended women's retreat in our calendar.",
+    sections: [
+      { h: "The path", p: "Womb meditation, sacred feminine practices, sister circles, sound healing, and the slow unwinding that only a held container can provide. You arrive carrying. You leave knowing what was yours and what was never yours." },
+      { h: "Included", list: [
+        "7 nights eco-villa accommodation in Bali",
+        "All organic meals (plant-based)",
+        "Full daily container with Sarita & Usha",
+        "Sister-circle private community (1 year)",
+        "Pre-retreat preparation pack",
+        "Post-retreat integration call"
+      ]}
+    ],
+    cta: ["Apply for next cohort →", "Read past sisters' words"]
+  },
+
+  "Menodawn — New Era": {
+    type: "retreat",
+    tag: "Retreat · Women only · Menopause",
+    loc: "Bali · 5 days · Amma Usha Regina · 17–21 May 2026",
+    img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "5-day women's retreat",
+    stats: [["5d","Bali"],["Women","Only"],["Tantric","Approach"],["Usha","Lead"]],
+    intro: "A Tantric approach to Menopause. Five days held by Amma Usha Regina — for the women who refuse to accept the cultural story that this passage is loss, and who feel underneath it the rising of a deeper power.",
+    sections: [
+      { h: "What unfolds", p: "Cycle wisdom for the new era of your body, hormonal balance through Tantric practice, the alchemy of menopausal awakening (kundalini patterns specific to this passage), sisterhood in transition, and the closing ritual where the next chapter is named." },
+      { h: "For", p: "Women in pre-menopause, peri-menopause, and post-menopause. Whether you're 40 or 70, this retreat meets you where you are." }
+    ],
+    cta: ["Apply for May 2026 →", "Read pre-retreat letter"]
+  },
+
+  "Alchemy of Her": {
+    type: "retreat",
+    tag: "Retreat · Women only · Bali",
+    loc: "Bali · 4 days · Sira & Christa · 6–9 Aug 2026",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "4-day women's retreat",
+    stats: [["4d","Bali"],["Women","Only"],["Sira","Christa"],["Embodied","Path"]],
+    intro: "The path of embodied feminine awakening. Four days held by Sira and Christa where the body remembers what the mind tried to forget.",
+    sections: [
+      { h: "The work", p: "Through somatic embodiment, sacred dance, breathwork, and circle initiation, you stop performing femininity and start inhabiting it. Quietly. Fully. Without apology." }
+    ],
+    cta: ["Apply for August →", "Read past words"]
+  },
+
+  "Goddess Essence — Part 3": {
+    type: "retreat",
+    tag: "Retreat · Women · Switzerland",
+    loc: "Switzerland · 4 days · Ma Prem Tanmaya · 7–10 May 2026",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "4-day continuation",
+    stats: [["4d","Swiss"],["Women","Only"],["Tanmaya","Lead"],["Part 3","Series"]],
+    intro: "Tap into your inner divine feminine. The third part of the Goddess Essence series, held by Ma Prem Tanmaya in the Swiss mountains.",
+    sections: [
+      { h: "Required", p: "Open to women who have completed Goddess Essence Part 1&2 (or equivalent). Continuation deepens the lineage transmission." }
+    ],
+    cta: ["Apply for May →", "Read prerequisites"]
+  },
+
+  /* ===== FOR COUPLES ===== */
+  "Master Lover Retreat": {
+    type: "retreat",
+    tag: "Retreat · Singles & Couples · Bali",
+    loc: "Bali · 7 days · Sarita & Modestas · 1–7 Jun 2026",
+    img: "https://images.unsplash.com/photo-1526800651728-b339a11ffd02?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "7-day · per person",
+    stats: [["7d","Bali"],["Yes","Singles"],["Yes","Couples"],["Sarita","Lead"]],
+    intro: "Discover the secrets of Tantric love-making. Seven Bali days held by Ma Ananda Sarita and Modestas — open to singles and couples ready for the deepest container we offer in this domain.",
+    sections: [
+      { h: "What unfolds", p: "From breath to touch to the alchemy of two becoming one, this retreat unfolds the slow, the precise, the eternal art of love as a spiritual practice. Held with consent and care, in private rooms and group containers as practice deepens." },
+      { h: "Included", list: [
+        "7 nights luxury Bali accommodation",
+        "All plant-based meals",
+        "Daily Tantric practice (5-6h, group + paired)",
+        "Sound healing & ceremony evenings",
+        "Closing beloved ceremony",
+        "Post-retreat integration support"
+      ]}
+    ],
+    cta: ["Apply for June →", "Read past lovers' words"]
+  },
+
+  "Soulmate — Level 1": {
+    type: "retreat",
+    tag: "Retreat · Couples only · Bali",
+    loc: "Bali · 7 days · Modestas & Dieke",
+    img: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "7-day · per couple",
+    stats: [["7d","Bali"],["Couples","Only"],["Level 1","Entry"],["10","Couples max"]],
+    intro: "Where lovers turn into Soulmates. The entry level of the most beloved couples' path in Sarita's lineage — a journey that unfolds across five levels for couples who decide to walk it together.",
+    sections: [
+      { h: "The Soulmate path", p: "Five levels, each one deepening what was opened in the previous. Level 1 builds the foundations: presence, breath, sacred touch, conscious communication. The container holds 10 couples maximum, ensuring intimacy and personal attention." }
+    ],
+    cta: ["Apply for next cohort →", "Read about Soulmate path"]
+  },
+
+  "Soulmate — Level 2": {
+    type: "retreat",
+    tag: "Retreat · Couples · Bali",
+    loc: "Bali · 8 days · Sarita & Modestas · 21–28 May 2026",
+    img: "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "8-day · Level 1 graduates only",
+    stats: [["8d","Bali"],["Level","2"],["Sarita","Lead"],["10","Couples"]],
+    intro: "For Level 1 graduates ready to deepen. Eight Bali days where the foundations laid in Level 1 become the soil for the deeper alchemy of Tantric union.",
+    sections: [
+      { h: "Required", p: "Both partners must have completed Soulmate Level 1 (or equivalent assessed by application)." }
+    ],
+    cta: ["Apply for May 2026 →", "Read Level 1 first"]
+  },
+
+  "Soulmate Level 3": {
+    type: "retreat",
+    tag: "Retreat · Couples · Bali",
+    loc: "Bali · 7 days · Sarita & Modestas · 11–17 Oct 2026",
+    img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "7-day · Level 2 graduates only",
+    stats: [["7d","Bali"],["Level","3"],["Sarita","Lead"],["Closed","Container"]],
+    intro: "When lovers turn into Soulmates. The third gate of the path — for couples who have crossed Levels 1 & 2 and feel called to the deeper transmission.",
+    sections: [
+      { h: "What deepens", p: "The previous levels prepared the body and the heart. Level 3 opens the field where two no longer feel separate — and from that field, daily life is rewritten." }
+    ],
+    cta: ["Apply for October →", "Path overview"]
+  },
+
+  "Initiation Into Tantra": {
+    type: "initiation",
+    tag: "Initiation · Singles & Couples",
+    loc: "London · 2 days · Suta & Marali · 13–14 Jun 2026",
+    img: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1400&q=85&auto=format&fit=crop",
+    price: "Reserve",
+    priceNote: "2-day weekend immersion",
+    stats: [["2d","Days"],["London","UK"],["Open","Level"],["Suta","Marali"]],
+    intro: "A 2-day Tantra Immersion in London. The doorway. The most accessible entry into the path — open to singles and couples who want to taste before they commit.",
+    sections: [
+      { h: "What you'll experience", p: "Two days of foundations: what Tantra actually is (and isn't), the chakras as living energy centres, breath as a vehicle, presence as practice, and a daily ritual you can take home." }
+    ],
+    cta: ["Reserve London June →", "Other dates"]
+  },
+
+  /* ===== FOR MEN ===== */
+  "Shivoham Level 1": {
+    type: "training",
+    tag: "Training · Men only · Mexico",
+    loc: "Mexico · 5 days · Amandeep & Dev · 26–30 Jun 2026",
+    img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "5-day men's training",
+    stats: [["5d","Mexico"],["Men","Only"],["Level","1"],["Amandeep","Dev"]],
+    intro: "Unleash your true masculine power. Five Mexican days held by Amandeep and Dev — the entry level of Shivoham, the men's path in Sarita's lineage.",
+    sections: [
+      { h: "The work", p: "Through breath, body, brotherhood, and the slow burning away of the false masculine, you remember what was always yours. Not the performed strength — the rooted one. The one that holds without forcing." }
+    ],
+    cta: ["Apply for June →", "Read about Shivoham"]
+  },
+
+  "Shivoham Level 2": {
+    type: "training",
+    tag: "Training · Men only · India",
+    loc: "Dharamshala · 8 days · Amandeep & Dev · 19–26 Sep 2026",
+    img: "https://images.unsplash.com/photo-1528164344705-47542687000d?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "8-day continuation",
+    stats: [["8d","India"],["Men","Only"],["Level","2"],["Solar","Plexus"]],
+    intro: "Awaken the power of your Solar Plexus. The continuation of Shivoham — eight Himalayan days for men who walked Level 1 and feel ready for the deeper fire.",
+    sections: [
+      { h: "Required", p: "Completion of Shivoham Level 1 (or equivalent assessed by application)." }
+    ],
+    cta: ["Apply for September →", "Path overview"]
+  },
+
+  "Tantra Transformation": {
+    type: "retreat",
+    tag: "Retreat · For everyone · Bali",
+    loc: "Bali · 7 days · Dharmaraj & Sira · multiple dates",
+    img: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "7-day immersion",
+    stats: [["7d","Days"],["Open","All"],["Dharmaraj","Sira"],["Multiple","Dates"]],
+    intro: "Rewrite your life story. Seven days held by Dharmaraj and Sira to release childhood patterns, reprogram the subconscious, and write the next chapter from a clearer place.",
+    sections: [
+      { h: "What unfolds", p: "Breathwork, somatic release, shadow integration, sacred sexuality (held with consent), and the closing fire ceremony where what wanted to leave gets to leave." },
+      { h: "Multiple dates", list: [
+        "24–30 Apr 2026 · Bali",
+        "23–29 Jun 2026 · Bali (with Sarita)",
+        "9–16 Dec 2026 · Austin USA",
+        "1–7 Mar 2027 · Austin USA",
+        "25–31 Mar 2027 · Bali",
+        "24–30 Apr 2027 · Bali",
+        "7–13 Jun 2027 · Bali",
+        "15–21 Sep 2027 · Bali (with Sarita)"
+      ]}
+    ],
+    cta: ["See all dates →", "Apply now"]
+  },
+
+  "Inner Mastery — Anahata": {
+    type: "training",
+    tag: "Training · Heart Chakra · Czechia",
+    loc: "Czech Republic · 4 days · Amandeep & Anurasa · 11–14 Jun 2026",
+    img: "https://images.unsplash.com/photo-1508050919630-b135583b29e8?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "4-day chakra training",
+    stats: [["4d","Czechia"],["Anahata","Heart"],["Open","All"],["Amandeep","Anurasa"]],
+    intro: "Awaken your Heart Chakra. Four Czech days where the long-held armours dissolve, and Anahata — the heart centre — opens into its natural state of unconditional presence.",
+    sections: [
+      { h: "The path", p: "Anahata work isn't sweet. It's the gate of grief, of the love we couldn't give, of the tenderness that survived. Held with rigour by Amandeep and Anurasa." }
+    ],
+    cta: ["Apply for June →", "Inner Mastery series"]
+  },
+
+  "Inner Mastery — Muladhara": {
+    type: "training",
+    tag: "Training · Root Chakra · Bali",
+    loc: "Bali · 4 days · Christa & Simon · 30 May – 2 Jun 2026",
+    img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "4-day root chakra training",
+    stats: [["4d","Bali"],["Muladhara","Root"],["Christa","Simon"],["Open","All"]],
+    intro: "Awaken your Root Chakra. Four Bali days where the foundations are tended — survival fears, the felt sense of belonging on this earth, the body's right to take up space.",
+    sections: [
+      { h: "Why root first", p: "Without Muladhara grounded, no higher chakra opens cleanly. This is the work most spiritual seekers skip — and the reason their progress feels untethered." }
+    ],
+    cta: ["Apply for May →", "Inner Mastery series"]
+  },
+
+  /* ===== HEALING & CERTIFICATIONS ===== */
+  "Tantra Sacred Touch": {
+    type: "retreat",
+    tag: "Retreat · For everyone · Bali / Greece",
+    loc: "Bali · 8 days · Sarita & Modestas · 11–18 May 2026",
+    img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "8-day retreat",
+    stats: [["8d","Days"],["Bali","Greece"],["Sarita","Lead"],["Open","All"]],
+    intro: "Chakra Massage, Meditation, Ritual. Eight days held by Ma Ananda Sarita and Modestas — the most-loved sacred touch retreat, offered twice a year (Bali and Greece).",
+    sections: [
+      { h: "What unfolds", p: "Each day works one chakra through specific massage protocols, meditation, and ritual. By day eight, the body is mapped — and the touch you give (and receive) is forever changed." },
+      { h: "Locations 2026", list: [
+        "11–18 May 2026 · Bali · Sarita & Modestas",
+        "18–25 Jul 2026 · Corfu Greece · Prabuddha & Samya"
+      ]}
+    ],
+    cta: ["Apply for next date →", "Read past words"]
+  },
+
+  "Tantra Sacred Touch (Greece)": {
+    type: "retreat",
+    tag: "Retreat · For everyone · Greece",
+    loc: "Corfu Greece · 8 days · Prabuddha & Samya · 18–25 Jul 2026",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "8-day retreat in Corfu",
+    stats: [["8d","Greece"],["Corfu","Island"],["Open","All"],["Mediterranean","Setting"]],
+    intro: "The Greek edition of Sacred Touch. Eight days on Corfu held by Prabuddha and Samya — same lineage transmission, Mediterranean light.",
+    sections: [
+      { h: "Why Greece", p: "The land remembers. Greece holds Tantric currents older than its temples. The retreat space sits steps from the sea, with the long Greek summer days as the rhythm." }
+    ],
+    cta: ["Apply for July →", "Bali edition"]
+  },
+
+  "Colour Light Therapy Training": {
+    type: "training",
+    tag: "Training · Bali · For everyone",
+    loc: "Bali · 8 days · Sarita & Usha · 23–30 Sep 2026",
+    img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "8-day certification",
+    stats: [["8d","Bali"],["Yes","Certified"],["Sarita","Usha"],["Colour","Frequency"]],
+    intro: "Step Into the Medicine of Colour & Frequency. An eight-day certification training in Colour Light Therapy — a healing modality combining chakra work, frequency medicine, and Tantric awareness.",
+    sections: [
+      { h: "What you learn", list: [
+        "Chakra-colour correspondences (the deeper map)",
+        "Light frequency healing protocols",
+        "Hands-on practice with light tools",
+        "Client intake & integration",
+        "Final certification with lineage stamp"
+      ]}
+    ],
+    cta: ["Apply for September →", "Read about modality"]
+  },
+
+  "Tachyon Vertical Reality — Level 1": {
+    type: "training",
+    tag: "Training · Bali · Tachyon healing",
+    loc: "Bali · 2 days · Dharmaraj · 8–9 Jun 2027",
+    img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "2-day entry training",
+    stats: [["2d","Days"],["Tachyon","Energy"],["Level","1"],["Dharmaraj","Lead"]],
+    intro: "Get trained in Tachyon healing. The entry level of the Tachyon Vertical Reality system — a healing modality unique to Sarita's lineage.",
+    sections: [
+      { h: "What is Tachyon", p: "Tachyon refers to subtle energy that moves vertically — through the chakras, through time, through the field of awareness itself. The training equips you with protocols to access and direct this current for self-healing and (in advanced levels) for working with others." }
+    ],
+    cta: ["Apply for June 2027 →", "Series overview"]
+  },
+
+  "Tachyon Vertical Reality — Level 3": {
+    type: "training",
+    tag: "Training · Bali · Tachyon Level 3",
+    loc: "Bali · 7 days · Sarita, Usha & Dharmaraj · 15–21 Jun 2027",
+    img: "https://images.unsplash.com/photo-1528164344705-47542687000d?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "7-day · Level 2 graduates only",
+    stats: [["7d","Bali"],["Level","3"],["Sarita","Usha"],["Closed","Container"]],
+    intro: "Continue your training in Tachyon healing. Level 3 — for practitioners who have crossed Levels 1 and 2 and are ready to deepen into the most advanced applications.",
+    sections: [
+      { h: "Required", p: "Completion of Tachyon Levels 1 and 2 (verified by application)." }
+    ],
+    cta: ["Apply for June 2027 →", "Path overview"]
+  },
+
+  "Kashmiri Massage Practitioner": {
+    type: "training",
+    tag: "Massage · Austin · For everyone",
+    loc: "Austin USA · 6 days · Dharmaraj & Svetlana · 18–23 Dec 2026",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1400&q=85&auto=format&fit=crop",
+    price: "Apply",
+    priceNote: "6-day certification",
+    stats: [["6d","Austin"],["Yes","Certified"],["Kashmiri","Lineage"],["Dharmaraj","Lead"]],
+    intro: "Learn the Art of Tantra Massage. A six-day certification in Kashmiri Massage — the slow, precise, deeply attuned form of Tantric bodywork rooted in the Kashmiri Shaivism lineage.",
+    sections: [
+      { h: "Curriculum", p: "Foundation strokes (12 sequences mastered), subtle anatomy, ethics & consent, hands-on practice with peer feedback, and final certification." }
+    ],
+    cta: ["Apply for December →", "Download syllabus"]
+  },
+
+  /* ===== EVENTS-SPECIFIC keys (for events grid lookup) ===== */
+  "Tantra Teacher Training — Part 1": {
+    alias: "Tantra Teacher Training"
+  },
+  "Tantra Transformation (Austin)": {
+    alias: "Tantra Transformation"
+  }
+
+};
+
+/* Resolve aliases — flatten so all keys point to real entries */
+Object.keys(SANDRA_DATA_REAL).forEach(k => {
+  if (SANDRA_DATA_REAL[k].alias) {
+    SANDRA_DATA_REAL[k] = SANDRA_DATA_REAL[SANDRA_DATA_REAL[k].alias];
+  }
+});
+
+/* SANDRA_DATA points to the REAL data above (anandasarita.com scraped 30/04/2026) */
+const SANDRA_DATA = SANDRA_DATA_REAL;
+
+const _SANDRA_DATA_LEGACY_DISABLED = {
+  /* ---------- LEGACY PROGRAMS (kept for reference, not used) ---------- */
+  "Sacred Touch": {
+    type: "program",
+    tag: "For Couples · Bestseller",
+    loc: "6 weeks · 24 lessons · 12h video",
+    img: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?w=1400&q=85&auto=format&fit=crop",
+    price: "$297",
+    priceNote: "one-time · lifetime access",
+    stats: [["6w","Duration"],["24","Lessons"],["12h","Video"],["∞","Access"]],
+    intro: "Sacred Touch is the most-loved couples journey in Sarita's lineage. A six-week awakening into conscious intimacy where touch becomes prayer, and presence becomes practice.",
+    sections: [
+      { h: "What you'll experience", p: "From the first breath together to the deep tantric communion of week six, this is a complete map for couples ready to remember that the beloved in your partner is the beloved in yourself. Each week unfolds a new dimension — chakra activation, sacred massage, eye-gazing, breath weaving, and the silent language of two hearts beating as one." },
+      { h: "Inside the program", list: [
+        "24 video lessons (12h) with Ma Ananda Sarita and certified facilitators",
+        "Weekly live Q&A circle (90 min, included for 6 weeks)",
+        "PDF practice cards — printable rituals for daily intimacy",
+        "Audio guided meditations (8 tracks) for couples",
+        "Private community space with other Sacred Touch couples",
+        "Lifetime access — return whenever the heart calls"
+      ]},
+      { h: "For whom", p: "For couples who want more than what daily life allows — a deeper field, a slower kiss, a conscious meeting of two souls. Whether you've been together six months or sixty years, Sacred Touch meets you where you are." }
+    ],
+    cta: ["Join Sacred Touch →", "Watch free preview"]
+  },
+  "Divine Feminine Awakening": {
+    type: "program",
+    tag: "For Women · New cohort",
+    loc: "8 weeks · 32 lessons · Live cohort",
+    img: "https://images.unsplash.com/photo-1545389336-cf090694435e?w=1400&q=85&auto=format&fit=crop",
+    price: "$397",
+    priceNote: "live cohort · 50 women",
+    stats: [["8w","Live"],["32","Lessons"],["Yes","Live calls"],["50","Women only"]],
+    intro: "An eight-week pilgrimage back to the body's wisdom. Reclaim sensuality, intuition, and the sacred feminine essence that the world tried to ask you to forget.",
+    sections: [
+      { h: "The journey", p: "Through chakra awakening, womb meditation, sacred dance, and circle initiation, you remember what your grandmothers knew — that the feminine body is a temple, and the temple is the path. This is not theory. This is felt knowing, week after week, breath after breath." },
+      { h: "What's included", list: [
+        "32 video lessons across 8 weeks (one revealed weekly)",
+        "Weekly live circle with Sarita & senior teachers (90 min)",
+        "Womb wisdom meditation pack (audio, 6 guided journeys)",
+        "Cycle alignment journal — printable monthly tracker",
+        "Sisters circle private community (1 year access)",
+        "Goddess essence practices — daily 15-min rituals"
+      ]},
+      { h: "Beyond the course", p: "Graduates are invited to apply for the Goddess Essence Teacher Training — the certification path that opens this transmission to the women you'll one day guide." }
+    ],
+    cta: ["Reserve your seat →", "Read founder letter"]
+  },
+  "The Conscious Warrior": {
+    type: "program",
+    tag: "For Men",
+    loc: "6 weeks · 22 lessons · 9h video",
+    img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1400&q=85&auto=format&fit=crop",
+    price: "$247",
+    priceNote: "self-paced · lifetime access",
+    stats: [["6w","Duration"],["22","Lessons"],["9h","Video"],["∞","Access"]],
+    intro: "Cultivate presence and depth. This is the path for the modern man who feels the ache of disconnection and is ready to embody the loving strength of the sacred masculine.",
+    sections: [
+      { h: "The transmission", p: "Six weeks of practice that reach the parts of you no self-help book can. Through breathwork, body awareness, shadow integration and tantric grounding, you stop performing masculinity and start inhabiting it. Quietly. Fully. Without apology." },
+      { h: "Inside", list: [
+        "22 video lessons (9h) — practical, body-first, no fluff",
+        "Daily 12-min practice library (mornings or evenings)",
+        "Brotherhood circle access (private, men only)",
+        "Shadow work prompts — weekly written exercises",
+        "Sacred sexuality module (week 5) — for partnered or solo men",
+        "Lifetime access + future updates included"
+      ]},
+      { h: "Best paired with", p: "Sacred Touch (if you're partnered) or Master Lover Retreat (if you want the full embodied container)." }
+    ],
+    cta: ["Begin the path →", "Watch intro lesson"]
+  },
+  "Goddess Essence": {
+    type: "program",
+    tag: "Teacher Path · Certification",
+    loc: "12 months · Live cohort · Application required",
+    img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=85&auto=format&fit=crop",
+    price: "$6,800",
+    priceNote: "12-month certification",
+    stats: [["12mo","Container"],["Live","+ online"],["50","Women cohort"],["Yes","Certified"]],
+    intro: "The Goddess Essence Teacher Training is a year-long initiation into the lineage of Ma Ananda Sarita. Become a certified guide, hold space for women, carry the transmission.",
+    sections: [
+      { h: "The certification", p: "A twelve-month rite of passage combining online study (~5h/week), four in-person modules across Bali, India and Europe, supervised teaching practice, and a final transmission ceremony. This is not a certificate course. It is a remembering — of yourself first, then of those you'll one day serve." },
+      { h: "What's required", list: [
+        "Application interview (we read every word)",
+        "Completion of Divine Feminine Awakening (or equivalent)",
+        "Commitment to ~5h weekly study + 4 retreats",
+        "Personal therapeutic support during the year",
+        "Final teaching project (15 women guided over 8 weeks)",
+        "Devotion — to the path, to the lineage, to the women you'll meet"
+      ]},
+      { h: "What you receive", p: "Lifetime certification recognized in 36 countries, lineage transmission, full curriculum access, mentorship from Sarita and senior teachers, alumni circle, and an invitation to teach within the Ananda Sarita global community." }
+    ],
+    cta: ["Apply for the cohort →", "Download brochure"]
+  },
+  "Tantra Essentials": {
+    type: "program",
+    tag: "Foundation",
+    loc: "5h · 10 lessons · Self-paced",
+    img: "https://images.unsplash.com/photo-1508050919630-b135583b29e8?w=1400&q=85&auto=format&fit=crop",
+    price: "$47",
+    priceNote: "tripwire · lifetime access",
+    stats: [["5h","Total"],["10","Lessons"],["Self","Paced"],["∞","Access"]],
+    intro: "The doorway. Five hours that change the way you breathe, touch, listen and meet your own body. The perfect first step into the world of Tantra.",
+    sections: [
+      { h: "What you'll learn", p: "Ten short lessons (~30 min each) covering the foundations: what Tantra actually is (and isn't), the seven chakras as living energy centers, the breath as a vehicle, sacred touch basics, presence as practice, and a daily 15-min ritual you'll keep for life." },
+      { h: "Inside", list: [
+        "10 video lessons (~30 min each, 5h total)",
+        "PDF practice guide with daily 15-min ritual",
+        "3 guided meditations (audio)",
+        "Foundational reading list (curated by Sarita)",
+        "Lifetime access — revisit anytime",
+        "Direct path into all advanced programs"
+      ]},
+      { h: "Best for", p: "Anyone curious. Singles, couples, beginners, returning students. If you've never taken a Tantra course, start here." }
+    ],
+    cta: ["Start for $47 →", "Watch free preview"]
+  },
+  "Sacred Massage Training": {
+    type: "program",
+    tag: "Tantric Massage · Certification",
+    loc: "14 days · In-person · Hands-on",
+    img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1400&q=85&auto=format&fit=crop",
+    price: "$3,900",
+    priceNote: "Costa Rica · all-inclusive",
+    stats: [["14d","In-person"],["20","Students max"],["Yes","Certified"],["1:1","Practice"]],
+    intro: "Fourteen days in the Costa Rican jungle to become a certified Tantric Massage practitioner. Hands, breath, presence — the trinity of healing touch.",
+    sections: [
+      { h: "The container", p: "An intimate in-person training capped at twenty students. Days flow between teaching, hands-on practice, body-listening exercises, evening circles and silent integration. You leave certified, but more importantly — you leave changed." },
+      { h: "Curriculum", list: [
+        "Anatomy of subtle body — chakras, nadis, marma points",
+        "Foundation strokes — 14 core sequences mastered",
+        "Sacred touch ethics & consent framework",
+        "Energetic boundaries for practitioners",
+        "Client intake & integration practice",
+        "Final certification ceremony with lineage transmission"
+      ]},
+      { h: "Included", p: "Accommodation in shared eco-cabins, three plant-based meals daily, all materials, certification, alumni network access. Flights to San José (SJO) not included." }
+    ],
+    cta: ["Apply for Costa Rica →", "Download syllabus"]
+  },
+  "Red Tent Moon Initiation": {
+    type: "event",
+    tag: "Initiation · Women",
+    loc: "Sedona · USA · 18 Nov 2026",
+    img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=85&auto=format&fit=crop",
+    price: "$2,200",
+    priceNote: "5-day in-person · women only",
+    stats: [["5d","Container"],["20","Women"],["Sedona","Red rocks"],["Yes","Ceremony"]],
+    intro: "Five days under the red rocks of Sedona, in the oldest tradition of women circle. The Red Tent is where you remember who you were before the world told you who to be.",
+    sections: [
+      { h: "What unfolds", p: "Days flow with sunrise meditation, womb breathwork, sister-circle storytelling, sacred dance under stars, and the closing initiation ceremony where you receive your moon name. Held by Sarita and senior women teachers, in a venue chosen for its silence and red-earth grounding." },
+      { h: "Included", list: [
+        "5 nights accommodation (shared sacred dwellings)",
+        "All meals (organic, plant-based, ceremonial)",
+        "Full ceremonial container — opening to closing",
+        "Sacred bundle gift (handmade by Sedona artisans)",
+        "Pre-retreat preparation pack (sent 30 days before)",
+        "Post-retreat integration call (1 month after)"
+      ]},
+      { h: "For", p: "Women ready to come home. No previous Tantra experience required, but inner readiness — yes." }
+    ],
+    cta: ["Apply for November →", "Read past initiates' words"]
+  },
+  "Sacred Rage & Release": {
+    type: "program",
+    tag: "For Women",
+    loc: "4 weeks · 16 lessons",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1400&q=85&auto=format&fit=crop",
+    price: "$197",
+    priceNote: "4 weeks · self-paced + 1 live",
+    stats: [["4w","Duration"],["16","Lessons"],["1","Live circle"],["∞","Access"]],
+    intro: "The rage women weren't allowed to feel becomes the medicine they were always meant to carry. Four weeks of guided release, sacred fire, and reclaimed power.",
+    sections: [
+      { h: "The work", p: "Through somatic release practices, sound work, fire ceremony and journal prompts, you stop swallowing what was never yours to swallow. Each week clears one layer — and what emerges is not destruction. It is clarity." },
+      { h: "Inside", list: [
+        "16 video lessons across 4 weeks",
+        "1 live release circle (Sarita-led)",
+        "Daily 10-min somatic practice library",
+        "Journal prompts (week-by-week)",
+        "Sister support pod (small private group, 8-12 women)",
+        "Integration toolkit for life after the course"
+      ]}
+    ],
+    cta: ["Begin the release →", "Listen to a free practice"]
+  },
+  "Womb Wisdom Journey": {
+    type: "program",
+    tag: "Meditation · Women",
+    loc: "28 min · Audio · Guided",
+    img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1400&q=85&auto=format&fit=crop",
+    price: "$17",
+    priceNote: "single guided audio",
+    stats: [["28m","Length"],["Audio","Format"],["Sarita","Voice"],["∞","Access"]],
+    intro: "A 28-minute guided journey into the wisdom of the womb. For all women — those with wombs, those without, those healing, those celebrating.",
+    sections: [
+      { h: "The practice", p: "Sarita guides you through the seven gates of feminine wisdom — root, sacrum, womb, heart, throat, third eye, crown. A practice you can return to monthly, in cycle with the moon, or any time the soul calls." },
+      { h: "Best for", p: "First-time meditators. Cycle days. Difficult moments. Quiet evenings. Whenever the womb whispers — and waits to be heard." }
+    ],
+    cta: ["Buy for $17 →", "Listen to 60-sec sample"]
+  },
+  "Master Lover Retreat — Ibiza": {
+    type: "event",
+    tag: "For Couples · Retreat",
+    loc: "Ibiza · Spain · Oct 2026",
+    img: "https://images.unsplash.com/photo-1526800651728-b339a11ffd02?w=1400&q=85&auto=format&fit=crop",
+    price: "$3,400",
+    priceNote: "7-day · per couple",
+    stats: [["7d","In-person"],["20","People"],["10","Couples max"],["Yes","Sarita-led"]],
+    intro: "Seven days in a private Ibiza villa, ten couples, one transmission. Master Lover is the most intimate retreat in Sarita's calendar — and the one couples remember for life.",
+    sections: [
+      { h: "What unfolds", p: "Sunrise yoga overlooking the Mediterranean, days woven with tantric practice, sacred touch sessions for couples (held privately or in held container), sound healing evenings, and the final beloved ceremony where vows are renewed in the deepest way you've ever spoken them." },
+      { h: "Included", list: [
+        "7 nights luxury villa (private double rooms, sea view)",
+        "All meals — chef-prepared, plant-based",
+        "Daily yoga + tantric practice (4-6h/day)",
+        "Sound healing & ceremony evenings",
+        "Closing beloved ceremony (with vow renewal)",
+        "Couple's integration call post-retreat"
+      ]},
+      { h: "For couples who", p: "want to stop drifting — and start meeting. Whether in a deep crisis or a peaceful plateau, Master Lover works on every couple who shows up willing to be seen." }
+    ],
+    cta: ["Apply for October →", "Download brochure"]
+  },
+  "Rekindle Intimacy": {
+    type: "program",
+    tag: "For Couples",
+    loc: "4 weeks · 18 lessons",
+    img: "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1400&q=85&auto=format&fit=crop",
+    price: "$167",
+    priceNote: "4 weeks · self-paced",
+    stats: [["4w","Duration"],["18","Lessons"],["Daily","Practices"],["∞","Access"]],
+    intro: "For the couples who used to be on fire and have forgotten how to strike the match. Four weeks. Eighteen practices. One renewed connection.",
+    sections: [
+      { h: "How it works", p: "A practice each day, six days a week, with one rest day. Most are 15-25 minutes — eye-gazing, breath synchronization, sensory listening, sacred conversation prompts. By week four, the field between you is different. Tested across 1,200+ couples." },
+      { h: "Inside", list: [
+        "18 video lessons + 24 daily practice cards",
+        "Couple's journal (printable, 6 weeks of pages)",
+        "Audio guided meditations (8 tracks for two)",
+        "Email check-ins every 7 days",
+        "Lifetime access for both partners"
+      ]}
+    ],
+    cta: ["Rekindle now →", "Watch the first practice"]
+  },
+  "Breath of the Beloved": {
+    type: "program",
+    tag: "Guided Practice · For two",
+    loc: "42 min · Audio · Guided",
+    img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1400&q=85&auto=format&fit=crop",
+    price: "$27",
+    priceNote: "single guided audio",
+    stats: [["42m","Length"],["2","People"],["Audio","Format"],["∞","Access"]],
+    intro: "A 42-minute guided breath practice for two. Sarita's voice holds you and your beloved in a slow, deep tantric breathing pattern that opens the heart and softens every defense.",
+    sections: [
+      { h: "When to use", p: "Before sacred lovemaking. After conflict. On a sunday morning. The first night home from a long trip. Anytime you want to come back to each other — not in words, but in breath." }
+    ],
+    cta: ["Buy for $27 →", "Listen to a sample"]
+  },
+  "Opening the Sacred Heart": {
+    type: "program",
+    tag: "Heart · Meditation",
+    loc: "22 min · Audio · Guided",
+    img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1400&q=85&auto=format&fit=crop",
+    price: "$12",
+    priceNote: "single audio",
+    stats: [["22m","Length"],["Heart","Chakra"],["Audio","Format"],["∞","Access"]],
+    intro: "Twenty-two minutes inside the heart center. A guided journey into the green-gold light of Anahata, where forgiveness becomes effortless and love becomes the only thing left.",
+    sections: [
+      { h: "The practice", p: "Sarita guides you through layered visualization, breath into the heart-space, and the slow release of every defense the heart built. You leave softer, more porous, more dangerous to those who don't love you well — and more available to those who do." }
+    ],
+    cta: ["Buy for $12 →", "Listen to a sample"]
+  },
+  "Grounding the Inner Fire": {
+    type: "program",
+    tag: "Root · Meditation",
+    loc: "18 min · Audio · Guided",
+    img: "https://images.unsplash.com/photo-1528164344705-47542687000d?w=1400&q=85&auto=format&fit=crop",
+    price: "$12",
+    priceNote: "single audio",
+    stats: [["18m","Length"],["Root","Chakra"],["Audio","Format"],["∞","Access"]],
+    intro: "Eighteen minutes to come home to the body, the earth, and the steady fire at the base of your spine. A grounding practice for the over-thinkers, the floaters, the spiritually bypassing.",
+    sections: [
+      { h: "When to use", p: "Mornings. After difficult conversations. Before big decisions. Anytime the head has eaten the body and you need to come back down." }
+    ],
+    cta: ["Buy for $12 →", "Listen to a sample"]
+  },
+  "Awakening the Inner Seer": {
+    type: "program",
+    tag: "Third Eye · Advanced",
+    loc: "30 min · Audio · Advanced",
+    img: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=1400&q=85&auto=format&fit=crop",
+    price: "$17",
+    priceNote: "advanced practice",
+    stats: [["30m","Length"],["Ajna","Third eye"],["Adv","Level"],["∞","Access"]],
+    intro: "An advanced practice for the third eye — Ajna chakra. Not for beginners. For those who already meditate daily and want to refine the channel of inner sight.",
+    sections: [
+      { h: "Required", p: "At least 6 months of daily meditation practice. Familiarity with breath retention. A quiet space for 30 uninterrupted minutes." }
+    ],
+    cta: ["Buy for $17 →", "Read prerequisites"]
+  },
+  "Morning Light Activation": {
+    type: "program",
+    tag: "Daily · Beginner",
+    loc: "10 min · Audio · Beginner",
+    img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=85&auto=format&fit=crop",
+    price: "Free",
+    priceNote: "with newsletter",
+    stats: [["10m","Length"],["Daily","Use"],["Free","Gift"],["∞","Access"]],
+    intro: "A 10-minute morning practice given freely to every member of the Sarita community. Wake up the body, set the heart, meet the day from your essence — not your inbox.",
+    sections: [
+      { h: "Inside", p: "Three breath cycles, a sun salutation in stillness, a heart-centered intention for the day. Do it before opening your phone. Do it for 30 days. Watch what changes." }
+    ],
+    cta: ["Get free + newsletter →", "Listen now"]
+  },
+  "Yoga Nidra — Into the Void": {
+    type: "program",
+    tag: "Deep · Sleep journey",
+    loc: "45 min · Audio · Sleep",
+    img: "https://images.unsplash.com/photo-1508050919630-b135583b29e8?w=1400&q=85&auto=format&fit=crop",
+    price: "$22",
+    priceNote: "deep practice",
+    stats: [["45m","Length"],["Sleep","Or wake"],["Audio","Format"],["∞","Access"]],
+    intro: "A 45-minute Yoga Nidra journey into the void. Not for productivity. Not for self-improvement. For the parts of you that are tired — and have been tired for years.",
+    sections: [
+      { h: "Use as", p: "A pre-sleep practice (most fall asleep before the end), a deep midday reset, or a Sunday afternoon dissolution. Equivalent of 3 hours of sleep when listened to in full presence." }
+    ],
+    cta: ["Buy for $22 →", "Listen to a sample"]
+  },
+
+  /* ---------- EVENTS ---------- */
+  "Tantra Transformation Bali": {
+    type: "event",
+    tag: "Retreat · Open to all",
+    loc: "Ubud · Bali · 15 Jun 2026",
+    img: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1400&q=85&auto=format&fit=crop",
+    price: "$4,200",
+    priceNote: "21-day · all-inclusive",
+    stats: [["21d","In-person"],["20","Spots"],["Bali","Ubud"],["Yes","Sarita-led"]],
+    intro: "The flagship retreat. Twenty-one days of full immersion in the rice fields and temples of Ubud, with Ma Ananda Sarita and her senior team. The deepest container we offer — and the one that changes everything.",
+    sections: [
+      { h: "What unfolds across 21 days", p: "Days are woven with sunrise yoga, tantric body practice, sacred massage modules, breath work, sound healing, jungle silence, sacred sexuality teachings (held with consent and care), and ceremony work in collaboration with local Balinese Hindu priests. Evenings flow with kirtan, integration circles, or starlit silence." },
+      { h: "Included", list: [
+        "21 nights luxury eco-villa accommodation",
+        "3 organic meals/day (Balinese + plant-based)",
+        "Full daily program with Sarita & 4 senior teachers",
+        "Temple ceremonies & cultural immersion days",
+        "1:1 integration session (mid-retreat & closing)",
+        "Pre-retreat preparation pack + post-retreat 90-day integration",
+        "Lifetime alumni community access"
+      ]},
+      { h: "For", p: "Seekers ready for the full container. Singles, couples, returning students. Application required (we read every word and reply within 7 days)." }
+    ],
+    cta: ["Apply for Bali →", "Download brochure"]
+  },
+  "Goddess Essence Teacher Training": {
+    type: "event",
+    tag: "Training · Women only",
+    loc: "Rishikesh · India · 03 Sep 2026",
+    img: "https://images.unsplash.com/photo-1545389336-cf090694435e?w=1400&q=85&auto=format&fit=crop",
+    price: "$6,800",
+    priceNote: "12-month certification",
+    stats: [["12mo","Container"],["50","Women"],["4","Live modules"],["Yes","Lineage"]],
+    intro: "The certification path. A twelve-month rite of passage including four in-person modules — Rishikesh, Bali, Ibiza, and a final closing ceremony in Sedona. You leave a teacher.",
+    sections: [
+      { h: "Structure", p: "Online curriculum (~5h/week of self-study + group circles) interlaced with four 7-day in-person modules across the year. Each module deepens the lineage transmission and refines your teaching capacity. Final certification ceremony in Sedona, USA." },
+      { h: "Application required", list: [
+        "Completion of Divine Feminine Awakening (or equivalent)",
+        "Application essay (we read every word)",
+        "1:1 interview with Sarita's lead facilitator",
+        "Commitment to the full year — financial, energetic, spiritual",
+        "Therapeutic support during the year"
+      ]}
+    ],
+    cta: ["Apply for the cohort →", "Download full curriculum"]
+  },
+  "Sacred Touch Couples Retreat": {
+    type: "event",
+    tag: "Retreat · For Couples",
+    loc: "Ibiza · Spain · 12 Oct 2026",
+    img: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?w=1400&q=85&auto=format&fit=crop",
+    price: "$3,400",
+    priceNote: "7-day · per couple · all-inclusive",
+    stats: [["7d","Length"],["10","Couples"],["Ibiza","Villa"],["Sarita","Lead"]],
+    intro: "Seven days, ten couples, one private Ibiza villa overlooking the sea. The retreat that takes Sacred Touch from screen to skin — and from theory to lived intimacy.",
+    sections: [
+      { h: "Daily flow", p: "Sunrise yoga (6:30) · breakfast in silence (7:30) · tantric body practice (9-12) · lunch + integration time (12-16) · sacred touch session for couples (16-19) · dinner (19) · evening circle, sound healing or starlit silence (20-22). Days flow with intentionality, not pressure." },
+      { h: "Included", list: [
+        "7 nights private double room, sea-view villa",
+        "All meals (chef-prepared, plant-based with optional fish)",
+        "Daily group + couple's tantric practice",
+        "Sacred touch ritual nights (held privately, with optional facilitator support)",
+        "Closing beloved ceremony — vow renewal",
+        "Post-retreat integration call (1 month after)"
+      ]}
+    ],
+    cta: ["Reserve for October →", "Read past couples' words"]
+  },
+  "Silent Meditation Immersion": {
+    type: "event",
+    tag: "Retreat · Beginner friendly",
+    loc: "Sri Lanka · 07 Feb 2027",
+    img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1400&q=85&auto=format&fit=crop",
+    price: "$1,980",
+    priceNote: "10-day · all-inclusive",
+    stats: [["10d","Silence"],["30","Spots"],["Sri Lanka","Ocean"],["Open","All levels"]],
+    intro: "Ten days of complete silence in a beach-front retreat in southern Sri Lanka. The most accessible entry point into deep contemplative practice in Sarita's offering.",
+    sections: [
+      { h: "What you'll experience", p: "From day two onwards, the noble silence is held — no speaking, no eye contact, no devices. Days flow with guided sittings, mindful walking by the ocean, body scans, and one teaching transmission per day from Sarita (the one moment voice enters the field)." },
+      { h: "Included", list: [
+        "10 nights shared accommodation (twin rooms available)",
+        "All vegetarian meals",
+        "Full silent container with daily teaching",
+        "Pre-retreat preparation pack",
+        "Closing integration day (silence breaks gently on day 10)"
+      ]},
+      { h: "For", p: "Beginners welcome — actually, this is the recommended first immersion before any of the longer Tantra retreats. The silence does the work." }
+    ],
+    cta: ["Reserve for February →", "Pre-retreat reading list"]
+  },
+  "Tantra Massage Certification": {
+    type: "event",
+    tag: "Training · Application required",
+    loc: "Costa Rica · 22 Mar 2027",
+    img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1400&q=85&auto=format&fit=crop",
+    price: "$3,900",
+    priceNote: "14-day · all-inclusive",
+    stats: [["14d","In-person"],["20","Max"],["Yes","Certified"],["Hands","On"]],
+    intro: "Become a certified Tantric Massage practitioner in fourteen jungle days in Costa Rica. The most rigorous hands-on certification we offer — application required.",
+    sections: [
+      { h: "Why this certification matters", p: "Recognized in 36 countries through the Ananda Sarita lineage. Includes ethics, consent, energetic boundaries, and the core 14 sacred touch sequences. Graduates can practice professionally or integrate the work into existing healing arts businesses." },
+      { h: "Application", list: [
+        "Open to bodyworkers, therapists, healers, and serious practitioners",
+        "Minimum: 6 months of personal Tantra practice",
+        "Application essay + 1:1 interview",
+        "Final exam: live demonstration with peer & instructor feedback",
+        "Lifetime alumni network access post-certification"
+      ]}
+    ],
+    cta: ["Apply for Costa Rica →", "Download syllabus"]
+  }
+};
+
+/* Aliases — quand le titre HTML ne matche pas exactement une clé SANDRA_DATA */
+const SANDRA_ALIASES = {
+  "Goddess Essence Certification": "Goddess Essence Teacher Training"
+};
+
+/* ============================================
+   DETAIL PANEL — open / close logic
+   ============================================ */
+const overlay = document.getElementById('detailOverlay');
+const panel = document.getElementById('detailPanel');
+const heroEl = document.getElementById('detailHero');
+const tagEl = document.getElementById('detailTag');
+const titleEl = document.getElementById('detailTitle');
+const locEl = document.getElementById('detailLoc');
+const bodyEl = document.getElementById('detailBody');
+const closeBtn = document.getElementById('detailClose');
+
+function escapeHTML(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function openDetail(key) {
+  const data = SANDRA_DATA[key];
+  if (!data) {
+    console.warn('No detail data for:', key);
+    return;
+  }
+  heroEl.style.backgroundImage = `url('${data.img}')`;
+  tagEl.textContent = data.tag;
+  titleEl.innerHTML = escapeHTML(data.intro ? key : key);
+  // re-build title with em-italic for prettier display
+  const titleParts = key.split(' ');
+  if (titleParts.length > 1) {
+    const lastWord = titleParts.pop();
+    titleEl.innerHTML = `${escapeHTML(titleParts.join(' '))} <em>${escapeHTML(lastWord)}</em>`;
+  } else {
+    titleEl.textContent = key;
+  }
+  locEl.textContent = data.loc;
+
+  let html = '';
+  if (data.stats) {
+    html += '<div class="detail-stats">';
+    data.stats.forEach(([val, lbl]) => {
+      html += `<div class="detail-stat"><strong>${escapeHTML(val)}</strong><span>${escapeHTML(lbl)}</span></div>`;
+    });
+    html += '</div>';
+  }
+  if (data.intro) {
+    html += `<div class="detail-section"><p style="font-size:1.1rem;color:var(--ink);font-style:italic;">${escapeHTML(data.intro)}</p></div>`;
+  }
+  if (data.sections) {
+    data.sections.forEach(sec => {
+      html += '<div class="detail-section">';
+      if (sec.h) html += `<h3>${escapeHTML(sec.h)}</h3>`;
+      if (sec.p) html += `<p>${escapeHTML(sec.p)}</p>`;
+      if (sec.list) {
+        html += '<ul>';
+        sec.list.forEach(item => { html += `<li>${escapeHTML(item)}</li>`; });
+        html += '</ul>';
+      }
+      html += '</div>';
+    });
+  }
+  if (data.price) {
+    html += `<div class="detail-section">
+      <div class="detail-price">${escapeHTML(data.price)}<small>${escapeHTML(data.priceNote || '')}</small></div>
+    </div>`;
+  }
+  if (data.cta) {
+    html += '<div class="detail-cta">';
+    data.cta.forEach((c, i) => {
+      const cls = i === 0 ? 'btn btn-terracotta' : 'btn btn-outline';
+      html += `<a href="#capture" class="${cls}">${escapeHTML(c)}</a>`;
+    });
+    html += '</div>';
+  }
+  bodyEl.innerHTML = html;
+
+  overlay.classList.add('open');
+  panel.classList.add('open');
+  overlay.setAttribute('aria-hidden', 'false');
+  panel.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  panel.scrollTop = 0;
+  setTimeout(() => closeBtn.focus(), 400);
+}
+
+function closeDetail() {
+  overlay.classList.remove('open');
+  panel.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  panel.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+closeBtn.addEventListener('click', closeDetail);
+overlay.addEventListener('click', closeDetail);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && panel.classList.contains('open')) closeDetail();
+});
+
+/* ============================================
+   Attach click handlers to all programs + events
+   Lookup by title text (no DOM modification needed)
+   ============================================ */
+function bindCardClicks() {
+  document.querySelectorAll('.nf-card').forEach(card => {
+    const titleNode = card.querySelector('.nf-title');
+    if (!titleNode) return;
+    const rawKey = titleNode.textContent.trim();
+    const key = SANDRA_ALIASES[rawKey] || rawKey;
+    if (!SANDRA_DATA[key]) return;
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', `Open details for ${key}`);
+    card.addEventListener('click', () => openDetail(key));
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(key); }
+    });
+  });
+  document.querySelectorAll('.event-card').forEach(card => {
+    const titleNode = card.querySelector('h3');
+    if (!titleNode) return;
+    const rawKey = titleNode.textContent.trim();
+    const key = SANDRA_ALIASES[rawKey] || rawKey;
+    if (!SANDRA_DATA[key]) return;
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', `Open details for ${key}`);
+    card.addEventListener('click', () => openDetail(key));
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(key); }
+    });
+  });
+}
+bindCardClicks();
+
+/* ============================================
+   Events multi-filter (Type + Audience + Location)
+   3 groups, mutually exclusive within each group, AND between groups
+   ============================================ */
+const activeFilters = { type: 'all', audience: 'all', location: 'all' };
+const eventsCountEl = document.getElementById('eventsCount');
+const eventsTotalEl = document.getElementById('eventsTotal');
+
+function applyEventsFilter() {
+  let visible = 0;
+  document.querySelectorAll('.event-card').forEach(card => {
+    const titleNode = card.querySelector('h3');
+    const locNode = card.querySelector('.event-loc');
+    const metaNode = card.querySelector('.event-meta');
+    const typeNode = card.querySelector('.event-type');
+    const haystack = `${titleNode?.textContent || ''} ${locNode?.textContent || ''} ${metaNode?.textContent || ''} ${typeNode?.textContent || ''}`.toLowerCase();
+
+    let show = true;
+    if (activeFilters.type !== 'all' && !haystack.includes(activeFilters.type)) show = false;
+    if (activeFilters.audience !== 'all' && !haystack.includes(activeFilters.audience)) show = false;
+    if (activeFilters.location !== 'all' && !haystack.includes(activeFilters.location)) show = false;
+
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  if (eventsCountEl) eventsCountEl.textContent = visible;
+  // empty state
+  const grid = document.querySelector('.events-grid');
+  if (grid) {
+    let empty = grid.querySelector('.events-empty');
+    if (visible === 0) {
+      if (!empty) {
+        empty = document.createElement('div');
+        empty.className = 'events-empty';
+        empty.textContent = 'No event matches these filters. Try widening your search.';
+        grid.appendChild(empty);
+      }
+    } else if (empty) {
+      empty.remove();
+    }
+  }
+}
+
+document.querySelectorAll('.events-filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const group = btn.dataset.filterGroup;
+    const value = btn.dataset.filter;
+    if (!group) return;
+    document.querySelectorAll(`.events-filter[data-filter-group="${group}"]`).forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilters[group] = value;
+    applyEventsFilter();
+  });
+});
+
+if (eventsTotalEl) eventsTotalEl.textContent = document.querySelectorAll('.event-card').length;
+</script>
+</body>
+</html>

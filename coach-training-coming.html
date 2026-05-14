@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coach Training · Tantra Essence</title>
+<meta name="description" content="Train to become a certified Tantra teacher with Sarita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivoire:#FAF5EC; --ivoire-deep:#F2E9D6; --paper:#FEFBF4;
+  --pink-soft:#F5D9D3; --pink:#D98B83; --pink-bg:#FCEFEA;
+  --maroon:#8C3645; --maroon-deep:#5D1F2C; --maroon-soft:#C88995;
+  --gold:#C9A35E; --gold-deep:#9E7F47; --gold-soft:#E8D4A2; --gold-bright:#F7D560;
+  --ink:#2A1A1E; --ink-sub:#5E4A4E; --ink-muted:#8C7A7E;
+  --border:rgba(93,117,95,0.15); --border-soft:rgba(93,117,95,0.08);
+  --shadow-sm:0 2px 14px rgba(45,42,36,0.06); --shadow:0 14px 40px rgba(45,42,36,0.08); --shadow-lg:0 30px 80px rgba(45,42,36,0.12);
+  --radius:24px; --radius-sm:14px; --radius-lg:32px; --radius-full:9999px;
+  --transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+  --max-w:1240px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 2rem}
+h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15;letter-spacing:-0.01em;color:var(--ink)}
+em{font-family:'DM Serif Display',serif;font-style:italic}
+.eyebrow{display:inline-block;font-size:0.74rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--maroon);margin-bottom:1.2rem}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(244,241,232,0.85);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);transition:var(--transition)}
+nav.scrolled{background:rgba(244,241,232,0.95);box-shadow:0 1px 16px rgba(45,42,36,0.05)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:86px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.logo-tantra{font-family:'DM Serif Display',serif;font-size:1.35rem;letter-spacing:0.13em;color:var(--maroon);display:block}
+.logo-essence{font-family:'DM Serif Display',serif;font-size:0.84rem;letter-spacing:0.36em;color:var(--maroon);text-transform:uppercase;display:block;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:2.4rem;list-style:none}
+.nav-links a{font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition);padding:0.4rem 0;border-bottom:1px solid transparent}
+.nav-links a:hover{color:var(--maroon);border-bottom-color:var(--gold)}
+.nav-actions{display:flex;align-items:center;gap:1.2rem}
+.nav-login{font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition)}
+.nav-login:hover{color:var(--maroon)}
+.nav-cta{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.78rem 1.7rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition);box-shadow:0 4px 14px rgba(201,163,94,0.35)}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,163,94,0.5)}
+@media (max-width:880px){.nav-links,.nav-login{display:none}.nav-inner{height:72px}}
+
+/* PAGE HERO */
+.page-hero{padding:160px 0 4rem;background:linear-gradient(135deg,var(--pink-bg) 0%,var(--ivoire) 100%);text-align:center}
+.page-hero h1{font-size:clamp(2.4rem,5vw,4rem);margin-bottom:1rem;line-height:1.05}
+.page-hero h1 em{color:var(--maroon)}
+.page-hero-lead{font-size:1.2rem;color:var(--ink-sub);max-width:680px;margin:0 auto;line-height:1.6}
+
+/* SECTION */
+section.content-section{padding:5rem 0;background:var(--paper)}
+.content-section.alt{background:var(--ivoire)}
+.content-section h2{font-size:clamp(1.8rem,2.8vw,2.4rem);margin-bottom:1rem}
+.content-section p{font-size:1.05rem;color:var(--ink-sub);margin-bottom:1.2rem;max-width:760px}
+.content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3rem}
+@media (max-width:880px){.content-grid{grid-template-columns:1fr}}
+
+/* CARD */
+.card{background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-soft);transition:var(--transition);display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.card-img{aspect-ratio:16/10;background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));background-size:cover;background-position:center}
+.card-body{padding:1.6rem 1.4rem;flex:1}
+.card-tag{font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:0.6rem}
+.card-body h3{font-size:1.2rem;margin-bottom:0.6rem;color:var(--ink)}
+.card-body p{color:var(--ink-sub);font-size:0.92rem;margin-bottom:1rem}
+.card-cta{color:var(--maroon);font-weight:600;font-size:0.9rem}
+
+/* BTN */
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 1.8rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition);cursor:pointer;border:0}
+.btn-gold{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);box-shadow:0 4px 14px rgba(201,163,94,0.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,163,94,0.5)}
+.btn-outline{background:transparent;color:var(--maroon);border:1.5px solid var(--maroon)}
+.btn-outline:hover{background:var(--maroon);color:#fff}
+
+/* CTA SECTION */
+.cta-section{padding:6rem 0;background:linear-gradient(135deg,var(--maroon) 0%,var(--maroon-deep) 100%);color:#fff;text-align:center}
+.cta-section h2{color:#fff;font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:1rem}
+.cta-section h2 em{color:var(--gold-bright)}
+.cta-section p{color:rgba(255,255,255,0.88);font-size:1.1rem;max-width:620px;margin:0 auto 2rem}
+
+/* COMING SOON banner */
+.coming-soon{padding:5rem 0;text-align:center;background:var(--ivoire-deep)}
+.coming-soon-card{max-width:560px;margin:0 auto;background:var(--paper);padding:3rem 2rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+.coming-soon-card .eyebrow{color:var(--gold-deep)}
+.coming-soon-card h2{margin-bottom:1rem}
+
+/* FOOTER */
+footer{background:var(--maroon-deep);color:rgba(255,255,255,0.8);padding:3rem 0 2rem;text-align:center}
+footer a{color:rgba(255,255,255,0.75);margin:0 0.8rem;font-size:0.92rem}
+footer a:hover{color:var(--gold-bright)}
+.footer-copy{margin-top:1.5rem;font-size:0.84rem;color:rgba(255,255,255,0.5)}
+
+/* ARTICLE/DETAIL page */
+.article{max-width:780px;margin:0 auto;padding:160px 2rem 4rem}
+.article h1{font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem;line-height:1.1}
+.article .article-meta{color:var(--ink-muted);font-size:0.9rem;margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap}
+.article p{font-size:1.1rem;color:var(--ink);margin-bottom:1.4rem;line-height:1.7}
+.article h2{font-size:1.6rem;margin:2.5rem 0 1rem;color:var(--maroon)}
+.article blockquote{border-left:4px solid var(--gold);padding-left:1.5rem;font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:var(--ink-sub);margin:1.5rem 0}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span><span class="logo-tantra">TANTRA</span><span class="logo-essence">ESSENCE</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="events.html">Events</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="community.html">Community</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login">Login</a>
+      <a href="signup.html" class="nav-cta">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+
+<section class="coming-soon">
+  <div class="coming-soon-card">
+    <span class="eyebrow">Tantra Essence</span>
+    <h2>Coach Training</h2>
+    <p>Train to become a certified Tantra teacher with Sarita.</p>
+    <div style="margin-top:1.5rem"><a href="index.html" class="btn btn-gold">Back to home →</a></div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <a href="index.html">Home</a> · <a href="events.html">Events</a> · <a href="programs.html">Programs</a> · <a href="community.html">Community</a> · <a href="about.html">About Sarita</a> · <a href="teachers.html">Team</a> · <a href="podcast.html">Podcast</a> · <a href="blog.html">Blog</a> · <a href="contact.html">Contact</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
+    <div class="footer-copy">© 2026 Tantra Essence · Created by Ma Ananda Sarita · All rights reserved</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  if(nav){
+    window.addEventListener('scroll',function(){
+      if(window.scrollY>20)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
+    },{passive:true});
+  }
+})();
+</script>
+
+</body>
+</html>

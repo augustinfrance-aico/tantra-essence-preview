@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ananda Sarita — 3 Prototype Themes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0F0C08;
+  color: #F4F1E8;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+}
+.wrap { max-width: 1400px; margin: 0 auto; }
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.header .eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C9A961;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.header h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.header p {
+  color: rgba(244,241,232,0.6);
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+.proto {
+  background: rgba(244,241,232,0.04);
+  border: 1px solid rgba(244,241,232,0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+.proto:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201,169,97,0.5);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(201,169,97,0.1);
+}
+
+.proto-preview {
+  aspect-ratio: 16/10;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+/* V1 — Sacred Earth */
+.proto-v1 .proto-preview {
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(201,169,97,0.25) 0%, transparent 50%),
+    linear-gradient(135deg, #F8F2E8 0%, #E4D9EC 100%);
+}
+.proto-v1 .proto-symbol {
+  font-family: 'DM Serif Display', serif;
+  font-size: 5rem;
+  color: #4A3558;
+  font-style: italic;
+}
+
+/* V2 — Mystic Night */
+.proto-v2 .proto-preview {
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(107,63,160,0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(212,175,55,0.2) 0%, transparent 50%),
+    #0A0612;
+}
+.proto-v2 .proto-preview::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, #F5EFE0, transparent),
+    radial-gradient(1px 1px at 60% 20%, rgba(245,239,224,0.7), transparent),
+    radial-gradient(2px 2px at 85% 60%, #E8C96A, transparent),
+    radial-gradient(1px 1px at 15% 75%, #F5EFE0, transparent);
+  opacity: 0.6;
+}
+.proto-v2 .proto-symbol {
+  font-family: 'DM Serif Display', serif;
+  font-size: 5rem;
+  color: #D4AF37;
+  position: relative;
+}
+
+/* V3 — Temple Garden */
+.proto-v3 .proto-preview {
+  background:
+    radial-gradient(ellipse at top left, #E8EFE6 0%, transparent 60%),
+    radial-gradient(ellipse at bottom right, rgba(230,184,164,0.5) 0%, transparent 60%),
+    #F4F1E8;
+}
+.proto-v3 .proto-symbol {
+  font-family: 'DM Serif Display', serif;
+  font-size: 5rem;
+  color: #5E7A5F;
+  font-style: italic;
+}
+
+.proto-body {
+  padding: 2rem 1.8rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.proto-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C9A961;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.proto-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #F4F1E8;
+}
+.proto-vibe {
+  font-size: 0.88rem;
+  color: rgba(244,241,232,0.6);
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+  flex: 1;
+}
+.proto-traits {
+  list-style: none;
+  margin-bottom: 1.6rem;
+}
+.proto-traits li {
+  font-size: 0.82rem;
+  color: rgba(244,241,232,0.7);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(244,241,232,0.06);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.proto-traits li:last-child { border-bottom: none; }
+.proto-traits li::before {
+  content: '○';
+  color: #C9A961;
+  font-size: 0.6rem;
+}
+.proto-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 9999px;
+  background: #C9A961;
+  color: #0A0612;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+.proto:hover .proto-cta {
+  background: #E8C96A;
+  transform: translateX(4px);
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(244,241,232,0.1);
+  color: rgba(244,241,232,0.4);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+.footer-note strong { color: #C9A961; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div class="eyebrow">Ananda Sarita — Website Concepts</div>
+    <h1>Three directions<br>for the sacred path online</h1>
+    <p>Each prototype embodies the Tantra universe from a different visual angle. Pick the one that feels like home — or mix elements from several. Hero videos are placeholders (replace with Kling AI renders).</p>
+  </div>
+
+  <div class="grid">
+
+    <a href="ananda-v1-sacred-earth.html" class="proto proto-v1">
+      <div class="proto-preview">
+        <span class="proto-symbol">a</span>
+      </div>
+      <div class="proto-body">
+        <div class="proto-label">Prototype 1</div>
+        <div class="proto-name">Sacred Earth</div>
+        <p class="proto-vibe">Warm spa-luxe. Cream, violet, and gold. Feels like a premium wellness retreat.</p>
+        <ul class="proto-traits">
+          <li>Cream + violet + gold palette</li>
+          <li>Cormorant Garamond + Plus Jakarta</li>
+          <li>Soft, airy, feminine luxe</li>
+          <li>Inspired by Aman Resorts, Mindvalley</li>
+        </ul>
+        <span class="proto-cta">Open preview →</span>
+      </div>
+    </a>
+
+    <a href="ananda-v2-mystic-night.html" class="proto proto-v2">
+      <div class="proto-preview">
+        <span class="proto-symbol">☾</span>
+      </div>
+      <div class="proto-body">
+        <div class="proto-label">Prototype 2</div>
+        <div class="proto-name">Mystic Night</div>
+        <p class="proto-vibe">Deep cosmic. Starfield, gold, and violet-noir. Feels like a temple at midnight — sacred and immersive.</p>
+        <ul class="proto-traits">
+          <li>Night + gold + violet-deep palette</li>
+          <li>Cinzel (display) + Inter</li>
+          <li>Animated starfield background</li>
+          <li>Netflix-style program rows</li>
+        </ul>
+        <span class="proto-cta">Open preview →</span>
+      </div>
+    </a>
+
+    <a href="ananda-v3-temple-garden.html" class="proto proto-v3">
+      <div class="proto-preview">
+        <span class="proto-symbol">a</span>
+      </div>
+      <div class="proto-body">
+        <div class="proto-label">Prototype 3</div>
+        <div class="proto-name">Temple Garden</div>
+        <p class="proto-vibe">Natural zen. Sage, terracotta, and ivoire. Feels like a botanical garden at dawn — grounded, alive, humane.</p>
+        <ul class="proto-traits">
+          <li>Ivoire + sage + terracotta palette</li>
+          <li>DM Serif Display + Inter</li>
+          <li>Split hero + organic shapes</li>
+          <li>Shop section for Tachyon / music / books</li>
+        </ul>
+        <span class="proto-cta">Open preview →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="footer-note">
+    <p><strong>Next step:</strong> pick a direction (or mix) → we finalize copy, pricing, and product catalogue → full build with all funnels + upsell flow.</p>
+    <p style="margin-top:1rem;">Preview videos use <code>yoga-outdoor.mp4</code> and <code>yoga-sunrise.mp4</code> as placeholders. Nikola will generate final hero videos via Kling AI.</p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Tantra Essentials - the doorway program. 5 hours of teaching, 10 lessons, a 15-minute daily ritual you keep for life.">
+<meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Tantra Essentials &middot; Tantra Essence</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--ivoire:#FAF5EC;--ivoire-deep:#F2E9D6;--paper:#FEFBF4;--pink-soft:#F5D9D3;--pink:#D98B83;--pink-mid:#C26B64;--pink-bg:#FCEFEA;--maroon:#8C3645;--maroon-deep:#5D1F2C;--gold:#C9A35E;--gold-deep:#9E7F47;--gold-soft:#E8D4A2;--ink:#2A1A1E;--ink-sub:#5E4A4E;--ink-muted:#8C7A7E;--border:rgba(93,42,46,0.12);--border-soft:rgba(93,42,46,0.06);--shadow:0 14px 40px rgba(45,26,30,0.10);--shadow-lg:0 30px 80px rgba(45,26,30,0.18);--radius:18px;--radius-full:9999px}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.65;font-size:16px}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15}
+em{color:var(--maroon);font-style:italic}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.topbar{position:sticky;top:0;z-index:100;background:rgba(254,251,244,0.95);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-soft);padding:0.9rem 0}
+.topbar-inner{max-width:1240px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:var(--gold-soft);border-radius:50%;display:grid;place-items:center;font-family:'DM Serif Display',serif;font-style:italic;color:var(--maroon);font-size:1.1rem}
+.logo-text strong{display:block;font-size:0.92rem;letter-spacing:0.14em;color:var(--maroon);font-family:'DM Serif Display',serif;line-height:1}
+.logo-text span{display:block;font-size:0.66rem;letter-spacing:0.32em;color:var(--maroon);margin-top:2px;font-family:'DM Serif Display',serif}
+.nav-links{display:flex;gap:1.4rem;list-style:none}
+.nav-links a{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--ink)}
+.nav-cta{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.65rem 1.3rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:0.95rem;box-shadow:0 4px 14px rgba(201,163,94,0.35)}
+.eyebrow{display:inline-block;font-size:0.74rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--maroon);padding:0.4rem 1rem;background:var(--pink-bg);border-radius:var(--radius-full);margin-bottom:1rem}
+.crumbs{padding:1rem 0 0;font-size:0.84rem;color:var(--ink-muted)}
+.crumbs a{color:var(--maroon);font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:0.95rem 1.6rem;border-radius:var(--radius-full);font-weight:600;text-decoration:none;transition:all 0.3s;font-size:1rem;border:none;cursor:pointer;font-family:inherit;min-height:48px}
+.btn-maroon{background:var(--maroon);color:var(--paper);box-shadow:0 6px 20px rgba(140,54,69,0.35)}
+.btn-maroon:hover{background:var(--maroon-deep);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--maroon);border:2px solid var(--maroon)}
+.btn-outline:hover{background:var(--maroon);color:var(--paper)}
+.btn-gold{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);box-shadow:0 4px 14px rgba(201,163,94,0.35)}
+.section{padding:3rem 0}
+.section.alt{background:var(--paper)}
+.section-head{text-align:center;margin-bottom:2.5rem}
+.section-head h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:0.5rem;color:var(--maroon-deep)}
+.section-head h2 em{color:var(--maroon);font-style:italic}
+.section-head p{color:var(--ink-sub);max-width:55ch;margin:0 auto}
+.footer{padding:3rem 0;text-align:center;background:var(--ink);color:rgba(255,255,255,0.75);font-size:0.86rem;margin-top:3rem}
+.footer a{color:var(--gold-soft)}
+.footer-links{display:flex;justify-content:center;gap:1.4rem;flex-wrap:wrap;margin:1rem 0}
+.crumbs{padding:1rem 0 0;font-size:0.84rem;color:var(--ink-muted)}
+.crumbs a{color:var(--maroon);font-weight:500}
+.event-banner{position:relative;width:100%;aspect-ratio:21/9;min-height:380px;background-size:cover;background-position:center;border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;box-shadow:var(--shadow-lg)}
+.event-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(45,26,30,0.15) 0%,rgba(45,26,30,0.55) 100%)}
+.event-banner-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem;color:var(--paper);z-index:2}
+.event-banner-tag{display:inline-block;background:rgba(254,251,244,0.18);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(254,251,244,0.3);padding:0.35rem 0.9rem;border-radius:var(--radius-full);font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;margin-bottom:0.8rem}
+.event-banner h1{color:var(--paper);font-size:clamp(2rem,5vw,3.4rem);max-width:24ch;line-height:1.1;margin-bottom:0.5rem}
+.event-banner h1 em{color:var(--gold-soft);font-style:italic}
+.event-banner-meta{font-size:0.96rem;color:var(--gold-soft);font-family:'DM Serif Display',serif;font-style:italic}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap;padding:1.5rem 0;border-bottom:1px solid var(--border);margin-bottom:2rem}
+.cta-row .btn{flex:1;min-width:240px}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;background:var(--ivoire-deep);padding:1.5rem;border-radius:var(--radius);margin:1.5rem 0}
+.stat{text-align:center}
+.stat strong{display:block;font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--maroon);line-height:1}
+.stat span{display:block;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted);margin-top:0.4rem;font-weight:600}
+ul.included{list-style:none;padding:0;margin:1rem 0}
+ul.included li{position:relative;padding:0.6rem 0 0.6rem 1.7rem;border-bottom:1px dashed var(--border);color:var(--ink-sub)}
+ul.included li:last-child{border-bottom:none}
+ul.included li::before{content:'\2726';position:absolute;left:0;top:0.7rem;color:var(--gold-deep)}
+.investment{background:var(--ivoire-deep);padding:2rem;border-radius:var(--radius);margin:1.5rem 0;text-align:center}
+.investment .price{font-family:'DM Serif Display',serif;font-size:2.4rem;color:var(--maroon);display:block}
+.investment .note{font-size:0.84rem;color:var(--ink-muted);margin-top:0.4rem;display:block}
+.faq details{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.8rem;padding:0.4rem 1.4rem}
+.faq summary{cursor:pointer;font-weight:600;color:var(--ink);padding:0.8rem 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-size:1.4rem;color:var(--maroon)}
+.faq details[open] summary::after{content:'\2212'}
+.faq details p{padding:0.5rem 0 1rem;color:var(--ink-sub);font-size:0.94rem}
+.final-cta{padding:3rem 1.5rem;background:linear-gradient(135deg,var(--pink-soft) 0%,var(--gold-soft) 100%);text-align:center;border-radius:var(--radius);margin:2rem 0}
+@media (max-width:880px){.event-banner{aspect-ratio:4/3;min-height:340px}.event-banner-content{padding:1.4rem}.cta-row .btn{flex:1 1 100%}.stats-row{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}}
+
+.prog-banner{position:relative;width:100%;aspect-ratio:21/9;min-height:340px;background-size:cover;background-position:center;border-radius:var(--radius);overflow:hidden;margin:1.5rem 0;box-shadow:var(--shadow-lg)}
+.prog-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(45,26,30,0.2),rgba(45,26,30,0.65))}
+.prog-banner-content{position:absolute;bottom:0;left:0;right:0;padding:2rem;color:var(--paper);z-index:2}
+.prog-banner h1{color:var(--paper);font-size:clamp(2rem,5vw,3rem)}
+.prog-banner h1 em{color:var(--gold-soft);font-style:italic}
+.prog-meta{font-family:'DM Serif Display',serif;font-style:italic;color:var(--gold-soft)}
+.prog-cta{display:flex;gap:0.8rem;flex-wrap:wrap;padding:1.5rem 0;border-bottom:1px solid var(--border);margin-bottom:1.5rem}
+.lessons-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.5rem 0}
+.lesson{background:var(--paper);padding:1.2rem 1.4rem;border-radius:var(--radius);border:1px solid var(--border-soft);display:flex;gap:1rem;align-items:flex-start}
+.lesson-num{width:36px;height:36px;background:var(--maroon);color:var(--paper);border-radius:50%;display:grid;place-items:center;font-family:'DM Serif Display',serif;font-style:italic;flex-shrink:0}
+.lesson h3{font-size:1rem;margin-bottom:0.2rem}
+.lesson p{font-size:0.84rem;color:var(--ink-sub);margin:0}
+.lesson-meta{font-size:0.72rem;color:var(--gold-deep);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;margin-top:0.3rem;display:block}
+@media (max-width:880px){.lessons-grid{grid-template-columns:1fr}.nav-links{display:none}}
+
+/* PHASE 16 — enrichment sections */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
+.who-card{padding:1.6rem;border-radius:var(--radius);border:1px solid var(--border)}
+.who-card.for{background:var(--ivoire-deep);border-color:var(--gold)}
+.who-card.notfor{background:var(--paper);border-color:var(--border)}
+.who-card h3{margin-bottom:0.8rem;font-size:1.2rem}
+.who-card.for h3{color:var(--maroon)}
+.who-card.notfor h3{color:var(--ink-muted)}
+.who-card ul{list-style:none;padding:0}
+.who-card li{padding:0.5rem 0 0.5rem 1.6rem;position:relative;font-size:0.92rem;color:var(--ink-sub);border-bottom:1px dashed var(--border-soft)}
+.who-card.for li::before{content:'\2713';position:absolute;left:0;top:0.5rem;color:var(--maroon);font-weight:700}
+.who-card.notfor li::before{content:'\2715';position:absolute;left:0;top:0.5rem;color:var(--ink-muted)}
+.who-card li:last-child{border-bottom:none}
+.narrative{background:var(--ivoire-deep);padding:2rem;border-radius:var(--radius);margin:1.5rem 0;border-left:4px solid var(--gold)}
+.narrative h3{font-size:1.3rem;color:var(--maroon-deep);margin-bottom:0.8rem}
+.narrative p{color:var(--ink-sub);margin-bottom:0.9rem;line-height:1.75}
+.narrative p:last-child{margin-bottom:0}
+.narrative em{color:var(--maroon);font-style:italic}
+.testi-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.testi-mini{background:var(--paper);padding:1.4rem;border-radius:var(--radius);border:1px solid var(--border-soft)}
+.testi-mini .stars{color:var(--gold-deep);letter-spacing:0.4em;font-size:0.78rem;margin-bottom:0.6rem}
+.testi-mini blockquote{font-family:'DM Serif Display',serif;font-style:italic;font-size:0.94rem;color:var(--ink);margin-bottom:0.8rem;line-height:1.5}
+.testi-mini cite{font-size:0.74rem;color:var(--ink-muted);font-style:normal;letter-spacing:0.04em;display:block;border-top:1px dashed var(--border);padding-top:0.5rem}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:1.5rem 0}
+.related-card{background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-soft);text-decoration:none;color:inherit;transition:all 0.3s;display:block}
+.related-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--gold)}
+.related-img{aspect-ratio:16/10;background-size:cover;background-position:center}
+.related-body{padding:1rem 1.2rem 1.2rem}
+.related-tag{font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:0.3rem;display:block}
+.related-card h4{font-size:1rem;margin-bottom:0.3rem;line-height:1.2;color:var(--ink)}
+.related-meta{font-size:0.78rem;color:var(--ink-muted)}
+/* Sticky Apply CTA bottom */
+.sticky-apply{position:fixed;bottom:0;left:0;right:0;background:var(--paper);border-top:1px solid var(--border);box-shadow:0 -4px 14px rgba(45,26,30,0.06);padding:0.9rem 1.5rem;z-index:90;transform:translateY(100%);transition:transform 0.3s}
+.sticky-apply.show{transform:translateY(0)}
+.sticky-apply-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.sticky-apply .info{font-family:'DM Serif Display',serif;color:var(--maroon);font-size:0.96rem}
+.sticky-apply .info strong{display:block;font-size:1.05rem;color:var(--ink)}
+.sticky-apply .actions{display:flex;gap:0.6rem;flex-wrap:wrap}
+.sticky-apply .btn{padding:0.7rem 1.3rem;font-size:0.9rem;min-height:40px}
+@media (max-width:880px){.who-grid{grid-template-columns:1fr}.testi-strip,.related-grid{grid-template-columns:1fr}.sticky-apply-inner{flex-direction:column;gap:0.5rem;text-align:center}.sticky-apply .info{font-size:0.86rem}}
+</style></head><body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="ananda-v3-temple-garden.html" class="logo">
+      <span class="logo-mark">a</span>
+      <span class="logo-text"><strong>TANTRA</strong><span>ESSENCE</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="ananda-v3-temple-garden.html#events">Events</a></li>
+      <li><a href="ananda-v3-temple-garden.html#freeclasses">Free Classes</a></li>
+      <li><a href="ananda-v3-temple-garden.html#programs">Programs</a></li>
+      <li><a href="ananda-v3-temple-garden.html#about">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="donate.html" class="nav-cta">Donate</a>
+  </div>
+</header>
+<div class="container">
+<div class="crumbs"><a href="ananda-v3-temple-garden.html">Home</a> &middot; <a href="ananda-v3-temple-garden.html#programs">Programs</a> &middot; <strong style="color:var(--ink);">Tantra Essentials</strong></div>
+<div class="prog-banner" style="background-image:url('https://images.unsplash.com/photo-1508050919630-b135583b29e8?w=1600&q=85&auto=format&fit=crop');"><div class="prog-banner-content"><span class="event-banner-tag" style="background:rgba(254,251,244,0.18);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(254,251,244,0.3);padding:0.35rem 0.9rem;border-radius:var(--radius-full);font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;display:inline-block;margin-bottom:0.7rem;">Foundation &middot; 5 hours</span><h1>Tantra <em>Essentials</em></h1><div class="prog-meta">10 lessons | self-paced</div></div></div>
+<div class="prog-cta"><a href="funnel-tripwire.html" class="btn btn-maroon">Get instant access &mdash; $47 &rarr;</a><a href="funnel-landing.html" class="btn btn-outline">Watch free preview</a></div>
+<section class="section"><span class="eyebrow">Overview</span><h2>About this <em>program</em></h2><p>The doorway. Five hours that change the way you breathe, touch, listen and meet your own body. The perfect first step into the world of Tantra. Ten short lessons (~30 min each) covering the foundations: what Tantra actually is, the seven chakras, breath as a vehicle, sacred touch basics, presence as practice, and a daily 15-min ritual you will keep for life.</p></section>
+<section class="section alt"><span class="eyebrow">What is inside</span><h2>The <em>lessons</em></h2><div class="lessons-grid"><div class="lesson"><div class="lesson-num">1</div><div><h3>What Tantra really is</h3><p>Cut through the noise</p><span class="lesson-meta">30 min</span></div></div><div class="lesson"><div class="lesson-num">2</div><div><h3>The 7 chakras</h3><p>Living energy centres</p><span class="lesson-meta">35 min</span></div></div><div class="lesson"><div class="lesson-num">3</div><div><h3>Breath as vehicle</h3><p>Pranayama foundations</p><span class="lesson-meta">28 min</span></div></div><div class="lesson"><div class="lesson-num">4</div><div><h3>Sacred touch basics</h3><p>For self or partner</p><span class="lesson-meta">32 min</span></div></div><div class="lesson"><div class="lesson-num">5</div><div><h3>Presence as practice</h3><p>The hidden skill</p><span class="lesson-meta">30 min</span></div></div><div class="lesson"><div class="lesson-num">6</div><div><h3>The 15-min daily ritual</h3><p>Your anchor</p><span class="lesson-meta">22 min</span></div></div><div class="lesson"><div class="lesson-num">7</div><div><h3>Polarity work</h3><p>Masculine and feminine</p><span class="lesson-meta">28 min</span></div></div><div class="lesson"><div class="lesson-num">8</div><div><h3>Meditation as Tantra</h3><p>Why both are one</p><span class="lesson-meta">30 min</span></div></div><div class="lesson"><div class="lesson-num">9</div><div><h3>Devotion and surrender</h3><p>The heart of the path</p><span class="lesson-meta">26 min</span></div></div><div class="lesson"><div class="lesson-num">10</div><div><h3>Where to go next</h3><p>Plan your journey</p><span class="lesson-meta">14 min</span></div></div></div></section>
+<section class="section"><span class="eyebrow">Investment</span><h2>What it <em>costs</em></h2><div class="investment"><span class="price">$47</span><span class="note">tripwire | lifetime access | 30-day refund</span></div></section>
+<section class="section alt"><span class="eyebrow">Who is this for</span><h2>For <em>anyone</em> curious</h2><p>Singles, couples, beginners, returning students. If you have never taken a Tantra course, start here.</p></section>
+<div class="final-cta" style="padding:3rem 1.5rem;background:linear-gradient(135deg,var(--pink-soft) 0%,var(--gold-soft) 100%);text-align:center;border-radius:var(--radius);margin:2rem 0;"><span class="eyebrow">Begin tonight</span><h2>Yours for $47</h2><p style="color:var(--ink-sub);max-width:50ch;margin:0 auto 1.5rem;">30-day money-back guarantee. Lifetime access. No subscription.</p><a href="funnel-tripwire.html" class="btn btn-maroon">Get instant access &rarr;</a></div>
+</div>
+
+<section class="section" id="who"><div class="container">
+<span class="eyebrow">Honest fit check</span>
+<h2>Who this <em>is for</em> &mdash; and who it is not</h2>
+<div class="who-grid">
+<div class="who-card for"><h3>This is for you if...</h3><ul><li>Anyone curious about Tantra for the first time</li><li>Practitioners returning after a break who want a refresh</li><li>Singles, couples, students of any age</li><li>Beginners with zero experience &mdash; the curriculum starts at zero</li><li>Anyone considering a retreat who wants to try the path first</li></ul></div>
+<div class="who-card notfor"><h3>This may not be for you if...</h3><ul><li>Advanced practitioners with 5+ years of daily practice (you might find it foundational)</li><li>Those expecting a "secret techniques" course &mdash; this is the path, not tricks</li><li>Anyone unwilling to do 15 minutes a day for six weeks</li><li>People allergic to spiritual language &mdash; we use it sober but we use it</li><li>Those needing 1:1 support &mdash; this is self-paced</li></ul></div>
+</div></div></section>
+
+<section class="section alt"><div class="container">
+<span class="eyebrow">A felt narrative</span>
+<h2 style="font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15;font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:1rem;color:var(--maroon-deep);">Five hours that <em>change</em> the way you breathe, touch, listen</h2>
+<div class="narrative">
+<p>Lesson one (28 min) is what Tantra actually is. Cut through the cultural noise that has nothing to do with the path. By the end of lesson one, you have a working definition that holds for the next thirty years of your practice.</p>
+<p>Lessons two to five build the body map. Chakras, breath, sacred touch basics, presence. You start to feel things you had not noticed before. Most students report the first changes within seven days &mdash; sleep, calmness, a way of meeting your morning.</p>
+<p>Lessons six to eight teach the work of polarity and meditation. Lesson nine on devotion lands quietly. Lesson ten is the bridge: where to go next, what programs match your stage.</p>
+<p>Total time on platform: roughly 5 hours of video plus a daily 15-minute practice you can do for life. The doorway most students walk through before joining a retreat. Lifetime access. 30-day refund. No subscription.</p>
+</div></div></section>
+
+<section class="section"><div class="container">
+<span class="eyebrow">Voices from past students</span>
+<h2>What students <em>actually</em> say</h2>
+<div class="testi-strip">
+<div class="testi-mini"><div class="stars">&#10047;&#10047;&#10047;&#10047;&#10047;</div><blockquote>"I have taken five online Tantra courses. This is the first one that actually changed how I move through my day."</blockquote><cite>&mdash; Marie L. &middot; Brussels</cite></div>
+<div class="testi-mini"><div class="stars">&#10047;&#10047;&#10047;&#10047;&#10047;</div><blockquote>"The 15-minute morning ritual. Six months in. Still doing it."</blockquote><cite>&mdash; Thomas R. &middot; Lyon</cite></div>
+<div class="testi-mini"><div class="stars">&#10047;&#10047;&#10047;&#10047;&#10047;</div><blockquote>"I bought it on a whim. It is the one I keep recommending to friends."</blockquote><cite>&mdash; Sofia G. &middot; Lisbon</cite></div>
+</div>
+</div></section>
+
+<section class="section alt"><div class="container">
+<span class="eyebrow">If this calls you, you may also like</span>
+<h2>Related <em>offerings</em></h2>
+<div class="related-grid"><a href="sacred-touch-program.html" class="related-card"><div class="related-img" style="background-image:url('https://images.unsplash.com/photo-1526800651728-b339a11ffd02?w=600&q=80');"></div><div class="related-body"><span class="related-tag">Online &middot; 6 weeks</span><h4>Sacred Touch Program</h4><div class="related-meta">For couples ready to deepen</div></div></a><a href="divine-feminine-awakening-program.html" class="related-card"><div class="related-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&q=80');"></div><div class="related-body"><span class="related-tag">Online &middot; 8 weeks</span><h4>Divine Feminine Awakening</h4><div class="related-meta">For women, live cohort</div></div></a><a href="master-lover-retreat-bali.html" class="related-card"><div class="related-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163646077/settings_images/844e80e-cb50-a6e0-edd-7812c0a445_ML_poster.jpg');"></div><div class="related-body"><span class="related-tag">Bali &middot; 7 days</span><h4>Master Lover Retreat</h4><div class="related-meta">Take it in person</div></div></a></div>
+</div></section>
+
+<div class="sticky-apply show">
+<div class="sticky-apply-inner">
+<div class="info"><strong>Tantra Essentials</strong><span>10 lessons &middot; lifetime &middot; $47</span></div>
+<div class="actions">
+<a href="application.html" class="btn btn-maroon">Apply now &rarr;</a>
+<a href="contact.html" class="btn btn-outline">Ask a question</a>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--paper);margin-bottom:0.4rem;">tantra <em style="color:var(--gold-soft)">essence</em></p>
+    <div class="footer-links">
+      <a href="ananda-v3-temple-garden.html#events">Events</a>
+      <a href="ananda-v3-temple-garden.html#programs">Programs</a>
+      <a href="ananda-v3-temple-garden.html#about">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html">Donate</a>
+    </div>
+    <p style="font-size:0.78rem;opacity:0.6;">&copy; 2026 Tantra Essence &middot; Ma Ananda Sarita</p>
+  </div>
+</footer>
+</body></html>

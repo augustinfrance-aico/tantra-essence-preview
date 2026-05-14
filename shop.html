@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Sacred shop - Tachyon healing tools, ceremonial music, books and wisdom texts curated by Ma Ananda Sarita.">
+<meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Shop &mdash; Tachyon, Music, Books &middot; Tantra Essence</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--ivoire:#FAF5EC;--ivoire-deep:#F2E9D6;--paper:#FEFBF4;--pink-soft:#F5D9D3;--pink:#D98B83;--pink-mid:#C26B64;--pink-bg:#FCEFEA;--maroon:#8C3645;--maroon-deep:#5D1F2C;--gold:#C9A35E;--gold-deep:#9E7F47;--gold-soft:#E8D4A2;--ink:#2A1A1E;--ink-sub:#5E4A4E;--ink-muted:#8C7A7E;--border:rgba(93,42,46,0.12);--border-soft:rgba(93,42,46,0.06);--shadow:0 14px 40px rgba(45,26,30,0.10);--shadow-lg:0 30px 80px rgba(45,26,30,0.18);--radius:18px;--radius-full:9999px}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.65;font-size:16px}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15}
+em{color:var(--maroon);font-style:italic}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.topbar{position:sticky;top:0;z-index:100;background:rgba(254,251,244,0.95);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-soft);padding:0.9rem 0}
+.topbar-inner{max-width:1240px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:var(--gold-soft);border-radius:50%;display:grid;place-items:center;font-family:'DM Serif Display',serif;font-style:italic;color:var(--maroon);font-size:1.1rem}
+.logo-text strong{display:block;font-size:0.92rem;letter-spacing:0.14em;color:var(--maroon);font-family:'DM Serif Display',serif;line-height:1}
+.logo-text span{display:block;font-size:0.66rem;letter-spacing:0.32em;color:var(--maroon);margin-top:2px;font-family:'DM Serif Display',serif}
+.nav-links{display:flex;gap:1.4rem;list-style:none}
+.nav-links a{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--ink)}
+.nav-cta{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.65rem 1.3rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:0.95rem;box-shadow:0 4px 14px rgba(201,163,94,0.35)}
+.eyebrow{display:inline-block;font-size:0.74rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--maroon);padding:0.4rem 1rem;background:var(--pink-bg);border-radius:var(--radius-full);margin-bottom:1rem}
+.crumbs{padding:1rem 0 0;font-size:0.84rem;color:var(--ink-muted)}
+.crumbs a{color:var(--maroon);font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:0.95rem 1.6rem;border-radius:var(--radius-full);font-weight:600;text-decoration:none;transition:all 0.3s;font-size:1rem;border:none;cursor:pointer;font-family:inherit;min-height:48px}
+.btn-maroon{background:var(--maroon);color:var(--paper);box-shadow:0 6px 20px rgba(140,54,69,0.35)}
+.btn-maroon:hover{background:var(--maroon-deep);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--maroon);border:2px solid var(--maroon)}
+.btn-outline:hover{background:var(--maroon);color:var(--paper)}
+.btn-gold{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);box-shadow:0 4px 14px rgba(201,163,94,0.35)}
+.section{padding:3rem 0}
+.section.alt{background:var(--paper)}
+.section-head{text-align:center;margin-bottom:2.5rem}
+.section-head h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:0.5rem;color:var(--maroon-deep)}
+.section-head h2 em{color:var(--maroon);font-style:italic}
+.section-head p{color:var(--ink-sub);max-width:55ch;margin:0 auto}
+.footer{padding:3rem 0;text-align:center;background:var(--ink);color:rgba(255,255,255,0.75);font-size:0.86rem;margin-top:3rem}
+.footer a{color:var(--gold-soft)}
+.footer-links{display:flex;justify-content:center;gap:1.4rem;flex-wrap:wrap;margin:1rem 0}
+.shop-hero{padding:4rem 0 2rem;text-align:center;background:linear-gradient(180deg,var(--ivoire-deep),var(--ivoire))}
+.shop-hero h1{font-size:clamp(2.4rem,6vw,3.4rem);color:var(--maroon);margin-bottom:0.6rem}
+.shop-hero p{color:var(--ink-sub);max-width:50ch;margin:0 auto}
+.shop-categories{display:flex;justify-content:center;gap:0.6rem;margin:2rem 0;flex-wrap:wrap}
+.shop-tab{padding:0.6rem 1.4rem;background:var(--paper);color:var(--ink-sub);border:1px solid var(--border);border-radius:var(--radius-full);font-family:inherit;cursor:pointer;font-size:0.92rem}
+.shop-tab.active{background:var(--maroon);color:var(--paper);border-color:var(--maroon)}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin:2rem 0}
+.product{background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-soft);transition:all 0.3s;cursor:pointer}
+.product:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--gold)}
+.product-img{aspect-ratio:1;background-size:cover;background-position:center}
+.product-body{padding:1.2rem 1.4rem 1.4rem}
+.product-cat{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:0.3rem}
+.product h3{font-size:1.1rem;margin-bottom:0.3rem;line-height:1.2}
+.product-desc{font-size:0.84rem;color:var(--ink-muted);line-height:1.55;margin-bottom:0.8rem}
+.product-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--border);padding-top:0.6rem}
+.product-price{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--maroon)}
+.product-cta{font-size:0.84rem;color:var(--maroon);font-weight:600}
+@media (max-width:880px){.products-grid{grid-template-columns:1fr}.nav-links{display:none}}
+
+/* PAGE STORY ENRICHMENT */
+.story-section{padding:3rem 0;background:var(--paper)}
+.story-narrative{max-width:720px;margin:0 auto;color:var(--ink-sub);line-height:1.85;font-size:1.02rem}
+.story-narrative p{margin-bottom:1.2rem}
+.story-narrative em{color:var(--maroon);font-style:italic}
+.story-narrative strong{color:var(--ink)}
+.faq-section{padding:3rem 0}
+.faq-section .faq{max-width:720px;margin:0 auto}
+.faq-section details{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.7rem;padding:0.4rem 1.4rem}
+.faq-section summary{cursor:pointer;font-weight:600;color:var(--ink);padding:0.8rem 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq-section summary::after{content:'+';font-size:1.4rem;color:var(--maroon)}
+.faq-section details[open] summary::after{content:'\2212'}
+.faq-section details p{padding:0.5rem 0 1rem;color:var(--ink-sub);font-size:0.94rem;line-height:1.65}
+</style></head><body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="ananda-v3-temple-garden.html" class="logo">
+      <span class="logo-mark">a</span>
+      <span class="logo-text"><strong>TANTRA</strong><span>ESSENCE</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="ananda-v3-temple-garden.html#events">Events</a></li>
+      <li><a href="ananda-v3-temple-garden.html#freeclasses">Free Classes</a></li>
+      <li><a href="ananda-v3-temple-garden.html#programs">Programs</a></li>
+      <li><a href="ananda-v3-temple-garden.html#about">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="donate.html" class="nav-cta">Donate</a>
+  </div>
+</header>
+<section class="shop-hero"><div class="container"><span class="eyebrow">Sacred Shop</span>
+<h1><em>Tools</em> for the daily practice</h1>
+<p>Carefully curated objects, music, and wisdom to support your path home.</p>
+<div class="shop-categories">
+<button class="shop-tab active">All</button>
+<button class="shop-tab">Tachyon</button>
+<button class="shop-tab">Music</button>
+<button class="shop-tab">Books</button>
+</div></div></section>
+<section class="container"><div class="products-grid">
+<article class="product"><div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&q=80&auto=format&fit=crop');"></div><div class="product-body"><div class="product-cat">Tachyon &middot; Healing</div><h3>Tachyon Pendant &mdash; Heart</h3><p class="product-desc">Sacred geometry pendant infused with Tachyon energy. Worn over the heart center for daily attunement.</p><div class="product-foot"><span class="product-price">$185</span><span class="product-cta">Add to cart &rarr;</span></div></div></article>
+<article class="product"><div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&auto=format&fit=crop');"></div><div class="product-body"><div class="product-cat">Tachyon &middot; Tools</div><h3>Tachyon Crystal Set</h3><p class="product-desc">Seven Tachyon-charged crystals corresponding to the chakras. For meditation altars and energy work.</p><div class="product-foot"><span class="product-price">$320</span><span class="product-cta">Add to cart &rarr;</span></div></div></article>
+<article class="product"><div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80&auto=format&fit=crop');"></div><div class="product-body"><div class="product-cat">Music &middot; Mantra</div><h3>Sacred Mantras Vol. 1</h3><p class="product-desc">12 ceremonial mantras chanted by Sarita and senior students. Digital album, lifetime download.</p><div class="product-foot"><span class="product-price">$24</span><span class="product-cta">Add to cart &rarr;</span></div></div></article>
+<article class="product"><div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1471478331149-c72f17e33c73?w=600&q=80&auto=format&fit=crop');"></div><div class="product-body"><div class="product-cat">Music &middot; Sound bath</div><h3>Tantra Sound Journey</h3><p class="product-desc">90-minute sound bath recorded in Bali. Singing bowls, drums, voice. For deep practice or sleep.</p><div class="product-foot"><span class="product-price">$18</span><span class="product-cta">Add to cart &rarr;</span></div></div></article>
+<article class="product"><div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80&auto=format&fit=crop');"></div><div class="product-body"><div class="product-cat">Books &middot; Foundations</div><h3>The Path of Awareness</h3><p class="product-desc">Sarita's introduction to authentic Tantra in 240 pages. The book most teachers in our network start with.</p><div class="product-foot"><span class="product-price">$28</span><span class="product-cta">Add to cart &rarr;</span></div></div></article>
+<article class="product"><div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&q=80&auto=format&fit=crop');"></div><div class="product-body"><div class="product-cat">Books &middot; Practice</div><h3>112 Doorways to Awareness</h3><p class="product-desc">A daily practice companion based on the Vigyan Bhairav Tantra. One sutra per day for 112 days.</p><div class="product-foot"><span class="product-price">$32</span><span class="product-cta">Add to cart &rarr;</span></div></div></article>
+</div></section>
+
+<section class="story-section">
+<div class="container">
+<div style="text-align:center;margin-bottom:1.5rem;"><span class="eyebrow">A felt narrative</span>
+<h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--maroon-deep);">How we <em>choose</em> what to sell</h2></div>
+<div class="story-narrative"><p>The Tantra Essence shop is small on purpose. We sell what we use, what students keep coming back for, and what we can stand behind. Six categories of products. None of them are best-sellers in any meaningful sense &mdash; we sell maybe a few hundred pieces a year of each, and that is fine.</p><p>The Tachyon items are sourced from a single producer we have worked with since 2014. They are charged in a specific way that the producer has refined over twenty-five years. We do not pretend to know whether Tachyon "works" the way the producer claims &mdash; we know that students who use them report a felt difference, and that is enough for us to keep stocking them.</p><p>The music is recorded by Sarita and senior students in actual ceremonial settings. Not in a studio. The slight imperfections are intentional &mdash; you are not buying production polish, you are buying the thing that was sung in the room. The books are written by Sarita over forty years of teaching. They are dense.</p><p>Shipping is handled from two warehouses (US and Europe). Delivery is typically 5-12 business days depending on country. Music and book downloads are immediate after purchase.</p></div>
+</div></section>
+<section class="faq-section">
+<div class="container">
+<div style="text-align:center;margin-bottom:1.5rem;"><span class="eyebrow">Common questions</span>
+<h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--maroon-deep);"><em>FAQ</em></h2></div>
+<div class="faq"><details><summary>Are the Tachyon items "real" Tachyon?</summary><p>We rely on the producer's certification. We do not run independent scientific tests. Use them based on your own felt experience, not on our claims.</p></details><details><summary>Can I return a product?</summary><p>Tachyon items: returnable within 14 days if unworn and in original packaging. Music and books: digital purchases are non-refundable but we will replace damaged physical items.</p></details><details><summary>Do you ship internationally?</summary><p>Yes &mdash; from our two warehouses (US and EU). Customs duties, where applicable, are the buyer's responsibility.</p></details><details><summary>Are the books available in other languages?</summary><p>Three of Sarita's books are translated into Spanish, two into Portuguese, one into French and German. Translations are noted on each book's page.</p></details><details><summary>Can I buy in bulk for a yoga studio or workshop?</summary><p>Yes &mdash; please contact us through the support page for wholesale pricing on quantities of 12+.</p></details></div>
+</div></section>
+
+<footer class="footer">
+  <div class="container">
+    <p style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--paper);margin-bottom:0.4rem;">tantra <em style="color:var(--gold-soft)">essence</em></p>
+    <div class="footer-links">
+      <a href="ananda-v3-temple-garden.html#events">Events</a>
+      <a href="ananda-v3-temple-garden.html#programs">Programs</a>
+      <a href="ananda-v3-temple-garden.html#about">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html">Donate</a>
+    </div>
+    <p style="font-size:0.78rem;opacity:0.6;">&copy; 2026 Tantra Essence &middot; Ma Ananda Sarita</p>
+  </div>
+</footer>
+</body></html>

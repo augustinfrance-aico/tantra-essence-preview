@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Secure checkout for Tantra Essence programs and retreats. Payment via Stripe, 30-day refund guarantee.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Checkout · Tantra Essence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ivoire:#FAF5EC;--ivoire-deep:#F2E9D6;--paper:#FEFBF4;--pink-soft:#F5D9D3;--pink:#D98B83;--pink-mid:#C26B64;--pink-bg:#FCEFEA;--maroon:#8C3645;--maroon-deep:#5D1F2C;--gold:#C9A35E;--gold-deep:#9E7F47;--gold-soft:#E8D4A2;--ink:#2A1A1E;--ink-sub:#5E4A4E;--ink-muted:#8C7A7E;--border:rgba(93,42,46,0.12);--border-soft:rgba(93,42,46,0.06);--shadow:0 14px 40px rgba(45,26,30,0.10);--radius:16px;--radius-full:9999px;--max-w:1080px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.6;font-size:15px}
+h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15}
+em{color:var(--maroon);font-style:italic}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 1.5rem}
+.demo-banner{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--ink);color:var(--gold-soft);font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;text-align:center;padding:0.45rem;font-weight:600}
+.demo-banner a{color:var(--gold-soft);text-decoration:underline}
+.topbar{background:var(--paper);border-bottom:1px solid var(--border-soft);padding:1rem 0;margin-top:32px}
+.topbar-inner{max-width:var(--max-w);margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:var(--gold-soft);border-radius:50%;display:grid;place-items:center;font-family:'DM Serif Display',serif;font-style:italic;color:var(--maroon);font-size:1.1rem}
+.logo-text strong{display:block;font-size:0.9rem;letter-spacing:0.14em;color:var(--maroon);font-family:'DM Serif Display',serif;line-height:1}
+.logo-text span{display:block;font-size:0.62rem;letter-spacing:0.32em;color:var(--maroon);margin-top:2px;font-family:'DM Serif Display',serif}
+.steps{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:var(--ink-muted)}
+.step{padding:0.3rem 0.7rem;border-radius:var(--radius-full);background:var(--ivoire-deep)}
+.step.active{background:var(--maroon);color:var(--paper);font-weight:600}
+.step.done{background:var(--gold-soft);color:var(--maroon-deep)}
+
+.checkout-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;padding:3rem 0}
+
+/* LEFT — form + bumps */
+.checkout-section{background:var(--paper);border-radius:var(--radius);padding:1.8rem;margin-bottom:1.2rem;border:1px solid var(--border-soft)}
+.checkout-section h3{font-size:1.2rem;margin-bottom:1.2rem;color:var(--maroon-deep)}
+.field{margin-bottom:0.9rem}
+.field label{display:block;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:0.4rem}
+.field input{width:100%;padding:0.85rem 1rem;border:1px solid var(--border);border-radius:10px;background:var(--ivoire);font-family:inherit;font-size:0.96rem;color:var(--ink);outline:none;transition:border 0.3s}
+.field input:focus{border-color:var(--maroon)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem}
+
+/* BUMPS */
+.bump{background:linear-gradient(135deg,var(--pink-bg) 0%,var(--gold-soft) 100%);border:2px dashed var(--gold);border-radius:var(--radius);padding:1.3rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start;cursor:pointer;transition:all 0.3s}
+.bump.checked{border-style:solid;background:linear-gradient(135deg,var(--gold-soft) 0%,var(--pink-soft) 100%);box-shadow:0 4px 14px rgba(201,163,94,0.3)}
+.bump-check{width:24px;height:24px;border:2px solid var(--maroon);border-radius:6px;flex-shrink:0;margin-top:2px;display:grid;place-items:center;background:var(--paper);transition:all 0.2s}
+.bump.checked .bump-check{background:var(--maroon)}
+.bump.checked .bump-check::after{content:'✓';color:var(--paper);font-weight:700;font-size:14px}
+.bump-content{flex:1}
+.bump-tag{display:inline-block;font-size:0.66rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--maroon);font-weight:700;margin-bottom:0.3rem}
+.bump-content h4{font-size:1.05rem;margin-bottom:0.3rem;color:var(--maroon-deep)}
+.bump-content p{font-size:0.86rem;color:var(--ink-sub);line-height:1.5}
+.bump-price{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--maroon);flex-shrink:0;text-align:right}
+.bump-price small{display:block;font-size:0.66rem;color:var(--ink-muted);font-family:'Inter',sans-serif;letter-spacing:0.06em;text-transform:uppercase;margin-top:2px}
+
+/* RIGHT — order summary */
+.order-summary{position:sticky;top:1rem;background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);padding:1.8rem;height:fit-content}
+.order-summary h3{font-size:1.1rem;margin-bottom:1.2rem;color:var(--maroon-deep);border-bottom:1px dashed var(--border);padding-bottom:0.8rem}
+.order-line{display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;font-size:0.92rem;color:var(--ink-sub)}
+.order-line strong{color:var(--ink);font-weight:500}
+.order-line.bonus{color:var(--gold-deep)}
+.order-line.bonus strong{color:var(--gold-deep)}
+.order-total{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;border-top:2px solid var(--maroon);margin-top:0.6rem;font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--maroon)}
+.btn-pay{display:flex;align-items:center;justify-content:center;width:100%;padding:1.2rem;background:var(--maroon);color:var(--paper);font-family:inherit;font-size:1.05rem;font-weight:600;border:none;border-radius:var(--radius-full);cursor:pointer;margin-top:1rem;box-shadow:0 6px 20px rgba(140,54,69,0.4);transition:all 0.3s}
+.btn-pay:hover{background:var(--maroon-deep);transform:translateY(-1px)}
+.btn-pay::before{content:'🔒  '}
+.trust-row{display:flex;align-items:center;justify-content:center;gap:0.8rem;margin-top:1rem;font-size:0.74rem;color:var(--ink-muted);letter-spacing:0.04em}
+.trust-row span{padding:0.3rem 0.6rem;background:var(--ivoire-deep);border-radius:6px}
+
+.guarantee-block{padding:1.2rem;background:var(--ivoire-deep);border-radius:12px;margin-top:1.2rem;font-size:0.86rem;color:var(--ink-sub);line-height:1.5;text-align:center}
+.guarantee-block strong{display:block;color:var(--maroon-deep);margin-bottom:0.4rem;font-family:'DM Serif Display',serif;font-size:1rem}
+
+@media (max-width:880px){.checkout-grid{grid-template-columns:1fr}.steps{display:none}.field-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO STRUCTURE · Checkout (Stripe placeholder) · Step 3 of 6 · <a href="ananda-v3-temple-garden.html">← back to home</a></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="ananda-v3-temple-garden.html" class="logo">
+      <span class="logo-mark">a</span>
+      <span class="logo-text"><strong>TANTRA</strong><span>ESSENCE</span></span>
+    </a>
+    <div class="steps">
+      <span class="step done">✓ Cart</span>
+      <span class="step active">2 · Checkout</span>
+      <span class="step">3 · Access</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="checkout-grid">
+
+    <div>
+      <div class="checkout-section">
+        <h3>Your contact info</h3>
+        <div class="field-row">
+          <div class="field"><label>First name</label><input type="text" placeholder="Maria" required></div>
+          <div class="field"><label>Last name</label><input type="text" placeholder="Garcia" required></div>
+        </div>
+        <div class="field"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
+        <div class="field"><label>Phone (optional, for support)</label><input type="tel" placeholder="+33 6 ..."></div>
+      </div>
+
+      <div class="checkout-section">
+        <h3>Add to your order</h3>
+
+        <label class="bump" id="bump1" onclick="toggleBump('bump1', 17)">
+          <span class="bump-check"></span>
+          <div class="bump-content">
+            <span class="bump-tag">Yes — add this to my order</span>
+            <h4>Guided Meditation Pack</h4>
+            <p>8 audio meditations companion to the Starter program. Add it now and save 60% vs separate purchase.</p>
+          </div>
+          <div class="bump-price">+$17<small>one-time</small></div>
+        </label>
+
+        <label class="bump" id="bump2" onclick="toggleBump('bump2', 27)">
+          <span class="bump-check"></span>
+          <div class="bump-content">
+            <span class="bump-tag">Yes — add 3 months access</span>
+            <h4>Tantra Essence Community · 3 months</h4>
+            <p>Private circle of 8,000+ students worldwide. Monthly live calls with Sarita. Cancel anytime.</p>
+          </div>
+          <div class="bump-price">+$27<small>3 months</small></div>
+        </label>
+      </div>
+
+      <div class="checkout-section">
+        <h3>Payment · Stripe secure</h3>
+        <div class="field"><label>Card number</label><input type="text" placeholder="4242 4242 4242 4242" autocomplete="cc-number"></div>
+        <div class="field-row">
+          <div class="field"><label>Expiration</label><input type="text" placeholder="MM / YY" autocomplete="cc-exp"></div>
+          <div class="field"><label>CVC</label><input type="text" placeholder="123" autocomplete="cc-csc"></div>
+        </div>
+        <div class="field"><label>Postal code</label><input type="text" placeholder="75001"></div>
+        <div style="font-size:0.78rem;color:var(--ink-muted);margin-top:0.6rem;">Stripe placeholder — wire real Stripe Elements with publishable key once Sandra Stripe account access is provided.</div>
+      </div>
+    </div>
+
+    <aside class="order-summary">
+      <h3>Order summary</h3>
+      <div class="order-line"><strong>Tantra Awakening Starter</strong><span>$47</span></div>
+      <div class="order-line bonus" id="line-bump1" hidden><strong>+ Meditation Pack</strong><span>$17</span></div>
+      <div class="order-line bonus" id="line-bump2" hidden><strong>+ Community 3 mo</strong><span>$27</span></div>
+      <div class="order-line"><span>Subtotal</span><strong id="subtotal">$47</strong></div>
+      <div class="order-line"><span>VAT</span><span>included</span></div>
+      <div class="order-total"><span>Total</span><strong id="total">$47</strong></div>
+      <button class="btn-pay" onclick="window.location.href='funnel-upsell-1.html?session='+sessionStorage.getItem('tantra_funnel_session')">Complete order — <span id="totalBtn">$47</span></button>
+      <div class="trust-row"><span>SSL</span><span>Stripe</span><span>30-day refund</span></div>
+      <div class="guarantee-block">
+        <strong>30-day money-back guarantee</strong>
+        Email us within 30 days, get refunded — no questions, no friction.
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<script>
+let basePrice = 47;
+let bumps = {bump1: 0, bump2: 0};
+
+function toggleBump(id, price) {
+  const el = document.getElementById(id);
+  const lineEl = document.getElementById('line-' + id);
+  if (el.classList.contains('checked')) {
+    el.classList.remove('checked');
+    bumps[id] = 0;
+    lineEl.hidden = true;
+  } else {
+    el.classList.add('checked');
+    bumps[id] = price;
+    lineEl.hidden = false;
+  }
+  updateTotal();
+}
+
+function updateTotal() {
+  const total = basePrice + bumps.bump1 + bumps.bump2;
+  document.getElementById('subtotal').textContent = '$' + total;
+  document.getElementById('total').textContent = '$' + total;
+  document.getElementById('totalBtn').textContent = '$' + total;
+  sessionStorage.setItem('tantra_total', total);
+}
+
+sessionStorage.setItem('tantra_funnel_step', 'checkout');
+</script>
+</body>
+</html>

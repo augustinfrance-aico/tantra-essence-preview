@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Free Tantra masterclasses with Ma Ananda Sarita - the doorway most students walk through to the path. No card required.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Classes · Tantra Essence</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ivoire:#FAF5EC;--ivoire-deep:#F2E9D6;--paper:#FEFBF4;--pink-soft:#F5D9D3;--pink-bg:#FCEFEA;--maroon:#8C3645;--maroon-deep:#5D1F2C;--gold:#C9A35E;--gold-deep:#9E7F47;--gold-soft:#E8D4A2;--ink:#2A1A1E;--ink-sub:#5E4A4E;--ink-muted:#8C7A7E;--border:rgba(93,42,46,0.12);--border-soft:rgba(93,42,46,0.06);--shadow:0 14px 40px rgba(45,26,30,0.10);--radius:18px;--radius-full:9999px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.6;font-size:16px}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15}
+em{color:var(--maroon);font-style:italic}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+.demo-banner{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--ink);color:var(--gold-soft);font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;text-align:center;padding:0.45rem;font-weight:600}
+.demo-banner a{color:var(--gold-soft);text-decoration:underline}
+.topbar{position:sticky;top:32px;z-index:100;background:rgba(254,251,244,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-soft);padding:0.9rem 0}
+.topbar-inner{max-width:1240px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:var(--gold-soft);border-radius:50%;display:grid;place-items:center;font-family:'DM Serif Display',serif;font-style:italic;color:var(--maroon);font-size:1.1rem}
+.logo-text strong{display:block;font-size:0.92rem;letter-spacing:0.14em;color:var(--maroon);font-family:'DM Serif Display',serif;line-height:1}
+.logo-text span{display:block;font-size:0.66rem;letter-spacing:0.32em;color:var(--maroon);margin-top:2px;font-family:'DM Serif Display',serif}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--ink)}
+.nav-cta{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.65rem 1.3rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:0.95rem}
+.eyebrow{display:inline-block;font-size:0.74rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--maroon);padding:0.4rem 1rem;background:var(--pink-bg);border-radius:var(--radius-full);margin-bottom:1rem}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:0.95rem 1.5rem;background:var(--maroon);color:var(--paper);font-weight:600;border:none;border-radius:var(--radius-full);cursor:pointer;box-shadow:0 6px 20px rgba(140,54,69,0.35);transition:all 0.3s;font-family:inherit}
+.btn-primary:hover{background:var(--maroon-deep);transform:translateY(-2px)}
+.btn-outline{display:inline-flex;align-items:center;justify-content:center;padding:0.95rem 1.5rem;background:transparent;color:var(--maroon);font-weight:600;border:2px solid var(--maroon);border-radius:var(--radius-full);cursor:pointer;transition:all 0.3s}
+.btn-outline:hover{background:var(--maroon);color:var(--paper)}
+.page-hero{padding:4rem 0 2.5rem;text-align:center;background:linear-gradient(180deg,var(--ivoire) 0%,var(--paper) 100%)}
+.page-hero h1{font-size:clamp(2.4rem,6vw,3.6rem);margin-bottom:1rem;max-width:18ch;margin-left:auto;margin-right:auto}
+.page-hero p{font-size:1.1rem;color:var(--ink-sub);max-width:55ch;margin:0 auto}
+
+.featured{padding:3rem 0;background:var(--paper)}
+.featured-card{display:grid;grid-template-columns:1fr 1.3fr;gap:2rem;background:linear-gradient(135deg,var(--paper) 0%,var(--gold-soft) 100%);border:2px solid var(--gold);border-radius:var(--radius);padding:2rem;align-items:center;box-shadow:var(--shadow);max-width:900px;margin:0 auto}
+.featured-img{aspect-ratio:1;border-radius:var(--radius);background:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/87804b-f7-b558-35ca-f4e4f4c6f8c8_19061057-efd3-4bc0-9899-c34e268516a9.webp') center/cover;position:relative}
+.featured-img::after{content:'▶';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:rgba(254,251,244,0.92);border-radius:50%;display:grid;place-items:center;font-size:1.6rem;color:var(--maroon)}
+.featured-card h2{font-size:1.7rem;margin-bottom:0.6rem}
+.featured-card .tag{display:inline-block;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--maroon);font-weight:700;margin-bottom:0.6rem;background:rgba(255,255,255,0.5);padding:0.3rem 0.7rem;border-radius:var(--radius-full)}
+.featured-card p{color:var(--ink-sub);margin-bottom:1.2rem}
+.featured-meta{display:flex;gap:1.4rem;flex-wrap:wrap;font-size:0.82rem;color:var(--ink-muted);margin-bottom:1.4rem}
+
+.section{padding:3rem 0}
+.section.alt{background:var(--paper)}
+.section-head{text-align:center;margin-bottom:2.2rem}
+.section-head h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:0.5rem}
+.fc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.fc-card{background:var(--paper);border-radius:var(--radius);padding:1.6rem;border:1px solid var(--border-soft);transition:all 0.3s;display:flex;flex-direction:column}
+.fc-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--gold)}
+.fc-tag{display:inline-block;font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--paper);background:var(--maroon);padding:0.3rem 0.7rem;border-radius:var(--radius-full);margin-bottom:0.8rem;font-weight:600;align-self:flex-start}
+.fc-card h3{font-size:1.18rem;margin-bottom:0.5rem;color:var(--ink)}
+.fc-card p{color:var(--ink-sub);font-size:0.92rem;line-height:1.55;margin-bottom:1rem;flex:1}
+.fc-link{color:var(--maroon);font-weight:600;font-size:0.88rem;border-bottom:1px solid transparent;align-self:flex-start;transition:border 0.3s}
+.fc-link:hover{border-bottom-color:var(--maroon)}
+
+.newsletter{padding:4rem 1.5rem;background:linear-gradient(135deg,var(--pink-soft) 0%,var(--gold-soft) 100%);text-align:center}
+.newsletter h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:0.8rem}
+.newsletter p{color:var(--ink-sub);max-width:50ch;margin:0 auto 1.8rem}
+.newsletter-form{display:flex;gap:0.6rem;max-width:480px;margin:0 auto;flex-wrap:wrap}
+.newsletter-form input{flex:1;min-width:200px;padding:1rem 1.2rem;border:1px solid var(--border);border-radius:var(--radius-full);background:var(--paper);font-family:inherit;font-size:0.96rem;outline:none;text-align:center}
+.newsletter-form input:focus{border-color:var(--maroon)}
+
+.footer{padding:3rem 0;text-align:center;background:var(--ink);color:rgba(255,255,255,0.7);font-size:0.86rem}
+.footer a{color:var(--gold-soft)}
+.footer-links{display:flex;justify-content:center;gap:1.4rem;flex-wrap:wrap;margin:1rem 0}
+
+@media (max-width:880px){.featured-card{grid-template-columns:1fr}.fc-grid{grid-template-columns:1fr}.nav-links{display:none}}
+
+/* PAGE STORY ENRICHMENT */
+.story-section{padding:3rem 0;background:var(--paper)}
+.story-narrative{max-width:720px;margin:0 auto;color:var(--ink-sub);line-height:1.85;font-size:1.02rem}
+.story-narrative p{margin-bottom:1.2rem}
+.story-narrative em{color:var(--maroon);font-style:italic}
+.story-narrative strong{color:var(--ink)}
+.faq-section{padding:3rem 0}
+.faq-section .faq{max-width:720px;margin:0 auto}
+.faq-section details{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.7rem;padding:0.4rem 1.4rem}
+.faq-section summary{cursor:pointer;font-weight:600;color:var(--ink);padding:0.8rem 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq-section summary::after{content:'+';font-size:1.4rem;color:var(--maroon)}
+.faq-section details[open] summary::after{content:'\2212'}
+.faq-section details p{padding:0.5rem 0 1rem;color:var(--ink-sub);font-size:0.94rem;line-height:1.65}
+</style>
+</head>
+<body>
+<div class="demo-banner">FREE CLASSES &amp; LEAD MAGNETS · Begin without paying · <a href="ananda-v3-temple-garden.html">← back to home</a></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="ananda-v3-temple-garden.html" class="logo"><span class="logo-mark">a</span><span class="logo-text"><strong>TANTRA</strong><span>ESSENCE</span></span></a>
+    <ul class="nav-links">
+      <li><a href="events.html">Events</a></li><li><a href="free-classes.html">Free Classes</a></li><li><a href="programs.html">Programs</a></li><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="funnel-landing.html" class="nav-cta">Donate</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">No card · No catch · Real teaching</span>
+    <h1>Free <em>classes</em> &amp; gifts</h1>
+    <p>Begin the path without paying a thing. Six free transmissions handpicked by Sarita to give you a real taste — not a teaser.</p>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="container">
+    <div class="featured-card">
+      <div class="featured-img" role="img" aria-label="Free Tantra Masterclass"></div>
+      <div>
+        <span class="tag">Featured · 60 minutes</span>
+        <h2>The Free Tantra <em>Masterclass</em></h2>
+        <p>A complete 60-minute video transmission from Sarita on the foundations of authentic Tantra. The masterclass most students walk through before joining a retreat.</p>
+        <div class="featured-meta"><span>📹 HD video</span><span>🌍 12,400+ students</span><span>⭐ 4.9 rating</span><span>🌐 60+ countries</span></div>
+        <a href="funnel-landing.html" class="btn-primary">Get instant access — free →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">5 more free gifts</span>
+      <h2>Begin <em>anywhere</em></h2>
+      <p style="color:var(--ink-sub);max-width:50ch;margin:0.5rem auto 0;">Pick the one that calls you — they're all yours, free, no signup gates beyond your email.</p>
+    </div>
+    <div class="fc-grid">
+      <article class="fc-card"><span class="fc-tag">Daily · 10 min</span><h3>Morning Light <em>Activation</em></h3><p>A 10-minute morning practice given freely to every member. Wake up the body, set the heart, meet the day from your essence.</p><a href="funnel-landing.html" class="fc-link">Listen now →</a></article>
+      <article class="fc-card"><span class="fc-tag">Women · 22 min</span><h3>Womb Wisdom <em>Sample</em></h3><p>The first chapter of the women's path — a 22-minute guided journey into the wisdom of the body. Free, unlocked, yours forever.</p><a href="funnel-landing.html" class="fc-link">Receive the gift →</a></article>
+      <article class="fc-card"><span class="fc-tag">Couples · 18 min</span><h3>Sacred Touch <em>Preview</em></h3><p>The opening practice of the most-loved couples' program. Eye-gazing, breath synchronization — taught in 18 minutes.</p><a href="funnel-landing.html" class="fc-link">Preview now →</a></article>
+      <article class="fc-card"><span class="fc-tag">Newsletter · 3 min/week</span><h3>Weekly <em>wisdom</em></h3><p>Three minutes of Tantric wisdom every Sunday. Free — and the doorway most students walk through to the deeper path.</p><a href="#newsletter" class="fc-link">Subscribe free →</a></article>
+      <article class="fc-card"><span class="fc-tag">Application · personal</span><h3>Tantra <em>Transformation</em> Application</h3><p>Tell us where you stand on the path. Free 1:1 application review by a senior teacher — they'll point you to the right next step.</p><a href="contact.html" class="fc-link">Apply free →</a></article>
+      <article class="fc-card"><span class="fc-tag">PDF · printable</span><h3>The 15-min <em>daily ritual</em></h3><p>The practice you'll still be doing in six months. Six pages, printable, designed by Sarita to anchor your day.</p><a href="funnel-landing.html" class="fc-link">Download free →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter" id="newsletter">
+  <div class="container">
+    <span class="eyebrow">Free · 3 minutes / week</span>
+    <h2>Wisdom in your <em>inbox</em></h2>
+    <p>Three minutes of Tantric wisdom every Sunday. Reflections, practices, retreat updates. Unsubscribe in one click.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks — you are in. First letter arrives Sunday.');">
+      <input type="email" placeholder="your@email.com" required>
+      <button type="submit" class="btn-primary">Subscribe →</button>
+    </form>
+  </div>
+</section>
+
+
+<section class="story-section">
+<div class="container">
+<div style="text-align:center;margin-bottom:1.5rem;"><span class="eyebrow">A felt narrative</span>
+<h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--maroon-deep);">Why we <em>actually</em> give classes away</h2></div>
+<div class="story-narrative"><p>There is a marketing wisdom that says: give away the foundation, charge for the depth. We agree, but only halfway. The free classes we offer are not stripped-down teasers &mdash; they are <strong>real teachings that stand on their own</strong>.</p><p>The Free Tantra Masterclass with Sarita is sixty minutes of taught content. By the end of it, you have a working definition of Tantra, a feel for the chakra map, and a 15-minute daily ritual. If you never bought another thing from us, you would have a practice you could keep for life. That is intentional.</p><p>The same holds for the Womb Wisdom audio, the Morning Light Activation, the Sacred Touch Preview. Each one is a complete piece. You can use them as long as you want without ever joining a paid program.</p><p>Most students who join paid programs do so months or years after their first free class. They watch the masterclass, do the morning ritual, sit on it, and only when they feel ready do they take a next step. <em>That slow path is the real path.</em> We design our offerings to support it rather than rush it.</p></div>
+</div></section>
+<section class="faq-section">
+<div class="container">
+<div style="text-align:center;margin-bottom:1.5rem;"><span class="eyebrow">Common questions</span>
+<h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--maroon-deep);"><em>FAQ</em></h2></div>
+<div class="faq"><details><summary>Do I have to give my email to access free classes?</summary><p>Yes. We need a way to send you the access link. You can unsubscribe from the newsletter in one click after receiving it.</p></details><details><summary>Will I be added to a long sales sequence?</summary><p>You will receive 3-5 welcome emails over two weeks introducing different aspects of the lineage. Then you join the standard weekly newsletter (3 minutes per week). Unsubscribe anytime.</p></details><details><summary>Can I share the free classes with friends?</summary><p>We prefer you send them the signup link rather than the content directly. The signup is free for them too.</p></details><details><summary>Are the free classes the same as paid programs?</summary><p>They are foundational. Paid programs go deeper, include practice cards, live circles, community access, and supervised instruction. The free classes are not "lite" &mdash; they are different in scope.</p></details><details><summary>Why is it free?</summary><p>Because the foundation should be accessible. We charge for depth, retreats, and certification &mdash; not for the doorway.</p></details></div>
+</div></section>
+
+<footer class="footer">
+  <div class="container">
+    <p style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--paper);margin-bottom:0.4rem;">tantra <em style="color:var(--gold-soft)">essence</em></p>
+    <div class="footer-links"><a href="events.html">Events</a><a href="programs.html">Programs</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+    <p style="font-size:0.78rem;opacity:0.6;">© 2026 Tantra Essence · Ma Ananda Sarita</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="The Tantra Essence team - Sarita and 21 senior certified teachers leading retreats across 36 countries.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team &amp; Teachers · Tantra Essence</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ivoire:#FAF5EC;--ivoire-deep:#F2E9D6;--paper:#FEFBF4;--pink-soft:#F5D9D3;--pink-bg:#FCEFEA;--maroon:#8C3645;--maroon-deep:#5D1F2C;--gold:#C9A35E;--gold-deep:#9E7F47;--gold-soft:#E8D4A2;--ink:#2A1A1E;--ink-sub:#5E4A4E;--ink-muted:#8C7A7E;--border:rgba(93,42,46,0.12);--border-soft:rgba(93,42,46,0.06);--shadow:0 14px 40px rgba(45,26,30,0.10);--radius:18px;--radius-full:9999px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.6;font-size:16px}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15}
+em{color:var(--maroon);font-style:italic}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+.demo-banner{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--ink);color:var(--gold-soft);font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;text-align:center;padding:0.45rem;font-weight:600}
+.demo-banner a{color:var(--gold-soft);text-decoration:underline}
+.topbar{position:sticky;top:32px;z-index:100;background:rgba(254,251,244,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-soft);padding:0.9rem 0}
+.topbar-inner{max-width:1240px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:var(--gold-soft);border-radius:50%;display:grid;place-items:center;font-family:'DM Serif Display',serif;font-style:italic;color:var(--maroon);font-size:1.1rem}
+.logo-text strong{display:block;font-size:0.92rem;letter-spacing:0.14em;color:var(--maroon);font-family:'DM Serif Display',serif;line-height:1}
+.logo-text span{display:block;font-size:0.66rem;letter-spacing:0.32em;color:var(--maroon);margin-top:2px;font-family:'DM Serif Display',serif}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--ink)}
+.nav-cta{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.65rem 1.3rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:0.95rem}
+.eyebrow{display:inline-block;font-size:0.74rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--maroon);padding:0.4rem 1rem;background:var(--pink-bg);border-radius:var(--radius-full);margin-bottom:1rem}
+.page-hero{padding:4rem 0 2.5rem;text-align:center}
+.page-hero h1{font-size:clamp(2.4rem,6vw,3.6rem);margin-bottom:1rem}
+.page-hero p{font-size:1.1rem;color:var(--ink-sub);max-width:55ch;margin:0 auto}
+.lead-card{background:var(--paper);border-radius:var(--radius);padding:2.5rem;margin:2rem auto 4rem;max-width:900px;display:grid;grid-template-columns:1fr 1.4fr;gap:2.5rem;align-items:center;border:2px solid var(--gold);box-shadow:var(--shadow)}
+.lead-img{aspect-ratio:1;border-radius:var(--radius);background:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/fa815e1-416-5a6-638e-8ee238e1fe_Ma_Ananda_Sarita_Potrait.webp') center/cover}
+.lead-card h2{font-size:1.7rem;margin-bottom:0.4rem}
+.lead-card .role{display:inline-block;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:0.8rem}
+.lead-card p{color:var(--ink-sub);font-size:0.96rem;margin-bottom:0.8rem}
+.section{padding:3rem 0}
+.section.alt{background:var(--paper)}
+.section-head{text-align:center;margin-bottom:2.5rem}
+.section-head h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:0.6rem}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.tcard{background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-soft);transition:all 0.3s}
+.tcard:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--gold)}
+.tcard-img{aspect-ratio:1;background:linear-gradient(135deg,var(--pink-soft),var(--gold-soft));position:relative;display:grid;place-items:center;font-family:'DM Serif Display',serif;font-style:italic;font-size:3rem;color:var(--maroon)}
+.tcard-body{padding:1.2rem 1.3rem 1.4rem}
+.tcard h3{font-size:1.1rem;margin-bottom:0.2rem}
+.tcard .role{font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:0.5rem;display:block}
+.tcard p{font-size:0.84rem;color:var(--ink-sub);line-height:1.5}
+.footer{padding:3rem 0;text-align:center;background:var(--ink);color:rgba(255,255,255,0.7);font-size:0.86rem}
+.footer a{color:var(--gold-soft)}
+.footer-links{display:flex;justify-content:center;gap:1.4rem;flex-wrap:wrap;margin:1rem 0}
+@media (max-width:880px){.lead-card{grid-template-columns:1fr}.team-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}}
+@media (max-width:540px){.team-grid{grid-template-columns:1fr}}
+
+/* PAGE STORY ENRICHMENT */
+.story-section{padding:3rem 0;background:var(--paper)}
+.story-narrative{max-width:720px;margin:0 auto;color:var(--ink-sub);line-height:1.85;font-size:1.02rem}
+.story-narrative p{margin-bottom:1.2rem}
+.story-narrative em{color:var(--maroon);font-style:italic}
+.story-narrative strong{color:var(--ink)}
+.faq-section{padding:3rem 0}
+.faq-section .faq{max-width:720px;margin:0 auto}
+.faq-section details{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.7rem;padding:0.4rem 1.4rem}
+.faq-section summary{cursor:pointer;font-weight:600;color:var(--ink);padding:0.8rem 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq-section summary::after{content:'+';font-size:1.4rem;color:var(--maroon)}
+.faq-section details[open] summary::after{content:'\2212'}
+.faq-section details p{padding:0.5rem 0 1rem;color:var(--ink-sub);font-size:0.94rem;line-height:1.65}
+</style>
+</head>
+<body>
+<div class="demo-banner">TEAM &amp; CERTIFIED TEACHERS · 36+ countries · <a href="ananda-v3-temple-garden.html">← back to home</a></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="ananda-v3-temple-garden.html" class="logo"><span class="logo-mark">a</span><span class="logo-text"><strong>TANTRA</strong><span>ESSENCE</span></span></a>
+    <ul class="nav-links">
+      <li><a href="events.html">Events</a></li><li><a href="free-classes.html">Free Classes</a></li><li><a href="programs.html">Programs</a></li><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="funnel-landing.html" class="nav-cta">Donate</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">The lineage carriers</span>
+    <h1>Our <em>certified team</em></h1>
+    <p>Senior teachers trained in Sarita's lineage, leading retreats and holding space across 36 countries.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="lead-card">
+    <div class="lead-img" role="img" aria-label="Ma Ananda Sarita"></div>
+    <div>
+      <span class="role">Founder · Lineage holder</span>
+      <h2>Ma Ananda <em>Sarita</em></h2>
+      <p>53 years on the path of Tantra. 17 years learning directly from Osho. Founder of Tantra Essence.</p>
+      <p>Sarita leads flagship retreats — Tantra Teacher Training, Vigyan Bhairav Tantra, Mt Kailash Pilgrimage, Khajuraho — alongside her senior teachers.</p>
+      <a href="about.html" style="display:inline-block;margin-top:0.6rem;color:var(--maroon);font-weight:600;border-bottom:1px solid;padding-bottom:2px;">Read full bio →</a>
+    </div>
+  </div>
+</div>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Senior teachers · co-leads</span>
+      <h2>The <em>circle of guides</em></h2>
+      <p style="color:var(--ink-sub);max-width:55ch;margin:0.5rem auto 0;">Each one a transmission of the lineage. Each one a teacher in their own right.</p>
+    </div>
+    <div class="team-grid">
+      <article class="tcard"><div class="tcard-img">M</div><div class="tcard-body"><h3>Modestas</h3><span class="role">Senior teacher · Co-lead</span><p>Co-leads Sacred Touch, Master Lover, Soulmate Levels, Vigyan Bhairav Tantra alongside Sarita.</p></div></article>
+      <article class="tcard"><div class="tcard-img">D</div><div class="tcard-body"><h3>Dharmaraj</h3><span class="role">Senior teacher · Co-lead</span><p>Lead facilitator on Tantra Transformation retreats and Tantra Teacher Training Part 1.</p></div></article>
+      <article class="tcard"><div class="tcard-img">U</div><div class="tcard-body"><h3>Amma Usha Regina</h3><span class="role">Women's path · Co-lead</span><p>Co-lead with Sarita on Goddess Essence Retreats and the women's Teacher Training.</p></div></article>
+      <article class="tcard"><div class="tcard-img">S</div><div class="tcard-body"><h3>Sira</h3><span class="role">Women's path</span><p>Co-leads Alchemy of Her and Tantra Transformation retreats. Embodied feminine awakening.</p></div></article>
+      <article class="tcard"><div class="tcard-img">C</div><div class="tcard-body"><h3>Christa</h3><span class="role">Initiations &amp; chakra work</span><p>Leads Initiation Into Tantra weekends and Inner Mastery — Muladhara training.</p></div></article>
+      <article class="tcard"><div class="tcard-img">S</div><div class="tcard-body"><h3>Simon</h3><span class="role">Initiations</span><p>Co-leads Initiation Into Tantra and Inner Mastery foundational trainings.</p></div></article>
+      <article class="tcard"><div class="tcard-img">A</div><div class="tcard-body"><h3>Swami Amandeep</h3><span class="role">Men's path · Inner Mastery</span><p>Lead facilitator on Shivoham Levels 1 &amp; 2 and Inner Mastery — Anahata.</p></div></article>
+      <article class="tcard"><div class="tcard-img">N</div><div class="tcard-body"><h3>Ma Nritya Anurasa</h3><span class="role">Inner Mastery · Heart</span><p>Co-leads Inner Mastery — Anahata in Czech Republic. Heart-centered transmissions.</p></div></article>
+      <article class="tcard"><div class="tcard-img">S</div><div class="tcard-body"><h3>Suta</h3><span class="role">Initiations · UK &amp; Portugal</span><p>Leads Initiation Into Tantra in London and Soulmate retreats in Portugal.</p></div></article>
+      <article class="tcard"><div class="tcard-img">M</div><div class="tcard-body"><h3>Marali</h3><span class="role">Women's path · Co-lead</span><p>Co-leads Initiation Into Tantra in London and Goddess Essence Part 1 in Portugal.</p></div></article>
+      <article class="tcard"><div class="tcard-img">T</div><div class="tcard-body"><h3>Ma Prem Tanmaya</h3><span class="role">Women's path · Switzerland</span><p>Lead teacher on Goddess Essence Part 3 retreats in Switzerland.</p></div></article>
+      <article class="tcard"><div class="tcard-img">D</div><div class="tcard-body"><h3>Dieke</h3><span class="role">Couples path</span><p>Co-leads Soulmate Levels 1, 2 and 3 alongside Modestas.</p></div></article>
+      <article class="tcard"><div class="tcard-img">D</div><div class="tcard-body"><h3>Dev</h3><span class="role">Men's path · Mexico</span><p>Co-leads Shivoham Level 1 in Mexico and Level 2 in Dharamshala.</p></div></article>
+      <article class="tcard"><div class="tcard-img">P</div><div class="tcard-body"><h3>Prabuddha</h3><span class="role">Sacred Touch · Greece</span><p>Lead teacher on Tantra Sacred Touch retreats in Corfu.</p></div></article>
+      <article class="tcard"><div class="tcard-img">S</div><div class="tcard-body"><h3>Samya</h3><span class="role">Sacred Touch · Greece</span><p>Co-lead with Prabuddha on the Greek edition of Sacred Touch.</p></div></article>
+      <article class="tcard"><div class="tcard-img">A</div><div class="tcard-body"><h3>Antar Rahi</h3><span class="role">Pilgrimage · Mt Kailash</span><p>Co-facilitator on the Sacred Mt Kailash &amp; Kora Pilgrimage with Sarita.</p></div></article>
+      <article class="tcard"><div class="tcard-img">S</div><div class="tcard-body"><h3>Swami Ganga</h3><span class="role">India · Temple Tantra</span><p>Co-lead on the Khajuraho Tantra Retreat with Sarita and Modestas.</p></div></article>
+      <article class="tcard"><div class="tcard-img">R</div><div class="tcard-body"><h3>Roxana</h3><span class="role">Couples path · Portugal</span><p>Co-leads Soulmate Level 1 retreats in Portugal alongside Suta.</p></div></article>
+      <article class="tcard"><div class="tcard-img">B</div><div class="tcard-body"><h3>Bárbara</h3><span class="role">Women's path · Portugal</span><p>Co-leads Goddess Essence Part 1 in Portugal alongside Marali.</p></div></article>
+      <article class="tcard"><div class="tcard-img">T</div><div class="tcard-body"><h3>Tara</h3><span class="role">Women's path · Dharamshala</span><p>Co-leads Goddess Essence Part 3&amp;4 in Dharamshala with Christa.</p></div></article>
+      <article class="tcard"><div class="tcard-img">S</div><div class="tcard-body"><h3>Svetlana</h3><span class="role">Massage · Austin</span><p>Co-lead on the Kashmiri Massage Practitioner Training in Austin.</p></div></article>
+      <article class="tcard"><div class="tcard-img">+</div><div class="tcard-body"><h3>Become a teacher</h3><span class="role">Teacher path</span><p>Apply for the Tantra Teacher Training or the Goddess Essence Teacher Training.</p></div></article>
+    </div>
+  </div>
+</section>
+
+
+<section class="story-section">
+<div class="container">
+<div style="text-align:center;margin-bottom:1.5rem;"><span class="eyebrow">A felt narrative</span>
+<h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--maroon-deep);">How a teacher <em>becomes</em> a teacher in this lineage</h2></div>
+<div class="story-narrative"><p>Becoming a certified teacher in Sarita's lineage is a minimum two-year path. It begins with the Teacher Training Part 1 (32 days in Bali), which itself is open only to students who already have at least two years of personal Tantra and meditation practice.</p><p>After Part 1, the candidate enters a year of supervised teaching practice. They co-lead small workshops alongside senior teachers, receive feedback on every session, and submit recorded teachings for review. Most candidates teach 30-50 hours minimum during this year.</p><p>After the year of practice, the candidate joins Teacher Training Part 2 (37 days). This second part deepens the philosophical work, refines holding-space skills, and culminates in a transmission ceremony where the candidate is recognized as a full lineage holder.</p><p><strong>Certification is not a credential to add to a marketing bio</strong>. It is a recognition that you are now responsible for the lineage in the territory where you teach. Certified teachers are required to maintain an annual continuing-practice with Sarita or a senior teacher, and to abide by the lineage's ethical code &mdash; which is stricter than most professional codes you will encounter.</p></div>
+</div></section>
+<section class="faq-section">
+<div class="container">
+<div style="text-align:center;margin-bottom:1.5rem;"><span class="eyebrow">Common questions</span>
+<h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--maroon-deep);"><em>FAQ</em></h2></div>
+<div class="faq"><details><summary>How long does the full certification take?</summary><p>Minimum two years from Part 1 to certification. Most candidates take 2.5-3 years &mdash; the supervised teaching year is rarely rushed.</p></details><details><summary>Can I teach Tantra without certification?</summary><p>You can teach what you know. But to teach <em>in this lineage</em>, with our materials and under our name, certification is required. We protect the lineage to protect students.</p></details><details><summary>Is there ongoing supervision after certification?</summary><p>Yes. Annual continuing practice with Sarita or a senior. Six-monthly check-ins with the lineage council. Public ethical complaints, if any, are reviewed transparently.</p></details><details><summary>Can men become certified teachers?</summary><p>Yes. The Teacher Training is open to both genders. The Goddess Essence Teacher Training (women's lineage) is women-only by design.</p></details><details><summary>What does it cost?</summary><p>Part 1: $8,400. Year of supervised practice: free of additional fee, you teach and receive feedback. Part 2: similar to Part 1. Total investment is significant &mdash; matching the responsibility you take on.</p></details></div>
+</div></section>
+
+<footer class="footer">
+  <div class="container">
+    <p style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--paper);margin-bottom:0.4rem;">tantra <em style="color:var(--gold-soft)">essence</em></p>
+    <div class="footer-links"><a href="events.html">Events</a><a href="programs.html">Programs</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+    <p style="font-size:0.78rem;opacity:0.6;">© 2026 Tantra Essence · Ma Ananda Sarita</p>
+  </div>
+</footer>
+</body>
+</html>

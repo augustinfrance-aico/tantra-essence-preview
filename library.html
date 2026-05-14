@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Your members area - every program, recording, and guided practice in one place. Pick up where you left off.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Library · Tantra Essence</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ivoire:#FAF5EC;--ivoire-deep:#F2E9D6;--paper:#FEFBF4;--pink-soft:#F5D9D3;--pink-bg:#FCEFEA;--maroon:#8C3645;--maroon-deep:#5D1F2C;--gold:#C9A35E;--gold-deep:#9E7F47;--gold-soft:#E8D4A2;--ink:#2A1A1E;--ink-sub:#5E4A4E;--ink-muted:#8C7A7E;--border:rgba(93,42,46,0.12);--border-soft:rgba(93,42,46,0.06);--shadow:0 14px 40px rgba(45,26,30,0.10);--radius:18px;--radius-full:9999px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.6;font-size:16px}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15}
+em{color:var(--maroon);font-style:italic}
+a{color:inherit;text-decoration:none}
+.container{max-width:1240px;margin:0 auto;padding:0 1.5rem}
+.topbar{position:sticky;top:0;z-index:100;background:rgba(254,251,244,0.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-soft);padding:0.9rem 0}
+.topbar-inner{max-width:1240px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:var(--gold-soft);border-radius:50%;display:grid;place-items:center;font-family:'DM Serif Display',serif;font-style:italic;color:var(--maroon);font-size:1.1rem}
+.logo-text strong{display:block;font-size:0.92rem;letter-spacing:0.14em;color:var(--maroon);font-family:'DM Serif Display',serif;line-height:1}
+.logo-text span{display:block;font-size:0.66rem;letter-spacing:0.32em;color:var(--maroon);margin-top:2px;font-family:'DM Serif Display',serif}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--ink)}
+.nav-cta{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.65rem 1.3rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:0.95rem}
+.eyebrow{display:inline-block;font-size:0.74rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--maroon);padding:0.4rem 1rem;background:var(--pink-bg);border-radius:var(--radius-full);margin-bottom:1rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:0.95rem 1.6rem;border-radius:var(--radius-full);font-weight:600;text-decoration:none;transition:all 0.3s;font-size:0.96rem;border:none}
+.btn-maroon{background:var(--maroon);color:var(--paper);box-shadow:0 6px 20px rgba(140,54,69,0.35)}
+.btn-maroon:hover{background:var(--maroon-deep);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--maroon);border:2px solid var(--maroon)}
+.page-hero{padding:4rem 0 2rem;text-align:center}
+.page-hero h1{font-size:clamp(2.4rem,6vw,3.4rem);margin-bottom:1rem}
+.page-hero p{font-size:1.1rem;color:var(--ink-sub);max-width:55ch;margin:0 auto}
+.section{padding:3rem 0 5rem}
+.tabs{display:flex;justify-content:center;gap:0.6rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.tab{padding:0.55rem 1.2rem;background:var(--paper);color:var(--ink-sub);border:1px solid var(--border);border-radius:var(--radius-full);font-size:0.86rem;font-weight:500;cursor:pointer;font-family:inherit}
+.tab.active{background:var(--maroon);color:var(--paper);border-color:var(--maroon)}
+.lib-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.lib-card{background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-soft);transition:all 0.3s;cursor:pointer;display:flex;flex-direction:column}
+.lib-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--gold)}
+.lib-img{aspect-ratio:16/10;background-size:cover;background-position:center;position:relative}
+.lib-img::after{content:'▶';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;background:rgba(254,251,244,0.92);border-radius:50%;display:grid;place-items:center;font-size:1.2rem;color:var(--maroon);box-shadow:var(--shadow);transition:all 0.3s}
+.lib-card:hover .lib-img::after{transform:translate(-50%,-50%) scale(1.1);background:var(--paper)}
+.lib-progress{position:absolute;bottom:0;left:0;height:3px;background:var(--gold);z-index:2}
+.lib-body{padding:1.2rem 1.4rem;flex:1}
+.lib-cat{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:0.3rem}
+.lib-card h3{font-size:1.15rem;margin-bottom:0.4rem;line-height:1.2}
+.lib-meta{font-size:0.84rem;color:var(--ink-muted);line-height:1.5}
+.lib-status{display:inline-block;font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;padding:0.2rem 0.6rem;border-radius:4px;margin-top:0.5rem}
+.lib-status.in-progress{background:var(--pink-bg);color:var(--maroon)}
+.lib-status.completed{background:#dcfce7;color:#166534}
+.lib-status.new{background:var(--gold-soft);color:var(--maroon-deep)}
+.welcome-bar{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem 2rem;margin-bottom:2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.welcome-bar .greeting{font-family:'DM Serif Display',serif}
+.welcome-bar .greeting strong{font-size:1.4rem;color:var(--maroon);display:block;margin-bottom:0.2rem}
+.welcome-bar .greeting span{font-size:0.92rem;color:var(--ink-sub)}
+.stats-row{display:flex;gap:1.5rem}
+.stat{text-align:center}
+.stat strong{display:block;font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--maroon);line-height:1}
+.stat span{display:block;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted);margin-top:0.3rem}
+.footer{padding:3rem 0;text-align:center;background:var(--ink);color:rgba(255,255,255,0.7);font-size:0.86rem}
+.footer a{color:var(--gold-soft)}
+@media (max-width:880px){.lib-grid{grid-template-columns:1fr}.nav-links{display:none}.welcome-bar{flex-direction:column;text-align:center}}
+
+/* PAGE STORY ENRICHMENT */
+.story-section{padding:3rem 0;background:var(--paper)}
+.story-narrative{max-width:720px;margin:0 auto;color:var(--ink-sub);line-height:1.85;font-size:1.02rem}
+.story-narrative p{margin-bottom:1.2rem}
+.story-narrative em{color:var(--maroon);font-style:italic}
+.story-narrative strong{color:var(--ink)}
+.faq-section{padding:3rem 0}
+.faq-section .faq{max-width:720px;margin:0 auto}
+.faq-section details{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.7rem;padding:0.4rem 1.4rem}
+.faq-section summary{cursor:pointer;font-weight:600;color:var(--ink);padding:0.8rem 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq-section summary::after{content:'+';font-size:1.4rem;color:var(--maroon)}
+.faq-section details[open] summary::after{content:'\2212'}
+.faq-section details p{padding:0.5rem 0 1rem;color:var(--ink-sub);font-size:0.94rem;line-height:1.65}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="ananda-v3-temple-garden.html" class="logo">
+      <span class="logo-mark">a</span>
+      <span class="logo-text"><strong>TANTRA</strong><span>ESSENCE</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="events.html">Events</a></li>
+      <li><a href="free-classes.html">Free Classes</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="library.html">My Library</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="funnel-landing.html" class="nav-cta">Donate</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Members area · Your library</span>
+    <h1>Welcome back, <em>seeker</em></h1>
+    <p>Every program you've joined, every recording, every guided practice — all in one place. Pick up where you left off.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="welcome-bar">
+    <div class="greeting">
+      <strong>Continue your path</strong>
+      <span>Last accessed: yesterday · 14 minutes in "Tantra Essentials Lesson 3"</span>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><strong>3</strong><span>Active programs</span></div>
+      <div class="stat"><strong>47%</strong><span>Avg progress</span></div>
+      <div class="stat"><strong>12</strong><span>Days streak</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="tabs">
+      <button class="tab active">All</button>
+      <button class="tab">In progress</button>
+      <button class="tab">Programs</button>
+      <button class="tab">Meditations</button>
+      <button class="tab">Free gifts</button>
+      <button class="tab">Completed</button>
+    </div>
+
+    <div class="lib-grid">
+      <article class="lib-card">
+        <div class="lib-img" style="background-image:url('https://images.unsplash.com/photo-1508050919630-b135583b29e8?w=900&q=80&auto=format&fit=crop');"><div class="lib-progress" style="width:35%;"></div></div>
+        <div class="lib-body">
+          <div class="lib-cat">Foundation · 5h total</div>
+          <h3>Tantra Awakening Starter</h3>
+          <div class="lib-meta">10 lessons · ~3.5h remaining</div>
+          <span class="lib-status in-progress">In progress</span>
+        </div>
+      </article>
+      <article class="lib-card">
+        <div class="lib-img" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80&auto=format&fit=crop');"><div class="lib-progress" style="width:8%;"></div></div>
+        <div class="lib-body">
+          <div class="lib-cat">Daily · Ritual</div>
+          <h3>Morning Light Activation</h3>
+          <div class="lib-meta">10 min · Free gift</div>
+          <span class="lib-status new">New</span>
+        </div>
+      </article>
+      <article class="lib-card">
+        <div class="lib-img" style="background-image:url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&q=80&auto=format&fit=crop');"><div class="lib-progress" style="width:0%;"></div></div>
+        <div class="lib-body">
+          <div class="lib-cat">Free gift · 22 min</div>
+          <h3>Womb Wisdom Sample</h3>
+          <div class="lib-meta">Audio · Guided journey</div>
+          <span class="lib-status new">New</span>
+        </div>
+      </article>
+      <article class="lib-card">
+        <div class="lib-img" style="background-image:url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&q=80&auto=format&fit=crop');"><div class="lib-progress" style="width:100%;"></div></div>
+        <div class="lib-body">
+          <div class="lib-cat">Foundation · Completed</div>
+          <h3>Free Tantra Masterclass</h3>
+          <div class="lib-meta">60 min · Watched 2x</div>
+          <span class="lib-status completed">Completed</span>
+        </div>
+      </article>
+      <article class="lib-card">
+        <div class="lib-img" style="background-image:url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&q=80&auto=format&fit=crop');"><div class="lib-progress" style="width:55%;"></div></div>
+        <div class="lib-body">
+          <div class="lib-cat">Heart Chakra · 22 min</div>
+          <h3>Opening the Sacred Heart</h3>
+          <div class="lib-meta">Audio · Guided meditation</div>
+          <span class="lib-status in-progress">In progress</span>
+        </div>
+      </article>
+      <article class="lib-card">
+        <div class="lib-img" style="background-image:url('https://images.unsplash.com/photo-1528164344705-47542687000d?w=900&q=80&auto=format&fit=crop');"><div class="lib-progress" style="width:0%;"></div></div>
+        <div class="lib-body">
+          <div class="lib-cat">Root Chakra · 18 min</div>
+          <h3>Grounding the Inner Fire</h3>
+          <div class="lib-meta">Audio · Locked</div>
+          <span class="lib-status new">Upgrade required</span>
+        </div>
+      </article>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem;padding:2.5rem;background:var(--paper);border:1px dashed var(--border);border-radius:var(--radius);">
+      <h3 style="font-size:1.5rem;margin-bottom:0.6rem;">Want more in your library?</h3>
+      <p style="color:var(--ink-sub);margin-bottom:1.5rem;max-width:48ch;margin-left:auto;margin-right:auto;">Unlock all 25+ programs, 50+ guided meditations, and live monthly calls with Sarita with the Tantra Essence Membership.</p>
+      <div style="display:flex;gap:0.7rem;justify-content:center;flex-wrap:wrap;">
+        <a href="programs.html" class="btn btn-maroon">Browse all programs</a>
+        <a href="funnel-landing.html" class="btn btn-outline">See membership</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="story-section">
+<div class="container">
+<div style="text-align:center;margin-bottom:1.5rem;"><span class="eyebrow">A felt narrative</span>
+<h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--maroon-deep);">How <em>your</em> library actually works</h2></div>
+<div class="story-narrative"><p>When you purchase a program, your access is permanent. Lifetime means lifetime &mdash; for as long as the platform exists, you can return to it. We have students from 2014 who still log in and rewatch lessons. The platform has changed providers twice. Their access has always carried over.</p><p>The library tracks your progress automatically. Where you stopped, what you completed, when you last accessed each lesson. This is not used for marketing &mdash; it is shown to <em>you</em> so you can pick up where you left off. We do not send "you haven't logged in lately!" guilt-trip emails.</p><p>For programs with live components (cohort programs, live Q&amp;A), recordings are added to your library within 48 hours of each session. You can rewatch any time. Live calls are transcribed for accessibility.</p><p>You can download audio meditations for offline use. Video lessons stream only (to keep the lifetime access manageable on our side). Files for printable practice cards are downloadable at any time.</p></div>
+</div></section>
+<section class="faq-section">
+<div class="container">
+<div style="text-align:center;margin-bottom:1.5rem;"><span class="eyebrow">Common questions</span>
+<h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--maroon-deep);"><em>FAQ</em></h2></div>
+<div class="faq"><details><summary>What if I lose access to my email?</summary><p>Email us through the contact form with your full name and approximate date of purchase. We can verify and restore access via a new email.</p></details><details><summary>Can I download videos for offline?</summary><p>Audio yes, video no &mdash; for licensing reasons. The platform is reliable for streaming on slow connections.</p></details><details><summary>What about cohort program recordings?</summary><p>Added within 48 hours of each live session. Yours forever in your library.</p></details><details><summary>Can I share my account with my partner?</summary><p>For couples programs (like Sacred Touch), yes &mdash; both partners can use the same login. For individual programs, please respect the personal license.</p></details><details><summary>What happens to my library if I cancel a membership?</summary><p>Memberships and one-time purchases are different. One-time program purchases stay in your library forever. Membership content disappears at the end of the membership period.</p></details></div>
+</div></section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Tantra Essence · <a href="ananda-v3-temple-garden.html">Home</a> · <a href="contact.html">Support</a></p>
+  </div>
+</footer>
+</body>
+</html>

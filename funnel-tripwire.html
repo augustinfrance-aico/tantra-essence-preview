@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Tantra Awakening Starter — 5 hours of teaching, 10 lessons, the doorway program for the curious.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FAF5EC">
+<title>Tantra Awakening Starter — $47 · Tantra Essence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ivoire:#FAF5EC;--ivoire-deep:#F2E9D6;--paper:#FEFBF4;--pink-soft:#F5D9D3;--pink:#D98B83;--pink-mid:#C26B64;--pink-bg:#FCEFEA;--maroon:#8C3645;--maroon-deep:#5D1F2C;--gold:#C9A35E;--gold-deep:#9E7F47;--gold-soft:#E8D4A2;--ink:#2A1A1E;--ink-sub:#5E4A4E;--ink-muted:#8C7A7E;--border:rgba(93,42,46,0.12);--border-soft:rgba(93,42,46,0.06);--shadow:0 14px 40px rgba(45,26,30,0.10);--radius:20px;--radius-sm:12px;--radius-full:9999px;--max-w:1100px}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.65}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15;letter-spacing:-0.01em}
+em{color:var(--maroon);font-style:italic}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 1.5rem}
+.demo-banner{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--ink);color:var(--gold-soft);font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;text-align:center;padding:0.45rem;font-weight:600}
+.demo-banner a{color:var(--gold-soft);text-decoration:underline}
+.topbar{position:sticky;top:32px;z-index:100;background:rgba(254,251,244,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-soft);padding:0.9rem 0}
+.topbar-inner{max-width:var(--max-w);margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:var(--gold-soft);border-radius:50%;display:grid;place-items:center;font-family:'DM Serif Display',serif;font-style:italic;color:var(--maroon);font-size:1.1rem}
+.logo-text strong{display:block;font-size:0.95rem;letter-spacing:0.14em;color:var(--maroon);font-family:'DM Serif Display',serif;line-height:1}
+.logo-text span{display:block;font-size:0.66rem;letter-spacing:0.32em;color:var(--maroon);margin-top:2px;font-family:'DM Serif Display',serif}
+.topbar-back{font-size:0.86rem;color:var(--ink-sub);padding:0.5rem 1rem;border-radius:var(--radius-full);border:1px solid var(--border)}
+.topbar-back:hover{background:var(--ivoire-deep)}
+.eyebrow{display:inline-block;font-size:0.74rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--maroon);padding:0.4rem 1rem;background:var(--pink-bg);border-radius:var(--radius-full)}
+
+/* HERO sales */
+.sales-hero{padding:3.5rem 0 1rem;text-align:center}
+.sales-hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);margin:1.2rem 0;max-width:18ch;margin-left:auto;margin-right:auto}
+.sales-hero .lead{font-size:1.15rem;color:var(--ink-sub);max-width:60ch;margin:0 auto 2rem}
+.price-strip{display:inline-flex;align-items:center;gap:1.4rem;background:var(--paper);border:2px solid var(--gold);padding:1rem 1.8rem;border-radius:var(--radius-full);box-shadow:var(--shadow)}
+.price-strip .price-old{color:var(--ink-muted);font-size:1.1rem;text-decoration:line-through}
+.price-strip .price-now{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--maroon)}
+.price-strip .price-save{font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+
+/* PRODUCT body */
+.product-body{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;padding:3rem 0;align-items:start}
+.product-img{aspect-ratio:1;border-radius:var(--radius);background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/87804b-f7-b558-35ca-f4e4f4c6f8c8_19061057-efd3-4bc0-9899-c34e268516a9.webp');background-size:cover;background-position:center;box-shadow:var(--shadow)}
+.product-info h2{font-size:1.7rem;margin-bottom:1rem;color:var(--maroon-deep)}
+.product-info p{color:var(--ink-sub);margin-bottom:1rem;font-size:0.98rem;line-height:1.7}
+.product-features{list-style:none;padding:0;margin:1.5rem 0}
+.product-features li{position:relative;padding:0.6rem 0 0.6rem 1.8rem;border-bottom:1px dashed var(--border);font-size:0.94rem;color:var(--ink-sub)}
+.product-features li::before{content:'✦';position:absolute;left:0;top:0.6rem;color:var(--gold-deep)}
+
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:1.05rem 1.8rem;border-radius:var(--radius-full);background:var(--maroon);color:var(--paper);font-family:inherit;font-size:1rem;font-weight:600;cursor:pointer;border:none;box-shadow:0 6px 20px rgba(140,54,69,0.35);transition:all 0.3s;width:100%;margin-top:0.8rem}
+.btn-primary:hover{background:var(--maroon-deep);transform:translateY(-2px)}
+.btn-big{font-size:1.15rem;padding:1.2rem 1.8rem}
+.guarantee{font-size:0.82rem;color:var(--ink-muted);text-align:center;margin-top:1rem;letter-spacing:0.04em}
+.guarantee::before{content:'✓ ';color:var(--gold-deep);font-weight:700}
+
+/* SECTIONS */
+.section{padding:4rem 0}
+.section.alt{background:var(--paper)}
+.section-head{text-align:center;margin-bottom:2.5rem}
+.section-head h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:0.6rem}
+.section-head p{color:var(--ink-sub);max-width:55ch;margin:0 auto}
+
+/* WHAT YOU GET */
+.modules{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+.module-card{background:var(--paper);padding:1.6rem;border-radius:var(--radius);border:1px solid var(--border-soft);display:flex;gap:1rem;align-items:flex-start}
+.module-num{width:42px;height:42px;background:var(--maroon);color:var(--paper);border-radius:50%;display:grid;place-items:center;font-family:'DM Serif Display',serif;font-style:italic;flex-shrink:0}
+.module-card h3{font-size:1.15rem;margin-bottom:0.3rem}
+.module-card p{font-size:0.88rem;color:var(--ink-sub);line-height:1.55}
+.module-card .module-meta{font-size:0.74rem;color:var(--gold-deep);letter-spacing:0.12em;text-transform:uppercase;margin-top:0.4rem;display:block;font-weight:600}
+
+/* TESTIMONIALS */
+.testis{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.testi{background:var(--paper);padding:1.5rem;border-radius:var(--radius);border:1px solid var(--border)}
+.testi blockquote{font-family:'DM Serif Display',serif;font-style:italic;font-size:0.98rem;color:var(--ink);line-height:1.5;margin-bottom:0.8rem}
+.testi cite{font-size:0.78rem;color:var(--ink-muted);font-style:normal;letter-spacing:0.06em}
+.testi .stars{color:var(--gold-deep);letter-spacing:0.4em;font-size:0.85rem;margin-bottom:0.6rem}
+
+/* FAQ */
+.faq{max-width:720px;margin:0 auto}
+.faq details{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:0.8rem;padding:1rem 1.4rem}
+.faq summary{cursor:pointer;font-weight:600;color:var(--ink);padding:0.4rem 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-size:1.4rem;color:var(--maroon);font-weight:300}
+.faq details[open] summary::after{content:'−'}
+.faq details p{padding:0.8rem 0 0.4rem;color:var(--ink-sub);font-size:0.94rem}
+
+/* FINAL CTA */
+.final-cta{padding:4rem 1.5rem;background:linear-gradient(135deg,var(--pink-soft) 0%,var(--gold-soft) 100%);text-align:center}
+.final-cta h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1rem}
+.final-cta p{color:var(--ink-sub);margin-bottom:2rem;max-width:50ch;margin-left:auto;margin-right:auto}
+.final-cta .btn-primary{display:inline-flex;width:auto;padding:1.2rem 2.4rem}
+
+/* FOOTER */
+.footer{padding:2.5rem 0;text-align:center;background:var(--ink);color:rgba(255,255,255,0.7);font-size:0.82rem}
+.footer a{color:var(--gold-soft)}
+
+@media (max-width:880px){.product-body{grid-template-columns:1fr}.modules{grid-template-columns:1fr}.testis{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO STRUCTURE · Tripwire $47 · Step 2 of 6 · <a href="ananda-v3-temple-garden.html">← back to home</a></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="ananda-v3-temple-garden.html" class="logo">
+      <span class="logo-mark">a</span>
+      <span class="logo-text"><strong>TANTRA</strong><span>ESSENCE</span></span>
+    </a>
+    <a href="ananda-v3-temple-garden.html" class="topbar-back">← Home</a>
+  </div>
+</header>
+
+<section class="sales-hero">
+  <div class="container">
+    <span class="eyebrow">Limited time · 60% off launch price</span>
+    <h1>The doorway practice — yours for <em>$47</em></h1>
+    <p class="lead">A 5-hour foundational program crafted by Ma Ananda Sarita. The first step that 12,000+ students take before joining a retreat.</p>
+    <div class="price-strip">
+      <span class="price-old">$127</span>
+      <span class="price-now">$47</span>
+      <span class="price-save">Save 60%</span>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="product-body">
+    <div class="product-img" role="img" aria-label="Tantra Awakening Starter"></div>
+    <div class="product-info">
+      <h2>Tantra Awakening Starter</h2>
+      <p>10 video lessons (~30 min each) covering the foundations of authentic Tantra. The doorway most students walk through before deciding whether to go deeper.</p>
+      <ul class="product-features">
+        <li>10 HD video lessons (5 hours total)</li>
+        <li>PDF practice guide with 15-min daily ritual</li>
+        <li>3 guided audio meditations</li>
+        <li>Foundational reading list curated by Sarita</li>
+        <li>Lifetime access — revisit anytime, on any device</li>
+        <li>Certificate of completion (optional)</li>
+      </ul>
+      <button class="btn-primary btn-big" onclick="window.location.href='funnel-checkout.html?product=starter&price=47'">Get instant access — $47 →</button>
+      <div class="guarantee">30-day money-back guarantee · No questions asked</div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">10 lessons · 5 hours</span>
+      <h2>What's <em>inside</em></h2>
+      <p>Each lesson stands alone, builds on the last. Watch in order or jump around — your path, your pace.</p>
+    </div>
+    <div class="modules">
+      <div class="module-card"><div class="module-num">1</div><div><h3>What Tantra really is</h3><p>Beyond the cultural noise — the real meaning of the path.</p><span class="module-meta">28 min · Foundation</span></div></div>
+      <div class="module-card"><div class="module-num">2</div><div><h3>The 7 chakras as living energy</h3><p>The map of the subtle body that informs everything else.</p><span class="module-meta">34 min · Energetic anatomy</span></div></div>
+      <div class="module-card"><div class="module-num">3</div><div><h3>Breath as the vehicle</h3><p>The foundational pranayama practices that unlock the body.</p><span class="module-meta">26 min · Practice</span></div></div>
+      <div class="module-card"><div class="module-num">4</div><div><h3>Sacred touch basics</h3><p>For self and (optionally) partner — the first principles.</p><span class="module-meta">32 min · Embodiment</span></div></div>
+      <div class="module-card"><div class="module-num">5</div><div><h3>Presence as practice</h3><p>The hardest and most overlooked skill on the path.</p><span class="module-meta">30 min · Awareness</span></div></div>
+      <div class="module-card"><div class="module-num">6</div><div><h3>The 15-min daily ritual</h3><p>The practice you'll still be doing in six months.</p><span class="module-meta">22 min · Daily anchor</span></div></div>
+      <div class="module-card"><div class="module-num">7</div><div><h3>Working with polarity</h3><p>Masculine and feminine as energetic principles, not roles.</p><span class="module-meta">28 min · Theory + practice</span></div></div>
+      <div class="module-card"><div class="module-num">8</div><div><h3>Meditation as Tantra</h3><p>Why Tantra without meditation is missing its core.</p><span class="module-meta">30 min · Stillness</span></div></div>
+      <div class="module-card"><div class="module-num">9</div><div><h3>Devotion and surrender</h3><p>The often-misunderstood heart of authentic Tantra.</p><span class="module-meta">26 min · Heart</span></div></div>
+      <div class="module-card"><div class="module-num">10</div><div><h3>Where to go next</h3><p>How to choose your next program — or know if a retreat is right.</p><span class="module-meta">14 min · Path forward</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Real students · Real shifts</span>
+      <h2>Voices from the <em>community</em></h2>
+    </div>
+    <div class="testis">
+      <div class="testi"><div class="stars">✦ ✦ ✦ ✦ ✦</div><blockquote>"I've taken five online Tantra courses. This is the first one that actually changed how I move through my day."</blockquote><cite>— Marie L. · Brussels</cite></div>
+      <div class="testi"><div class="stars">✦ ✦ ✦ ✦ ✦</div><blockquote>"The 15-min ritual I'm now doing every morning. Six months in. Still going."</blockquote><cite>— Thomas R. · Lyon</cite></div>
+      <div class="testi"><div class="stars">✦ ✦ ✦ ✦ ✦</div><blockquote>"I bought it on a whim. It's the one I keep recommending to friends."</blockquote><cite>— Sofia G. · Lisbon</cite></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Common questions</span>
+      <h2>Things people <em>actually ask</em></h2>
+    </div>
+    <div class="faq">
+      <details><summary>Is this for beginners?</summary><p>Yes — this is the doorway program. Designed for someone who has never taken a Tantra course before. If you're advanced, you'll find it a useful refresher; if you're brand new, you'll feel held the entire way.</p></details>
+      <details><summary>Do I need a partner?</summary><p>No. Most lessons are individual. The sacred touch lesson can be practiced solo or with a partner — your choice.</p></details>
+      <details><summary>How long do I have access?</summary><p>Lifetime. Revisit any lesson, any time, on any device.</p></details>
+      <details><summary>What if it's not for me?</summary><p>30-day money-back guarantee. Email us, get refunded. No questions asked.</p></details>
+      <details><summary>Will I be added to a list?</summary><p>You'll receive the weekly Tantra Essence newsletter (3-min read each Sunday). Unsubscribe in one click anytime.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <span class="eyebrow">$47 · Lifetime access · 30-day guarantee</span>
+    <h2>Begin the path <em>tonight</em></h2>
+    <p>Five hours of teaching, a daily ritual you'll keep, and the doorway into everything Sarita has built over 53 years on the path.</p>
+    <button class="btn-primary btn-big" onclick="window.location.href='funnel-checkout.html?product=starter&price=47'">Get instant access — $47 →</button>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Tantra Essence · <a href="ananda-v3-temple-garden.html">Home</a> · <a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+
+<script>sessionStorage.setItem('tantra_funnel_step','tripwire');</script>
+</body>
+</html>
