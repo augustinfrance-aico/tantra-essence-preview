@@ -346,6 +346,29 @@ body.has-live-bar{padding-top:0}
 .home-sticky-cta .btn-gold{padding:0.78rem 1.4rem;font-size:0.95rem;white-space:nowrap}
 @media (max-width:600px){.home-sticky-cta{padding:0.7rem 1rem}.home-sticky-cta-title{font-size:0.92rem}.home-sticky-cta-sub{font-size:0.72rem}}
 
+
+/* ============================================
+   RECOMMENDATIONS CAROUSEL (Mindvalley quest style)
+   ============================================ */
+.reco-section{padding:5rem 0;background:var(--pink-bg);overflow:hidden}
+.reco-section + .reco-section{padding-top:1rem}
+.reco-title{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);max-width:1240px;margin:0 auto 2rem;padding:0 2rem;color:var(--ink)}
+.reco-title em{font-style:italic;color:var(--maroon-soft);font-weight:400}
+.reco-scroll{display:flex;gap:1.6rem;overflow-x:auto;padding:0.5rem 2rem 2rem;scroll-snap-type:x mandatory;scrollbar-width:none}
+.reco-scroll::-webkit-scrollbar{display:none}
+.reco-card{flex:0 0 320px;background:var(--paper);border-radius:var(--radius);overflow:hidden;transition:var(--transition);scroll-snap-align:start;text-decoration:none;color:inherit;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);position:relative}
+.reco-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.reco-img{aspect-ratio:1/1;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.reco-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(45,26,30,0.45) 100%)}
+.reco-badge{position:absolute;top:1rem;left:1rem;background:rgba(45,26,30,0.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;font-size:0.82rem;font-weight:500;padding:0.4rem 0.9rem;border-radius:8px;z-index:2;letter-spacing:0.02em}
+.reco-number{position:absolute;right:0.2rem;bottom:-0.5rem;font-family:'DM Serif Display',serif;font-style:italic;font-size:8rem;line-height:1;color:rgba(254,251,244,0.85);z-index:2;text-shadow:0 4px 20px rgba(0,0,0,0.35);pointer-events:none}
+.reco-body{padding:1.4rem 1.4rem 1.6rem}
+.reco-cat{display:flex;align-items:center;gap:0.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--maroon);margin-bottom:0.8rem}
+.reco-cat-dot{width:3px;height:3px;border-radius:50%;background:currentColor}
+.reco-body h3{font-family:'DM Serif Display',serif;font-size:1.25rem;line-height:1.25;color:var(--ink);margin-bottom:0.5rem}
+.reco-meta{font-size:0.88rem;color:var(--ink-muted)}
+@media (max-width:600px){.reco-card{flex:0 0 280px}.reco-number{font-size:6rem}}
+
 /* ============================================
    POP-UP GIFT (Mindvalley style)
    ============================================ */
@@ -1046,6 +1069,210 @@ body.has-live-bar{padding-top:0}
         <div class="fav-body"><h4>Master Lover — Polarity mastery</h4><div class="fav-meta"><strong>👁️ 2,403 plays</strong></div></div>
       </a>
     </div>
+  </div>
+</section>
+
+
+<!-- ============= TOP RECOMMENDATIONS CAROUSEL (Mindvalley quest style) ============= -->
+<section class="reco-section">
+  <h2 class="reco-title">Top <em>recommendations</em></h2>
+  <div class="reco-scroll">
+    <a class="reco-card" href="program-master-lover.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&q=80')">
+        <span class="reco-badge">32 days</span>
+        <span class="reco-number">1</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Certification<span class="reco-cat-dot"></span>Bali</div>
+        <h3>Tantra Teacher Training</h3>
+        <div class="reco-meta">Sarita &amp; Dharmaraj · Jul 2026</div>
+      </div>
+    </a>
+    <a class="reco-card" href="program-goddess-unveiled.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80')">
+        <span class="reco-badge">22 days</span>
+        <span class="reco-number">2</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Teacher Path<span class="reco-cat-dot"></span>Women</div>
+        <h3>Goddess Essence Teacher Training</h3>
+        <div class="reco-meta">Sarita &amp; Usha Regina · May 2027</div>
+      </div>
+    </a>
+    <a class="reco-card" href="program-tantra-massage-7-chakras.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=80')">
+        <span class="reco-badge">30 days</span>
+        <span class="reco-number">3</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Massage Cert<span class="reco-cat-dot"></span>Practitioners</div>
+        <h3>Mystic Tantra Massage Practitioner</h3>
+        <div class="reco-meta">Sarita &amp; Modestas · Sep 2026</div>
+      </div>
+    </a>
+    <a class="reco-card" href="program-master-lover.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&q=80')">
+        <span class="reco-badge">14 days</span>
+        <span class="reco-number">4</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Retreat<span class="reco-cat-dot"></span>Couples</div>
+        <h3>Sacred Union Couples Retreat</h3>
+        <div class="reco-meta">Sarita &amp; Tanmaya · Oct 2026</div>
+      </div>
+    </a>
+    <a class="reco-card" href="masterclass.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1593011951-37b09687648f?w=900&q=80')">
+        <span class="reco-badge">90 min</span>
+        <span class="reco-number">5</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Masterclass<span class="reco-cat-dot"></span>Free</div>
+        <h3>The hidden science of Tantric awakening</h3>
+        <div class="reco-meta">Ma Ananda Sarita · May 28, 2026</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============= TANTRA FOR WOMEN CAROUSEL ============= -->
+<section class="reco-section">
+  <h2 class="reco-title">Tantra for <em>women</em></h2>
+  <div class="reco-scroll">
+    <a class="reco-card" href="program-goddess-unveiled.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&q=80')">
+        <span class="reco-badge">7 days</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Retreat<span class="reco-cat-dot"></span>India</div>
+        <h3>Goddess Essence Retreat</h3>
+        <div class="reco-meta">Sarita · Jun 2026 · Khajuraho</div>
+      </div>
+    </a>
+    <a class="reco-card" href="program-goddess-unveiled.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&q=80')">
+        <span class="reco-badge">12 weeks</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Online Program<span class="reco-cat-dot"></span>For Women</div>
+        <h3>Goddess Unveiled</h3>
+        <div class="reco-meta">Sarita · Self-paced · $599</div>
+      </div>
+    </a>
+    <a class="reco-card" href="meditations.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=900&q=80')">
+        <span class="reco-badge">4 hours</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Audio Series<span class="reco-cat-dot"></span>Free</div>
+        <h3>Womb Wisdom Meditation</h3>
+        <div class="reco-meta">Sarita · 21 daily practices</div>
+      </div>
+    </a>
+    <a class="reco-card" href="events/free-online-meditation.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&q=80')">
+        <span class="reco-badge">90 min</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Live Online<span class="reco-cat-dot"></span>Free</div>
+        <h3>Awakening the Inner Goddess</h3>
+        <div class="reco-meta">Sarita · May 28, 2026 · Zoom</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============= TANTRA FOR MEN CAROUSEL ============= -->
+<section class="reco-section">
+  <h2 class="reco-title">Tantra for <em>men</em></h2>
+  <div class="reco-scroll">
+    <a class="reco-card" href="program-master-lover.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80')">
+        <span class="reco-badge">7 modules</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Bestseller<span class="reco-cat-dot"></span>For Men</div>
+        <h3>Master Lover</h3>
+        <div class="reco-meta">Sarita · Self-paced · $799</div>
+      </div>
+    </a>
+    <a class="reco-card" href="events/men-circle.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=900&q=80')">
+        <span class="reco-badge">90 min</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Live Online<span class="reco-cat-dot"></span>Free</div>
+        <h3>Men's Tantra Circle</h3>
+        <div class="reco-meta">Dharmaraj · Monthly · Zoom</div>
+      </div>
+    </a>
+    <a class="reco-card" href="program-tantra-massage-7-chakras.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=80')">
+        <span class="reco-badge">9 modules</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Online Program<span class="reco-cat-dot"></span>Practitioners</div>
+        <h3>Tantra Massage 7 Chakras</h3>
+        <div class="reco-meta">Sarita &amp; Modestas · $799</div>
+      </div>
+    </a>
+    <a class="reco-card" href="tantra-teacher-training.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?w=900&q=80')">
+        <span class="reco-badge">34 days</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Certification<span class="reco-cat-dot"></span>Bali</div>
+        <h3>Sacred Masculine Teacher Training</h3>
+        <div class="reco-meta">Sarita &amp; Dharmaraj · Jul 2026</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============= TANTRA FOR COUPLES CAROUSEL ============= -->
+<section class="reco-section">
+  <h2 class="reco-title">Tantra for <em>couples</em></h2>
+  <div class="reco-scroll">
+    <a class="reco-card" href="events/couples-retreat-switzerland.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&q=80')">
+        <span class="reco-badge">8 days</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Retreat<span class="reco-cat-dot"></span>Switzerland</div>
+        <h3>Sacred Union Couples Retreat</h3>
+        <div class="reco-meta">Sarita &amp; Tanmaya · Oct 2026</div>
+      </div>
+    </a>
+    <a class="reco-card" href="program-master-lover.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=900&q=80')">
+        <span class="reco-badge">7 modules</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Online Program<span class="reco-cat-dot"></span>For Couples</div>
+        <h3>The Conscious Lovers Path</h3>
+        <div class="reco-meta">Sarita · Self-paced · $799</div>
+      </div>
+    </a>
+    <a class="reco-card" href="meditations.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1502790671504-542ad42d5189?w=900&q=80')">
+        <span class="reco-badge">3 hours</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Audio Series<span class="reco-cat-dot"></span>Free</div>
+        <h3>Heart-to-Heart Couples Meditations</h3>
+        <div class="reco-meta">Sarita · 14 daily practices</div>
+      </div>
+    </a>
+    <a class="reco-card" href="masterclass.html">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1593011951-37b09687648f?w=900&q=80')">
+        <span class="reco-badge">90 min</span>
+      </div>
+      <div class="reco-body">
+        <div class="reco-cat">Masterclass<span class="reco-cat-dot"></span>Free</div>
+        <h3>Reigniting Passion After 10 Years</h3>
+        <div class="reco-meta">Sarita · Jun 12, 2026 · Zoom</div>
+      </div>
+    </a>
   </div>
 </section>
 
