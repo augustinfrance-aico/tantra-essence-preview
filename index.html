@@ -45,10 +45,12 @@ nav.scrolled{background:rgba(244,241,232,0.95);box-shadow:0 1px 16px rgba(45,42,
 .nav-links{display:flex;align-items:center;gap:2.4rem;list-style:none;flex:1;justify-content:center}
 .nav-links li a{color:var(--ink);text-decoration:none;font-family:'DM Serif Display',serif;font-size:1.1rem;letter-spacing:0.02em;transition:var(--transition);padding:0.4rem 0;border-bottom:1px solid transparent;display:inline-flex;align-items:center;gap:0.55rem}
 .nav-links li a:hover{color:var(--maroon);border-bottom-color:var(--gold)}
-.nav-icon{width:22px;height:22px;color:var(--gold-deep);transition:transform 0.5s cubic-bezier(0.4,0,0.2,1),color 0.3s ease;flex-shrink:0;animation:nav-icon-breathe 4s ease-in-out infinite;transform-origin:center}
-.nav-links li:nth-child(2) .nav-icon{animation-delay:0.5s}
-.nav-links li:nth-child(3) .nav-icon{animation-delay:1s}
-@keyframes nav-icon-breathe{0%,100%{transform:rotate(0deg) scale(1)}50%{transform:rotate(15deg) scale(1.08)}}
+.nav-icon{width:22px;height:22px;color:var(--gold-deep);transition:transform 0.5s cubic-bezier(0.4,0,0.2,1),color 0.3s ease;flex-shrink:0;animation:nav-icon-spin 8s linear infinite;transform-origin:center;will-change:transform}
+.nav-links li:nth-child(2) .nav-icon{animation:nav-icon-pulse 2.6s ease-in-out infinite;animation-delay:0.3s}
+.nav-links li:nth-child(3) .nav-icon{animation:nav-icon-wobble 3.2s ease-in-out infinite;animation-delay:0.6s}
+@keyframes nav-icon-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+@keyframes nav-icon-pulse{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.2) rotate(40deg)}}
+@keyframes nav-icon-wobble{0%,100%{transform:rotate(0deg)}25%{transform:rotate(-14deg)}75%{transform:rotate(14deg)}}50%{transform:rotate(15deg) scale(1.08)}}
 .nav-links li a:hover .nav-icon{color:var(--maroon);transform:rotate(180deg) scale(1.12)}
 .nav-icon-float{animation:icon-float 3s ease-in-out infinite}
 @keyframes icon-float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-2px) rotate(8deg)}}
@@ -963,7 +965,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       <p>Choose your archetype. We'll guide you to the exact program, retreat or practice your soul is asking for right now.</p>
     </div>
     <div class="quiz-grid">
-      <a class="quiz-card" href="tantra-for-women.html" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&q=80')">
+      <a class="quiz-card" href="tantra-for-women.html" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&auto=format&fit=crop')">
         <div class="quiz-card-content">
           <span class="quiz-icon">🌹</span>
           <h3>The Awakening Woman</h3>
@@ -971,7 +973,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
           <span class="quiz-cta">Show me my path →</span>
         </div>
       </a>
-      <a class="quiz-card" href="tantra-for-men.html" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80')">
+      <a class="quiz-card" href="tantra-for-men.html" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&auto=format&fit=crop')">
         <div class="quiz-card-content">
           <span class="quiz-icon">⚡</span>
           <h3>The Conscious Man</h3>
@@ -979,7 +981,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
           <span class="quiz-cta">Show me my path →</span>
         </div>
       </a>
-      <a class="quiz-card" href="tantra-for-couples.html" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&q=80')">
+      <a class="quiz-card" href="tantra-for-couples.html" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&auto=format&fit=crop')">
         <div class="quiz-card-content">
           <span class="quiz-icon">💞</span>
           <h3>The Sacred Lovers</h3>
@@ -1061,7 +1063,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
           <a href="tantra-teacher-training.html" class="btn btn-ghost">Learn More</a>
         </div>
       </div>
-      <div class="featured-img" style="background-image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?w=1400&q=80');background-size:cover;background-position:center"></div>
+      <div class="featured-img" style="background-image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?w=800&auto=format&fit=crop');background-size:cover;background-position:center"></div>
     </div>
   </div>
 </section>
@@ -1098,7 +1100,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
         </div>
       </a>
       <a href="events/sacred-touch-bali.html" class="event-card">
-        <div class="event-img" style="background-image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?w=1400&q=80')">
+        <div class="event-img" style="background-image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?w=800&auto=format&fit=crop')">
           <span class="event-badge">Retreat</span>
         </div>
         <div class="event-body">
@@ -1120,7 +1122,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
         </div>
       </a>
       <a href="events/teacher-training-bali.html" class="event-card">
-        <div class="event-img" style="background-image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?w=1400&q=80')">
+        <div class="event-img" style="background-image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?w=800&auto=format&fit=crop')">
           <span class="event-badge event-badge-featured">Flagship</span>
         </div>
         <div class="event-body">
@@ -1247,15 +1249,15 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       <a href="meditations.html" class="btn btn-gold">Browse the library →</a>
     </div>
     <div class="meditations-grid">
-      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1495746121317-bd1ba7f54a6c?w=400&q=80')"><span class="med-tile-play">▶</span><span>Morning Awakening</span></div>
-      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=400&q=80')"><span class="med-tile-play">▶</span><span>Heart Opening</span></div>
-      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&q=80')"><span class="med-tile-play">▶</span><span>Goddess Activation</span></div>
-      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=400&q=80')"><span class="med-tile-play">▶</span><span>Kundalini Rising</span></div>
-      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1502790671504-542ad42d5189?w=400&q=80')"><span class="med-tile-play">▶</span><span>Sacred Sleep</span></div>
-      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=400&q=80')"><span class="med-tile-play">▶</span><span>Inner Lover</span></div>
-      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1593011951-37b09687648f?w=400&q=80')"><span class="med-tile-play">▶</span><span>Womb Wisdom</span></div>
-      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1530333407406-30daf16fee4e?w=400&q=80')"><span class="med-tile-play">▶</span><span>Chakra Cleanse</span></div>
-      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80')"><span class="med-tile-play">▶</span><span>Yoga Nidra</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&auto=format&fit=crop')"><span class="med-tile-play">▶</span><span>Morning Awakening</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&auto=format&fit=crop')"><span class="med-tile-play">▶</span><span>Heart Opening</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&auto=format&fit=crop')"><span class="med-tile-play">▶</span><span>Goddess Activation</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=800&auto=format&fit=crop')"><span class="med-tile-play">▶</span><span>Kundalini Rising</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1502790671504-542ad42d5189?w=800&auto=format&fit=crop')"><span class="med-tile-play">▶</span><span>Sacred Sleep</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=800&auto=format&fit=crop')"><span class="med-tile-play">▶</span><span>Inner Lover</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1593011951-37b09687648f?w=800&auto=format&fit=crop')"><span class="med-tile-play">▶</span><span>Womb Wisdom</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1530333407406-30daf16fee4e?w=500&auto=format&fit=crop')"><span class="med-tile-play">▶</span><span>Chakra Cleanse</span></div>
+      <div class="med-tile" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop')"><span class="med-tile-play">▶</span><span>Yoga Nidra</span></div>
     </div>
   </div>
 </section>
@@ -1272,7 +1274,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
   </div>
   <div class="marketplace-scroll">
     <a class="mp-tile" href="program-goddess-unveiled.html" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"><span><span class="mp-tile-tag">Bestseller</span><span class="mp-tile-title">Goddess Unveiled</span></span></a>
-    <a class="mp-tile" href="program-master-lover.html" style="background-image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?w=1400&q=80')"><span><span class="mp-tile-tag">For Men</span><span class="mp-tile-title">Master Lover</span></span></a>
+    <a class="mp-tile" href="program-master-lover.html" style="background-image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?w=800&auto=format&fit=crop')"><span><span class="mp-tile-tag">For Men</span><span class="mp-tile-title">Master Lover</span></span></a>
     <a class="mp-tile" href="program-tantra-massage-7-chakras.html" style="background:linear-gradient(135deg,#E8D4A2,#9E7F47)"><span><span class="mp-tile-tag">Practitioners</span><span class="mp-tile-title">Tantra Massage 7 Chakras</span></span></a>
     <a class="mp-tile" href="programs.html" style="background:linear-gradient(135deg,#8C3645,#5D1F2C)"><span><span class="mp-tile-tag">Couples</span><span class="mp-tile-title">Sacred Union Path</span></span></a>
     <a class="mp-tile" href="programs.html" style="background:linear-gradient(135deg,#C26B64,#8C3645)"><span><span class="mp-tile-tag">Beginners</span><span class="mp-tile-title">Initiation Into Tantra</span></span></a>
@@ -1294,7 +1296,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
   <h2 class="reco-title">Top <em>recommendations</em></h2>
   <div class="reco-scroll">
     <a class="reco-card" href="program-master-lover.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&auto=format&fit=crop')">
         <span class="reco-badge">32 days</span>
         <span class="reco-number">1</span>
       </div>
@@ -1305,7 +1307,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="program-goddess-unveiled.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&auto=format&fit=crop')">
         <span class="reco-badge">22 days</span>
         <span class="reco-number">2</span>
       </div>
@@ -1316,7 +1318,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="program-tantra-massage-7-chakras.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&auto=format&fit=crop')">
         <span class="reco-badge">30 days</span>
         <span class="reco-number">3</span>
       </div>
@@ -1327,7 +1329,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="program-master-lover.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&auto=format&fit=crop')">
         <span class="reco-badge">14 days</span>
         <span class="reco-number">4</span>
       </div>
@@ -1338,7 +1340,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="masterclass.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1593011951-37b09687648f?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1593011951-37b09687648f?w=800&auto=format&fit=crop')">
         <span class="reco-badge">90 min</span>
         <span class="reco-number">5</span>
       </div>
@@ -1356,7 +1358,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
   <h2 class="reco-title">Tantra for <em>women</em></h2>
   <div class="reco-scroll">
     <a class="reco-card" href="program-goddess-unveiled.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&auto=format&fit=crop')">
         <span class="reco-badge">7 days</span>
       </div>
       <div class="reco-body">
@@ -1366,7 +1368,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="program-goddess-unveiled.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&auto=format&fit=crop')">
         <span class="reco-badge">12 weeks</span>
       </div>
       <div class="reco-body">
@@ -1376,7 +1378,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="meditations.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=800&auto=format&fit=crop')">
         <span class="reco-badge">4 hours</span>
       </div>
       <div class="reco-body">
@@ -1386,7 +1388,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="events/free-online-meditation.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop')">
         <span class="reco-badge">90 min</span>
       </div>
       <div class="reco-body">
@@ -1403,7 +1405,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
   <h2 class="reco-title">Tantra for <em>men</em></h2>
   <div class="reco-scroll">
     <a class="reco-card" href="program-master-lover.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&auto=format&fit=crop')">
         <span class="reco-badge">7 modules</span>
       </div>
       <div class="reco-body">
@@ -1413,7 +1415,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="events/men-circle.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=800&auto=format&fit=crop')">
         <span class="reco-badge">90 min</span>
       </div>
       <div class="reco-body">
@@ -1423,7 +1425,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="program-tantra-massage-7-chakras.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&auto=format&fit=crop')">
         <span class="reco-badge">9 modules</span>
       </div>
       <div class="reco-body">
@@ -1433,7 +1435,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="tantra-teacher-training.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?w=800&auto=format&fit=crop')">
         <span class="reco-badge">34 days</span>
       </div>
       <div class="reco-body">
@@ -1450,7 +1452,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
   <h2 class="reco-title">Tantra for <em>couples</em></h2>
   <div class="reco-scroll">
     <a class="reco-card" href="events/couples-retreat-switzerland.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&auto=format&fit=crop')">
         <span class="reco-badge">8 days</span>
       </div>
       <div class="reco-body">
@@ -1460,7 +1462,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="program-master-lover.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=800&auto=format&fit=crop')">
         <span class="reco-badge">7 modules</span>
       </div>
       <div class="reco-body">
@@ -1470,7 +1472,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="meditations.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1502790671504-542ad42d5189?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1502790671504-542ad42d5189?w=800&auto=format&fit=crop')">
         <span class="reco-badge">3 hours</span>
       </div>
       <div class="reco-body">
@@ -1480,7 +1482,7 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </div>
     </a>
     <a class="reco-card" href="masterclass.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1593011951-37b09687648f?w=900&q=80')">
+      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1593011951-37b09687648f?w=800&auto=format&fit=crop')">
         <span class="reco-badge">90 min</span>
       </div>
       <div class="reco-body">

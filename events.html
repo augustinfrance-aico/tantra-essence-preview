@@ -214,5 +214,17 @@ footer a:hover{color:var(--gold-bright)}
   });
 })();
 </script>
+<script>
+(function(){
+  document.querySelectorAll('.pp-chip,.filter-chip,.cat-chip,.t-chip').forEach(function(chip){
+    chip.addEventListener('click',function(e){
+      e.preventDefault();
+      var group=chip.parentElement;
+      group.querySelectorAll('.pp-chip,.filter-chip,.cat-chip,.t-chip').forEach(function(c){c.classList.remove('active');});
+      chip.classList.add('active');
+    });
+  });
+})();
+</script>
 </body>
 </html>
