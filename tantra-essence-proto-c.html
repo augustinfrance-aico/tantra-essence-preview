@@ -376,6 +376,77 @@ body.has-live-bar{padding-top:0}
 .reco-meta{font-size:0.88rem;color:var(--ink-muted)}
 @media (max-width:600px){.reco-card{flex:0 0 280px}.reco-number{font-size:6rem}}
 
+
+/* ============================================
+   SCROLL INDICATOR (hero bottom)
+   ============================================ */
+.scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:5;color:#fff;text-align:center;cursor:pointer;animation:scroll-bounce 2.4s ease-in-out infinite}
+.scroll-indicator span{display:block;font-size:0.72rem;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.85);margin-bottom:0.6rem;font-weight:500}
+.scroll-indicator-arrow{width:24px;height:36px;border:2px solid rgba(255,255,255,0.8);border-radius:12px;margin:0 auto;position:relative}
+.scroll-indicator-arrow::before{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:4px;height:8px;background:#fff;border-radius:2px;animation:wheel 1.6s ease-out infinite}
+@keyframes wheel{0%{opacity:1;transform:translate(-50%,0)}80%,100%{opacity:0;transform:translate(-50%,12px)}}
+@keyframes scroll-bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-8px)}}
+@media (max-width:600px){.scroll-indicator{bottom:1rem}.scroll-indicator span{display:none}}
+
+/* ============================================
+   QUIZ ARCHETYPE (Mindvalley path selection)
+   ============================================ */
+.quiz-section{padding:7rem 0;background:linear-gradient(135deg,var(--paper) 0%,var(--ivoire-deep) 100%);position:relative;overflow:hidden}
+.quiz-section::before{content:'';position:absolute;top:-50%;right:-10%;width:60%;height:200%;background:radial-gradient(ellipse,rgba(247,213,96,0.08),transparent 60%);pointer-events:none}
+.quiz-inner{max-width:1100px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:1rem}
+.quiz-header h2 em{color:var(--maroon)}
+.quiz-header p{color:var(--ink-sub);max-width:560px;margin:0 auto}
+.quiz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.quiz-card{aspect-ratio:1/1.15;border-radius:var(--radius);overflow:hidden;position:relative;cursor:pointer;background-size:cover;background-position:center;transition:var(--transition);text-decoration:none;color:inherit;display:flex;flex-direction:column;justify-content:flex-end;padding:1.6rem}
+.quiz-card::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(45,26,30,0.2) 0%,rgba(45,26,30,0.92) 100%);transition:var(--transition);z-index:1}
+.quiz-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.quiz-card:hover::before{background:linear-gradient(180deg,rgba(140,54,69,0.4) 0%,rgba(45,26,30,0.95) 100%)}
+.quiz-card-content{position:relative;z-index:2;color:#fff}
+.quiz-icon{font-size:2.4rem;margin-bottom:1rem;display:block;text-shadow:0 4px 12px rgba(0,0,0,0.4)}
+.quiz-card h3{color:#fff;font-size:1.4rem;margin-bottom:0.5rem;text-shadow:0 2px 8px rgba(0,0,0,0.4)}
+.quiz-card p{color:rgba(255,255,255,0.88);font-size:0.92rem;line-height:1.5;margin-bottom:0.8rem}
+.quiz-cta{font-size:0.82rem;color:var(--gold-bright);font-weight:600;letter-spacing:0.08em;display:inline-flex;align-items:center;gap:0.4rem;transition:var(--transition)}
+.quiz-card:hover .quiz-cta{gap:0.8rem}
+@media (max-width:880px){.quiz-grid{grid-template-columns:1fr}}
+
+/* ============================================
+   TODAY'S CLASS (Mindvalley live class teaser)
+   ============================================ */
+.today-section{padding:5rem 0;background:var(--maroon-deep);color:#fff;text-align:center;position:relative;overflow:hidden}
+.today-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(247,213,96,0.12),transparent 50%);pointer-events:none}
+.today-inner{max-width:780px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.today-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(30,255,142,0.15);border:1px solid #1EFF8E;color:#1EFF8E;padding:0.5rem 1.2rem;border-radius:9999px;font-size:0.78rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:1.5rem}
+.today-badge-dot{width:8px;height:8px;border-radius:50%;background:#1EFF8E;animation:live-pulse 1.6s infinite}
+.today-section h2{color:#fff;font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:1rem;line-height:1.1}
+.today-section h2 em{color:var(--gold-bright)}
+.today-section > .today-inner > p{color:rgba(255,255,255,0.88);font-size:1.1rem;margin-bottom:1.5rem}
+.today-countdown{display:flex;justify-content:center;gap:1rem;margin:2rem 0}
+.countdown-unit{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:var(--radius-sm);padding:1rem 1.4rem;min-width:80px;text-align:center;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.countdown-num{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--gold-bright);line-height:1;display:block}
+.countdown-label{font-size:0.66rem;color:rgba(255,255,255,0.7);letter-spacing:0.16em;text-transform:uppercase;margin-top:0.3rem;display:block}
+
+/* ============================================
+   PRICING COMPARISON (Mindvalley membership tiers)
+   ============================================ */
+.pricing-section{padding:6rem 0;background:var(--paper)}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1100px;margin:3rem auto 0;padding:0 2rem;align-items:stretch}
+.pricing-card{background:var(--ivoire);border-radius:var(--radius-lg);padding:2.5rem 2rem 2rem;border:1px solid var(--border-soft);transition:var(--transition);display:flex;flex-direction:column;position:relative;text-align:center}
+.pricing-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.pricing-card.featured{border:2px solid var(--gold);box-shadow:0 14px 40px rgba(201,163,94,0.25);transform:translateY(-12px) scale(1.02)}
+.pricing-card.featured:hover{transform:translateY(-18px) scale(1.02)}
+.pricing-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:9999px;box-shadow:0 4px 14px rgba(201,163,94,0.4)}
+.pricing-card h3{font-size:1.6rem;margin-bottom:0.5rem}
+.pricing-card .price-amount{font-family:'DM Serif Display',serif;font-size:3rem;color:var(--maroon);line-height:1;margin:1rem 0 0.3rem;display:block}
+.pricing-card .price-period{font-size:0.9rem;color:var(--ink-muted)}
+.pricing-features-list{list-style:none;padding:0;margin:1.5rem 0;text-align:left;flex:1}
+.pricing-features-list li{padding:0.55rem 0;color:var(--ink);font-size:0.92rem;padding-left:1.8rem;position:relative}
+.pricing-features-list li::before{content:'✓';position:absolute;left:0;color:var(--maroon);font-weight:700}
+.pricing-features-list li.no::before{content:'×';color:var(--ink-muted)}
+.pricing-features-list li.no{color:var(--ink-muted)}
+@media (max-width:880px){.pricing-grid{grid-template-columns:1fr}.pricing-card.featured{transform:none}}
+
 /* ============================================
    POP-UP GIFT (Mindvalley style)
    ============================================ */
@@ -718,6 +789,11 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
     <div class="hero-badge"><strong>17</strong><span>Years with Osho</span></div>
     <div class="hero-badge"><strong>60+</strong><span>Retreats / year</span></div>
   </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <span>Scroll to explore</span>
+    <div class="scroll-indicator-arrow"></div>
+  </a>
 </section>
 
 <!-- ============= FEATURED ON BAR ============= -->
@@ -767,6 +843,44 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
   </div>
 </section>
 
+
+<!-- ============= QUIZ ARCHETYPE (Mindvalley path selection) ============= -->
+<section class="quiz-section">
+  <div class="quiz-inner">
+    <div class="quiz-header">
+      <span class="eyebrow">Find your path</span>
+      <h2>Where are you on the <em>Tantric journey</em>?</h2>
+      <p>Choose your archetype. We'll guide you to the exact program, retreat or practice your soul is asking for right now.</p>
+    </div>
+    <div class="quiz-grid">
+      <a class="quiz-card" href="tantra-for-women.html" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&q=80')">
+        <div class="quiz-card-content">
+          <span class="quiz-icon">🌹</span>
+          <h3>The Awakening Woman</h3>
+          <p>You feel a deep calling to reclaim your feminine power, sensuality, and voice.</p>
+          <span class="quiz-cta">Show me my path →</span>
+        </div>
+      </a>
+      <a class="quiz-card" href="tantra-for-men.html" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80')">
+        <div class="quiz-card-content">
+          <span class="quiz-icon">⚡</span>
+          <h3>The Conscious Man</h3>
+          <p>You want to become a present, grounded man — and a master lover.</p>
+          <span class="quiz-cta">Show me my path →</span>
+        </div>
+      </a>
+      <a class="quiz-card" href="tantra-for-couples.html" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&q=80')">
+        <div class="quiz-card-content">
+          <span class="quiz-icon">💞</span>
+          <h3>The Sacred Lovers</h3>
+          <p>You and your partner are ready to deepen intimacy and turn your relationship into a path of awakening.</p>
+          <span class="quiz-cta">Show me our path →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ============= NUMBERS / TRUST BAR ============= -->
 <section class="numbers-bar">
   <div class="container">
@@ -777,6 +891,22 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       <div class="number-item"><strong>53</strong><span>Years of mastery</span></div>
       <div class="number-item"><strong>4.9★</strong><span>2,800+ reviews</span></div>
     </div>
+  </div>
+</section>
+
+
+<!-- ============= TODAY'S LIVE CLASS (Mindvalley urgency) ============= -->
+<section class="today-section">
+  <div class="today-inner">
+    <span class="today-badge"><span class="today-badge-dot"></span>Live class starting today</span>
+    <h2>Awakening the Inner Goddess — <em>tonight at 7 PM CET</em></h2>
+    <p>Sarita is going live in 6h12m with a free 90-min masterclass. 1,847 seekers already registered. Your seat is one click away.</p>
+    <div class="today-countdown">
+      <div class="countdown-unit"><span class="countdown-num" id="cd-h">06</span><span class="countdown-label">Hours</span></div>
+      <div class="countdown-unit"><span class="countdown-num" id="cd-m">12</span><span class="countdown-label">Minutes</span></div>
+      <div class="countdown-unit"><span class="countdown-num" id="cd-s">48</span><span class="countdown-label">Seconds</span></div>
+    </div>
+    <a href="masterclass.html" class="btn btn-gold">Reserve my free seat →</a>
   </div>
 </section>
 
@@ -1588,6 +1718,70 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
   </div>
 </section>
 
+
+<!-- ============= PRICING COMPARISON (membership tiers) ============= -->
+<section class="pricing-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Membership</span>
+      <h2>Choose your <em>level of immersion</em></h2>
+      <p>Free forever account, single program, or unlimited access to everything Sarita has ever taught.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Free Seeker</h3>
+        <span class="price-amount">$0</span>
+        <span class="price-period">Forever · No credit card</span>
+        <ul class="pricing-features-list">
+          <li>Free Tantra meditation library</li>
+          <li>Weekly wisdom newsletter</li>
+          <li>Public podcast access</li>
+          <li>Skool community access</li>
+          <li>Free monthly live class</li>
+          <li class="no">Premium programs</li>
+          <li class="no">Live Q&amp;A with Sarita</li>
+          <li class="no">Retreat priority access</li>
+        </ul>
+        <a href="signup.html" class="btn btn-outline">Create free account →</a>
+      </div>
+      <div class="pricing-card featured">
+        <span class="pricing-tag">⭐ Most Popular</span>
+        <h3>Member</h3>
+        <span class="price-amount">$49</span>
+        <span class="price-period">per month · Cancel anytime</span>
+        <ul class="pricing-features-list">
+          <li>Everything in Free</li>
+          <li>Unlimited access to all programs</li>
+          <li>1,000+ guided meditations</li>
+          <li>Monthly live Q&amp;A with Sarita</li>
+          <li>Private member community</li>
+          <li>10% off all retreats &amp; trainings</li>
+          <li>Tantra Essence mobile app</li>
+          <li class="no">1-on-1 mentoring</li>
+        </ul>
+        <a href="signup.html" class="btn btn-gold">Start 7-day free trial →</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Practitioner</h3>
+        <span class="price-amount">$197</span>
+        <span class="price-period">per month · Cancel anytime</span>
+        <ul class="pricing-features-list">
+          <li>Everything in Member</li>
+          <li>1-on-1 mentoring with Kaula teacher (monthly)</li>
+          <li>Practitioner-only advanced trainings</li>
+          <li>25% off all retreats &amp; trainings</li>
+          <li>Direct ask Sarita (text channel)</li>
+          <li>Early access to new programs</li>
+          <li>Bring-a-friend retreat invites</li>
+          <li>Listed in our practitioner directory</li>
+        </ul>
+        <a href="signup.html" class="btn btn-outline">Become a Practitioner →</a>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:2.5rem;color:var(--ink-muted);font-size:0.92rem">14-day money-back guarantee on all paid plans · No long-term commitment · Cancel in 1 click</p>
+  </div>
+</section>
+
 <!-- ============= FAQ HOMEPAGE ============= -->
 <section class="faq-home">
   <div class="container">
@@ -1761,6 +1955,20 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       burger.classList.remove('open');
     });
   });
+
+
+  // Today's class countdown
+  (function(){
+    var endTime=new Date();endTime.setHours(19,0,0,0);if(endTime<new Date())endTime.setDate(endTime.getDate()+1);
+    var h=document.getElementById('cd-h'),m=document.getElementById('cd-m'),s=document.getElementById('cd-s');
+    if(!h)return;
+    function tick(){
+      var d=endTime-new Date();if(d<0){endTime.setDate(endTime.getDate()+1);d=endTime-new Date();}
+      var hh=Math.floor(d/3600000),mm=Math.floor((d%3600000)/60000),ss=Math.floor((d%60000)/1000);
+      h.textContent=String(hh).padStart(2,'0');m.textContent=String(mm).padStart(2,'0');s.textContent=String(ss).padStart(2,'0');
+    }
+    tick();setInterval(tick,1000);
+  })();
 
   // Pop-up gift logic — PREVIEW MODE: shows every visit
   var overlay=document.getElementById('popupOverlay');
