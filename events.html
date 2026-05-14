@@ -9,165 +9,193 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ivoire:#FAF5EC; --ivoire-deep:#F2E9D6; --paper:#FEFBF4;
-  --pink-soft:#F5D9D3; --pink:#D98B83; --pink-bg:#FCEFEA;
-  --maroon:#8C3645; --maroon-deep:#5D1F2C; --maroon-soft:#C88995;
-  --gold:#C9A35E; --gold-deep:#9E7F47; --gold-soft:#E8D4A2; --gold-bright:#F7D560;
-  --ink:#2A1A1E; --ink-sub:#5E4A4E; --ink-muted:#8C7A7E;
-  --border:rgba(93,117,95,0.15); --border-soft:rgba(93,117,95,0.08);
-  --shadow-sm:0 2px 14px rgba(45,42,36,0.06); --shadow:0 14px 40px rgba(45,42,36,0.08); --shadow-lg:0 30px 80px rgba(45,42,36,0.12);
-  --radius:24px; --radius-sm:14px; --radius-lg:32px; --radius-full:9999px;
-  --transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
-  --max-w:1240px;
-}
+:root{--ivoire:#FAF5EC;--ivoire-deep:#F2E9D6;--paper:#FEFBF4;--pink-soft:#F5D9D3;--pink-bg:#FCEFEA;--maroon:#8C3645;--maroon-deep:#5D1F2C;--gold:#C9A35E;--gold-deep:#9E7F47;--gold-soft:#E8D4A2;--gold-bright:#F7D560;--ink:#2A1A1E;--ink-sub:#5E4A4E;--ink-muted:#8C7A7E;--border:rgba(93,117,95,0.15);--border-soft:rgba(93,117,95,0.08);--shadow-sm:0 2px 14px rgba(45,42,36,0.06);--shadow:0 14px 40px rgba(45,42,36,0.08);--shadow-lg:0 30px 80px rgba(45,42,36,0.12);--radius:24px;--radius-sm:14px;--radius-lg:32px;--radius-full:9999px;--transition:all 0.4s cubic-bezier(0.4,0,0.2,1);--max-w:1240px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.7;overflow-x:hidden}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--ivoire);line-height:1.7}
 a{text-decoration:none;color:inherit}
-img{max-width:100%;height:auto;display:block}
+img{max-width:100%;display:block}
 .container{max-width:var(--max-w);margin:0 auto;padding:0 2rem}
-h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15;letter-spacing:-0.01em;color:var(--ink)}
+h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15;letter-spacing:-0.01em}
 em{font-family:'DM Serif Display',serif;font-style:italic}
 .eyebrow{display:inline-block;font-size:0.74rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--maroon);margin-bottom:1.2rem}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(244,241,232,0.85);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);transition:var(--transition)}
-nav.scrolled{background:rgba(244,241,232,0.95);box-shadow:0 1px 16px rgba(45,42,36,0.05)}
-.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:86px}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
-.logo-tantra{font-family:'DM Serif Display',serif;font-size:1.35rem;letter-spacing:0.13em;color:var(--maroon);display:block}
-.logo-essence{font-family:'DM Serif Display',serif;font-size:0.84rem;letter-spacing:0.36em;color:var(--maroon);text-transform:uppercase;display:block;margin-top:2px}
-.nav-links{display:flex;align-items:center;gap:2.4rem;list-style:none}
-.nav-links a{font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition);padding:0.4rem 0;border-bottom:1px solid transparent}
-.nav-links a:hover{color:var(--maroon);border-bottom-color:var(--gold)}
-.nav-actions{display:flex;align-items:center;gap:1.2rem}
-.nav-login{font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition)}
-.nav-login:hover{color:var(--maroon)}
-.nav-cta{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.78rem 1.7rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition);box-shadow:0 4px 14px rgba(201,163,94,0.35)}
-.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,163,94,0.5)}
-@media (max-width:880px){.nav-links,.nav-login{display:none}.nav-inner{height:72px}}
-
-/* PAGE HERO */
-.page-hero{padding:160px 0 4rem;background:linear-gradient(135deg,var(--pink-bg) 0%,var(--ivoire) 100%);text-align:center}
-.page-hero h1{font-size:clamp(2.4rem,5vw,4rem);margin-bottom:1rem;line-height:1.05}
-.page-hero h1 em{color:var(--maroon)}
-.page-hero-lead{font-size:1.2rem;color:var(--ink-sub);max-width:680px;margin:0 auto;line-height:1.6}
-
-/* SECTION */
-section.content-section{padding:5rem 0;background:var(--paper)}
-.content-section.alt{background:var(--ivoire)}
-.content-section h2{font-size:clamp(1.8rem,2.8vw,2.4rem);margin-bottom:1rem}
-.content-section p{font-size:1.05rem;color:var(--ink-sub);margin-bottom:1.2rem;max-width:760px}
-.content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3rem}
-@media (max-width:880px){.content-grid{grid-template-columns:1fr}}
-
-/* CARD */
-.card{background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-soft);transition:var(--transition);display:flex;flex-direction:column}
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.card-img{aspect-ratio:16/10;background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));background-size:cover;background-position:center}
-.card-body{padding:1.6rem 1.4rem;flex:1}
-.card-tag{font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:0.6rem}
-.card-body h3{font-size:1.2rem;margin-bottom:0.6rem;color:var(--ink)}
-.card-body p{color:var(--ink-sub);font-size:0.92rem;margin-bottom:1rem}
-.card-cta{color:var(--maroon);font-weight:600;font-size:0.9rem}
-
-/* BTN */
-.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 1.8rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition);cursor:pointer;border:0}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 1.8rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition);cursor:pointer;border:0;text-decoration:none}
 .btn-gold{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);box-shadow:0 4px 14px rgba(201,163,94,0.35)}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,163,94,0.5)}
 .btn-outline{background:transparent;color:var(--maroon);border:1.5px solid var(--maroon)}
 .btn-outline:hover{background:var(--maroon);color:#fff}
 
-/* CTA SECTION */
-.cta-section{padding:6rem 0;background:linear-gradient(135deg,var(--maroon) 0%,var(--maroon-deep) 100%);color:#fff;text-align:center}
-.cta-section h2{color:#fff;font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:1rem}
-.cta-section h2 em{color:var(--gold-bright)}
-.cta-section p{color:rgba(255,255,255,0.88);font-size:1.1rem;max-width:620px;margin:0 auto 2rem}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(244,241,232,0.85);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);transition:var(--transition)}
+nav.scrolled{background:rgba(244,241,232,0.95);box-shadow:0 1px 16px rgba(45,42,36,0.05)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:86px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-tantra{font-family:'DM Serif Display',serif;font-size:1.35rem;letter-spacing:0.13em;color:var(--maroon);display:block}
+.logo-essence{font-family:'DM Serif Display',serif;font-size:0.84rem;letter-spacing:0.36em;color:var(--maroon);text-transform:uppercase;display:block;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:2.4rem;list-style:none}
+.nav-links a{font-family:'DM Serif Display',serif;font-size:1.05rem;padding:0.4rem 0;border-bottom:1px solid transparent;transition:var(--transition)}
+.nav-links a:hover{color:var(--maroon);border-bottom-color:var(--gold)}
+.nav-actions{display:flex;align-items:center;gap:1.2rem}
+.nav-login{font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition)}
+.nav-cta{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.78rem 1.7rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.05rem;box-shadow:0 4px 14px rgba(201,163,94,0.35)}
+@media (max-width:880px){.nav-links,.nav-login{display:none}.nav-inner{height:72px}}
 
-/* COMING SOON banner */
-.coming-soon{padding:5rem 0;text-align:center;background:var(--ivoire-deep)}
-.coming-soon-card{max-width:560px;margin:0 auto;background:var(--paper);padding:3rem 2rem;border-radius:var(--radius);box-shadow:var(--shadow)}
-.coming-soon-card .eyebrow{color:var(--gold-deep)}
-.coming-soon-card h2{margin-bottom:1rem}
+/* HERO */
+.events-hero{padding:160px 0 3rem;background:linear-gradient(135deg,var(--pink-bg) 0%,var(--ivoire) 100%);text-align:center}
+.events-hero h1{font-size:clamp(2.4rem,5vw,4rem);margin-bottom:1rem;line-height:1.05}
+.events-hero h1 em{color:var(--maroon)}
+.events-hero-lead{font-size:1.2rem;color:var(--ink-sub);max-width:680px;margin:0 auto 2rem;line-height:1.6}
+.events-hero-stats{display:flex;justify-content:center;gap:3rem;margin-top:2rem;flex-wrap:wrap}
+.events-stat{text-align:center}
+.events-stat strong{display:block;font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--maroon)}
+.events-stat span{font-size:0.78rem;color:var(--ink-muted);text-transform:uppercase;letter-spacing:0.1em}
+
+/* FILTERS */
+.events-filters{padding:2.5rem 0;background:var(--paper);border-bottom:1px solid var(--border-soft);position:sticky;top:86px;z-index:99;backdrop-filter:blur(10px)}
+.filters-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;gap:0.8rem;flex-wrap:wrap;align-items:center;justify-content:center}
+.filter-chip{padding:0.55rem 1.2rem;border-radius:9999px;border:1px solid var(--border);background:var(--ivoire);font-family:'Inter',sans-serif;font-size:0.85rem;cursor:pointer;transition:var(--transition);color:var(--ink-sub)}
+.filter-chip:hover{border-color:var(--maroon);color:var(--maroon)}
+.filter-chip.active{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.filter-chip-icon{margin-right:0.4rem}
+
+/* FEATURED EVENT */
+.featured-event{padding:4rem 0;background:var(--paper)}
+.featured-event-card{max-width:1100px;margin:0 auto;background:linear-gradient(135deg,var(--maroon),var(--maroon-deep));border-radius:var(--radius-lg);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;color:#fff;box-shadow:var(--shadow-lg)}
+.fe-img{aspect-ratio:auto;min-height:380px;background-size:cover;background-position:center;position:relative}
+.fe-img::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(140,54,69,0.6) 100%)}
+.fe-badge{position:absolute;top:1.5rem;left:1.5rem;background:linear-gradient(135deg,var(--gold-bright),#E9A93C);color:var(--maroon-deep);font-size:0.7rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:0.45rem 1rem;border-radius:9999px;z-index:2;box-shadow:0 4px 14px rgba(201,163,94,0.4)}
+.fe-content{padding:3rem 2.5rem;display:flex;flex-direction:column;justify-content:center}
+.fe-eyebrow{color:var(--gold-bright);font-size:0.74rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;margin-bottom:1rem}
+.fe-content h2{color:#fff;font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:1rem;line-height:1.1}
+.fe-content h2 em{color:var(--gold-bright)}
+.fe-meta{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.5rem}
+.fe-meta-item{font-size:0.95rem;color:rgba(255,255,255,0.88)}
+.fe-meta-item strong{color:#FFE793}
+.fe-content > p{color:rgba(255,255,255,0.88);font-size:1rem;margin-bottom:1.8rem;line-height:1.6}
+.fe-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-gold-light{background:var(--gold-bright);color:var(--maroon-deep)}
+.btn-ghost-light{background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.4);padding:1rem 1.8rem;border-radius:9999px;font-family:'DM Serif Display',serif;font-size:1.05rem;text-decoration:none;transition:var(--transition)}
+.btn-ghost-light:hover{background:rgba(255,255,255,0.22)}
+@media (max-width:880px){.featured-event-card{grid-template-columns:1fr}.fe-img{min-height:240px}.fe-content{padding:2rem 1.6rem}}
+
+/* GRID */
+.events-list{padding:4rem 0;background:var(--paper)}
+.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:0}
+.event-card{background:var(--ivoire);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);transition:var(--transition);border:1px solid var(--border-soft)}
+.event-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.event-img{aspect-ratio:16/10;background-size:cover;background-position:center;position:relative}
+.event-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(45,26,30,0.5) 100%)}
+.event-badge{position:absolute;top:1rem;left:1rem;background:rgba(254,251,244,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--maroon);font-size:0.66rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:0.35rem 0.8rem;border-radius:9999px;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.event-badge-free{background:linear-gradient(135deg,#1EFF8E,#0FB86A);color:#053820}
+.event-badge-featured{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep)}
+.event-body{padding:1.4rem 1.4rem 1.6rem;flex:1;display:flex;flex-direction:column}
+.event-meta{font-size:0.78rem;color:var(--ink-muted);margin-bottom:0.6rem}
+.event-body h3{font-size:1.15rem;line-height:1.25;margin-bottom:0.6rem;color:var(--ink)}
+.event-location{font-size:0.85rem;color:var(--ink-sub);margin-bottom:1rem}
+.event-location strong{color:var(--maroon)}
+.event-cta{color:var(--maroon);font-weight:600;font-size:0.88rem;margin-top:auto}
+@media (max-width:880px){.events-grid{grid-template-columns:1fr}}
+
+/* NEWSLETTER */
+.events-newsletter{padding:5rem 0;background:linear-gradient(135deg,var(--ivoire-deep),var(--pink-bg));text-align:center}
+.events-newsletter h2{font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:1rem}
+.events-newsletter h2 em{color:var(--maroon)}
+.events-newsletter p{color:var(--ink-sub);max-width:560px;margin:0 auto 1.5rem}
+.events-newsletter form{display:flex;gap:0.6rem;max-width:480px;margin:0 auto;flex-wrap:wrap}
+.events-newsletter input{flex:1;min-width:200px;padding:0.95rem 1.2rem;border:1px solid var(--border);border-radius:9999px;font-family:'Inter',sans-serif;background:#fff}
 
 /* FOOTER */
 footer{background:var(--maroon-deep);color:rgba(255,255,255,0.8);padding:3rem 0 2rem;text-align:center}
 footer a{color:rgba(255,255,255,0.75);margin:0 0.8rem;font-size:0.92rem}
 footer a:hover{color:var(--gold-bright)}
 .footer-copy{margin-top:1.5rem;font-size:0.84rem;color:rgba(255,255,255,0.5)}
-
-/* ARTICLE/DETAIL page */
-.article{max-width:780px;margin:0 auto;padding:160px 2rem 4rem}
-.article h1{font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem;line-height:1.1}
-.article .article-meta{color:var(--ink-muted);font-size:0.9rem;margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap}
-.article p{font-size:1.1rem;color:var(--ink);margin-bottom:1.4rem;line-height:1.7}
-.article h2{font-size:1.6rem;margin:2.5rem 0 1rem;color:var(--maroon)}
-.article blockquote{border-left:4px solid var(--gold);padding-left:1.5rem;font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:var(--ink-sub);margin:1.5rem 0}
 </style>
 </head>
 <body>
-
 <nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <span><span class="logo-tantra">TANTRA</span><span class="logo-essence">ESSENCE</span></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="events.html">Events</a></li>
-      <li><a href="programs.html">Programs</a></li>
-      <li><a href="community.html">Community</a></li>
-    </ul>
-    <div class="nav-actions">
-      <a href="login.html" class="nav-login">Login</a>
-      <a href="signup.html" class="nav-cta">Get Started</a>
-    </div>
+    <a href="index.html" class="logo"><span><span class="logo-tantra">TANTRA</span><span class="logo-essence">ESSENCE</span></span></a>
+    <ul class="nav-links"><li><a href="events.html">Events</a></li><li><a href="programs.html">Programs</a></li><li><a href="community.html">Community</a></li></ul>
+    <div class="nav-actions"><a href="login.html" class="nav-login">Login</a><a href="signup.html" class="nav-cta">Get Started</a></div>
   </div>
 </nav>
 
-
-<section class="page-hero">
+<section class="events-hero">
   <div class="container">
     <span class="eyebrow">Calendar of Events</span>
     <h1>Live events &amp; <em>sacred retreats</em></h1>
-    <p class="page-hero-lead">From intimate online circles to immersive in-person retreats around the world. Meet Sarita and the Kaula teachers in Bali, Switzerland, India, Estonia and beyond.</p>
-  </div>
-</section>
-<section class="content-section">
-  <div class="container">
-    <div class="content-grid">
-      <a class="card" href="events/teacher-training-bali.html">
-        <div class="card-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/0bb8cd-4374-861a-d7c8-c55d64e56f_ma-ananda-sarita-tantra-essence-vigyan-bhairav-tantra-retreat-01.jpg')"></div>
-        <div class="card-body"><span class="card-tag">Flagship Retreat</span><h3>Tantra Teacher Training — Bali 2026</h3><p>📅 July 2 – August 2, 2026 · 📍 Bali, Indonesia. 34-day immersion. Become a certified Tantra teacher.</p><span class="card-cta">Apply now →</span></div>
-      </a>
-      <a class="card" href="events/goddess-essence-retreat.html">
-        <div class="card-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"></div>
-        <div class="card-body"><span class="card-tag">Retreat · For Women</span><h3>Goddess Essence Retreat</h3><p>📅 June 15-22, 2026 · 📍 Khajuraho, India. 8 days of feminine awakening.</p><span class="card-cta">Get tickets →</span></div>
-      </a>
-      <a class="card" href="events/free-online-meditation.html">
-        <div class="card-img" style="background:linear-gradient(135deg,#8C3645,#5D1F2C)"></div>
-        <div class="card-body"><span class="card-tag">Free · Live Online</span><h3>Awakening the Inner Goddess</h3><p>📅 May 28, 2026 · 7 PM CET · 📍 Zoom. A 90-min live class with Sarita.</p><span class="card-cta">Join for free →</span></div>
-      </a>
-      <a class="card" href="events/sacred-touch-bali.html">
-        <div class="card-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/0bb8cd-4374-861a-d7c8-c55d64e56f_ma-ananda-sarita-tantra-essence-vigyan-bhairav-tantra-retreat-01.jpg')"></div>
-        <div class="card-body"><span class="card-tag">Retreat</span><h3>Sacred Touch Tantra Massage Training</h3><p>📅 September 10-20, 2026 · 📍 Bali. 11-day practitioner training.</p><span class="card-cta">Get tickets →</span></div>
-      </a>
-      <a class="card" href="events/men-circle.html">
-        <div class="card-img" style="background:linear-gradient(135deg,#9E7F47,#5D1F2C)"></div>
-        <div class="card-body"><span class="card-tag">Free · Live Online</span><h3>Men's Tantra Circle</h3><p>📅 June 5, 2026 · 8 PM CET · 📍 Zoom. A monthly free circle for men.</p><span class="card-cta">Join for free →</span></div>
-      </a>
-      <a class="card" href="events/couples-retreat-switzerland.html">
-        <div class="card-img" style="background:linear-gradient(135deg,#E8D4A2,#9E7F47)"></div>
-        <div class="card-body"><span class="card-tag">Retreat · For Couples</span><h3>Couples Tantra Retreat</h3><p>📅 October 15-22, 2026 · 📍 TBC, Switzerland. Reignite intimacy with your partner.</p><span class="card-cta">Get tickets →</span></div>
-      </a>
+    <p class="events-hero-lead">From intimate free online circles to immersive in-person retreats in Bali, Switzerland, India, Estonia and beyond. Meet Sarita and the Kaula teachers.</p>
+    <div class="events-hero-stats">
+      <div class="events-stat"><strong>40+</strong><span>Events per year</span></div>
+      <div class="events-stat"><strong>12</strong><span>Countries</span></div>
+      <div class="events-stat"><strong>6,000+</strong><span>Attendees yearly</span></div>
+      <div class="events-stat"><strong>FREE</strong><span>Monthly live classes</span></div>
     </div>
   </div>
 </section>
 
+<div class="events-filters">
+  <div class="filters-inner">
+    <button class="filter-chip active"><span class="filter-chip-icon">✦</span>All events</button>
+    <button class="filter-chip"><span class="filter-chip-icon">🎁</span>Free</button>
+    <button class="filter-chip"><span class="filter-chip-icon">🌍</span>In-person</button>
+    <button class="filter-chip"><span class="filter-chip-icon">💻</span>Online (Zoom)</button>
+    <button class="filter-chip"><span class="filter-chip-icon">🏝️</span>Retreats</button>
+    <button class="filter-chip"><span class="filter-chip-icon">🎓</span>Trainings</button>
+    <button class="filter-chip"><span class="filter-chip-icon">👩</span>For women</button>
+    <button class="filter-chip"><span class="filter-chip-icon">👨</span>For men</button>
+    <button class="filter-chip"><span class="filter-chip-icon">💑</span>For couples</button>
+  </div>
+</div>
+
+<section class="featured-event">
+  <div class="container">
+    <div class="featured-event-card">
+      <div class="fe-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/0bb8cd-4374-861a-d7c8-c55d64e56f_ma-ananda-sarita-tantra-essence-vigyan-bhairav-tantra-retreat-01.jpg')"><span class="fe-badge">🌺 Flagship Retreat</span></div>
+      <div class="fe-content">
+        <span class="fe-eyebrow">Featured · Apply Now</span>
+        <h2>Tantra Teacher Training<br><em>Bali · Summer 2026</em></h2>
+        <div class="fe-meta">
+          <div class="fe-meta-item">📅 <strong>July 2 – August 2, 2026</strong></div>
+          <div class="fe-meta-item">📍 <strong>Bali, Indonesia</strong></div>
+          <div class="fe-meta-item">⏱ <strong>34 days · 24 spots only</strong></div>
+          <div class="fe-meta-item">💰 <strong>From $2,880</strong> (shared) — financing available</div>
+        </div>
+        <p>34 days of deep transformation. Become a certified Tantra teacher in Sarita's Kaula lineage. The flagship training. By application only.</p>
+        <div class="fe-ctas">
+          <a href="apply-bali.html" class="btn btn-gold-light">Apply now →</a>
+          <a href="tantra-teacher-training.html" class="btn-ghost-light">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="events-list">
+  <div class="container">
+    <div class="events-grid">
+      <a class="event-card" href="events/goddess-essence-retreat.html"><div class="event-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"><span class="event-badge">Retreat · For Women</span></div><div class="event-body"><div class="event-meta">📅 June 15-22, 2026 · 8 days</div><h3>Goddess Essence Retreat</h3><div class="event-location">📍 <strong>Khajuraho, India</strong></div><span class="event-cta">Get tickets →</span></div></a>
+      <a class="event-card" href="events/free-online-meditation.html"><div class="event-img" style="background:linear-gradient(135deg,#8C3645,#5D1F2C)"><span class="event-badge event-badge-free">Free · Live</span></div><div class="event-body"><div class="event-meta">📅 May 28, 2026 · 7 PM CET</div><h3>Awakening the Inner Goddess</h3><div class="event-location">📍 <strong>Zoom · Worldwide</strong></div><span class="event-cta">Join for free →</span></div></a>
+      <a class="event-card" href="events/sacred-touch-bali.html"><div class="event-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/0bb8cd-4374-861a-d7c8-c55d64e56f_ma-ananda-sarita-tantra-essence-vigyan-bhairav-tantra-retreat-01.jpg')"><span class="event-badge">Practitioner Training</span></div><div class="event-body"><div class="event-meta">📅 September 10-20, 2026 · 11 days</div><h3>Sacred Touch Tantra Massage</h3><div class="event-location">📍 <strong>Bali, Indonesia</strong></div><span class="event-cta">Get tickets →</span></div></a>
+      <a class="event-card" href="events/men-circle.html"><div class="event-img" style="background:linear-gradient(135deg,#9E7F47,#5D1F2C)"><span class="event-badge event-badge-free">Free · Live</span></div><div class="event-body"><div class="event-meta">📅 June 5, 2026 · 8 PM CET</div><h3>Men's Tantra Circle (monthly)</h3><div class="event-location">📍 <strong>Zoom · Worldwide</strong></div><span class="event-cta">Join for free →</span></div></a>
+      <a class="event-card" href="events/teacher-training-bali.html"><div class="event-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/0bb8cd-4374-861a-d7c8-c55d64e56f_ma-ananda-sarita-tantra-essence-vigyan-bhairav-tantra-retreat-01.jpg')"><span class="event-badge event-badge-featured">⚡ Flagship</span></div><div class="event-body"><div class="event-meta">📅 July 2 – August 2, 2026 · 34 days</div><h3>Tantra Teacher Training</h3><div class="event-location">📍 <strong>Bali, Indonesia</strong></div><span class="event-cta">Apply now →</span></div></a>
+      <a class="event-card" href="events/couples-retreat-switzerland.html"><div class="event-img" style="background:linear-gradient(135deg,#E8D4A2,#9E7F47)"><span class="event-badge">Retreat · For Couples</span></div><div class="event-body"><div class="event-meta">📅 October 15-22, 2026 · 8 days</div><h3>Couples Tantra Retreat</h3><div class="event-location">📍 <strong>TBC · Switzerland</strong></div><span class="event-cta">Get tickets →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="events-newsletter">
+  <div class="container">
+    <span class="eyebrow">Never miss an event</span>
+    <h2>Be the <em>first to know</em></h2>
+    <p>Get early access to retreat applications, free live class invites, and waitlist priority — straight to your inbox.</p>
+    <form onsubmit="event.preventDefault();alert('Thank you! (Placeholder)')"><input type="email" placeholder="Your email address" required><button type="submit" class="btn btn-gold">Subscribe →</button></form>
+  </div>
+</section>
 
 <footer>
   <div class="container">
-    <a href="index.html">Home</a> · <a href="events.html">Events</a> · <a href="programs.html">Programs</a> · <a href="community.html">Community</a> · <a href="about.html">About Sarita</a> · <a href="teachers.html">Team</a> · <a href="podcast.html">Podcast</a> · <a href="blog.html">Blog</a> · <a href="contact.html">Contact</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
+    <a href="index.html">Home</a> · <a href="events.html">Events</a> · <a href="programs.html">Programs</a> · <a href="community.html">Community</a> · <a href="about.html">About Sarita</a> · <a href="teachers.html">Team</a> · <a href="podcast.html">Podcast</a> · <a href="blog.html">Blog</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a>
     <div class="footer-copy">© 2026 Tantra Essence · Created by Ma Ananda Sarita · All rights reserved</div>
   </div>
 </footer>
@@ -175,13 +203,16 @@ footer a:hover{color:var(--gold-bright)}
 <script>
 (function(){
   var nav=document.getElementById('nav');
-  if(nav){
-    window.addEventListener('scroll',function(){
-      if(window.scrollY>20)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
-    },{passive:true});
-  }
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>20)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
+  },{passive:true});
+  document.querySelectorAll('.filter-chip').forEach(function(c){
+    c.addEventListener('click',function(){
+      document.querySelectorAll('.filter-chip').forEach(function(x){x.classList.remove('active');});
+      c.classList.add('active');
+    });
+  });
 })();
 </script>
-
 </body>
 </html>
