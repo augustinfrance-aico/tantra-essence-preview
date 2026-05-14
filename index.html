@@ -1306,13 +1306,8 @@ footer{background:var(--maroon-deep);color:rgba(255,255,255,0.8);padding:4rem 0 
     overlay.classList.remove('open');
     overlay.setAttribute('aria-hidden','true');
   }
-  // Show after 5s OR after 35% scroll, whichever happens first — every visit (preview mode)
-  var shown=false;
-  var t=setTimeout(function(){if(!shown){shown=true;openPopup();}},5000);
-  window.addEventListener('scroll',function onScroll(){
-    var pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
-    if(pct>35 && !shown){shown=true;clearTimeout(t);openPopup();window.removeEventListener('scroll',onScroll);}
-  },{passive:true});
+  // Show pop-up 2s after arrival — every visit (preview mode)
+  setTimeout(function(){openPopup();},2000);
   closeBtn.addEventListener('click',closePopup);
   overlay.addEventListener('click',function(e){if(e.target===overlay)closePopup();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
