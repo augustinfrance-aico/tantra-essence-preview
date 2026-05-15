@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Live Webinar with Ma Ananda Sarita · Reserve your seat</title>
+<meta name="description" content="Reserve your free seat for the upcoming live webinar with Ma Ananda Sarita — 90 minutes of pure transmission on the Tantric path of awakening. Live on Zoom. Free replay included.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivoire:#FAF5EC; --paper:#FEFBF4; --pink-bg:#FCEFEA;
+  --maroon:#8C3645; --maroon-deep:#5D1F2C; --maroon-dark:#1A0D11;
+  --gold:#C9A35E; --gold-bright:#F7D560; --gold-soft:#E8D4A2; --gold-deep:#9E7F47;
+  --ink:#2A1A1E; --ink-sub:#5E4A4E; --ink-muted:#8C7A7E;
+  --border:rgba(93,117,95,0.15); --border-soft:rgba(93,117,95,0.08);
+  --shadow:0 14px 40px rgba(45,42,36,0.12); --shadow-lg:0 30px 80px rgba(45,42,36,0.18);
+  --radius:24px; --radius-sm:14px; --radius-full:9999px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--maroon-dark);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15;letter-spacing:-0.01em}
+em{font-style:italic;color:var(--gold-bright)}
+
+/* === TOP BAR === */
+.top-bar{padding:1.4rem 0;text-align:center;border-bottom:1px solid rgba(255,255,255,0.06);position:relative;z-index:10}
+.logo{display:inline-flex;align-items:center;gap:10px}
+.logo-tantra{font-family:'DM Serif Display',serif;font-size:1.1rem;letter-spacing:0.18em;color:var(--gold-bright)}
+.logo-essence{font-family:'DM Serif Display',serif;font-size:0.7rem;letter-spacing:0.36em;color:var(--gold-soft);text-transform:uppercase}
+
+/* === HERO === */
+.hero{padding:5rem 0 4rem;position:relative;overflow:hidden;color:#fff}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(247,213,96,0.18),transparent 50%),radial-gradient(ellipse at 75% 50%,rgba(140,54,69,0.5),transparent 50%);z-index:1}
+.hero-bg-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.6}
+.hero-bg-orb-1{top:-100px;right:-100px;width:500px;height:500px;background:rgba(247,213,96,0.25);animation:orb-float 20s ease-in-out infinite}
+.hero-bg-orb-2{bottom:-150px;left:-100px;width:600px;height:600px;background:rgba(140,54,69,0.3);animation:orb-float 25s ease-in-out infinite reverse}
+@keyframes orb-float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,40px) scale(1.1)}}
+.hero-grid{max-width:1160px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1.2fr 0.9fr;gap:4rem;align-items:center;position:relative;z-index:2}
+
+.live-badge{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(30,255,142,0.12);border:1px solid #1EFF8E;color:#1EFF8E;padding:0.5rem 1.2rem;border-radius:9999px;font-size:0.78rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1.5rem;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#1EFF8E;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);box-shadow:0 0 0 0 rgba(30,255,142,0.7)}50%{opacity:0.6;transform:scale(1.4);box-shadow:0 0 0 10px rgba(30,255,142,0)}}
+
+.hero h1{font-size:clamp(2.4rem,5vw,4rem);margin-bottom:1.4rem;color:#fff}
+.hero-subtitle{font-size:1.2rem;color:rgba(255,255,255,0.88);margin-bottom:2rem;line-height:1.6;max-width:540px}
+.event-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:0.7rem;margin-bottom:2rem;padding:1.4rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-sm);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.event-meta-item{font-size:0.92rem;color:rgba(255,255,255,0.9);display:flex;align-items:center;gap:0.5rem}
+.event-meta-item strong{color:var(--gold-bright);font-weight:600}
+
+.hero-trust{display:flex;align-items:center;gap:0.9rem;margin-top:1.4rem;font-size:0.9rem;color:rgba(255,255,255,0.78)}
+.hero-trust-avatars{display:flex}
+.hero-trust-avatar{width:34px;height:34px;border-radius:50%;background-size:cover;background-position:center;border:2px solid var(--maroon-dark);margin-left:-10px;box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.hero-trust-avatar:first-child{margin-left:0}
+.hero-trust strong{color:#FFE793}
+
+/* === FORM CARD === */
+.form-card{background:#fff;border-radius:var(--radius);padding:2.5rem 2rem 2rem;box-shadow:0 40px 100px rgba(0,0,0,0.5);position:relative}
+.form-card-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:0.5rem 1.2rem;border-radius:9999px;box-shadow:0 4px 14px rgba(201,163,94,0.5)}
+.form-card h2{color:var(--ink);font-family:'DM Serif Display',serif;font-size:1.7rem;margin-bottom:0.5rem;text-align:center;line-height:1.2}
+.form-card h2 em{color:var(--maroon);font-style:italic}
+.form-card > p{text-align:center;color:var(--ink-sub);font-size:0.95rem;margin-bottom:1.5rem}
+.form-card form{display:flex;flex-direction:column;gap:0.8rem}
+.form-card input{padding:1rem 1.2rem;border:1.5px solid var(--border);border-radius:9999px;font-family:'Inter',sans-serif;font-size:0.98rem;outline:0;transition:border-color 0.3s,box-shadow 0.3s;background:var(--ivoire);color:var(--ink)}
+.form-card input:focus{border-color:var(--maroon);box-shadow:0 0 0 3px rgba(140,54,69,0.1)}
+.form-submit{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:1.2rem 1.5rem;border-radius:9999px;font-family:'DM Serif Display',serif;font-size:1.1rem;border:0;cursor:pointer;box-shadow:0 6px 20px rgba(201,163,94,0.45);transition:transform 0.4s var(--ease),box-shadow 0.4s var(--ease);font-weight:400;position:relative;overflow:hidden}
+.form-submit::before{content:'';position:absolute;top:50%;left:50%;width:0;height:0;border-radius:50%;background:rgba(255,255,255,0.4);transform:translate(-50%,-50%);transition:width 0.6s,height 0.6s;pointer-events:none}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,163,94,0.65)}
+.form-submit:hover::before{width:400px;height:400px}
+.spots-left{display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:1.1rem;padding:0.8rem;background:rgba(140,54,69,0.06);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--maroon)}
+.spots-left strong{color:var(--maroon);font-weight:700}
+.spots-bar{height:4px;background:var(--border);border-radius:9999px;margin-top:0.6rem;overflow:hidden}
+.spots-bar-fill{height:100%;width:73%;background:linear-gradient(90deg,#1EFF8E,#F7D560,#E9A93C);border-radius:9999px}
+.form-trust{margin-top:1rem;font-size:0.78rem;color:var(--ink-muted);text-align:center;line-height:1.5}
+.form-trust strong{color:var(--maroon)}
+.payment-icons{display:flex;justify-content:center;gap:0.7rem;margin-top:0.8rem;opacity:0.7;font-size:0.8rem;color:var(--ink-muted)}
+
+/* === FEATURED ON BAR === */
+.featured-on-section{padding:2.5rem 0;background:rgba(255,255,255,0.04);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
+.featured-on-label{text-align:center;font-size:0.7rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1.4rem}
+.featured-on-logos{display:flex;justify-content:center;gap:2.6rem;flex-wrap:wrap;padding:0 2rem}
+.featured-on-logos span{font-family:'DM Serif Display',serif;font-size:1.15rem;color:rgba(255,255,255,0.65);font-style:italic}
+.featured-on-logos strong{font-style:normal}
+@media (max-width:720px){.featured-on-logos{gap:1.4rem}.featured-on-logos span{font-size:0.95rem}}
+
+/* === COUNTDOWN === */
+.countdown-section{padding:3rem 0;text-align:center;color:#fff;position:relative;z-index:1}
+.countdown-section h3{color:var(--gold-bright);font-size:0.78rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;margin-bottom:1.5rem;font-family:'Inter',sans-serif}
+.countdown{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.countdown-box{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:var(--radius-sm);padding:1rem 1.4rem;min-width:90px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.countdown-num{font-family:'DM Serif Display',serif;font-size:2.4rem;color:var(--gold-bright);line-height:1;display:block}
+.countdown-label{font-size:0.66rem;color:rgba(255,255,255,0.7);letter-spacing:0.2em;text-transform:uppercase;margin-top:0.4rem;display:block}
+
+/* === LEARN SECTION === */
+.learn-section{padding:6rem 0;background:linear-gradient(180deg,var(--maroon-dark),#0a0507);color:#fff;position:relative}
+.learn-inner{max-width:1100px;margin:0 auto;padding:0 2rem}
+.learn-header{text-align:center;margin-bottom:3rem}
+.learn-header .label{display:inline-block;color:var(--gold-bright);font-size:0.74rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;margin-bottom:1rem}
+.learn-header h2{color:#fff;font-size:clamp(2rem,3.6vw,2.8rem);line-height:1.15}
+.learn-header h2 em{color:var(--gold-bright)}
+.learn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem;margin-top:2.5rem}
+.learn-card{padding:2rem 1.8rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);transition:all 0.5s var(--ease);display:flex;gap:1.2rem;align-items:flex-start}
+.learn-card:hover{background:rgba(255,255,255,0.07);border-color:rgba(247,213,96,0.3);transform:translateY(-4px)}
+.learn-icon{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.5rem}
+.learn-card h4{color:#fff;font-size:1.2rem;margin-bottom:0.4rem}
+.learn-card p{color:rgba(255,255,255,0.78);font-size:0.95rem;line-height:1.6}
+@media (max-width:760px){.learn-grid{grid-template-columns:1fr}}
+
+/* === BONUS STACK === */
+.bonus-section{padding:6rem 0;background:linear-gradient(180deg,#0a0507,var(--maroon-dark));color:#fff}
+.bonus-card{max-width:780px;margin:0 auto;background:linear-gradient(135deg,rgba(247,213,96,0.08),rgba(247,213,96,0.02));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:var(--radius-lg);padding:3rem 2.5rem;box-shadow:0 30px 80px rgba(0,0,0,0.5);border:1px solid rgba(247,213,96,0.25);position:relative}
+.bonus-card::before{content:'🎁 BONUS INCLUDED';position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.5rem 1.2rem;border-radius:9999px;font-size:0.74rem;font-weight:700;letter-spacing:0.16em;box-shadow:0 4px 14px rgba(201,163,94,0.4)}
+.bonus-card h2{color:#fff;text-align:center;font-size:clamp(1.6rem,2.4vw,2.1rem);margin-bottom:0.6rem}
+.bonus-card h2 em{color:var(--gold-bright)}
+.bonus-card > p{text-align:center;color:rgba(255,255,255,0.8);margin-bottom:2rem}
+.bonus-item{display:flex;gap:1.2rem;align-items:flex-start;padding:1.3rem 0;border-bottom:1px dashed rgba(255,255,255,0.1)}
+.bonus-item:last-of-type{border-bottom:0}
+.bonus-item-icon{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--gold-soft),var(--gold));display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.bonus-item-text{flex:1}
+.bonus-item-text h4{color:#fff;font-size:1.1rem;margin-bottom:0.3rem}
+.bonus-item-text p{color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.5;margin-bottom:0.3rem}
+.bonus-value{color:var(--gold-bright);font-weight:600;font-size:0.85rem}
+
+/* === SPEAKER === */
+.speaker-section{padding:6rem 0;background:var(--ivoire);color:var(--ink)}
+.speaker-grid{max-width:1050px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1.4fr;gap:3.5rem;align-items:center}
+.speaker-photo{aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));box-shadow:var(--shadow-lg);max-width:360px;margin-left:auto;position:relative;border:8px solid #fff}
+.speaker-photo img{width:100%;height:100%;object-fit:cover}
+.speaker-photo::after{content:'';position:absolute;inset:-16px;border:1px dashed var(--gold);border-radius:50%;opacity:0.4;animation:rotate-slow 30s linear infinite}
+@keyframes rotate-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.speaker-content .label{display:inline-block;background:var(--gold-soft);color:var(--maroon-deep);padding:0.4rem 0.9rem;border-radius:9999px;font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:1rem}
+.speaker-content h2{color:var(--ink);font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:1rem}
+.speaker-content h2 em{color:var(--maroon)}
+.speaker-content p{color:var(--ink-sub);font-size:1.05rem;margin-bottom:1rem;line-height:1.7}
+.speaker-quote{margin-top:1.5rem;padding:1.3rem 1.5rem;background:linear-gradient(135deg,var(--gold-soft),#FFE793);border-radius:var(--radius);border-left:4px solid var(--gold-deep);font-family:'DM Serif Display',serif;font-style:italic;color:var(--maroon-deep);font-size:1.05rem}
+.speaker-stats{display:flex;gap:2.5rem;margin-top:1.8rem;padding-top:1.8rem;border-top:1px solid var(--border)}
+.speaker-stat strong{display:block;font-family:'DM Serif Display',serif;font-size:2rem;color:var(--maroon);line-height:1}
+.speaker-stat span{font-size:0.78rem;color:var(--ink-muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.3rem;display:block}
+@media (max-width:880px){.speaker-grid{grid-template-columns:1fr;text-align:center}.speaker-photo{margin:0 auto}.speaker-stats{justify-content:center}}
+
+/* === TESTIMONIALS === */
+.testi-section{padding:6rem 0;background:var(--pink-bg);color:var(--ink)}
+.testi-section .testi-header{text-align:center;max-width:780px;margin:0 auto 3rem;padding:0 2rem}
+.testi-section .label{display:inline-block;color:var(--maroon);font-size:0.74rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;margin-bottom:1rem}
+.testi-section h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:0.8rem}
+.testi-section h2 em{color:var(--maroon)}
+.testi-section .testi-header > p{color:var(--ink-sub);font-size:1.05rem}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1100px;margin:0 auto;padding:0 2rem}
+.testi-card{background:#fff;padding:2rem 1.8rem;border-radius:var(--radius);box-shadow:var(--shadow);transition:all 0.5s var(--ease);position:relative}
+.testi-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.testi-stars{color:var(--gold-deep);letter-spacing:0.15em;margin-bottom:0.8rem;font-size:0.9rem}
+.testi-card blockquote{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.05rem;color:var(--ink);line-height:1.5;margin-bottom:1.2rem}
+.testi-author{display:flex;align-items:center;gap:0.9rem;padding-top:1.2rem;border-top:1px solid var(--border)}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background-size:cover;background-position:center;background-color:var(--gold-soft)}
+.testi-name{font-weight:600;color:var(--ink);font-size:0.95rem}
+.testi-loc{font-size:0.78rem;color:var(--ink-muted)}
+@media (max-width:880px){.testi-grid{grid-template-columns:1fr}}
+
+/* === FAQ === */
+.faq-section{padding:6rem 0;background:var(--maroon-dark);color:#fff}
+.faq-inner{max-width:780px;margin:0 auto;padding:0 2rem}
+.faq-header{text-align:center;margin-bottom:3rem}
+.faq-header .label{color:var(--gold-bright);font-size:0.74rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;margin-bottom:1rem;display:inline-block}
+.faq-header h2{color:#fff;font-size:clamp(1.8rem,3vw,2.4rem)}
+.faq-header h2 em{color:var(--gold-bright)}
+.faq-list{display:flex;flex-direction:column;gap:0.8rem}
+.faq-item{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-sm);overflow:hidden;transition:all 0.4s var(--ease)}
+.faq-item:hover{border-color:rgba(247,213,96,0.2);background:rgba(255,255,255,0.06)}
+.faq-item summary{padding:1.3rem 1.6rem;cursor:pointer;font-family:'DM Serif Display',serif;font-size:1.05rem;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';color:var(--gold-bright);font-size:1.6rem;font-weight:300;transition:transform 0.4s var(--ease);flex-shrink:0}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{padding:0 1.6rem 1.4rem;color:rgba(255,255,255,0.82);font-size:0.95rem;line-height:1.7}
+
+/* === FINAL CTA === */
+.final-cta{padding:5rem 0;text-align:center;color:#fff;position:relative;overflow:hidden;background:linear-gradient(180deg,var(--maroon-dark),#0a0507)}
+.final-cta::before{content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:120%;height:200%;background:radial-gradient(ellipse,rgba(247,213,96,0.15),transparent 50%);pointer-events:none}
+.final-cta-inner{max-width:680px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.final-cta h2{color:#fff;font-size:clamp(2rem,3.6vw,3rem);margin-bottom:1rem;line-height:1.1}
+.final-cta h2 em{color:var(--gold-bright)}
+.final-cta > .final-cta-inner > p{color:rgba(255,255,255,0.88);max-width:520px;margin:0 auto 2rem;font-size:1.1rem;line-height:1.6}
+.final-cta-btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1.2rem 2.6rem;background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);border-radius:9999px;font-family:'DM Serif Display',serif;font-size:1.15rem;text-decoration:none;box-shadow:0 6px 24px rgba(201,163,94,0.5);transition:all 0.4s var(--ease);animation:gold-pulse 3s ease-out infinite}
+@keyframes gold-pulse{0%,100%{box-shadow:0 6px 24px rgba(201,163,94,0.5),0 0 0 0 rgba(247,213,96,0.45)}50%{box-shadow:0 6px 24px rgba(201,163,94,0.65),0 0 0 18px rgba(247,213,96,0)}}
+.final-cta-btn:hover{transform:translateY(-2px) scale(1.02)}
+.final-cta-meta{margin-top:1.5rem;font-size:0.85rem;color:rgba(255,255,255,0.6)}
+
+/* === FOOTER === */
+footer{padding:2rem 0;text-align:center;color:rgba(255,255,255,0.45);font-size:0.82rem;border-top:1px solid rgba(255,255,255,0.06);background:var(--maroon-dark)}
+footer a{color:rgba(255,255,255,0.65);margin:0 0.7rem}
+footer a:hover{color:var(--gold-bright)}
+
+/* === ANIMATIONS ON SCROLL === */
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.9s var(--ease),transform 0.9s var(--ease)}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+@media (max-width:880px){.hero-grid{grid-template-columns:1fr;gap:3rem}.form-card{margin:0 auto;max-width:480px}}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="index.html" class="logo">
+    <span class="logo-tantra">TANTRA</span>
+    <span class="logo-essence">ESSENCE</span>
+  </a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-orb hero-bg-orb-1"></div>
+    <div class="hero-bg-orb hero-bg-orb-2"></div>
+  </div>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <span class="live-badge"><span class="live-dot"></span>Free Live Webinar with Sarita</span>
+      <h1>The hidden science of <em>Tantric awakening</em></h1>
+      <p class="hero-subtitle">Join Ma Ananda Sarita live for 90 minutes of pure transmission on the path most spiritual seekers never see. Free. Limited Zoom seats. Replay included.</p>
+      <div class="event-meta">
+        <div class="event-meta-item">📅 <strong>Date soon announced</strong></div>
+        <div class="event-meta-item">🕐 <strong>90 min · Live</strong></div>
+        <div class="event-meta-item">📍 <strong>Online · Zoom</strong></div>
+        <div class="event-meta-item">🎁 <strong>Free replay included</strong></div>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-avatars">
+          <div class="hero-trust-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/707c03-bba8-ae86-12eb-7f7172020b1d_Suta_3.jpeg')"></div>
+          <div class="hero-trust-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/12c0dde-38e-bc2c-af82-bea5ab03e41_Tantra-Essence-Teacher-Ma-Prem-Tanmaya-Faculty-Photo.webp')"></div>
+          <div class="hero-trust-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/758140-be37-b777-00a-7a27a0f7045_Usha.jpeg')"></div>
+          <div class="hero-trust-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/1fe3ed8-eb4-afae-1fdf-bed83e255_Shivani_Tantra_Awakening_copy.jpeg')"></div>
+          <div class="hero-trust-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5bd5cc-c58b-42fb-17b5-e0d03c6724d_Damir_Maux.webp')"></div>
+        </div>
+        <span><strong>1,847 seekers</strong> registered · <span style="color:#F7D560">★★★★★ 4.9 / 5</span></span>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <span class="form-card-tag">🎁 Free Seat</span>
+      <h2>Reserve your <em>free seat</em></h2>
+      <p>Enter your details. We'll send the Zoom link &amp; replay access by email.</p>
+      <form id="webinarForm" onsubmit="event.preventDefault();var b=this.querySelector('button');b.textContent='✓ Your seat is reserved! Check your inbox';b.style.background='linear-gradient(135deg,#1EFF8E,#0FB86A)';b.style.color='#053820';b.disabled=true;this.querySelector('input[type=email]').disabled=true;this.querySelector('input[type=text]').disabled=true;">
+        <input type="text" name="firstName" placeholder="Your first name" required>
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit" class="form-submit">Reserve my free seat →</button>
+      </form>
+      <div class="spots-left">
+        🔥 <span><strong>1,847 / 2,500</strong> seats taken · Filling fast</span>
+      </div>
+      <div class="spots-bar"><div class="spots-bar-fill"></div></div>
+      <div class="form-trust"><strong>No spam.</strong> Unsubscribe anytime. GDPR compliant. We respect your privacy.</div>
+      <div class="payment-icons">🔒 Secure · 14-day replay · Mobile friendly</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED ON -->
+<section class="featured-on-section">
+  <div class="featured-on-label">Ma Ananda Sarita is featured in</div>
+  <div class="featured-on-logos">
+    <span>The <strong>New York Times</strong></span>
+    <span><strong>Forbes</strong></span>
+    <span><strong>USA Today</strong></span>
+    <span>The <strong>Guardian</strong></span>
+    <span><strong>Vogue</strong></span>
+    <span><strong>Elephant Journal</strong></span>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="countdown-section">
+  <h3>⏱ Webinar starts in</h3>
+  <div class="countdown">
+    <div class="countdown-box"><span class="countdown-num" id="cd-d">--</span><span class="countdown-label">Days</span></div>
+    <div class="countdown-box"><span class="countdown-num" id="cd-h">--</span><span class="countdown-label">Hours</span></div>
+    <div class="countdown-box"><span class="countdown-num" id="cd-m">--</span><span class="countdown-label">Minutes</span></div>
+    <div class="countdown-box"><span class="countdown-num" id="cd-s">--</span><span class="countdown-label">Seconds</span></div>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL LEARN -->
+<section class="learn-section">
+  <div class="learn-inner">
+    <div class="learn-header">
+      <span class="label">In 90 minutes</span>
+      <h2>What you'll <em>discover</em></h2>
+    </div>
+    <div class="learn-grid">
+      <div class="learn-card fade-in">
+        <div class="learn-icon">🕉️</div>
+        <div><h4>What Tantra really is</h4><p>The 3 dangerous misconceptions that keep 95% of seekers stuck on the surface — and the truth Sarita learned from 17 years with Osho.</p></div>
+      </div>
+      <div class="learn-card fade-in">
+        <div class="learn-icon">🗺️</div>
+        <div><h4>The map of awakening</h4><p>The 7-stage map every serious practitioner needs. Where most stop, where the gold is, and how to know which stage you're in.</p></div>
+      </div>
+      <div class="learn-card fade-in">
+        <div class="learn-icon">🔥</div>
+        <div><h4>The 3 core practices</h4><p>How to use breath, body, and relationship as direct portals to awakening — without retreating from the world.</p></div>
+      </div>
+      <div class="learn-card fade-in">
+        <div class="learn-icon">💬</div>
+        <div><h4>Live Q&amp;A with Sarita</h4><p>Bring your real questions about your real path. Sarita answers live. The transmission is in the answers as much as the talk.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUSES -->
+<section class="bonus-section">
+  <div class="bonus-card">
+    <h2>Plus these <em>3 free bonuses</em> when you register</h2>
+    <p>Worth over $397 — yours just for showing up.</p>
+    <div class="bonus-item">
+      <div class="bonus-item-icon">🎧</div>
+      <div class="bonus-item-text">
+        <h4>The Awakening Meditation (audio)</h4>
+        <p>A 25-minute guided meditation by Sarita herself. Use it daily to anchor the teachings into your body.</p>
+        <div class="bonus-value">Value: $97</div>
+      </div>
+    </div>
+    <div class="bonus-item">
+      <div class="bonus-item-icon">📖</div>
+      <div class="bonus-item-text">
+        <h4>"7 Misconceptions about Tantra" eBook (PDF)</h4>
+        <p>A 40-page deep-dive PDF that complements the webinar. Read it before, or after — both work.</p>
+        <div class="bonus-value">Value: $47</div>
+      </div>
+    </div>
+    <div class="bonus-item">
+      <div class="bonus-item-icon">🎬</div>
+      <div class="bonus-item-text">
+        <h4>Full webinar replay (lifetime access)</h4>
+        <p>Couldn't make it live or want to rewatch? You'll have permanent access to the recording. Yours to keep.</p>
+        <div class="bonus-value">Value: $253</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKER -->
+<section class="speaker-section">
+  <div class="speaker-grid">
+    <div class="speaker-photo">
+      <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/d11aecb-354b-e2d7-66a3-e8834b632e5d_Ma-Ananda-Sarita_Portraits-6.webp" alt="Ma Ananda Sarita">
+    </div>
+    <div class="speaker-content">
+      <span class="label">Your guide</span>
+      <h2>Ma Ananda <em>Sarita</em></h2>
+      <p>Disciple of Osho for 17 years. 53+ years immersed in Tantra. Founder of Tantra Essence and the worldwide Kaula lineage of 500+ certified teachers in 36 countries.</p>
+      <p>Sarita is known internationally for her direct, embodied, no-nonsense transmission of authentic Tantra — without dilution, without dogma.</p>
+      <div class="speaker-quote">"This webinar contains 53 years of practice condensed into 90 minutes. I'm giving you the keys I wish someone had given me."</div>
+      <div class="speaker-stats">
+        <div class="speaker-stat"><strong>53</strong><span>Years on the path</span></div>
+        <div class="speaker-stat"><strong>17</strong><span>Years with Osho</span></div>
+        <div class="speaker-stat"><strong>10K+</strong><span>Students taught</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section">
+  <div class="testi-header">
+    <span class="label">From past attendees</span>
+    <h2>What seekers say after <em>Sarita's webinars</em></h2>
+    <p>Hundreds of free webinars over the years. Thousands of lives shifted. Real words from real people.</p>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>"In 90 minutes Sarita unlocked something I'd been chasing for 10 years. I cried, I laughed. I joined her program the next day."</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/707c03-bba8-ae86-12eb-7f7172020b1d_Suta_3.jpeg')"></div>
+        <div><div class="testi-name">Anurasa</div><div class="testi-loc">Czech Republic</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>"I expected another spiritual webinar. I got a complete reorientation of my life. Sarita's transmission is real."</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/12c0dde-38e-bc2c-af82-bea5ab03e41_Tantra-Essence-Teacher-Ma-Prem-Tanmaya-Faculty-Photo.webp')"></div>
+        <div><div class="testi-name">Daniel K.</div><div class="testi-loc">Germany</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>"The free webinar alone was worth $500. The way she answered my question changed my marriage. Three years later, still grateful."</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/1fe3ed8-eb4-afae-1fdf-bed83e255_Shivani_Tantra_Awakening_copy.jpeg')"></div>
+        <div><div class="testi-name">Marali R.</div><div class="testi-loc">Brazil</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <span class="label">Questions</span>
+      <h2>You're not alone in <em>wondering</em></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item"><summary>Is the webinar really free?</summary><p>100% free. No hidden charges, no credit card required to register. You'll receive the Zoom link and the replay access by email after registering.</p></details>
+      <details class="faq-item"><summary>What if I can't make it live?</summary><p>Register anyway. You'll receive a free replay of the full webinar with lifetime access. Watch whenever you want, as many times as you want.</p></details>
+      <details class="faq-item"><summary>Do I need experience with Tantra to attend?</summary><p>Absolutely not. Sarita designs every webinar for both complete beginners and experienced practitioners. You'll receive value wherever you are on your path.</p></details>
+      <details class="faq-item"><summary>How does the Q&amp;A work?</summary><p>You'll be able to submit your questions in the Zoom chat. Sarita reads and answers as many as time allows. The depth of her answers is often where the deepest transmission happens.</p></details>
+      <details class="faq-item"><summary>Will you try to sell me something at the end?</summary><p>At the end, Sarita briefly mentions her programs for those who want to go deeper. Zero pressure, zero spam. The webinar itself is the gift.</p></details>
+      <details class="faq-item"><summary>Is it safe to share my email?</summary><p>Yes. We never share, sell or rent your data. GDPR-compliant. You can unsubscribe in one click anytime from any email we send you.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>Your seat is <em>waiting</em></h2>
+    <p>Reserve now. The Zoom link, the bonuses, and the replay access will land in your inbox immediately.</p>
+    <a href="#" class="final-cta-btn" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'});document.querySelector('#webinarForm input[type=text]').focus();">Reserve my free seat →</a>
+    <div class="final-cta-meta">🎁 Includes 3 bonuses worth $397 · 🔒 Secure registration · ↩️ No spam, ever</div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Tantra Essence · <a href="index.html">Home</a> · <a href="about.html">About Sarita</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
+</footer>
+
+<script>
+(function(){
+  // Countdown — replace target date when Sarita's webinar date is confirmed
+  var target=new Date();target.setDate(target.getDate()+7);target.setHours(19,0,0,0);
+  var d=document.getElementById('cd-d'),h=document.getElementById('cd-h'),m=document.getElementById('cd-m'),s=document.getElementById('cd-s');
+  function tick(){
+    var diff=target-new Date();if(diff<0)diff=0;
+    var dd=Math.floor(diff/86400000),hh=Math.floor((diff%86400000)/3600000),mm=Math.floor((diff%3600000)/60000),ss=Math.floor((diff%60000)/1000);
+    d.textContent=String(dd).padStart(2,'0');h.textContent=String(hh).padStart(2,'0');m.textContent=String(mm).padStart(2,'0');s.textContent=String(ss).padStart(2,'0');
+  }
+  tick();setInterval(tick,1000);
+
+  // Fade-in on scroll
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+    },{threshold:0.15});
+    document.querySelectorAll('.fade-in').forEach(function(el){io.observe(el);});
+  }
+})();
+</script>
+</body>
+</html>
