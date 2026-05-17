@@ -1889,7 +1889,11 @@ svg.mv-mq-geo{display:none !important;visibility:hidden !important;opacity:0 !im
 .logo-tantra{font-family:'DM Serif Display',serif !important;font-size:1.6rem !important;letter-spacing:0.1em !important;color:#D63E5C !important;line-height:1}
 .logo-essence{font-family:'DM Serif Display',serif !important;font-size:0.78rem !important;letter-spacing:0.42em !important;color:#D63E5C !important;text-transform:uppercase;display:block;margin-top:3px;font-weight:400}
 .logo{display:inline-flex !important;align-items:center !important;gap:0.85rem !important}
-.logo-img{height:48px !important;width:auto !important;display:block !important;object-fit:contain !important}
+.logo-img{height:48px !important;width:auto !important;display:block !important;object-fit:contain !important;transition:transform 0.7s cubic-bezier(0.34,1.56,0.64,1),filter 0.5s ease}
+.logo:hover .logo-img{transform:scale(1.08) rotate(-3deg);filter:drop-shadow(0 4px 16px rgba(247,213,96,0.55))}
+.logo:active .logo-img{transform:scale(1.02) rotate(-1deg);transition-duration:0.15s}
+@keyframes logo-breath{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.03) rotate(-1.5deg)}}
+.logo:hover .logo-img{animation:logo-breath 2.4s ease-in-out 0.7s infinite}
 @media(max-width:760px){.logo-img{height:38px !important}}
 
 /* === OFFER RIBBON under nav === */
