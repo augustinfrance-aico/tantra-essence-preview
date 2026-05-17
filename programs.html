@@ -196,12 +196,25 @@ footer a:hover{color:var(--gold-bright)}
 <script>(function(){var n=document.getElementById('nav');if(!n)return;window.addEventListener('scroll',function(){if(window.scrollY>20)n.classList.add('scrolled');else n.classList.remove('scrolled');},{passive:true});})();</script>
 <script>
 (function(){
-  document.querySelectorAll('.pp-chip,.filter-chip,.cat-chip,.t-chip').forEach(function(chip){
-    chip.addEventListener('click',function(e){
+  var chips=document.querySelectorAll('.pp-chip');
+  var cards=document.querySelectorAll('.pp-card');
+  var empty=document.getElementById('ppEmpty');
+  function applyFilter(filter){
+    var visibleCount=0;
+    cards.forEach(function(card){
+      var cats=(card.dataset.cat||'').split(/\s+/);
+      var match=(filter==='all')||cats.indexOf(filter)>=0;
+      if(match){card.classList.remove('hide');card.classList.add('show');visibleCount++;}
+      else{card.classList.add('hide');card.classList.remove('show');}
+    });
+    if(empty){empty.classList.toggle('visible',visibleCount===0);}
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click',function(e){
       e.preventDefault();
-      var group=chip.parentElement;
-      group.querySelectorAll('.pp-chip,.filter-chip,.cat-chip,.t-chip').forEach(function(c){c.classList.remove('active');});
-      chip.classList.add('active');
+      chips.forEach(function(x){x.classList.remove('active');});
+      c.classList.add('active');
+      applyFilter(c.dataset.filter||'all');
     });
   });
 })();

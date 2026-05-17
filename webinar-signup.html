@@ -199,6 +199,38 @@ footer a:hover{color:var(--gold-bright)}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
 @media (max-width:880px){.hero-grid{grid-template-columns:1fr;gap:3rem}.form-card{margin:0 auto;max-width:480px}}
+
+/* === EXIT-INTENT POPUP === */
+.exit-overlay{position:fixed;inset:0;background:rgba(10,5,7,0.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity 0.5s cubic-bezier(0.16,1,0.3,1)}
+.exit-overlay.open{opacity:1;pointer-events:auto}
+.exit-card{background:linear-gradient(135deg,#1A0D11 0%,#3a1a26 100%);border:1px solid rgba(247,213,96,0.3);border-radius:24px;max-width:560px;width:100%;padding:3rem 2.5rem;text-align:center;color:#fff;position:relative;transform:scale(0.95) translateY(20px);transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);box-shadow:0 40px 100px rgba(0,0,0,0.6)}
+.exit-overlay.open .exit-card{transform:scale(1) translateY(0)}
+.exit-close{position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);border:0;color:rgba(255,255,255,0.7);cursor:pointer;font-size:1.4rem;transition:all 0.3s;display:flex;align-items:center;justify-content:center}
+.exit-close:hover{background:rgba(255,255,255,0.2);color:#fff}
+.exit-badge{display:inline-block;background:linear-gradient(135deg,#1EFF8E,#0FB86A);color:#053820;padding:0.5rem 1.2rem;border-radius:9999px;font-size:0.74rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1.4rem}
+.exit-card h2{font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,2.6vw,2.2rem);color:#fff;margin-bottom:0.8rem;line-height:1.15}
+.exit-card h2 em{color:#F7D560;font-style:italic}
+.exit-card > p{color:rgba(255,255,255,0.85);margin-bottom:1.8rem;line-height:1.6}
+.exit-form{display:flex;flex-direction:column;gap:0.7rem;max-width:380px;margin:0 auto}
+.exit-form input{padding:1rem 1.2rem;border:1px solid rgba(255,255,255,0.2);border-radius:9999px;background:rgba(255,255,255,0.08);color:#fff;font-family:'Inter',sans-serif;font-size:0.95rem;outline:0}
+.exit-form input::placeholder{color:rgba(255,255,255,0.5)}
+.exit-form input:focus{border-color:#F7D560;background:rgba(255,255,255,0.12)}
+.exit-form button{background:linear-gradient(135deg,#F7D560,#E9A93C);color:#5D1F2C;padding:1.1rem 1.5rem;border-radius:9999px;font-family:'DM Serif Display',serif;font-size:1.05rem;border:0;cursor:pointer;box-shadow:0 6px 20px rgba(247,213,96,0.4);transition:all 0.4s;font-weight:400}
+.exit-form button:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(247,213,96,0.55)}
+.exit-trust{margin-top:1.2rem;font-size:0.78rem;color:rgba(255,255,255,0.6)}
+
+/* === LIVE SCARCITY WIDGET (bottom-left toast) === */
+.scarcity-widget{position:fixed;bottom:1.5rem;left:1.5rem;background:rgba(254,251,244,0.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:14px;padding:0.9rem 1.2rem;box-shadow:0 12px 40px rgba(0,0,0,0.25);max-width:340px;display:flex;align-items:center;gap:0.9rem;z-index:996;transform:translateX(-120%);transition:transform 0.7s cubic-bezier(0.16,1,0.3,1);border:1px solid rgba(0,0,0,0.05)}
+.scarcity-widget.visible{transform:translateX(0)}
+.scarcity-avatar{width:42px;height:42px;border-radius:50%;background-size:cover;background-position:center;border:2px solid #F7D560;flex-shrink:0}
+.scarcity-text{flex:1;font-size:0.86rem;color:#2A1A1E;line-height:1.3}
+.scarcity-text strong{color:#8C3645;font-weight:600}
+.scarcity-text-meta{font-size:0.72rem;color:#8C7A7E;margin-top:0.15rem;display:flex;align-items:center;gap:0.3rem}
+.scarcity-text-meta::before{content:'';width:6px;height:6px;border-radius:50%;background:#1EFF8E;animation:pulse 1.6s infinite}
+.scarcity-close{background:none;border:0;color:#8C7A7E;cursor:pointer;font-size:1rem;line-height:1;padding:0 0.3rem;transition:color 0.3s}
+.scarcity-close:hover{color:#8C3645}
+@media (max-width:600px){.scarcity-widget{left:0.8rem;right:0.8rem;max-width:none}}
+
 </style>
 </head>
 <body>
@@ -449,6 +481,82 @@ footer a:hover{color:var(--gold-bright)}
     },{threshold:0.15});
     document.querySelectorAll('.fade-in').forEach(function(el){io.observe(el);});
   }
+})();
+</script>
+
+<!-- EXIT INTENT POPUP -->
+<div class="exit-overlay" id="exitOverlay" role="dialog" aria-hidden="true">
+  <div class="exit-card">
+    <button class="exit-close" id="exitClose" aria-label="Close">×</button>
+    <span class="exit-badge">🎁 Wait! One more gift</span>
+    <h2>Before you go — claim your <em>free meditation</em></h2>
+    <p>If you're not ready for the webinar yet, take this 25-min guided meditation by Sarita. Yours free — no obligation.</p>
+    <form class="exit-form" id="exitForm" onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ Sent to your inbox!';this.querySelector('button').disabled=true;setTimeout(function(){document.getElementById('exitOverlay').classList.remove('open');},1500);">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Send me the meditation →</button>
+    </form>
+    <div class="exit-trust">No spam · GDPR compliant · One-click unsubscribe</div>
+  </div>
+</div>
+
+<!-- LIVE SCARCITY WIDGET -->
+<div class="scarcity-widget" id="scarcityWidget">
+  <div class="scarcity-avatar" id="scarAvatar"></div>
+  <div class="scarcity-text">
+    <span id="scarMsg"><strong id="scarName">Marie</strong> from <span id="scarCity">Paris</span> just reserved a seat</span>
+    <div class="scarcity-text-meta"><span id="scarTime">just now</span></div>
+  </div>
+  <button class="scarcity-close" onclick="document.getElementById('scarcityWidget').classList.remove('visible');">×</button>
+</div>
+
+
+<script>
+(function(){
+  // Exit intent detection
+  var overlay=document.getElementById('exitOverlay');
+  var closeBtn=document.getElementById('exitClose');
+  var shown=false;
+  function show(){if(shown)return;shown=true;overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');}
+  function hide(){overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');}
+  // Trigger when mouse leaves top of viewport (after 10s minimum)
+  setTimeout(function(){
+    document.addEventListener('mouseleave',function(e){if(e.clientY<10)show();});
+  },10000);
+  // Backup: also show after 60s if not yet
+  setTimeout(function(){if(!shown)show();},60000);
+  closeBtn.addEventListener('click',hide);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)hide();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});
+
+  // === LIVE SCARCITY WIDGET — rotating notifications ===
+  var widget=document.getElementById('scarcityWidget');
+  var avatar=document.getElementById('scarAvatar');
+  var nameEl=document.getElementById('scarName');
+  var cityEl=document.getElementById('scarCity');
+  var timeEl=document.getElementById('scarTime');
+  var msgEl=document.getElementById('scarMsg');
+  var notifs=[
+    {name:'Marie L.',city:'Paris',time:'2 min ago',avatar:'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/707c03-bba8-ae86-12eb-7f7172020b1d_Suta_3.jpeg',action:'reserved a seat'},
+    {name:'Daniel K.',city:'Berlin',time:'4 min ago',avatar:'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/a825d56-6ef-26bc-2563-f145c465a21_Photo_23-10-20_8_51_19_AM.jpeg',action:'reserved a seat'},
+    {name:'Sofia P.',city:'Lisbon',time:'7 min ago',avatar:'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/12c0dde-38e-bc2c-af82-bea5ab03e41_Tantra-Essence-Teacher-Ma-Prem-Tanmaya-Faculty-Photo.webp',action:'just registered'},
+    {name:'Marco G.',city:'Milan',time:'9 min ago',avatar:'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/e6b2a2-3444-71ab-bc-25c14a560c2_Tantra-Essence-Teacher-Team-Modestas.webp',action:'reserved a seat'},
+    {name:'Lara H.',city:'Sydney',time:'12 min ago',avatar:'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163608788/settings_images/52260f-35d-b3c3-771-b6c0a102b8b7_084fd6-3ca8-3fb-df6-1636734cdf_Dieke_photo_2.jpeg',action:'just joined'},
+    {name:'Adrien F.',city:'Lyon',time:'15 min ago',avatar:'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5bd5cc-c58b-42fb-17b5-e0d03c6724d_Damir_Maux.webp',action:'reserved a seat'},
+    {name:'Anurasa M.',city:'Prague',time:'18 min ago',avatar:'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/758140-be37-b777-00a-7a27a0f7045_Usha.jpeg',action:'just registered'},
+    {name:'Shivani T.',city:'New York',time:'21 min ago',avatar:'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/1fe3ed8-eb4-afae-1fdf-bed83e255_Shivani_Tantra_Awakening_copy.jpeg',action:'reserved a seat'},
+  ];
+  var idx=0;
+  function showNotif(){
+    var n=notifs[idx % notifs.length];
+    avatar.style.backgroundImage="url('"+n.avatar+"')";
+    nameEl.textContent=n.name;cityEl.textContent=n.city;timeEl.textContent=n.time;
+    msgEl.innerHTML='<strong>'+n.name+'</strong> from '+n.city+' '+n.action;
+    widget.classList.add('visible');
+    setTimeout(function(){widget.classList.remove('visible');},6500);
+    idx++;
+  }
+  setTimeout(showNotif,8000);
+  setInterval(showNotif,15000);
 })();
 </script>
 </body>
