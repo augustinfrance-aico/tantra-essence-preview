@@ -248,13 +248,16 @@ footer a:hover{color:var(--gold-bright)}
 .pp-payment-row .pay-stripe{color:#635BFF;font-size:1.4rem;font-weight:900;letter-spacing:-0.02em}
 .pp-payment-row .pay-visa{color:#1A1F71;font-style:italic;font-weight:900;font-size:1.35rem;letter-spacing:0.02em}
 
+
+.logo-img{height:48px !important;width:auto !important;display:block !important;object-fit:contain !important}
+@media(max-width:760px){.logo-img{height:38px !important}}
 </style>
 </head>
 <body>
 
 <nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><span><span class="logo-tantra">TANTRA</span><span class="logo-essence">ESSENCE</span></span></a>
+    <a href="index.html" class="logo"><img src="sarita-photos/tantra-essence-logo.png" alt="Tantra Essence" class="logo-img" /></a>
     <ul class="nav-links">
       <li><a href="events.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>Events</a></li>
       <li><a href="programs.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l2.6 6.7 7.4.6-5.5 4.8 1.9 6.9L12 17.3 5.6 21.5l1.9-6.9L2 9.8l7.4-.6z"/><circle cx="12" cy="13" r="1.2" fill="currentColor"/></svg>Programs</a></li>
@@ -310,39 +313,39 @@ footer a:hover{color:var(--gold-bright)}
 
 <div class="pp-filters">
   <div class="pp-filters-row">
-    <button class="pp-chip active">All programs</button>
-    <button class="pp-chip">⭐ Bestsellers</button>
-    <button class="pp-chip">👩 For women</button>
-    <button class="pp-chip">👨 For men</button>
-    <button class="pp-chip">💑 For couples</button>
-    <button class="pp-chip">🧘 Meditation</button>
-    <button class="pp-chip">💗 Healing</button>
-    <button class="pp-chip">🤲 Bodywork</button>
-    <button class="pp-chip">🎓 Trainings</button>
-    <button class="pp-chip">🎁 Free</button>
+    <button class="pp-chip active" data-filter="all">All programs</button>
+    <button class="pp-chip" data-filter="bestseller">⭐ Bestsellers</button>
+    <button class="pp-chip" data-filter="women">👩 For women</button>
+    <button class="pp-chip" data-filter="men">👨 For men</button>
+    <button class="pp-chip" data-filter="couples">💑 For couples</button>
+    <button class="pp-chip" data-filter="meditation">🧘 Meditation</button>
+    <button class="pp-chip" data-filter="healing">💗 Healing</button>
+    <button class="pp-chip" data-filter="bodywork">🤲 Bodywork</button>
+    <button class="pp-chip" data-filter="training">🎓 Trainings</button>
+    <button class="pp-chip" data-filter="free">🎁 Free</button>
   </div>
 </div>
 
-<section class="pp-section">
+<section class="pp-section" id="all-programs">
   <h2 class="pp-section-title">Top <em>recommendations</em></h2>
   <div class="pp-scroll">
-    <a class="pp-card" href="program-goddess-unveiled.html">
+    <a class="pp-card" data-cat="bestseller men women" href="program-goddess-unveiled.html">
       <div class="pp-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"><span class="pp-badge">12 modules</span></div>
       <div class="pp-card-body"><div class="pp-cat">Bestseller · For Women</div><h3>Goddess Unveiled</h3><div class="pp-meta">Sarita · Self-paced · <strong>$599</strong></div></div>
     </a>
-    <a class="pp-card" href="program-master-lover.html">
+    <a class="pp-card" data-cat="bestseller men" href="program-master-lover.html">
       <div class="pp-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/7a573f-45a7-d643-877b-b148047c036_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-01.jpg')"><span class="pp-badge">7 modules</span></div>
       <div class="pp-card-body"><div class="pp-cat">Bestseller · For Men</div><h3>Master Lover</h3><div class="pp-meta">Sarita · Self-paced · <strong>$799</strong></div></div>
     </a>
-    <a class="pp-card" href="program-tantra-massage-7-chakras.html">
+    <a class="pp-card" data-cat="bodywork men training" href="program-tantra-massage-7-chakras.html">
       <div class="pp-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/13a338b-4a7f-4f58-7fd4-54088ab646d_tantra-essence-event-tantra-massage-practitioner-training-14.webp')"><span class="pp-badge">9 modules</span></div>
       <div class="pp-card-body"><div class="pp-cat">Certification · For All</div><h3>Tantra Massage 7 Chakras</h3><div class="pp-meta">Sarita &amp; Modestas · <strong>$799</strong></div></div>
     </a>
-    <a class="pp-card" href="tantra-teacher-training.html">
+    <a class="pp-card" data-cat="bodywork men training" href="tantra-teacher-training.html">
       <div class="pp-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5b6a5e7-aa9e-7e3-d7a-aab14d2cd56e_tantra-essence-event-tantra-massage-practitioner-training-1.png')"><span class="pp-badge">34 days</span></div>
       <div class="pp-card-body"><div class="pp-cat">Flagship · Certification</div><h3>Tantra Teacher Training Bali</h3><div class="pp-meta">Sarita · Jul 2026 · <strong>$2,880</strong></div></div>
     </a>
-    <a class="pp-card" href="masterclass.html">
+    <a class="pp-card" data-cat="free men" href="masterclass.html">
       <div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1593011951-37b09687648f?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">90 min</span></div>
       <div class="pp-card-body"><div class="pp-cat">Masterclass · Free</div><h3>The Hidden Science of Tantric Awakening</h3><div class="pp-meta">Sarita · Live May 28 · <strong>Free</strong></div></div>
     </a>
@@ -407,40 +410,40 @@ footer a:hover{color:var(--gold-bright)}
 <section class="pp-section alt">
   <h2 class="pp-section-title">Tantra for <em>women</em></h2>
   <div class="pp-scroll">
-    <a class="pp-card" href="program-goddess-unveiled.html"><div class="pp-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"><span class="pp-badge">12 modules</span></div><div class="pp-card-body"><div class="pp-cat">Bestseller</div><h3>Goddess Unveiled</h3><div class="pp-meta">Sarita · <strong>$599</strong></div></div></a>
-    <a class="pp-card" href="meditations.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">21 days</span></div><div class="pp-card-body"><div class="pp-cat">Audio Series</div><h3>Womb Wisdom Daily Meditations</h3><div class="pp-meta">Sarita · <strong>Free</strong></div></div></a>
-    <a class="pp-card" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">8 weeks</span></div><div class="pp-card-body"><div class="pp-cat">Online Program</div><h3>Divine Feminine Awakening</h3><div class="pp-meta">Usha · <strong>$397</strong></div></div></a>
-    <a class="pp-card" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">6 weeks</span></div><div class="pp-card-body"><div class="pp-cat">Online Program</div><h3>Sacred Sexuality for Women</h3><div class="pp-meta">Sarita · <strong>$497</strong></div></div></a>
+    <a class="pp-card" data-cat="bestseller women" href="program-goddess-unveiled.html"><div class="pp-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"><span class="pp-badge">12 modules</span></div><div class="pp-card-body"><div class="pp-cat">Bestseller</div><h3>Goddess Unveiled</h3><div class="pp-meta">Sarita · <strong>$599</strong></div></div></a>
+    <a class="pp-card" data-cat="free meditation women" href="meditations.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">21 days</span></div><div class="pp-card-body"><div class="pp-cat">Audio Series</div><h3>Womb Wisdom Daily Meditations</h3><div class="pp-meta">Sarita · <strong>Free</strong></div></div></a>
+    <a class="pp-card" data-cat="women" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">8 weeks</span></div><div class="pp-card-body"><div class="pp-cat">Online Program</div><h3>Divine Feminine Awakening</h3><div class="pp-meta">Usha · <strong>$397</strong></div></div></a>
+    <a class="pp-card" data-cat="women" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">6 weeks</span></div><div class="pp-card-body"><div class="pp-cat">Online Program</div><h3>Sacred Sexuality for Women</h3><div class="pp-meta">Sarita · <strong>$497</strong></div></div></a>
   </div>
 </section>
 
 <section class="pp-section">
   <h2 class="pp-section-title">Tantra for <em>men</em></h2>
   <div class="pp-scroll">
-    <a class="pp-card" href="program-master-lover.html"><div class="pp-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/7a573f-45a7-d643-877b-b148047c036_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-01.jpg')"><span class="pp-badge">7 modules</span></div><div class="pp-card-body"><div class="pp-cat">Bestseller</div><h3>Master Lover</h3><div class="pp-meta">Sarita · <strong>$799</strong></div></div></a>
-    <a class="pp-card" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">6 weeks</span></div><div class="pp-card-body"><div class="pp-cat">Online Program</div><h3>Sacred Masculine Awakening</h3><div class="pp-meta">Dharmaraj · <strong>$497</strong></div></div></a>
-    <a class="pp-card" href="programs.html"><div class="pp-img" style="background-image:url('sarita-photos/sarita-online-courses.webp')"><span class="pp-badge">4 weeks</span></div><div class="pp-card-body"><div class="pp-cat">Online Program</div><h3>Multi-Orgasmic Man</h3><div class="pp-meta">Sarita · <strong>$297</strong></div></div></a>
-    <a class="pp-card" href="events/men-circle.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1502790671504-542ad42d5189?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">Monthly</span></div><div class="pp-card-body"><div class="pp-cat">Live Online</div><h3>Men's Tantra Circle</h3><div class="pp-meta">Dharmaraj · <strong>Free</strong></div></div></a>
+    <a class="pp-card" data-cat="bestseller men" href="program-master-lover.html"><div class="pp-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/7a573f-45a7-d643-877b-b148047c036_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-01.jpg')"><span class="pp-badge">7 modules</span></div><div class="pp-card-body"><div class="pp-cat">Bestseller</div><h3>Master Lover</h3><div class="pp-meta">Sarita · <strong>$799</strong></div></div></a>
+    <a class="pp-card" data-cat="men" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">6 weeks</span></div><div class="pp-card-body"><div class="pp-cat">Online Program</div><h3>Sacred Masculine Awakening</h3><div class="pp-meta">Dharmaraj · <strong>$497</strong></div></div></a>
+    <a class="pp-card" data-cat="men" href="programs.html"><div class="pp-img" style="background-image:url('sarita-photos/sarita-online-courses.webp')"><span class="pp-badge">4 weeks</span></div><div class="pp-card-body"><div class="pp-cat">Online Program</div><h3>Multi-Orgasmic Man</h3><div class="pp-meta">Sarita · <strong>$297</strong></div></div></a>
+    <a class="pp-card" data-cat="free men" href="events/men-circle.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1502790671504-542ad42d5189?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">Monthly</span></div><div class="pp-card-body"><div class="pp-cat">Live Online</div><h3>Men's Tantra Circle</h3><div class="pp-meta">Dharmaraj · <strong>Free</strong></div></div></a>
   </div>
 </section>
 
 <section class="pp-section alt">
   <h2 class="pp-section-title">Tantra for <em>couples</em></h2>
   <div class="pp-scroll">
-    <a class="pp-card" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">8 modules</span></div><div class="pp-card-body"><div class="pp-cat">Online Program</div><h3>Sacred Union Path</h3><div class="pp-meta">Sarita &amp; Tanmaya · <strong>$697</strong></div></div></a>
-    <a class="pp-card" href="events/couples-retreat-switzerland.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">8 days</span></div><div class="pp-card-body"><div class="pp-cat">Retreat</div><h3>Couples Tantra Retreat</h3><div class="pp-meta">Sarita · Oct 2026 · <strong>$2,400</strong></div></div></a>
-    <a class="pp-card" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1502790671504-542ad42d5189?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">14 days</span></div><div class="pp-card-body"><div class="pp-cat">Audio Series</div><h3>Heart-to-Heart Couples Meditations</h3><div class="pp-meta">Sarita · <strong>Free</strong></div></div></a>
-    <a class="pp-card" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">90 min</span></div><div class="pp-card-body"><div class="pp-cat">Masterclass · Free</div><h3>Reigniting Passion After 10 Years</h3><div class="pp-meta">Sarita · Jun 12 · <strong>Free</strong></div></div></a>
+    <a class="pp-card" data-cat="couples" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">8 modules</span></div><div class="pp-card-body"><div class="pp-cat">Online Program</div><h3>Sacred Union Path</h3><div class="pp-meta">Sarita &amp; Tanmaya · <strong>$697</strong></div></div></a>
+    <a class="pp-card" data-cat="couples" href="events/couples-retreat-switzerland.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1485800984207-7d6b81bf3eb1?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">8 days</span></div><div class="pp-card-body"><div class="pp-cat">Retreat</div><h3>Couples Tantra Retreat</h3><div class="pp-meta">Sarita · Oct 2026 · <strong>$2,400</strong></div></div></a>
+    <a class="pp-card" data-cat="couples free meditation" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1502790671504-542ad42d5189?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">14 days</span></div><div class="pp-card-body"><div class="pp-cat">Audio Series</div><h3>Heart-to-Heart Couples Meditations</h3><div class="pp-meta">Sarita · <strong>Free</strong></div></div></a>
+    <a class="pp-card" data-cat="couples free" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">90 min</span></div><div class="pp-card-body"><div class="pp-cat">Masterclass · Free</div><h3>Reigniting Passion After 10 Years</h3><div class="pp-meta">Sarita · Jun 12 · <strong>Free</strong></div></div></a>
   </div>
 </section>
 
 <section class="pp-section">
   <h2 class="pp-section-title">Certifications &amp; <em>teacher trainings</em></h2>
   <div class="pp-scroll">
-    <a class="pp-card" href="tantra-teacher-training.html"><div class="pp-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5b6a5e7-aa9e-7e3-d7a-aab14d2cd56e_tantra-essence-event-tantra-massage-practitioner-training-1.png')"><span class="pp-badge">34 days</span></div><div class="pp-card-body"><div class="pp-cat">Flagship</div><h3>Tantra Teacher Training</h3><div class="pp-meta">Sarita · Bali Jul 2026 · <strong>$2,880</strong></div></div></a>
-    <a class="pp-card" href="program-tantra-massage-7-chakras.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">22 days</span></div><div class="pp-card-body"><div class="pp-cat">Practitioner</div><h3>Tantra Massage Practitioner</h3><div class="pp-meta">Sarita &amp; Modestas · <strong>$2,200</strong></div></div></a>
-    <a class="pp-card" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">30 days</span></div><div class="pp-card-body"><div class="pp-cat">Teacher Path</div><h3>Goddess Essence Teacher Training</h3><div class="pp-meta">Sarita &amp; Usha · May 2027 · <strong>$2,400</strong></div></div></a>
-    <a class="pp-card" href="coach-training.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1518438089774-cd1ed5097dbe?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">14 days</span></div><div class="pp-card-body"><div class="pp-cat">Coaching</div><h3>Tantra Life Coach Certification</h3><div class="pp-meta">Sarita · <strong>$1,800</strong></div></div></a>
+    <a class="pp-card" data-cat="bodywork training" href="tantra-teacher-training.html"><div class="pp-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5b6a5e7-aa9e-7e3-d7a-aab14d2cd56e_tantra-essence-event-tantra-massage-practitioner-training-1.png')"><span class="pp-badge">34 days</span></div><div class="pp-card-body"><div class="pp-cat">Flagship</div><h3>Tantra Teacher Training</h3><div class="pp-meta">Sarita · Bali Jul 2026 · <strong>$2,880</strong></div></div></a>
+    <a class="pp-card" data-cat="bodywork training" href="program-tantra-massage-7-chakras.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">22 days</span></div><div class="pp-card-body"><div class="pp-cat">Practitioner</div><h3>Tantra Massage Practitioner</h3><div class="pp-meta">Sarita &amp; Modestas · <strong>$2,200</strong></div></div></a>
+    <a class="pp-card" data-cat="training women" href="programs.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">30 days</span></div><div class="pp-card-body"><div class="pp-cat">Teacher Path</div><h3>Goddess Essence Teacher Training</h3><div class="pp-meta">Sarita &amp; Usha · May 2027 · <strong>$2,400</strong></div></div></a>
+    <a class="pp-card" data-cat="training" href="coach-training.html"><div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1518438089774-cd1ed5097dbe?w=900&auto=format&fit=crop&q=80')"><span class="pp-badge">14 days</span></div><div class="pp-card-body"><div class="pp-cat">Coaching</div><h3>Tantra Life Coach Certification</h3><div class="pp-meta">Sarita · <strong>$1,800</strong></div></div></a>
   </div>
 </section>
 
@@ -760,5 +763,11 @@ footer a:hover{color:var(--gold-bright)}
   });
 })();
 </script>
+
+<div id="ppEmpty" style="display:none;text-align:center;padding:4rem 2rem;color:#5D1F2C;font-family:'DM Serif Display',serif;font-size:1.4rem">
+  No programs match this filter yet &mdash; <a href="#" onclick="document.querySelector('.pp-chip[data-filter=all]').click();return false;" style="color:#8C3645;text-decoration:underline">show all programs</a>
+</div>
+<style>#ppEmpty.visible{display:block !important}.pp-card.hide{display:none !important}</style>
+
 </body>
 </html>
