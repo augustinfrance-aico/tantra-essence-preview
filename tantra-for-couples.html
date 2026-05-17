@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tantra for Couples · Tantra Essence</title>
-<meta name="description" content="Rekindle passion and intimacy with your partner — programs and retreats designed for couples.">
+<title>Tantra for Couples &middot; Retreats, Trainings, Courses &amp; Classes &middot; Tantra Essence</title>
+<meta name="description" content="Welcome to the world of Tantra for Lovers & Couples. A transformative tantric journey of intimacy and connection. Soulmate Series, retreats, online courses for couples.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
   --ivoire:#FAF5EC; --ivoire-deep:#F2E9D6; --paper:#FEFBF4;
@@ -30,92 +30,133 @@ img{max-width:100%;height:auto;display:block}
 h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15;letter-spacing:-0.01em;color:var(--ink)}
 em{font-family:'DM Serif Display',serif;font-style:italic}
 .eyebrow{display:inline-block;font-size:0.74rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--maroon);margin-bottom:1.2rem}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(244,241,232,0.85);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);transition:var(--transition)}
-nav.scrolled{background:rgba(244,241,232,0.95);box-shadow:0 1px 16px rgba(45,42,36,0.05)}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(244,241,232,0.92);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);transition:var(--transition)}
+nav.scrolled{background:rgba(244,241,232,0.97);box-shadow:0 1px 16px rgba(45,42,36,0.05)}
 .nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:86px}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
-.logo-tantra{font-family:'DM Serif Display',serif;font-size:1.35rem;letter-spacing:0.13em;color:var(--maroon);display:block}
-.logo-essence{font-family:'DM Serif Display',serif;font-size:0.84rem;letter-spacing:0.36em;color:var(--maroon);text-transform:uppercase;display:block;margin-top:2px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-img{height:48px;width:auto;display:block;object-fit:contain}
 .nav-links{display:flex;align-items:center;gap:2.4rem;list-style:none}
 .nav-links a{font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition);padding:0.4rem 0;border-bottom:1px solid transparent}
 .nav-links a:hover{color:var(--maroon);border-bottom-color:var(--gold)}
 .nav-actions{display:flex;align-items:center;gap:1.2rem}
-.nav-login{font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition)}
-.nav-login:hover{color:var(--maroon)}
-.nav-cta{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.78rem 1.7rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition);box-shadow:0 4px 14px rgba(201,163,94,0.35)}
+.nav-login{font-family:'DM Serif Display',serif;font-size:1.05rem}
+.nav-cta{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.78rem 1.7rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.05rem;box-shadow:0 4px 14px rgba(201,163,94,0.35)}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,163,94,0.5)}
-@media (max-width:880px){.nav-links,.nav-login{display:none}.nav-inner{height:72px}}
-
-/* PAGE HERO */
-.page-hero{padding:160px 0 4rem;background:linear-gradient(135deg,var(--pink-bg) 0%,var(--ivoire) 100%);text-align:center}
-.page-hero h1{font-size:clamp(2.4rem,5vw,4rem);margin-bottom:1rem;line-height:1.05}
-.page-hero h1 em{color:var(--maroon)}
-.page-hero-lead{font-size:1.2rem;color:var(--ink-sub);max-width:680px;margin:0 auto;line-height:1.6}
-
-/* SECTION */
-section.content-section{padding:5rem 0;background:var(--paper)}
-.content-section.alt{background:var(--ivoire)}
-.content-section h2{font-size:clamp(1.8rem,2.8vw,2.4rem);margin-bottom:1rem}
-.content-section p{font-size:1.05rem;color:var(--ink-sub);margin-bottom:1.2rem;max-width:760px}
-.content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3rem}
-@media (max-width:880px){.content-grid{grid-template-columns:1fr}}
-
-/* CARD */
-.card{background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-soft);transition:var(--transition);display:flex;flex-direction:column}
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.card-img{aspect-ratio:16/10;background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));background-size:cover;background-position:center}
-.card-body{padding:1.6rem 1.4rem;flex:1}
-.card-tag{font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:0.6rem}
-.card-body h3{font-size:1.2rem;margin-bottom:0.6rem;color:var(--ink)}
-.card-body p{color:var(--ink-sub);font-size:0.92rem;margin-bottom:1rem}
-.card-cta{color:var(--maroon);font-weight:600;font-size:0.9rem}
-
-/* BTN */
+@media (max-width:880px){.nav-links,.nav-login{display:none}.nav-inner{height:72px}.logo-img{height:38px}}
+.page-hero{position:relative;padding:200px 0 5rem;background:linear-gradient(135deg,#2A1518 0%,#5D2235 50%,#8C3F58 100%);text-align:center;overflow:hidden;color:#fff}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:url('sarita-photos/tantra-for-couples.webp');background-size:cover;background-position:center;opacity:0.42;z-index:0}
+.page-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,21,24,0.55) 0%,rgba(93,34,53,0.45) 100%);z-index:1}
+.page-hero>*{position:relative;z-index:2}
+.page-hero .eyebrow{color:#F7D560}
+.page-hero h1{font-size:clamp(2.6rem,5.2vw,4.4rem);margin-bottom:1.2rem;color:#fff}
+.page-hero h1 em{color:#F7D560}
+.page-hero-lead{font-size:1.18rem;color:rgba(255,255,255,0.92);max-width:720px;margin:0 auto 2rem;line-height:1.6}
+.page-hero-stats{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(247,213,96,0.18);max-width:720px;margin-left:auto;margin-right:auto}
+.page-hero-stat{display:flex;flex-direction:column;align-items:center;gap:0.2rem}
+.page-hero-stat strong{font-family:'DM Serif Display',serif;font-size:2rem;color:#F7D560;line-height:1}
+.page-hero-stat span{font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.78)}
 .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 1.8rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.05rem;transition:var(--transition);cursor:pointer;border:0}
-.btn-gold{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);box-shadow:0 4px 14px rgba(201,163,94,0.35)}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,163,94,0.5)}
-.btn-outline{background:transparent;color:var(--maroon);border:1.5px solid var(--maroon)}
-.btn-outline:hover{background:var(--maroon);color:#fff}
-
-/* CTA SECTION */
-.cta-section{padding:6rem 0;background:linear-gradient(135deg,var(--maroon) 0%,var(--maroon-deep) 100%);color:#fff;text-align:center}
-.cta-section h2{color:#fff;font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:1rem}
-.cta-section h2 em{color:var(--gold-bright)}
-.cta-section p{color:rgba(255,255,255,0.88);font-size:1.1rem;max-width:620px;margin:0 auto 2rem}
-
-/* COMING SOON banner */
-.coming-soon{padding:5rem 0;text-align:center;background:var(--ivoire-deep)}
-.coming-soon-card{max-width:560px;margin:0 auto;background:var(--paper);padding:3rem 2rem;border-radius:var(--radius);box-shadow:var(--shadow)}
-.coming-soon-card .eyebrow{color:var(--gold-deep)}
-.coming-soon-card h2{margin-bottom:1rem}
-
-/* FOOTER */
-footer{background:var(--maroon-deep);color:rgba(255,255,255,0.8);padding:3rem 0 2rem;text-align:center}
-footer a{color:rgba(255,255,255,0.75);margin:0 0.8rem;font-size:0.92rem}
-footer a:hover{color:var(--gold-bright)}
-.footer-copy{margin-top:1.5rem;font-size:0.84rem;color:rgba(255,255,255,0.5)}
-
-/* ARTICLE/DETAIL page */
-.article{max-width:780px;margin:0 auto;padding:160px 2rem 4rem}
-.article h1{font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem;line-height:1.1}
-.article .article-meta{color:var(--ink-muted);font-size:0.9rem;margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap}
-.article p{font-size:1.1rem;color:var(--ink);margin-bottom:1.4rem;line-height:1.7}
-.article h2{font-size:1.6rem;margin:2.5rem 0 1rem;color:var(--maroon)}
-.article blockquote{border-left:4px solid var(--gold);padding-left:1.5rem;font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:var(--ink-sub);margin:1.5rem 0}
+.btn-gold{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);box-shadow:0 8px 26px rgba(201,163,94,0.4)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(201,163,94,0.55)}
+.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.45)}
+.btn-outline-white:hover{background:#fff;color:var(--maroon-deep);border-color:#fff}
+section.tfm-section{padding:5rem 0;background:var(--paper)}
+section.tfm-section.alt{background:var(--ivoire)}
+.section-header{text-align:center;max-width:780px;margin:0 auto 3.5rem}
+.section-header h2{font-size:clamp(2rem,3.4vw,2.8rem);margin-bottom:1rem}
+.section-header h2 em{color:var(--maroon)}
+.section-header p{color:var(--ink-sub);font-size:1.08rem;line-height:1.6}
+.free-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.8rem;margin-top:2rem}
+.free-card{background:var(--paper);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition);border:1px solid var(--border-soft);display:flex;flex-direction:column}
+.free-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--gold-soft)}
+.free-card-img{aspect-ratio:16/9;background-size:cover;background-position:center;position:relative}
+.free-card-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(45,26,30,0.45) 100%)}
+.free-card-badge{position:absolute;top:1rem;left:1rem;background:linear-gradient(135deg,#1EFF8E,#0AAB80);color:#fff;font-size:0.62rem;font-weight:800;letter-spacing:0.18em;padding:0.32rem 0.8rem;border-radius:var(--radius-full);text-transform:uppercase;z-index:2}
+.free-card-body{padding:1.8rem 1.6rem 1.6rem;flex:1;display:flex;flex-direction:column}
+.free-card-body h3{font-size:1.4rem;margin-bottom:0.6rem}
+.free-card-body p{color:var(--ink-sub);font-size:0.96rem;line-height:1.6;margin-bottom:1.4rem;flex:1}
+.free-card-cta{color:var(--maroon);font-weight:600;font-size:0.95rem;font-family:'DM Serif Display',serif}
+@media(max-width:760px){.free-grid{grid-template-columns:1fr}}
+.soul-hero{position:relative;background:linear-gradient(135deg,#2A1518 0%,#8C3645 100%);color:#fff;padding:5rem 0;overflow:hidden}
+.soul-hero::before{content:'';position:absolute;inset:0;background:url('sarita-photos/tantra-for-couples.webp') center/cover;opacity:0.22;z-index:0}
+.soul-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:3rem;align-items:center;position:relative;z-index:1}
+.soul-tag{display:inline-block;background:rgba(247,213,96,0.16);color:#F7D560;padding:0.4rem 1.1rem;border-radius:var(--radius-full);font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1rem}
+.soul-grid h2{font-size:clamp(2rem,3.6vw,3rem);color:#fff;margin-bottom:1rem;line-height:1.1}
+.soul-grid h2 em{color:#F7D560}
+.soul-grid p{color:rgba(255,255,255,0.85);font-size:1.05rem;line-height:1.6;margin-bottom:1.4rem}
+.soul-levels{display:grid;grid-template-columns:repeat(3,1fr);gap:0.55rem;margin:1.5rem 0}
+.soul-level{background:rgba(247,213,96,0.1);border:1px solid rgba(247,213,96,0.25);border-radius:var(--radius-sm);padding:0.7rem 0.85rem;font-family:'DM Serif Display',serif;text-align:center}
+.soul-level strong{display:block;color:#F7D560;font-size:0.95rem;margin-bottom:0.1rem}
+.soul-level span{font-family:'Inter',sans-serif;font-size:0.68rem;color:rgba(255,255,255,0.7);letter-spacing:0.04em}
+.soul-img{aspect-ratio:4/5;background:url('sarita-photos/tantra-for-couples.webp') center/cover;border-radius:var(--radius);box-shadow:0 30px 80px rgba(0,0,0,0.5)}
+@media(max-width:880px){.soul-grid{grid-template-columns:1fr}.soul-img{aspect-ratio:16/10}.soul-levels{grid-template-columns:repeat(2,1fr)}}
+.schedule-wrap{margin-top:3rem}
+.schedule-card{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);padding:1.6rem;display:grid;grid-template-columns:0.6fr 1.3fr 0.9fr 0.9fr;gap:1.5rem;align-items:center;margin-bottom:0.8rem;transition:var(--transition)}
+.schedule-card:hover{box-shadow:var(--shadow);border-color:var(--gold-soft);transform:translateX(4px)}
+.schedule-date{font-family:'DM Serif Display',serif;color:var(--maroon)}
+.schedule-date strong{display:block;font-size:1.2rem;line-height:1}
+.schedule-date span{font-size:0.8rem;color:var(--ink-muted);letter-spacing:0.05em}
+.schedule-title{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--ink)}
+.schedule-title span{display:block;font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--ink-muted);letter-spacing:0.12em;text-transform:uppercase;margin-top:0.25rem}
+.schedule-meta{font-size:0.88rem;color:var(--ink-sub)}
+.schedule-meta strong{display:block;color:var(--ink);font-weight:600;font-size:0.92rem;margin-bottom:0.1rem}
+.schedule-cta{justify-self:end}
+.schedule-cta a{display:inline-flex;align-items:center;gap:0.4rem;background:transparent;color:var(--maroon);border:1.5px solid var(--maroon);padding:0.55rem 1.1rem;border-radius:var(--radius-full);font-size:0.86rem;font-weight:600;font-family:'Inter',sans-serif}
+.schedule-cta a:hover{background:var(--maroon);color:#fff}
+.schedule-cta a.coming{background:rgba(140,54,69,0.08);border-color:transparent;color:var(--maroon-deep);cursor:default}
+@media(max-width:880px){.schedule-card{grid-template-columns:1fr;text-align:left}.schedule-cta{justify-self:start}}
+.tr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.8rem;margin-top:2rem}
+.tr-card{background:var(--paper);border:1px solid var(--border-soft);border-radius:var(--radius);overflow:hidden;transition:var(--transition);display:flex;flex-direction:column}
+.tr-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.tr-img{aspect-ratio:5/3;background-size:cover;background-position:center;position:relative}
+.tr-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(26,13,17,0.55) 100%)}
+.tr-tag{position:absolute;top:1rem;left:1rem;background:rgba(255,255,255,0.95);color:var(--maroon-deep);padding:0.32rem 0.8rem;border-radius:var(--radius-full);font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;z-index:2}
+.tr-body{padding:1.8rem 1.6rem;flex:1;display:flex;flex-direction:column}
+.tr-body h3{font-size:1.25rem;margin-bottom:0.6rem}
+.tr-body p{color:var(--ink-sub);font-size:0.92rem;line-height:1.55;margin-bottom:1.2rem;flex:1}
+.tr-cta{color:var(--maroon);font-weight:600;font-family:'DM Serif Display',serif;font-size:0.95rem}
+@media(max-width:760px){.tr-grid{grid-template-columns:1fr}}
+.oc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.8rem;margin-top:2rem}
+.oc-card{background:linear-gradient(135deg,#fff,#FDF5EC);border-radius:var(--radius);overflow:hidden;transition:var(--transition);border:1px solid var(--border-soft);display:grid;grid-template-columns:1fr 1.2fr}
+.oc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.oc-img{background-size:cover;background-position:center;min-height:240px}
+.oc-body{padding:1.8rem 1.5rem;display:flex;flex-direction:column;justify-content:center}
+.oc-tag{font-size:0.66rem;letter-spacing:0.2em;font-weight:700;text-transform:uppercase;color:var(--gold-deep);margin-bottom:0.5rem}
+.oc-body h3{font-size:1.25rem;margin-bottom:0.6rem}
+.oc-body p{color:var(--ink-sub);font-size:0.9rem;line-height:1.55;margin-bottom:1.2rem}
+.oc-cta{color:var(--maroon);font-weight:600;font-family:'DM Serif Display',serif}
+@media(max-width:880px){.oc-grid{grid-template-columns:1fr}.oc-card{grid-template-columns:1fr}}
+.newsletter{padding:5rem 0;background:linear-gradient(135deg,var(--maroon) 0%,var(--maroon-deep) 100%);color:#fff;text-align:center}
+.newsletter h2{color:#fff;font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:1rem}
+.newsletter h2 em{color:#F7D560}
+.newsletter p{color:rgba(255,255,255,0.88);max-width:560px;margin:0 auto 2rem;font-size:1.05rem}
+.nl-form{max-width:480px;margin:0 auto;display:flex;gap:0.6rem}
+.nl-form input{flex:1;padding:0.95rem 1.2rem;border:0;border-radius:var(--radius-full);font-family:'Inter',sans-serif;font-size:1rem;background:rgba(255,255,255,0.95);color:var(--ink-sub);outline:0}
+.nl-form button{background:#1A0D11;color:#fff;padding:0.95rem 1.6rem;border-radius:var(--radius-full);border:0;font-family:'DM Serif Display',serif;font-size:1rem;cursor:pointer}
+@media(max-width:680px){.nl-form{flex-direction:column}.nl-form button{width:100%}}
+footer{background:#1A0D11;color:rgba(255,255,255,0.78);padding:4rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.footer-brand p{color:rgba(255,255,255,0.6);font-size:0.92rem;margin-top:1rem;line-height:1.6;max-width:280px}
+.footer-col h4{color:#F7D560;font-family:'DM Serif Display',serif;font-size:1rem;margin-bottom:1rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.footer-col a{color:rgba(255,255,255,0.72);font-size:0.92rem;transition:var(--transition)}
+.footer-col a:hover{color:#F7D560}
+.footer-bottom{padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);text-align:center;color:rgba(255,255,255,0.45);font-size:0.82rem}
+@media(max-width:880px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <nav id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <span><span class="logo-tantra">TANTRA</span><span class="logo-essence">ESSENCE</span></span>
-    </a>
+    <a href="index.html" class="logo"><img src="sarita-photos/tantra-essence-logo.png" alt="Tantra Essence" class="logo-img" /></a>
     <ul class="nav-links">
       <li><a href="events.html">Events</a></li>
       <li><a href="programs.html">Programs</a></li>
+      <li><a href="tantra-for-men.html">For Men</a></li>
+      <li><a href="tantra-for-women.html">For Women</a></li>
+      <li><a href="tantra-for-couples.html">For Couples</a></li>
       <li><a href="community.html">Community</a></li>
     </ul>
     <div class="nav-actions">
@@ -125,37 +166,173 @@ footer a:hover{color:var(--gold-bright)}
   </div>
 </nav>
 
-
 <section class="page-hero">
   <div class="container">
-    <span class="eyebrow">For Couples</span>
-    <h1>Tantra for <em>couples</em></h1>
-    <p class="page-hero-lead">Rekindle passion and intimacy with your partner — programs and retreats designed for couples.</p>
-    <div style="margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <a href="programs.html" class="btn btn-gold">Explore programs →</a>
-      <a href="events.html" class="btn btn-outline">See live events</a>
+    <span class="eyebrow">Tantra For Couples</span>
+    <h1>A sacred <em>union of two souls</em></h1>
+    <p class="page-hero-lead">Welcome to the world of Tantra for Lovers &amp; Couples. Embark on a transformative tantric journey of intimacy and connection &mdash; cultivate deeper emotional bonds, navigate relationship challenges and create enhanced intimate experiences.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="#soulmate" class="btn btn-gold">Discover Soulmate Series &rarr;</a>
+      <a href="#free-classes" class="btn btn-outline-white">Watch free class</a>
+    </div>
+    <div class="page-hero-stats">
+      <div class="page-hero-stat"><strong>7 levels</strong><span>Soulmate Series</span></div>
+      <div class="page-hero-stat"><strong>30k+</strong><span>Couples trained</span></div>
+      <div class="page-hero-stat"><strong>53y</strong><span>Lineage</span></div>
+      <div class="page-hero-stat"><strong>36</strong><span>Countries</span></div>
     </div>
   </div>
 </section>
 
+<section class="tfm-section" id="free-classes">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Free Online Classes</span>
+      <h2>Begin <em>without commitment</em></h2>
+      <p>Two free masterclasses for couples ready to rewrite their lovemaking script.</p>
+    </div>
+    <div class="free-grid">
+      <a href="masterclass.html" class="free-card">
+        <div class="free-card-img" style="background-image:url('sarita-photos/tantra-for-couples.webp')"><span class="free-card-badge">Free &middot; 90 min</span></div>
+        <div class="free-card-body">
+          <h3>The Art of Intimacy</h3>
+          <p>Rewrite the script of your lovemaking by mastering the art of tantric sex. Wisdom from ancient Tantra &amp; Kamasutra scriptures &mdash; deep intimacy, passion and unprecedented pleasure with your partner.</p>
+          <span class="free-card-cta">Reserve my spot now &rarr;</span>
+        </div>
+      </a>
+      <a href="masterclass.html" class="free-card">
+        <div class="free-card-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&auto=format&fit=crop&q=80')"><span class="free-card-badge">Free &middot; 75 min</span></div>
+        <div class="free-card-body">
+          <h3>7-Chakra Tantra Massage</h3>
+          <p>Align body, mind &amp; spirit with our 7-Chakra Tantric Massage. Journey through the energy centers of the body, learning how each Chakra influences your relationships, sexual energy &amp; wellbeing.</p>
+          <span class="free-card-cta">Reserve my spot now &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="soul-hero" id="soulmate">
+  <div class="container">
+    <div class="soul-grid">
+      <div>
+        <span class="soul-tag">Flagship &middot; For Couples</span>
+        <h2>The Soulmate Series &mdash; <em>Levels 1 through 7</em></h2>
+        <p>Our flagship offering for couples that guides you on a step-by-step journey for enhancing and bringing to fruition your deepest aspirations for love, sexuality and spirituality in your relationship.</p>
+        <p style="color:#F7D560;font-family:'DM Serif Display',serif;font-style:italic;font-size:1.1rem">Seven progressive retreats &mdash; the most complete couples' Tantra journey in the world.</p>
+        <div class="soul-levels">
+          <div class="soul-level"><strong>Level 1</strong><span>Sacred meeting</span></div>
+          <div class="soul-level"><strong>Level 2</strong><span>Polarity</span></div>
+          <div class="soul-level"><strong>Level 3</strong><span>Heart fusion</span></div>
+          <div class="soul-level"><strong>Level 4</strong><span>Sacred sexuality</span></div>
+          <div class="soul-level"><strong>Level 5</strong><span>Tantric union</span></div>
+          <div class="soul-level"><strong>Level 6</strong><span>Conscious co-creation</span></div>
+        </div>
+        <a href="soulmate-level-1.html" class="btn btn-gold">View Soulmate Series details &rarr;</a>
+      </div>
+      <div class="soul-img"></div>
+    </div>
+  </div>
+</section>
+
+<section class="tfm-section alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Upcoming Schedule</span>
+      <h2>Soulmate <em>retreats</em></h2>
+      <p>2026 cohorts &middot; couples only &middot; limited spots per level.</p>
+    </div>
+    <div class="schedule-wrap">
+      <div class="schedule-card"><div class="schedule-date"><strong>May 2026</strong><span>Level 2</span></div><div class="schedule-title">Soulmate &mdash; Level 2<span>Level 1 graduates</span></div><div class="schedule-meta"><strong>Bali</strong>Ma Ananda Sarita &amp; Modestas</div><div class="schedule-cta"><a href="soulmate-level-2.html">View Details &rarr;</a></div></div>
+      <div class="schedule-card"><div class="schedule-date"><strong>Aug 2026</strong><span>Level 1</span></div><div class="schedule-title">Soulmate &mdash; Level 1<span>Couples only</span></div><div class="schedule-meta"><strong>Portugal</strong>Suta &amp; Roxana</div><div class="schedule-cta"><a href="soulmate-level-1.html">View Details &rarr;</a></div></div>
+      <div class="schedule-card"><div class="schedule-date"><strong>Sept 2026</strong><span>Level 1</span></div><div class="schedule-title">Soulmate &mdash; Level 1<span>Couples only</span></div><div class="schedule-meta"><strong>Bali</strong>Modestas &amp; Dieke</div><div class="schedule-cta"><a href="soulmate-level-1.html">View Details &rarr;</a></div></div>
+      <div class="schedule-card"><div class="schedule-date"><strong>Oct 2026</strong><span>Level 3</span></div><div class="schedule-title">Soulmate &mdash; Level 3<span>Level 2 graduates</span></div><div class="schedule-meta"><strong>Bali</strong>Ma Ananda Sarita &amp; Modestas</div><div class="schedule-cta"><a class="coming">Coming soon</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tfm-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">More Tantra Retreats</span>
+      <h2>Retreats you can <em>join as a couple</em></h2>
+      <p>Beyond the Soulmate Series, mixed retreats open to couples and singles ready to transform together.</p>
+    </div>
+    <div class="tr-grid">
+      <a href="master-lover-retreat-bali.html" class="tr-card">
+        <div class="tr-img" style="background-image:url('sarita-photos/tantra-for-couples.webp')"><span class="tr-tag">Master Lover &middot; Bali</span></div>
+        <div class="tr-body"><h3>Master Lover Retreat</h3><p>Discover the secrets of deep intimacy and Tantric sex at our Master Lover Retreat. A unique opportunity to deepen sacred union with your partner.</p><span class="tr-cta">View Schedule &rarr;</span></div>
+      </a>
+      <a href="events/sacred-touch-bali.html" class="tr-card">
+        <div class="tr-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&auto=format&fit=crop&q=80')"><span class="tr-tag">Transformation &middot; Bali</span></div>
+        <div class="tr-body"><h3>Tantra Transformation Retreat</h3><p>Heal childhood traumas and transform your life &mdash; together. One of our most popular retreats, psychotherapy-based shadow work and inner-child work.</p><span class="tr-cta">View Schedule &rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="tfm-section alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Calendar</span>
+      <h2>Upcoming retreats <em>for couples</em></h2>
+      <p>Mixed retreats open to couples &amp; singles.</p>
+    </div>
+    <div class="schedule-wrap">
+      <div class="schedule-card"><div class="schedule-date"><strong>Apr 2026</strong><span>10 days</span></div><div class="schedule-title">Tantra Transformation<span>Couples &amp; Singles</span></div><div class="schedule-meta"><strong>Bali</strong>Dharmaraj &amp; Sira</div><div class="schedule-cta"><a href="events/sacred-touch-bali.html">View Details &rarr;</a></div></div>
+      <div class="schedule-card"><div class="schedule-date"><strong>Jun 2026</strong><span>10 days</span></div><div class="schedule-title">Master Lover Retreat<span>Couples &amp; Singles</span></div><div class="schedule-meta"><strong>Bali</strong>Ma Ananda Sarita &amp; Modestas</div><div class="schedule-cta"><a href="master-lover-retreat-bali.html">View Details &rarr;</a></div></div>
+      <div class="schedule-card"><div class="schedule-date"><strong>Jun 2026</strong><span>10 days</span></div><div class="schedule-title">Tantra Transformation<span>Couples &amp; Singles</span></div><div class="schedule-meta"><strong>Bali</strong>Ma Ananda Sarita &amp; Dharmaraj</div><div class="schedule-cta"><a href="events/sacred-touch-bali.html">View Details &rarr;</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tfm-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Self-paced</span>
+      <h2>Online Tantra <em>courses for couples</em></h2>
+      <p>World-class programs delivered to your device &mdash; deepen your intimacy at your own pace, together.</p>
+    </div>
+    <div class="oc-grid">
+      <a href="program-master-lover.html" class="oc-card">
+        <div class="oc-img" style="background-image:url('sarita-photos/tantra-for-couples.webp')"></div>
+        <div class="oc-body"><div class="oc-tag">Bestseller &middot; 7 modules</div><h3>Master Lover</h3><p>Learn advanced sexual education based on Tantric principles. Delve into advanced techniques for energy exchange, cultivate sexual energy and discover how to create transcendent love experiences with your partner.</p><span class="oc-cta">View Online Program &rarr;</span></div>
+      </a>
+      <a href="program-tantra-massage-7-chakras.html" class="oc-card">
+        <div class="oc-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="oc-body"><div class="oc-tag">Bodywork &middot; 9 modules</div><h3>Tantra Massage</h3><p>Learn to use your hands as instruments of energy, love and transformation. This online course teaches you how to give and receive Tantra Massages with your partner.</p><span class="oc-cta">View Online Program &rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container">
+    <h2>Stay intimately <em>connected</em></h2>
+    <p>Subscribe to our newsletter to explore authentic Tantra for couples. Receive exclusive content, expert advice and event announcements.</p>
+    <form class="nl-form" onsubmit="event.preventDefault();alert('Welcome to the Tantra Essence couples circle.');this.reset();">
+      <input type="email" placeholder="Your email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
 
 <footer>
   <div class="container">
-    <a href="index.html">Home</a> · <a href="events.html">Events</a> · <a href="programs.html">Programs</a> · <a href="community.html">Community</a> · <a href="about.html">About Sarita</a> · <a href="teachers.html">Team</a> · <a href="podcast.html">Podcast</a> · <a href="blog.html">Blog</a> · <a href="contact.html">Contact</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
-    <div class="footer-copy">© 2026 Tantra Essence · Created by Ma Ananda Sarita · All rights reserved</div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="sarita-photos/tantra-essence-logo.png" alt="Tantra Essence" style="height:46px;filter:brightness(0) invert(1) opacity(0.9)" />
+        <p>Authentic Tantra rooted in the lineage of Ma Ananda Sarita &mdash; 53 years of practice, 30,000+ students across 36 countries.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="events.html">Events</a></li><li><a href="programs.html">Programs</a></li><li><a href="masterclass.html">Free Classes</a></li><li><a href="meditations.html">My Library</a></li></ul></div>
+      <div class="footer-col"><h4>Paths</h4><ul><li><a href="tantra-for-women.html">For Women</a></li><li><a href="tantra-for-men.html">For Men</a></li><li><a href="tantra-for-couples.html">For Couples</a></li><li><a href="programs.html">All paths</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="about.html">About Sarita</a></li><li><a href="teachers.html">Our Team</a></li><li><a href="blog.html">Blog</a></li><li><a href="wall-of-love.html">Wall of Love</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">© 2026 Tantra Essence &middot; Created by Ma Ananda Sarita &middot; All rights reserved &middot; <a href="privacy.html" style="color:rgba(255,255,255,0.45)">Privacy</a> &middot; <a href="terms.html" style="color:rgba(255,255,255,0.45)">Terms</a></div>
   </div>
 </footer>
 
-<script>
-(function(){
-  var nav=document.getElementById('nav');
-  if(nav){
-    window.addEventListener('scroll',function(){
-      if(window.scrollY>20)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
-    },{passive:true});
-  }
-})();
-</script>
+<script>(function(){var n=document.getElementById('nav');if(n){window.addEventListener('scroll',function(){if(window.scrollY>20)n.classList.add('scrolled');else n.classList.remove('scrolled');},{passive:true});}})();</script>
 
 </body>
 </html>
