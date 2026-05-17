@@ -1385,6 +1385,116 @@ body{font-feature-settings:'kern','liga'}
 /* Smoother text rendering */
 *{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
 
+
+/* ============================================
+   REFONTE MAJEURE — Mindvalley DNA structurelle
+   ============================================ */
+
+/* === ARCHETYPE 6-CARD GRID (Mindvalley "Begin your journey" pattern) === */
+.mv-arch{padding:6rem 0;background:linear-gradient(180deg,#FFFFFF 0%,#FAF5EC 100%);position:relative;overflow:hidden}
+.mv-arch-inner{max-width:1240px;margin:0 auto;padding:0 2rem}
+.mv-arch-header{text-align:center;margin-bottom:4rem;max-width:780px;margin-left:auto;margin-right:auto}
+.mv-arch-eyebrow{display:inline-block;font-family:'Inter',sans-serif;font-size:0.74rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#8C3645;margin-bottom:1rem}
+.mv-arch-title{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4vw,3.4rem);color:#1A0D11;line-height:1.06;margin-bottom:1rem;letter-spacing:-0.01em}
+.mv-arch-title em{font-style:italic;color:#8C3645}
+.mv-arch-sub{font-family:'Inter',sans-serif;font-size:1.1rem;color:#5E4A4E;line-height:1.6}
+.mv-arch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.mv-arch-card{position:relative;aspect-ratio:3/4;border-radius:22px;overflow:hidden;cursor:pointer;text-decoration:none;color:#fff;display:block;box-shadow:0 14px 40px rgba(45,26,30,0.18);transition:transform 0.7s cubic-bezier(0.16,1,0.3,1),box-shadow 0.7s cubic-bezier(0.16,1,0.3,1)}
+.mv-arch-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 28px 60px rgba(45,26,30,0.3)}
+.mv-arch-card .mv-arch-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1.6s cubic-bezier(0.16,1,0.3,1);z-index:0}
+.mv-arch-card:hover .mv-arch-img{transform:scale(1.08)}
+.mv-arch-card::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.4) 50%,rgba(0,0,0,0.92) 100%);z-index:1}
+.mv-arch-content{position:absolute;left:0;right:0;bottom:0;padding:2rem 1.8rem 1.8rem;z-index:2;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.mv-arch-card:hover .mv-arch-content{transform:translateY(-6px)}
+.mv-arch-num{position:absolute;top:1.5rem;left:1.6rem;width:46px;height:46px;border-radius:50%;background:rgba(247,213,96,0.15);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(247,213,96,0.4);display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:1.2rem;color:#F7D560;font-style:italic;z-index:2}
+.mv-arch-title-card{font-family:'DM Serif Display',serif;font-size:2rem;line-height:1;color:#fff;margin-bottom:0.5rem;letter-spacing:-0.005em;text-shadow:0 3px 14px rgba(0,0,0,0.45)}
+.mv-arch-title-card em{font-style:italic;color:#F7D560}
+.mv-arch-desc{font-family:'Inter',sans-serif;font-size:0.92rem;color:rgba(255,255,255,0.78);line-height:1.5;margin-bottom:1rem;max-width:280px}
+.mv-arch-cta{display:inline-flex;align-items:center;gap:0.4rem;font-family:'Inter',sans-serif;font-size:0.84rem;font-weight:700;letter-spacing:0.06em;color:#F7D560;text-transform:uppercase}
+.mv-arch-cta::after{content:'\2192';transition:transform 0.4s cubic-bezier(0.16,1,0.3,1)}
+.mv-arch-card:hover .mv-arch-cta::after{transform:translateX(6px)}
+@media (max-width:980px){.mv-arch-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.mv-arch-grid{grid-template-columns:1fr}}
+
+/* === HERO POLISH — STRONGER MINDVALLEY DNA === */
+.hero{min-height:92vh}
+.hero-content{padding:2rem}
+.hero h1{font-size:clamp(3rem,7.5vw,6.4rem) !important;font-weight:400;letter-spacing:-0.02em}
+.hero-lead{font-size:clamp(1.05rem,1.4vw,1.25rem);max-width:620px;line-height:1.55;color:rgba(255,255,255,0.9)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%,rgba(247,213,96,0.12) 0%,transparent 50%);z-index:1;pointer-events:none}
+
+/* === MEMBER CASE STUDIES (Mindvalley pattern) === */
+.mv-cases{padding:6rem 0;background:#FFFFFF}
+.mv-cases-inner{max-width:1240px;margin:0 auto;padding:0 2rem}
+.mv-cases-header{text-align:center;margin-bottom:4rem;max-width:720px;margin-left:auto;margin-right:auto}
+.mv-cases-eyebrow{display:inline-block;font-family:'Inter',sans-serif;font-size:0.74rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#8C3645;margin-bottom:1rem}
+.mv-cases-title{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.6vw,3rem);color:#1A0D11;line-height:1.08;margin-bottom:1rem;letter-spacing:-0.01em}
+.mv-cases-title em{font-style:italic;color:#8C3645}
+.mv-cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.mv-case-card{background:linear-gradient(135deg,#FAF5EC,#FFFFFF);border:1px solid rgba(140,54,69,0.08);border-radius:24px;padding:2.5rem;display:flex;gap:1.8rem;align-items:flex-start;transition:all 0.5s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.mv-case-card:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(45,26,30,0.1);border-color:rgba(140,54,69,0.2)}
+.mv-case-photo{width:140px;height:140px;border-radius:50%;background-size:cover;background-position:center;flex-shrink:0;border:3px solid #F7D560;box-shadow:0 8px 24px rgba(247,213,96,0.25)}
+.mv-case-content{flex:1}
+.mv-case-quote{font-family:'DM Serif Display',serif;font-size:1.3rem;line-height:1.35;color:#1A0D11;margin-bottom:1.2rem;letter-spacing:-0.005em}
+.mv-case-quote em{color:#8C3645;font-style:italic}
+.mv-case-meta{display:flex;gap:1rem;align-items:center;padding-top:1rem;border-top:1px solid rgba(0,0,0,0.06);flex-wrap:wrap}
+.mv-case-name{font-family:'DM Serif Display',serif;font-size:1.1rem;color:#1A0D11;font-weight:400}
+.mv-case-role{font-family:'Inter',sans-serif;font-size:0.84rem;color:#8C7A7E;padding-left:1rem;border-left:1px solid rgba(0,0,0,0.1)}
+.mv-case-result{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(247,213,96,0.15);color:#5D1F2C;padding:0.35rem 0.8rem;border-radius:9999px;font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:700;margin-left:auto}
+.mv-case-result::before{content:'\2713';color:#0a8a3a;font-weight:900}
+.mv-cases-more{text-align:center;margin-top:3rem}
+.mv-cases-more a{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 2rem;border:1.5px solid #1A0D11;color:#1A0D11;border-radius:9999px;font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;text-decoration:none;transition:all 0.4s ease}
+.mv-cases-more a:hover{background:#1A0D11;color:#fff;transform:translateY(-2px)}
+@media (max-width:760px){.mv-cases-grid{grid-template-columns:1fr}.mv-case-card{flex-direction:column;text-align:center;align-items:center}.mv-case-meta{justify-content:center}.mv-case-result{margin-left:0}}
+
+/* === BIG NUMBERS (alternative to mega-stats, denser) === */
+.mv-bignum{padding:5rem 0;background:linear-gradient(135deg,#FAF5EC 0%,#FFFFFF 100%)}
+.mv-bignum-inner{max-width:1240px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;align-items:center}
+.mv-bn-stat{text-align:center;padding:2rem}
+.mv-bn-stat strong{display:block;font-family:'DM Serif Display',serif;font-size:clamp(3rem,5.5vw,4.4rem);color:transparent;background:linear-gradient(135deg,#8C3645,#F7D560);background-clip:text;-webkit-background-clip:text;line-height:1;letter-spacing:-0.02em;margin-bottom:0.5rem}
+.mv-bn-stat span{display:block;font-family:'Inter',sans-serif;font-size:0.86rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#5E4A4E}
+.mv-bn-divider{height:60px;border-left:1px solid rgba(140,54,69,0.15)}
+@media (max-width:760px){.mv-bignum-inner{grid-template-columns:1fr}.mv-bn-divider{display:none}}
+
+/* === DEVICE COMPATIBILITY (Mindvalley signature) === */
+.mv-devices{padding:6rem 0;background:#0C1320;color:#fff;overflow:hidden;position:relative}
+.mv-devices-inner{max-width:1240px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.mv-devices-content .mv-devices-eyebrow{display:inline-block;font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#F7D560;margin-bottom:1.2rem}
+.mv-devices-content h2{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.6vw,3rem);color:#fff;line-height:1.08;margin-bottom:1.2rem;letter-spacing:-0.01em}
+.mv-devices-content h2 em{color:#F7D560;font-style:italic}
+.mv-devices-content p{font-family:'Inter',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.75);line-height:1.65;margin-bottom:2rem;max-width:480px}
+.mv-devices-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}
+.mv-dev-item{display:flex;align-items:center;gap:0.7rem;font-family:'Inter',sans-serif;font-size:0.92rem;color:rgba(255,255,255,0.88)}
+.mv-dev-item::before{content:'';width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,rgba(247,213,96,0.2),rgba(247,213,96,0.05));border:1px solid rgba(247,213,96,0.3);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F7D560' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='5 13 9 17 19 7'/%3E%3C/svg%3E"),linear-gradient(135deg,rgba(247,213,96,0.2),rgba(247,213,96,0.05));background-position:center;background-size:60%;background-repeat:no-repeat}
+.mv-devices-illustration{position:relative;height:480px;display:flex;align-items:center;justify-content:center}
+.mv-dev-screen{position:absolute;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.5);background:#000}
+.mv-dev-laptop{width:60%;aspect-ratio:16/10;left:5%;top:20%;background:linear-gradient(135deg,#8C3645,#1A0D11);transform:rotate(-3deg);border:6px solid #1a1a1a}
+.mv-dev-tablet{width:35%;aspect-ratio:4/5;right:8%;top:8%;background:linear-gradient(135deg,#5D1F2C,#1A0D11);transform:rotate(6deg);border:4px solid #1a1a1a;border-radius:24px;z-index:2}
+.mv-dev-phone{width:18%;aspect-ratio:9/19;right:20%;bottom:8%;background:linear-gradient(160deg,#F7D560,#8C3645);transform:rotate(-6deg);border:3px solid #1a1a1a;border-radius:24px;z-index:3;box-shadow:0 30px 60px rgba(247,213,96,0.2)}
+.mv-dev-screen::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,0.4) 100%)}
+@media (max-width:980px){.mv-devices-inner{grid-template-columns:1fr;gap:2rem}.mv-devices-illustration{height:350px}}
+
+/* === SECTION : COMPARISON FREE vs MEMBER === */
+.mv-compare{padding:6rem 0;background:#FAF5EC}
+.mv-compare-inner{max-width:1100px;margin:0 auto;padding:0 2rem}
+.mv-compare-header{text-align:center;margin-bottom:3.5rem}
+.mv-compare-eyebrow{display:inline-block;font-family:'Inter',sans-serif;font-size:0.74rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#8C3645;margin-bottom:1rem}
+.mv-compare-title{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.6vw,2.9rem);color:#1A0D11;line-height:1.08;letter-spacing:-0.01em}
+.mv-compare-title em{font-style:italic;color:#8C3645}
+.mv-compare-table{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 14px 40px rgba(45,26,30,0.06);border:1px solid rgba(140,54,69,0.08)}
+.mv-compare-row{display:grid;grid-template-columns:1.6fr 1fr 1fr;align-items:center;padding:1.4rem 2rem;border-bottom:1px solid rgba(0,0,0,0.05);font-family:'Inter',sans-serif;font-size:0.98rem;color:#1A0D11}
+.mv-compare-row:last-child{border-bottom:0}
+.mv-compare-row.head{background:linear-gradient(135deg,#1A0D11,#5D1F2C);color:#fff;font-family:'DM Serif Display',serif;font-size:1.2rem;padding:1.8rem 2rem}
+.mv-compare-row.head .mv-compare-cell{color:#fff}
+.mv-compare-row.head .mv-compare-cell.featured{color:#F7D560;font-style:italic;position:relative}
+.mv-compare-row.head .mv-compare-cell.featured::after{content:'POPULAR';position:absolute;top:-12px;right:0;background:linear-gradient(135deg,#F7D560,#E9A93C);color:#5D1F2C;font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:900;letter-spacing:0.18em;padding:0.3rem 0.6rem;border-radius:9999px}
+.mv-compare-cell{text-align:center}
+.mv-compare-cell:first-child{text-align:left}
+.mv-compare-cell.check{color:#0a8a3a;font-size:1.3rem;font-weight:900}
+.mv-compare-cell.cross{color:rgba(0,0,0,0.25);font-size:1.3rem;font-weight:900}
+.mv-compare-cell.featured{background:rgba(247,213,96,0.06)}
+@media (max-width:680px){.mv-compare-row{grid-template-columns:2fr 1fr 1fr;padding:1rem 1rem;font-size:0.88rem}}
+
 </style>
 </head>
 <body class="has-live-bar">
@@ -1774,6 +1884,219 @@ body{font-feature-settings:'kern','liga'}
         <span class="mv-spk-tag">Kaula</span>
         <div class="mv-spk-content"><div class="mv-spk-name">KRISHNA<br>NANDA</div><div class="mv-spk-role">Shadow work &middot; trauma</div></div>
       </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============= ARCHETYPE PATHS — 6 Mindvalley-style cards ============= -->
+<section class="mv-arch sr-fade">
+  <div class="mv-arch-inner">
+    <div class="mv-arch-header">
+      <span class="mv-arch-eyebrow">Begin your journey</span>
+      <h2 class="mv-arch-title">Six sacred paths &mdash; <em>choose where to start</em></h2>
+      <p class="mv-arch-sub">Each path is a doorway into Tantra. Pick the one that resonates today &mdash; you can always cross over once you're inside.</p>
+    </div>
+    <div class="mv-arch-grid">
+      <a href="tantra-for-women.html" class="mv-arch-card">
+        <div class="mv-arch-img" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="mv-arch-num">I</div>
+        <div class="mv-arch-content">
+          <h3 class="mv-arch-title-card">For <em>Women</em></h3>
+          <p class="mv-arch-desc">Reclaim your inner goddess. Womb wisdom, sacred sexuality, divine feminine awakening.</p>
+          <span class="mv-arch-cta">Select path</span>
+        </div>
+      </a>
+      <a href="tantra-for-men.html" class="mv-arch-card">
+        <div class="mv-arch-img" style="background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="mv-arch-num">II</div>
+        <div class="mv-arch-content">
+          <h3 class="mv-arch-title-card">For <em>Men</em></h3>
+          <p class="mv-arch-desc">Embody the sacred masculine. Mastery, presence, and the tantric warrior path.</p>
+          <span class="mv-arch-cta">Select path</span>
+        </div>
+      </a>
+      <a href="tantra-for-couples.html" class="mv-arch-card">
+        <div class="mv-arch-img" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="mv-arch-num">III</div>
+        <div class="mv-arch-content">
+          <h3 class="mv-arch-title-card">For <em>Couples</em></h3>
+          <p class="mv-arch-desc">Deepen intimacy. Sacred union, polarity work, and tantra as a daily practice together.</p>
+          <span class="mv-arch-cta">Select path</span>
+        </div>
+      </a>
+      <a href="meditations.html" class="mv-arch-card">
+        <div class="mv-arch-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="mv-arch-num">IV</div>
+        <div class="mv-arch-content">
+          <h3 class="mv-arch-title-card"><em>Meditation</em></h3>
+          <p class="mv-arch-desc">1,000+ guided meditations, sound journeys, and 21-day immersions in your pocket.</p>
+          <span class="mv-arch-cta">Select path</span>
+        </div>
+      </a>
+      <a href="program-tantra-massage-7-chakras.html" class="mv-arch-card">
+        <div class="mv-arch-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="mv-arch-num">V</div>
+        <div class="mv-arch-content">
+          <h3 class="mv-arch-title-card"><em>Bodywork</em></h3>
+          <p class="mv-arch-desc">Sacred touch. The 7-chakra tantra massage, full practitioner certification.</p>
+          <span class="mv-arch-cta">Select path</span>
+        </div>
+      </a>
+      <a href="tantra-teacher-training.html" class="mv-arch-card">
+        <div class="mv-arch-img" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="mv-arch-num">VI</div>
+        <div class="mv-arch-content">
+          <h3 class="mv-arch-title-card"><em>Teacher</em> Training</h3>
+          <p class="mv-arch-desc">34 days in Bali. Become a certified Tantra teacher backed by Sarita's lineage.</p>
+          <span class="mv-arch-cta">Select path</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============= MEMBER CASE STUDIES ============= -->
+<section class="mv-cases sr-fade">
+  <div class="mv-cases-inner">
+    <div class="mv-cases-header">
+      <span class="mv-cases-eyebrow">Member stories</span>
+      <h2 class="mv-cases-title">Real practitioners. <em>Real transformations.</em></h2>
+    </div>
+    <div class="mv-cases-grid">
+      <div class="mv-case-card">
+        <div class="mv-case-photo" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&auto=format&fit=crop&q=80')"></div>
+        <div class="mv-case-content">
+          <p class="mv-case-quote">Three years of therapy didn't touch what <em>Goddess Unveiled</em> did in twelve weeks. I finally feel at home in my body.</p>
+          <div class="mv-case-meta">
+            <span class="mv-case-name">Aisha Renault</span>
+            <span class="mv-case-role">Therapist &middot; Brooklyn</span>
+            <span class="mv-case-result">Goddess Unveiled</span>
+          </div>
+        </div>
+      </div>
+      <div class="mv-case-card">
+        <div class="mv-case-photo" style="background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80')"></div>
+        <div class="mv-case-content">
+          <p class="mv-case-quote">I thought intimacy was broken in me after two divorces. <em>Master Lover</em> showed me I was never broken &mdash; just asleep.</p>
+          <div class="mv-case-meta">
+            <span class="mv-case-name">Marcus Chen</span>
+            <span class="mv-case-role">Founder &middot; Singapore</span>
+            <span class="mv-case-result">Master Lover</span>
+          </div>
+        </div>
+      </div>
+      <div class="mv-case-card">
+        <div class="mv-case-photo" style="background-image:url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop&q=80')"></div>
+        <div class="mv-case-content">
+          <p class="mv-case-quote">Bali was the only thing in my adult life I'd call <em>life before / life after</em>. I came home a different woman.</p>
+          <div class="mv-case-meta">
+            <span class="mv-case-name">Sophia Lindqvist</span>
+            <span class="mv-case-role">Yoga teacher &middot; Stockholm</span>
+            <span class="mv-case-result">Bali Training</span>
+          </div>
+        </div>
+      </div>
+      <div class="mv-case-card">
+        <div class="mv-case-photo" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80')"></div>
+        <div class="mv-case-content">
+          <p class="mv-case-quote">My wife and I tried therapy, retreats, books. <em>Sacred Union</em> was the first work that touched the silence between us.</p>
+          <div class="mv-case-meta">
+            <span class="mv-case-name">David & Lara Müller</span>
+            <span class="mv-case-role">Couple &middot; Zurich</span>
+            <span class="mv-case-result">Sacred Union</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mv-cases-more">
+      <a href="wall-of-love.html">Browse 2,847 member stories <span>&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============= DEVICE COMPATIBILITY ============= -->
+<section class="mv-devices sr-fade">
+  <div class="mv-devices-inner">
+    <div class="mv-devices-content">
+      <span class="mv-devices-eyebrow">Learn anywhere</span>
+      <h2>One beautiful app. <em>Across all your devices.</em></h2>
+      <p>Stream meditations on your iPhone. Watch programs on your tablet. Listen to mantras through any car or smart speaker &mdash; your practice follows you everywhere.</p>
+      <div class="mv-devices-list">
+        <div class="mv-dev-item">iPhone &amp; iPad</div>
+        <div class="mv-dev-item">Android phones &amp; tablets</div>
+        <div class="mv-dev-item">Apple TV &amp; Chromecast</div>
+        <div class="mv-dev-item">Web on any browser</div>
+        <div class="mv-dev-item">Spotify &amp; Apple Music</div>
+        <div class="mv-dev-item">Offline mode &middot; flight ready</div>
+      </div>
+      <a href="signup.html" class="btn-pill btn-pill-primary">Get the app &mdash; free</a>
+    </div>
+    <div class="mv-devices-illustration">
+      <div class="mv-dev-screen mv-dev-laptop"></div>
+      <div class="mv-dev-screen mv-dev-tablet"></div>
+      <div class="mv-dev-screen mv-dev-phone"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============= FREE vs MEMBER COMPARISON ============= -->
+<section class="mv-compare sr-fade">
+  <div class="mv-compare-inner">
+    <div class="mv-compare-header">
+      <span class="mv-compare-eyebrow">Compare access</span>
+      <h2 class="mv-compare-title">Start <em>free</em>. Upgrade when ready.</h2>
+    </div>
+    <div class="mv-compare-table">
+      <div class="mv-compare-row head">
+        <div class="mv-compare-cell">What you get</div>
+        <div class="mv-compare-cell">Free Path</div>
+        <div class="mv-compare-cell featured">Essence Member</div>
+      </div>
+      <div class="mv-compare-row">
+        <div class="mv-compare-cell">3 free masterclasses</div>
+        <div class="mv-compare-cell check">&#10003;</div>
+        <div class="mv-compare-cell featured check">&#10003;</div>
+      </div>
+      <div class="mv-compare-row">
+        <div class="mv-compare-cell">Weekly wisdom letters</div>
+        <div class="mv-compare-cell check">&#10003;</div>
+        <div class="mv-compare-cell featured check">&#10003;</div>
+      </div>
+      <div class="mv-compare-row">
+        <div class="mv-compare-cell">All 100+ programs (lifetime)</div>
+        <div class="mv-compare-cell cross">&#10005;</div>
+        <div class="mv-compare-cell featured check">&#10003;</div>
+      </div>
+      <div class="mv-compare-row">
+        <div class="mv-compare-cell">1,000+ guided meditations</div>
+        <div class="mv-compare-cell cross">&#10005;</div>
+        <div class="mv-compare-cell featured check">&#10003;</div>
+      </div>
+      <div class="mv-compare-row">
+        <div class="mv-compare-cell">Monthly live Q&amp;A with Sarita</div>
+        <div class="mv-compare-cell cross">&#10005;</div>
+        <div class="mv-compare-cell featured check">&#10003;</div>
+      </div>
+      <div class="mv-compare-row">
+        <div class="mv-compare-cell">Private members community (Skool)</div>
+        <div class="mv-compare-cell cross">&#10005;</div>
+        <div class="mv-compare-cell featured check">&#10003;</div>
+      </div>
+      <div class="mv-compare-row">
+        <div class="mv-compare-cell">10% off retreats &amp; trainings</div>
+        <div class="mv-compare-cell cross">&#10005;</div>
+        <div class="mv-compare-cell featured check">&#10003;</div>
+      </div>
+      <div class="mv-compare-row">
+        <div class="mv-compare-cell">Mobile app &middot; offline mode</div>
+        <div class="mv-compare-cell cross">&#10005;</div>
+        <div class="mv-compare-cell featured check">&#10003;</div>
+      </div>
     </div>
   </div>
 </section>
