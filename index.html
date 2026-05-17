@@ -1894,21 +1894,6 @@ svg.mv-mq-geo{display:none !important;visibility:hidden !important;opacity:0 !im
 .logo:active .logo-img{transform:scale(1.02) rotate(-1deg);transition-duration:0.15s}
 @keyframes logo-breath{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.03) rotate(-1.5deg)}}
 .logo:hover .logo-img{animation:logo-breath 2.4s ease-in-out 0.7s infinite}
-
-/* ============================================
-   CUSTOM CURSOR — subtle trail (Mindvalley-grade)
-   ============================================ */
-.te-cursor{position:fixed;top:0;left:0;width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(247,213,96,0.55);pointer-events:none;z-index:99999;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:transform 0.25s cubic-bezier(0.16,1,0.3,1),width 0.3s ease,height 0.3s ease,border-color 0.3s ease,opacity 0.4s ease;will-change:transform,top,left;opacity:0}
-.te-cursor.is-active{opacity:1}
-.te-cursor-dot{position:fixed;top:0;left:0;width:5px;height:5px;border-radius:50%;background:radial-gradient(circle,#FFE793 0%,#F7D560 60%,transparent 100%);pointer-events:none;z-index:99998;transform:translate(-50%,-50%);will-change:top,left;mix-blend-mode:lighten;box-shadow:0 0 8px rgba(247,213,96,0.7);opacity:0;transition:opacity 0.4s ease,width 0.25s ease,height 0.25s ease}
-.te-cursor-dot.is-active{opacity:1}
-/* Trail particles */
-.te-cursor-trail{position:fixed;top:0;left:0;width:3px;height:3px;border-radius:50%;background:rgba(247,213,96,0.4);pointer-events:none;z-index:99997;transform:translate(-50%,-50%);will-change:top,left,opacity;mix-blend-mode:lighten}
-/* Hover state on interactive elements — cursor grows */
-.te-cursor.is-link{width:54px;height:54px;border-color:rgba(247,213,96,0.85);background:rgba(247,213,96,0.06)}
-.te-cursor-dot.is-link{width:0;height:0;opacity:0}
-/* Hide on touch devices */
-@media (hover:none),(pointer:coarse){.te-cursor,.te-cursor-dot,.te-cursor-trail{display:none !important}}
 @media(max-width:760px){.logo-img{height:38px !important}}
 
 /* === OFFER RIBBON under nav === */
@@ -3547,15 +3532,6 @@ body:has(.home-sticky-cta.visible) .te-advisor{bottom:6rem !important}
 </div>
 
 <!-- ============= C3 LIVE NOTIFICATIONS ============= -->
-<div class="te-toast" id="teToast">
-  <div class="te-toast-avatar" id="teToastAvatar">M</div>
-  <div>
-    <div class="te-toast-name" id="teToastName">Marie from Paris</div>
-    <div class="te-toast-action" id="teToastAction">just enrolled in <strong>Goddess Unveiled</strong></div>
-    <div class="te-toast-time" id="teToastTime">2 min ago</div>
-  </div>
-  <button class="te-toast-close" onclick="document.getElementById('teToast').classList.remove('is-visible')">&times;</button>
-</div>
 
 <!-- ============= C7 STICKY ADVISOR ============= -->
 <a href="#advisor" class="te-advisor" id="teAdvisor">
@@ -3737,70 +3713,6 @@ body:has(.home-sticky-cta.visible) .te-advisor{bottom:6rem !important}
   var targets=document.querySelectorAll('.section-header,.path-card,.program-card,.event-card,.mv-mq-card,.mv-arch-card,.fav-card,.story-card,.testimonial-card,.faq-home-item,.pp-card,.pp-trainer-card');
   targets.forEach(function(el){el.classList.add('fade-in');io.observe(el);});
   document.querySelectorAll('.fade-in').forEach(function(el){io.observe(el);});
-})();
-</script>
-
-<!-- Premium custom cursor with subtle trail -->
-<script>
-(function(){
-  if(window.matchMedia('(hover:none),(pointer:coarse)').matches)return;
-  var ring=document.createElement('div');ring.className='te-cursor';
-  var dot=document.createElement('div');dot.className='te-cursor-dot';
-  document.body.appendChild(ring);document.body.appendChild(dot);
-
-  // Pool of trail particles
-  var trailPool=[];var POOL=10;
-  for(var i=0;i<POOL;i++){var t=document.createElement('div');t.className='te-cursor-trail';t.style.opacity='0';document.body.appendChild(t);trailPool.push(t);}
-  var poolIdx=0;
-
-  var mouseX=window.innerWidth/2,mouseY=window.innerHeight/2;
-  var ringX=mouseX,ringY=mouseY;
-  var dotX=mouseX,dotY=mouseY;
-  var lastTrailTime=0;
-
-  window.addEventListener('mousemove',function(e){
-    mouseX=e.clientX;mouseY=e.clientY;
-    ring.classList.add('is-active');dot.classList.add('is-active');
-    // Drop trail particle every 30ms
-    var now=performance.now();
-    if(now-lastTrailTime>32){
-      var p=trailPool[poolIdx];poolIdx=(poolIdx+1)%POOL;
-      p.style.transition='none';
-      p.style.left=e.clientX+'px';p.style.top=e.clientY+'px';p.style.opacity='0.6';p.style.width='5px';p.style.height='5px';
-      // force reflow then animate
-      void p.offsetWidth;
-      p.style.transition='opacity 0.7s ease, width 0.7s ease, height 0.7s ease, transform 0.7s ease';
-      p.style.opacity='0';p.style.width='1px';p.style.height='1px';
-      lastTrailTime=now;
-    }
-  },{passive:true});
-
-  window.addEventListener('mouseleave',function(){ring.classList.remove('is-active');dot.classList.remove('is-active');});
-  window.addEventListener('mouseenter',function(){ring.classList.add('is-active');dot.classList.add('is-active');});
-
-  // Hover on interactive elements grows the cursor
-  function bindHover(){
-    var hovers=document.querySelectorAll('a,button,input,textarea,.btn,.btn-gold,.btn-pill,.nav-cta,.te-advisor,.logo,.mv-mq-card,.pp-card,.mv-arch-card,.path-card,.event-card,.program-card');
-    hovers.forEach(function(el){
-      el.addEventListener('mouseenter',function(){ring.classList.add('is-link');dot.classList.add('is-link');});
-      el.addEventListener('mouseleave',function(){ring.classList.remove('is-link');dot.classList.remove('is-link');});
-    });
-  }
-  bindHover();
-  // Rebind after DOM changes (eg. menus)
-  setTimeout(bindHover,1500);
-
-  // Lerp loop — ring lags behind, dot follows tight
-  function loop(){
-    ringX+=(mouseX-ringX)*0.18;
-    ringY+=(mouseY-ringY)*0.18;
-    dotX+=(mouseX-dotX)*0.45;
-    dotY+=(mouseY-dotY)*0.45;
-    ring.style.left=ringX+'px';ring.style.top=ringY+'px';
-    dot.style.left=dotX+'px';dot.style.top=dotY+'px';
-    requestAnimationFrame(loop);
-  }
-  requestAnimationFrame(loop);
 })();
 </script>
 
