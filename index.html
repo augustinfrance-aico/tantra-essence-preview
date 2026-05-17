@@ -1571,6 +1571,54 @@ section{contain:layout style}
 .popup-feat-logo.pf-entrepreneur em{font-style:normal;color:#D7202A}
 @media (max-width:760px){.popup-card{grid-template-columns:1fr;max-width:480px;min-height:auto}.popup-img{min-height:280px}.popup-img img{height:100%}.popup-content{padding:2rem 1.6rem 1.6rem}.popup-form-row{grid-template-columns:1fr}.popup-featured{padding:1rem;gap:1rem}.popup-content h2{font-size:1.7rem !important}}
 
+
+/* ============================================
+   HERO V2 — Video centered Mindvalley-style
+   ============================================ */
+.hero{position:relative;min-height:100vh;overflow:hidden;background:linear-gradient(135deg,#1A0D11 0%,#2D1218 35%,#5D1F2C 70%,#1A0D11 100%);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:140px 2rem 6rem;text-align:center}
+.hero::before{content:'';position:absolute;top:-20%;left:-10%;width:60%;height:80%;background:radial-gradient(ellipse,rgba(247,213,96,0.18) 0%,transparent 60%);pointer-events:none;animation:hero-orb-1 22s ease-in-out infinite;z-index:0}
+.hero::after{content:'';position:absolute;bottom:-15%;right:-10%;width:55%;height:75%;background:radial-gradient(ellipse,rgba(140,54,69,0.4) 0%,transparent 60%);pointer-events:none;animation:hero-orb-2 18s ease-in-out infinite;z-index:0}
+@keyframes hero-orb-1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(8%,4%) scale(1.1)}}
+@keyframes hero-orb-2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-6%,-4%) scale(1.08)}}
+/* Old full-bleed media → hide */
+.hero-media{display:none !important}
+.hero-overlay{display:none !important}
+.hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:0;display:flex;flex-direction:column;align-items:center}
+.hero h1{font-size:clamp(3rem,7vw,6rem) !important;line-height:1.04 !important;color:#fff !important;text-shadow:0 4px 30px rgba(0,0,0,0.4);margin-bottom:1.4rem !important;letter-spacing:-0.02em;max-width:900px;font-weight:400}
+.hero h1 em{font-style:italic;color:#F7D560}
+.hero-eyebrow{display:inline-block;color:#F7D560 !important;border:1px solid rgba(247,213,96,0.4);padding:0.5rem 1.2rem;border-radius:9999px;font-family:'Inter',sans-serif;font-size:0.74rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;margin-bottom:1.4rem;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);background:rgba(247,213,96,0.06)}
+.hero-lead{max-width:680px;font-size:clamp(1.05rem,1.4vw,1.2rem);color:rgba(255,255,255,0.85);line-height:1.6;margin:0 auto 2rem}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:3rem}
+.hero-badges{display:none !important}
+.scroll-indicator{display:none !important}
+
+/* === CENTERED VIDEO FRAME (Mindvalley-grade) === */
+.hero-video-frame{position:relative;width:100%;max-width:880px;margin:0 auto;aspect-ratio:16/9;border-radius:24px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,0.5),0 14px 40px rgba(0,0,0,0.4),0 0 0 1px rgba(247,213,96,0.18);background:#000;animation:hero-frame-rise 1.4s cubic-bezier(0.16,1,0.3,1) 0.3s both}
+@keyframes hero-frame-rise{from{opacity:0;transform:translateY(40px) scale(0.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+.hero-video-frame video{width:100%;height:100%;object-fit:cover;display:block;border-radius:24px}
+.hero-video-frame::before{content:'';position:absolute;inset:-6px;border-radius:30px;background:linear-gradient(135deg,#F7D560,#8C3645,#5D1F2C,#F7D560);background-size:300% 300%;opacity:0.6;z-index:-1;animation:hero-frame-glow 6s linear infinite;filter:blur(20px)}
+@keyframes hero-frame-glow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero-video-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,transparent 70%,rgba(0,0,0,0.35) 100%);pointer-events:none;z-index:2;border-radius:24px}
+.hero-video-controls{position:absolute;bottom:1rem;right:1rem;z-index:3;display:flex;gap:0.5rem}
+.hero-video-btn{width:42px;height:42px;border-radius:50%;background:rgba(0,0,0,0.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s ease;font-size:1rem}
+.hero-video-btn:hover{background:rgba(247,213,96,0.85);color:#1A0D11;border-color:#F7D560;transform:scale(1.05)}
+.hero-video-caption{position:absolute;bottom:1.2rem;left:1.4rem;z-index:3;color:#fff;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;background:rgba(0,0,0,0.5);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:0.4rem 0.85rem;border-radius:9999px;border:1px solid rgba(255,255,255,0.1)}
+.hero-video-caption::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:#1EFF8E;margin-right:0.5rem;vertical-align:middle;animation:hero-live-pulse 1.6s ease-in-out infinite}
+@keyframes hero-live-pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+
+/* Hero stats below video */
+.hero-stats-row{display:flex;gap:3rem;justify-content:center;margin-top:2.5rem;flex-wrap:wrap;animation:hero-frame-rise 1.4s cubic-bezier(0.16,1,0.3,1) 0.6s both}
+.hero-stat{text-align:center;color:#fff}
+.hero-stat strong{display:block;font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);color:#F7D560;line-height:1;letter-spacing:-0.01em}
+.hero-stat span{display:block;font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-top:0.35rem}
+
+@media (max-width:760px){
+  .hero{padding:120px 1rem 4rem;min-height:auto}
+  .hero h1{font-size:clamp(2.2rem,9vw,3.4rem) !important}
+  .hero-video-frame{aspect-ratio:9/16;max-width:340px}
+  .hero-stats-row{gap:1.6rem;margin-top:2rem}
+}
+
 </style>
 </head>
 <body class="has-live-bar">
@@ -1670,39 +1718,30 @@ section{contain:layout style}
 
 <!-- ============= HERO (Kling-ready) ============= -->
 <section class="hero">
-  <div class="hero-media">
-    <video src="sarita-photos/sarita-hero-animated.mp4" autoplay muted loop playsinline poster="sarita-photos/sarita-hero-foret.webp" preload="auto"></video>
-  </div>
-  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">A Path of Tantra · Since 1973</span>
+    <span class="hero-eyebrow">A Path of Tantra &middot; Since 1973</span>
     <h1>Awaken your<br>true <em>essence</em></h1>
-    <p class="hero-lead">I help people awaken their true essence using Tantra — a sublime path to enlightenment that explores polarities and the alchemy when opposites meet in the light of awareness. Welcome to my community.</p>
-    <div style="display:inline-flex;align-items:center;gap:0.7rem;background:rgba(254,251,244,0.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:0.55rem 1.1rem;border-radius:9999px;margin-bottom:1.6rem;font-size:0.85rem;color:var(--ink)">
-      <span style="display:flex">
-        <span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#F5D9D3,#C26B64);border:2px solid #fff"></span>
-        <span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#E8D4A2,#9E7F47);border:2px solid #fff;margin-left:-9px"></span>
-        <span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#8C3645,#5D1F2C);border:2px solid #fff;margin-left:-9px"></span>
-        <span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#FCEFEA,#D98B83);border:2px solid #fff;margin-left:-9px"></span>
-      </span>
-      <span><strong style="color:var(--maroon);font-weight:600">10,000+ seekers</strong> already walking this path in 36 countries</span>
-    </div>
+    <p class="hero-lead">53 years of teaching, distilled into self-paced quests, retreats in Bali, and a worldwide community guided by Ma Ananda Sarita.</p>
     <div class="hero-ctas">
       <a href="signup.html" class="btn-pill btn-pill-primary">Become a Member</a>
       <a href="programs.html" class="btn-pill btn-pill-outline">Explore programs</a>
-      <a href="apply-bali.html" class="btn-pill btn-pill-bali">Apply for Bali <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="hero-video-frame">
+      <video src="sarita-photos/sarita-hero-animated.mp4" autoplay muted loop playsinline poster="sarita-photos/sarita-hero-foret.webp" preload="auto" id="heroVideo"></video>
+      <div class="hero-video-overlay"></div>
+      <span class="hero-video-caption">Live with Sarita</span>
+      <div class="hero-video-controls">
+        <button class="hero-video-btn" id="heroMuteBtn" aria-label="Toggle sound" onclick="(function(){var v=document.getElementById('heroVideo');var b=document.getElementById('heroMuteBtn');v.muted=!v.muted;b.innerHTML=v.muted?'&#128263;':'&#128266;';})()">&#128263;</button>
+        <button class="hero-video-btn" aria-label="Full screen" onclick="(function(){var v=document.getElementById('heroVideo');if(v.requestFullscreen)v.requestFullscreen();})()">&#9974;</button>
+      </div>
+    </div>
+    <div class="hero-stats-row">
+      <div class="hero-stat"><strong>10K+</strong><span>Seekers</span></div>
+      <div class="hero-stat"><strong>53 yrs</strong><span>Of practice</span></div>
+      <div class="hero-stat"><strong>1K+</strong><span>Meditations</span></div>
+      <div class="hero-stat"><strong>4.9 &starf;</strong><span>2,847 reviews</span></div>
     </div>
   </div>
-  <div class="hero-badges">
-    <div class="hero-badge"><strong>53</strong><span>Years of practice</span></div>
-    <div class="hero-badge"><strong>17</strong><span>Years with Osho</span></div>
-    <div class="hero-badge"><strong>60+</strong><span>Retreats / year</span></div>
-  </div>
-
-  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-    <span>Scroll to explore</span>
-    <div class="scroll-indicator-arrow"></div>
-  </a>
 </section>
 <!-- ============= MARQUEE AUTO-SCROLL — MINDVALLEY SIGNATURE ============= -->
 <section class="mv-marquee">
