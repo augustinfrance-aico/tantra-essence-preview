@@ -275,7 +275,7 @@ footer a:hover{color:var(--gold-bright)}
       <span class="form-card-tag">🎁 Free Seat</span>
       <h2>Reserve your <em>free seat</em></h2>
       <p>Enter your details. We'll send the Zoom link &amp; replay access by email.</p>
-      <form id="webinarForm" onsubmit="event.preventDefault();var b=this.querySelector('button');b.textContent='✓ Your seat is reserved! Check your inbox';b.style.background='linear-gradient(135deg,#1EFF8E,#0FB86A)';b.style.color='#053820';b.disabled=true;this.querySelector('input[type=email]').disabled=true;this.querySelector('input[type=text]').disabled=true;">
+      <form id="webinarForm" onsubmit="event.preventDefault();window.location.href='webinar-confirmation.html';">
         <input type="text" name="firstName" placeholder="Your first name" required>
         <input type="email" name="email" placeholder="Your email address" required>
         <button type="submit" class="form-submit">Reserve my free seat →</button>
