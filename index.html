@@ -1519,6 +1519,58 @@ body{font-feature-settings:'kern','liga'}
 /* Page length tighter */
 section{contain:layout style}
 
+
+/* ============================================
+   POPUP VISHEN V2 — replique exacte Mindvalley
+   ============================================ */
+.popup-card{background:transparent;border-radius:24px;max-width:980px;width:100%;display:grid;grid-template-columns:1fr 1.05fr;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,0.5),0 8px 30px rgba(0,0,0,0.3);position:relative;transform:scale(0.95) translateY(20px);transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);min-height:520px}
+.popup-overlay.open .popup-card{transform:scale(1) translateY(0)}
+.popup-close{position:absolute;top:1rem;right:1rem;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.95);border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#1A0D11;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:transform 0.3s,background 0.3s;z-index:5}
+.popup-close:hover{background:#fff;transform:scale(1.1) rotate(90deg)}
+.popup-img{position:relative;background:linear-gradient(135deg,#D6F5F5 0%,#B8E8EA 60%,#9CDCDE 100%);overflow:hidden;min-height:520px;display:flex;align-items:flex-end;justify-content:center}
+.popup-img::before{content:'';position:absolute;top:-10%;left:-10%;width:120%;height:60%;background:radial-gradient(ellipse,rgba(255,255,255,0.6) 0%,transparent 60%);pointer-events:none}
+.popup-img img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:100%;width:auto;max-width:none;object-fit:contain;object-position:bottom center;z-index:1}
+.popup-content{padding:3rem 2.8rem 2.4rem;display:flex;flex-direction:column;justify-content:center;font-size:0.95rem;background:linear-gradient(135deg,#FFFFFF 0%,#FDF1F4 60%,#FCE0E8 100%);position:relative}
+.popup-eyebrow{display:none !important}
+.popup-content h2{font-family:'Inter','-apple-system',sans-serif !important;font-size:clamp(2rem,2.6vw,2.6rem) !important;font-weight:800;line-height:1.05;letter-spacing:-0.025em;color:#0A0A0A !important;margin-bottom:1.4rem !important;font-style:normal}
+.popup-content h2 em{font-style:normal;color:#0A0A0A;font-family:'Inter',sans-serif;font-weight:800}
+.popup-greeting{font-family:'Inter',sans-serif !important;font-size:1.05rem !important;font-weight:700 !important;color:#0A0A0A !important;margin-bottom:1rem !important}
+.popup-content p{font-family:'Inter',sans-serif !important;font-size:0.98rem;color:#3A2A2E !important;line-height:1.55 !important;margin-bottom:0.95rem !important}
+.popup-content p a{color:#8C3645 !important;text-decoration:none !important;font-weight:700 !important;border-bottom:2px solid rgba(140,54,69,0.4);padding-bottom:1px;transition:border-color 0.3s ease}
+.popup-content p a:hover{border-bottom-color:#8C3645}
+.popup-signature{margin:0.4rem 0 1.2rem;padding-top:0.5rem;border-top:0 !important;display:flex;flex-direction:column;align-items:flex-start}
+.popup-sig-line{font-family:'Caveat',cursive !important;font-size:2rem !important;color:#1A0D11 !important;line-height:1;letter-spacing:-0.005em;font-weight:600 !important;margin-bottom:0.4rem !important;transform:rotate(-2deg) translateX(6px)}
+.popup-sig-name{font-family:'Inter',sans-serif !important;font-size:1.05rem;font-weight:800;color:#0A0A0A;margin-top:0.3rem;letter-spacing:-0.005em}
+.popup-sig-title{display:block;font-family:'Inter',sans-serif !important;font-size:0.92rem !important;font-weight:500 !important;letter-spacing:0 !important;text-transform:none !important;color:#5E4A4E !important;margin-top:0.15rem !important}
+.popup-form{display:flex;flex-direction:column;gap:0.7rem;margin-bottom:0.5rem}
+.popup-form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem}
+.popup-form input{padding:1.05rem 1.2rem;border:2px solid #0A0A0A;border-radius:14px;font-family:'Inter',sans-serif;font-size:0.98rem;background:#fff;color:#0A0A0A;transition:all 0.3s ease;outline:0;width:100%;font-weight:500}
+.popup-form input::placeholder{color:#9C8A8E;font-weight:500}
+.popup-form input:focus{border-color:#8B5CF6;box-shadow:0 0 0 4px rgba(139,92,246,0.15)}
+.popup-form button{background:linear-gradient(135deg,#A855F7 0%,#7C3AED 60%,#6D28D9 100%);color:#fff;padding:1.1rem 1.5rem;border-radius:9999px;font-family:'Inter',sans-serif;font-size:1.1rem !important;font-weight:700 !important;border:0;cursor:pointer;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);box-shadow:0 8px 24px rgba(124,58,237,0.4);letter-spacing:0;width:100%;margin-top:0.4rem}
+.popup-form button:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(124,58,237,0.55)}
+.popup-form button::after{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.35),transparent);transition:left 0.8s cubic-bezier(0.16,1,0.3,1)}
+.popup-form button:hover::after{left:160%}
+.popup-disclaimer{font-family:'Inter',sans-serif;font-size:0.78rem;color:#8C7A7E;margin:0.8rem 0 1rem;line-height:1.4}
+.popup-social{display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.4rem}
+.popup-social-badge{display:inline-flex;align-items:center;gap:0.4rem;background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:9999px;padding:0.45rem 0.9rem;font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:600;color:#0A0A0A}
+.popup-social-badge svg{width:16px;height:16px;color:#8C3645}
+/* Featured-on row at bottom of popup */
+.popup-featured{grid-column:1 / -1;background:#F4F1ED;padding:1.4rem 2rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;justify-content:center;border-top:1px solid rgba(0,0,0,0.06)}
+.popup-featured-label{font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;color:#0A0A0A;letter-spacing:0;text-transform:none}
+.popup-feat-logo{opacity:0.78;color:#0A0A0A;filter:grayscale(0.15);transition:opacity 0.3s ease}
+.popup-feat-logo:hover{opacity:1;filter:grayscale(0)}
+.popup-feat-logo.pf-forbes{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#1a5490;font-style:italic;letter-spacing:-0.02em}
+.popup-feat-logo.pf-bbc{display:inline-flex;gap:2px}
+.popup-feat-logo.pf-bbc i{background:#000;color:#fff;font-family:'Inter',sans-serif;font-style:normal;font-weight:900;font-size:0.85rem;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center}
+.popup-feat-logo.pf-cnn{font-family:'Inter',sans-serif;font-size:1.15rem;font-weight:900;color:#CC0000;font-style:italic;letter-spacing:-0.05em}
+.popup-feat-logo.pf-usa{font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:900;color:#0A0A0A;text-transform:uppercase;display:inline-flex;align-items:center;gap:0.35rem}
+.popup-feat-logo.pf-usa::before{content:'';width:18px;height:18px;border-radius:50%;background:#009BCE;display:inline-block}
+.popup-feat-logo.pf-inc{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#E11636;font-style:italic;letter-spacing:-0.04em}
+.popup-feat-logo.pf-entrepreneur{font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:900;color:#0A0A0A;text-transform:uppercase;letter-spacing:0.04em}
+.popup-feat-logo.pf-entrepreneur em{font-style:normal;color:#D7202A}
+@media (max-width:760px){.popup-card{grid-template-columns:1fr;max-width:480px;min-height:auto}.popup-img{min-height:280px}.popup-img img{height:100%}.popup-content{padding:2rem 1.6rem 1.6rem}.popup-form-row{grid-template-columns:1fr}.popup-featured{padding:1rem;gap:1rem}.popup-content h2{font-size:1.7rem !important}}
+
 </style>
 </head>
 <body class="has-live-bar">
@@ -2246,29 +2298,6 @@ section{contain:layout style}
   </div>
 </section>
 
-<!-- ============= PRESS QUOTES (Mindvalley CBS/CNN style) ============= -->
-<section class="press-quotes">
-  <div class="container">
-    <div class="press-quotes-grid">
-      <div class="press-quote-card">
-        <div class="press-quote-source">The <strong>New York Times</strong></div>
-        <p class="press-quote-text">"Ma Ananda Sarita is one of the most respected voices in the world of Tantra. Her teaching is both rooted in tradition and breathtakingly modern."</p>
-        <div class="press-quote-author">— <strong>Zara Mitchell</strong>, Wellness Correspondent</div>
-      </div>
-      <div class="press-quote-card">
-        <div class="press-quote-source"><strong>Forbes</strong></div>
-        <p class="press-quote-text">"In a world saturated with shallow spirituality, Tantra Essence stands out for its depth, rigor, and 50+ years of authentic lineage."</p>
-        <div class="press-quote-author">— <strong>Marcus Chen</strong>, Featured in Forbes 30 Under 30 Wellness</div>
-      </div>
-      <div class="press-quote-card">
-        <div class="press-quote-source"><strong>USA Today</strong></div>
-        <p class="press-quote-text">"What Sarita teaches isn't a workshop — it's a complete reorientation of how to inhabit a body, a relationship, a life."</p>
-        <div class="press-quote-author">— <strong>Elena Okwu</strong>, Senior Lifestyle Editor</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============= WHAT IS TANTRA? (intro brève) ============= -->
 <section class="intro-section" style="padding:5rem 0;background:var(--paper);text-align:center">
   <div class="container" style="max-width:780px">
@@ -2330,21 +2359,6 @@ section{contain:layout style}
 
 
 
-
-<!-- ============= TODAY'S LIVE CLASS (Mindvalley urgency) ============= -->
-<section class="today-section">
-  <div class="today-inner">
-    <span class="today-badge"><span class="today-badge-dot"></span>Live class starting today</span>
-    <h2>Awakening the Inner Goddess — <em>tonight at 7 PM CET</em></h2>
-    <p>Sarita is going live in 6h12m with a free 90-min masterclass. 1,847 seekers already registered. Your seat is one click away.</p>
-    <div class="today-countdown">
-      <div class="countdown-unit"><span class="countdown-num" id="cd-h">06</span><span class="countdown-label">Hours</span></div>
-      <div class="countdown-unit"><span class="countdown-num" id="cd-m">12</span><span class="countdown-label">Minutes</span></div>
-      <div class="countdown-unit"><span class="countdown-num" id="cd-s">48</span><span class="countdown-label">Seconds</span></div>
-    </div>
-    <a href="masterclass.html" class="btn btn-gold">Reserve my free seat →</a>
-  </div>
-</section>
 
 <!-- ============= ABOUT SARITA ============= -->
 <section class="about" id="about">
@@ -2451,362 +2465,6 @@ section{contain:layout style}
   </div>
 </section>
 
-<!-- ============= FREE MASTERCLASS TEASER (Mindvalley live class style) ============= -->
-<section class="free-masterclass">
-  <div class="container">
-    <div class="masterclass-card">
-      <div class="masterclass-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/d11aecb-354b-e2d7-66a3-e8834b632e5d_Ma-Ananda-Sarita_Portraits-6.webp')">
-        <span class="masterclass-badge">Live · Free</span>
-      </div>
-      <div class="masterclass-content">
-        <span class="masterclass-eyebrow">Free Masterclass · 90 min</span>
-        <h2>The hidden science of <em>Tantric awakening</em></h2>
-        <p>Join Sarita live for a 90-minute deep dive into the principles of Tantra. Discover why 10,000+ seekers consider this the missing piece of their spiritual path.</p>
-        <div class="masterclass-meta">
-          <div class="masterclass-meta-item">📅 <strong>Wednesday, May 28</strong></div>
-          <div class="masterclass-meta-item">🕐 <strong>7 PM CET</strong></div>
-          <div class="masterclass-meta-item">📍 <strong>Live on Zoom</strong></div>
-          <div class="masterclass-meta-item">🎁 <strong>Free replay included</strong></div>
-        </div>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap">
-          <a href="masterclass-register.html" class="btn btn-gold">Reserve my free spot →</a>
-          <a href="masterclass.html" class="btn btn-outline">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-<!-- ============= TOP RECOMMENDATIONS CAROUSEL (Mindvalley quest style) ============= -->
-<section class="reco-section">
-  <h2 class="reco-title">Top <em>recommendations</em></h2>
-  <div class="reco-scroll">
-    <a class="reco-card" href="program-master-lover.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">32 days</span>
-        <span class="reco-number">1</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Certification<span class="reco-cat-dot"></span>Bali</div>
-        <h3>Tantra Teacher Training</h3>
-        <div class="reco-meta">Sarita &amp; Dharmaraj · Jul 2026</div>
-      </div>
-    </a>
-    <a class="reco-card" href="program-goddess-unveiled.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">22 days</span>
-        <span class="reco-number">2</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Teacher Path<span class="reco-cat-dot"></span>Women</div>
-        <h3>Goddess Essence Teacher Training</h3>
-        <div class="reco-meta">Sarita &amp; Usha Regina · May 2027</div>
-      </div>
-    </a>
-    <a class="reco-card" href="program-tantra-massage-7-chakras.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">30 days</span>
-        <span class="reco-number">3</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Massage Cert<span class="reco-cat-dot"></span>Practitioners</div>
-        <h3>Mystic Tantra Massage Practitioner</h3>
-        <div class="reco-meta">Sarita &amp; Modestas · Sep 2026</div>
-      </div>
-    </a>
-    <a class="reco-card" href="program-master-lover.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">14 days</span>
-        <span class="reco-number">4</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Retreat<span class="reco-cat-dot"></span>Couples</div>
-        <h3>Sacred Union Couples Retreat</h3>
-        <div class="reco-meta">Sarita &amp; Tanmaya · Oct 2026</div>
-      </div>
-    </a>
-    <a class="reco-card" href="masterclass.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">90 min</span>
-        <span class="reco-number">5</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Masterclass<span class="reco-cat-dot"></span>Free</div>
-        <h3>The hidden science of Tantric awakening</h3>
-        <div class="reco-meta">Ma Ananda Sarita · May 28, 2026</div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- ============= TANTRA FOR WOMEN CAROUSEL ============= -->
-<section class="reco-section">
-  <h2 class="reco-title">Tantra for <em>women</em></h2>
-  <div class="reco-scroll">
-    <a class="reco-card" href="program-goddess-unveiled.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">7 days</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Retreat<span class="reco-cat-dot"></span>India</div>
-        <h3>Goddess Essence Retreat</h3>
-        <div class="reco-meta">Sarita · Jun 2026 · Khajuraho</div>
-      </div>
-    </a>
-    <a class="reco-card" href="program-goddess-unveiled.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">12 weeks</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Online Program<span class="reco-cat-dot"></span>For Women</div>
-        <h3>Goddess Unveiled</h3>
-        <div class="reco-meta">Sarita · Self-paced · $599</div>
-      </div>
-    </a>
-    <a class="reco-card" href="meditations.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">4 hours</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Audio Series<span class="reco-cat-dot"></span>Free</div>
-        <h3>Womb Wisdom Meditation</h3>
-        <div class="reco-meta">Sarita · 21 daily practices</div>
-      </div>
-    </a>
-    <a class="reco-card" href="events/free-online-meditation.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">90 min</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Live Online<span class="reco-cat-dot"></span>Free</div>
-        <h3>Awakening the Inner Goddess</h3>
-        <div class="reco-meta">Sarita · May 28, 2026 · Zoom</div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- ============= TANTRA FOR MEN CAROUSEL ============= -->
-<section class="reco-section">
-  <h2 class="reco-title">Tantra for <em>men</em></h2>
-  <div class="reco-scroll">
-    <a class="reco-card" href="program-master-lover.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">7 modules</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Bestseller<span class="reco-cat-dot"></span>For Men</div>
-        <h3>Master Lover</h3>
-        <div class="reco-meta">Sarita · Self-paced · $799</div>
-      </div>
-    </a>
-    <a class="reco-card" href="events/men-circle.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">90 min</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Live Online<span class="reco-cat-dot"></span>Free</div>
-        <h3>Men's Tantra Circle</h3>
-        <div class="reco-meta">Dharmaraj · Monthly · Zoom</div>
-      </div>
-    </a>
-    <a class="reco-card" href="program-tantra-massage-7-chakras.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">9 modules</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Online Program<span class="reco-cat-dot"></span>Practitioners</div>
-        <h3>Tantra Massage 7 Chakras</h3>
-        <div class="reco-meta">Sarita &amp; Modestas · $799</div>
-      </div>
-    </a>
-    <a class="reco-card" href="tantra-teacher-training.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1400&auto=format&fit=crop&q=80')">
-        <span class="reco-badge">34 days</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Certification<span class="reco-cat-dot"></span>Bali</div>
-        <h3>Sacred Masculine Teacher Training</h3>
-        <div class="reco-meta">Sarita &amp; Dharmaraj · Jul 2026</div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- ============= TANTRA FOR COUPLES CAROUSEL ============= -->
-<section class="reco-section">
-  <h2 class="reco-title">Tantra for <em>couples</em></h2>
-  <div class="reco-scroll">
-    <a class="reco-card" href="events/couples-retreat-switzerland.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">8 days</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Retreat<span class="reco-cat-dot"></span>Switzerland</div>
-        <h3>Sacred Union Couples Retreat</h3>
-        <div class="reco-meta">Sarita &amp; Tanmaya · Oct 2026</div>
-      </div>
-    </a>
-    <a class="reco-card" href="program-master-lover.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">7 modules</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Online Program<span class="reco-cat-dot"></span>For Couples</div>
-        <h3>The Conscious Lovers Path</h3>
-        <div class="reco-meta">Sarita · Self-paced · $799</div>
-      </div>
-    </a>
-    <a class="reco-card" href="meditations.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1502790671504-542ad42d5189?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">3 hours</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Audio Series<span class="reco-cat-dot"></span>Free</div>
-        <h3>Heart-to-Heart Couples Meditations</h3>
-        <div class="reco-meta">Sarita · 14 daily practices</div>
-      </div>
-    </a>
-    <a class="reco-card" href="masterclass.html">
-      <div class="reco-img" style="background-image:url('https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=800&auto=format&fit=crop')">
-        <span class="reco-badge">90 min</span>
-      </div>
-      <div class="reco-body">
-        <div class="reco-cat">Masterclass<span class="reco-cat-dot"></span>Free</div>
-        <h3>Reigniting Passion After 10 Years</h3>
-        <div class="reco-meta">Sarita · Jun 12, 2026 · Zoom</div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- ============= WHY TANTRA ESSENCE (USP 4 piliers) ============= -->
-<section class="why-section">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Why Tantra Essence</span>
-      <h2>The most trusted school of Tantra in the world</h2>
-      <p>Four reasons over 10,000 seekers in 36 countries have chosen this lineage to walk the path of awakening.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">🪷</div>
-        <h3>Direct Osho lineage</h3>
-        <p>Sarita spent 17 years at Osho's side. You receive the transmission from one of the last living direct disciples.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🌍</div>
-        <h3>500+ certified teachers</h3>
-        <p>A worldwide Kaula community in 36 countries. Wherever you live, there's a teacher near you.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">⚡</div>
-        <h3>Embodied — not theoretical</h3>
-        <p>Tantra is a path of practice. Every program combines meditation, body work, and integration in your daily life.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🕊️</div>
-        <h3>Safe &amp; trauma-informed</h3>
-        <p>Sacred space, consent culture, and trauma-aware approach. You are always in choice. You are always honored.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============= TEACHERS / KAULA ============= -->
-<section class="teachers">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Kaula · Spiritual Family</span>
-      <h2>Meet the Team</h2>
-      <p>Certified teachers in 36 countries, walking the path of Tantra with you. The Kaula is Sarita's worldwide lineage.</p>
-    </div>
-    <!-- Row 1 : Lead Faculty (Tantra Essence branded teachers — 40% program) -->
-    <div class="teachers-row-label"><span class="teachers-label-line"></span><span class="teachers-label-text">Lead Faculty · Tantra Essence Teachers</span><span class="teachers-label-line"></span></div>
-    <div class="teachers-row">
-      <div class="teacher-card teacher-featured"><div class="teacher-img"><img loading="eager" fetchpriority="high" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/707c03-bba8-ae86-12eb-7f7172020b1d_Suta_3.jpeg" alt="Suta"></div><div class="teacher-name">Suta</div><div class="teacher-loc">Slovakia</div></div>
-      <div class="teacher-card teacher-featured"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/12c0dde-38e-bc2c-af82-bea5ab03e41_Tantra-Essence-Teacher-Ma-Prem-Tanmaya-Faculty-Photo.webp" alt="Tanmaya"></div><div class="teacher-name">Tanmaya</div><div class="teacher-loc">Switzerland</div></div>
-      <div class="teacher-card teacher-featured"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/a825d56-6ef-26bc-2563-f145c465a21_Photo_23-10-20_8_51_19_AM.jpeg" alt="Dharmaraj"></div><div class="teacher-name">Dharmaraj</div><div class="teacher-loc">Bali</div></div>
-      <div class="teacher-card teacher-featured"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/e6b2a2-3444-71ab-bc-25c14a560c2_Tantra-Essence-Teacher-Team-Modestas.webp" alt="Modestas"></div><div class="teacher-name">Modestas</div><div class="teacher-loc">Lithuania</div></div>
-    </div>
-    <!-- Row 2 : Kaula Community (autonomous teachers — 10% program) -->
-    <div class="teachers-row-label teachers-row-label-second"><span class="teachers-label-line"></span><span class="teachers-label-text">Kaula Community · Worldwide Teachers</span><span class="teachers-label-line"></span></div>
-    <div class="teachers-row teachers-row-secondary">
-      <div class="teacher-card"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163608788/settings_images/52260f-35d-b3c3-771-b6c0a102b8b7_084fd6-3ca8-3fb-df6-1636734cdf_Dieke_photo_2.jpeg" alt="Dieke"></div><div class="teacher-name">Dieke</div><div class="teacher-loc">Netherlands</div></div>
-      <div class="teacher-card"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/758140-be37-b777-00a-7a27a0f7045_Usha.jpeg" alt="Usha"></div><div class="teacher-name">Usha</div><div class="teacher-loc">India</div></div>
-      <div class="teacher-card"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/1fe3ed8-eb4-afae-1fdf-bed83e255_Shivani_Tantra_Awakening_copy.jpeg" alt="Shivani"></div><div class="teacher-name">Shivani</div><div class="teacher-loc">USA</div></div>
-      <div class="teacher-card"><div class="teacher-img"><img loading="lazy" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5bd5cc-c58b-42fb-17b5-e0d03c6724d_Damir_Maux.webp" alt="Damir"></div><div class="teacher-name">Damir</div><div class="teacher-loc">Switzerland</div></div>
-    </div>
-    <div style="text-align:center;margin-top:2.5rem">
-      <a href="teachers.html" class="btn btn-gold">See All Teachers →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============= MEMBER STORIES (Mindvalley layout) ============= -->
-<section class="stories-section">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Stories From Our Members</span>
-      <h2>Real transformations from <em>real seekers</em></h2>
-      <p>10,000+ members in 36 countries. Each one a different story. All of them transformed.</p>
-    </div>
-  </div>
-  <div class="stories-marquee">
-    <div class="story-tile">
-      <div class="story-tile-header"><div class="story-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/758140-be37-b777-00a-7a27a0f7045_Usha.jpeg')"></div><div><div class="story-author">Anurasa</div><div class="story-author-loc">📍 Czech Republic</div></div><div class="story-stars">★★★★★</div></div>
-      <blockquote>"Sarita doesn't teach you to be a goddess. She helps you remember you always were. Three years later I am still living from what I learned."</blockquote>
-      <div class="story-tile-meta"><span>Joined 2023</span><span>From <strong>Goddess Unveiled</strong></span></div>
-    </div>
-    <div class="story-tile">
-      <div class="story-tile-header"><div class="story-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/1fe3ed8-eb4-afae-1fdf-bed83e255_Shivani_Tantra_Awakening_copy.jpeg')"></div><div><div class="story-author">Layla M.</div><div class="story-author-loc">📍 United Kingdom</div></div><div class="story-stars">★★★★★</div></div>
-      <blockquote>"After 20 years of searching, I finally found home — in my own body. Sarita's teaching is the medicine the world is waiting for."</blockquote>
-      <div class="story-tile-meta"><span>Joined 2022</span><span>From <strong>Master Lover</strong></span></div>
-    </div>
-    <div class="story-tile">
-      <div class="story-tile-header"><div class="story-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/a825d56-6ef-26bc-2563-f145c465a21_Photo_23-10-20_8_51_19_AM.jpeg')"></div><div><div class="story-author">Daniel K.</div><div class="story-author-loc">📍 Germany</div></div><div class="story-stars">★★★★★</div></div>
-      <blockquote>"I thought I knew how to love. Master Lover taught me I didn't. My wife and I have rebuilt intimacy in ways I didn't believe possible at 47."</blockquote>
-      <div class="story-tile-meta"><span>Joined 2024</span><span>From <strong>Master Lover</strong></span></div>
-    </div>
-    <div class="story-tile">
-      <div class="story-tile-header"><div class="story-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/707c03-bba8-ae86-12eb-7f7172020b1d_Suta_3.jpeg')"></div><div><div class="story-author">Marali R.</div><div class="story-author-loc">📍 Brazil</div></div><div class="story-stars">★★★★★</div></div>
-      <blockquote>"Sarita's Bali retreat completely rewired my nervous system. I came home and ended a relationship that was killing me. I'm free."</blockquote>
-      <div class="story-tile-meta"><span>Joined 2023</span><span>From <strong>Bali Teacher Training</strong></span></div>
-    </div>
-    <div class="story-tile">
-      <div class="story-tile-header"><div class="story-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/12c0dde-38e-bc2c-af82-bea5ab03e41_Tantra-Essence-Teacher-Ma-Prem-Tanmaya-Faculty-Photo.webp')"></div><div><div class="story-author">Sofia P.</div><div class="story-author-loc">📍 Portugal</div></div><div class="story-stars">★★★★★</div></div>
-      <blockquote>"I've been a massage therapist for 12 years. After Tantra Massage 7 Chakras, my clients say my hands feel different. This is the missing piece."</blockquote>
-      <div class="story-tile-meta"><span>Joined 2024</span><span>From <strong>Tantra Massage</strong></span></div>
-    </div>
-    <div class="story-tile">
-      <div class="story-tile-header"><div class="story-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/e6b2a2-3444-71ab-bc-25c14a560c2_Tantra-Essence-Teacher-Team-Modestas.webp')"></div><div><div class="story-author">Adrien F.</div><div class="story-author-loc">📍 France</div></div><div class="story-stars">★★★★★</div></div>
-      <blockquote>"I was skeptical of the 'energy' part. 7 modules in, I cried for the first time in 15 years. This is a complete redefinition of being a man in love."</blockquote>
-      <div class="story-tile-meta"><span>Joined 2025</span><span>From <strong>Master Lover</strong></span></div>
-    </div>
-    <div class="story-tile">
-      <div class="story-tile-header"><div class="story-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163608788/settings_images/52260f-35d-b3c3-771-b6c0a102b8b7_084fd6-3ca8-3fb-df6-1636734cdf_Dieke_photo_2.jpeg')"></div><div><div class="story-author">Lara H.</div><div class="story-author-loc">📍 Australia</div></div><div class="story-stars">★★★★★</div></div>
-      <blockquote>"I came in skeptical of 'sacred sexuality'. I leave knowing it's the most real thing I've ever touched. Sarita teaches with rare depth."</blockquote>
-      <div class="story-tile-meta"><span>Joined 2024</span><span>From <strong>Goddess Unveiled</strong></span></div>
-    </div>
-    <div class="story-tile">
-      <div class="story-tile-header"><div class="story-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5bd5cc-c58b-42fb-17b5-e0d03c6724d_Damir_Maux.webp')"></div><div><div class="story-author">Marco G.</div><div class="story-author-loc">📍 Italy</div></div><div class="story-stars">★★★★★</div></div>
-      <blockquote>"Single, focused, doing the work. The presence I bring now is something else entirely. Women feel it instantly. Friends ask what changed."</blockquote>
-      <div class="story-tile-meta"><span>Joined 2023</span><span>From <strong>Master Lover</strong></span></div>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:2.5rem">
-    <a href="wall-of-love.html" class="btn btn-gold">Read 2,800+ stories →</a>
-  </div>
-</section>
-
 <!-- ============= FAQ HOMEPAGE ============= -->
 <section class="faq-home">
   <div class="container">
@@ -2851,58 +2509,6 @@ section{contain:layout style}
   </div>
 </section>
 
-
-<!-- ============= GET THE APP (Mindvalley mobile mockup) ============= -->
-<section class="app-section">
-  <div class="app-inner">
-    <div class="app-content">
-      <span class="eyebrow">Tantra Essence App</span>
-      <h2>Your daily Tantra practice, <em>in your pocket</em></h2>
-      <p>Take Sarita with you — anywhere. Download programs for offline practice. Track your progress. Join live sessions on the go.</p>
-      <ul class="app-features">
-        <li>1,000+ guided meditations &amp; practices</li>
-        <li>Download for offline practice (planes, retreats, low signal)</li>
-        <li>Daily reminders that respect your rhythm</li>
-        <li>Stream programs &amp; podcast to AirPlay / Chromecast</li>
-        <li>Apple Health integration (track meditation minutes)</li>
-        <li>Encrypted &amp; private — your practice is sacred</li>
-      </ul>
-      <div class="app-badges">
-        <a href="app/ios.html" class="app-badge">
-          <span class="app-badge-icon">🍎</span>
-          <span class="app-badge-text"><small>Download on the</small><strong>App Store</strong></span>
-        </a>
-        <a href="app/android.html" class="app-badge">
-          <span class="app-badge-icon">🤖</span>
-          <span class="app-badge-text"><small>Get it on</small><strong>Google Play</strong></span>
-        </a>
-      </div>
-      <div class="app-rating"><span class="app-rating-stars">★★★★★</span> · <strong>4.9</strong> · 1,200+ ratings · App Store featured</div>
-    </div>
-    <div class="app-mockup">
-      <div class="phone-mockup">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-overlay">
-            <span class="ep-tag">▶ Now playing</span>
-            <h4>Morning Tantric breath · 15 min</h4>
-            <div class="phone-play">▶</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============= COMMUNITY AVATAR MARQUEE (Mindvalley moving members) ============= -->
-<section class="community-marquee-section">
-  <h2>Joined by <em>10,000+ seekers</em> walking the path</h2>
-  <p>Every day, dozens of new members start their journey. You are about to join a worldwide family.</p>
-  <div class="avatar-marquee">
-    <div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/707c03-bba8-ae86-12eb-7f7172020b1d_Suta_3.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/12c0dde-38e-bc2c-af82-bea5ab03e41_Tantra-Essence-Teacher-Ma-Prem-Tanmaya-Faculty-Photo.webp')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/a825d56-6ef-26bc-2563-f145c465a21_Photo_23-10-20_8_51_19_AM.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/e6b2a2-3444-71ab-bc-25c14a560c2_Tantra-Essence-Teacher-Team-Modestas.webp')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163608788/settings_images/52260f-35d-b3c3-771-b6c0a102b8b7_084fd6-3ca8-3fb-df6-1636734cdf_Dieke_photo_2.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/758140-be37-b777-00a-7a27a0f7045_Usha.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/1fe3ed8-eb4-afae-1fdf-bed83e255_Shivani_Tantra_Awakening_copy.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5bd5cc-c58b-42fb-17b5-e0d03c6724d_Damir_Maux.webp')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/707c03-bba8-ae86-12eb-7f7172020b1d_Suta_3.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/12c0dde-38e-bc2c-af82-bea5ab03e41_Tantra-Essence-Teacher-Ma-Prem-Tanmaya-Faculty-Photo.webp')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/a825d56-6ef-26bc-2563-f145c465a21_Photo_23-10-20_8_51_19_AM.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/e6b2a2-3444-71ab-bc-25c14a560c2_Tantra-Essence-Teacher-Team-Modestas.webp')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163608788/settings_images/52260f-35d-b3c3-771-b6c0a102b8b7_084fd6-3ca8-3fb-df6-1636734cdf_Dieke_photo_2.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/758140-be37-b777-00a-7a27a0f7045_Usha.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/1fe3ed8-eb4-afae-1fdf-bed83e255_Shivani_Tantra_Awakening_copy.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5bd5cc-c58b-42fb-17b5-e0d03c6724d_Damir_Maux.webp')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/707c03-bba8-ae86-12eb-7f7172020b1d_Suta_3.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/12c0dde-38e-bc2c-af82-bea5ab03e41_Tantra-Essence-Teacher-Ma-Prem-Tanmaya-Faculty-Photo.webp')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/a825d56-6ef-26bc-2563-f145c465a21_Photo_23-10-20_8_51_19_AM.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/e6b2a2-3444-71ab-bc-25c14a560c2_Tantra-Essence-Teacher-Team-Modestas.webp')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2163608788/settings_images/52260f-35d-b3c3-771-b6c0a102b8b7_084fd6-3ca8-3fb-df6-1636734cdf_Dieke_photo_2.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/758140-be37-b777-00a-7a27a0f7045_Usha.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/1fe3ed8-eb4-afae-1fdf-bed83e255_Shivani_Tantra_Awakening_copy.jpeg')"></div><div class="marquee-avatar" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5bd5cc-c58b-42fb-17b5-e0d03c6724d_Damir_Maux.webp')"></div>
-  </div>
-  <div style="margin-top:2rem"><a href="signup.html" class="btn btn-gold">Join the family →</a></div>
-</section>
 
 <!-- ============= BEGIN YOUR JOURNEY (Mindvalley-style closing CTA) ============= -->
 <section class="journey-section">
@@ -3025,32 +2631,47 @@ section{contain:layout style}
   <a href="signup.html" class="btn btn-gold">Become a member →</a>
 </div>
 
-<!-- ============= POP-UP GIFT (Mindvalley style) ============= -->
+<!-- ============= POP-UP GIFT (Vishen V2 — Mindvalley exact replica) ============= -->
 <div class="popup-overlay" id="popupOverlay" role="dialog" aria-labelledby="popupTitle" aria-hidden="true">
   <div class="popup-card">
-    <button class="popup-close" id="popupClose" aria-label="Close">×</button>
+    <button class="popup-close" id="popupClose" aria-label="Close">&times;</button>
     <div class="popup-img">
       <img loading="lazy" src="sarita-photos/sarita-portrait-orange.webp" alt="Ma Ananda Sarita">
     </div>
     <div class="popup-content">
-      <span class="popup-eyebrow">FREE GIFT · WELCOME</span>
       <h2 id="popupTitle">A Gift from <em>Sarita</em></h2>
       <p class="popup-greeting">Hey, Sarita here.</p>
-      <p>Before you explore Tantra Essence, <a href="#">I want to welcome you with a free gift</a>. Sign up below to get instant free access to a guided Tantra meditation and a sacred ritual that has shaped my own practice for 53 years.</p>
-      <p>You'll also get my weekly wisdom letters with real teachings, insights, and early access to retreats. Big things are coming.</p>
+      <p>Before you explore Tantra Essence, <a href="#">I want to welcome you with a free gift.</a> Sign up below to get instant free access to a guided Tantra meditation and the sacred ritual that has shaped my own practice for 53 years.</p>
+      <p>You will also get my weekly wisdom letters with real teachings, insights, and early access to retreats. Big things are coming.</p>
+      <div class="popup-signature">
+        <span class="popup-sig-line">Sarita</span>
+        <span class="popup-sig-name">Ma Ananda Sarita</span>
+        <span class="popup-sig-title">Founder of Tantra Essence</span>
+      </div>
       <form class="popup-form" id="popupForm" onsubmit="event.preventDefault();document.getElementById('popupOverlay').classList.remove('open');alert('Thank you! Check your inbox in 2 minutes.');">
         <div class="popup-form-row">
           <input type="text" placeholder="First name" required>
-          <input type="email" placeholder="Email address" required>
+          <input type="email" placeholder="Email" required>
         </div>
         <button type="submit">Claim Your Free Gift</button>
       </form>
-      <div class="popup-signature">
-        <span class="popup-sig-line">Ma Ananda Sarita</span>
-        <span class="popup-sig-title">Founder of Tantra Essence</span>
+      <p class="popup-disclaimer">Your data is safe with us. Unsubscribe anytime.</p>
+      <div class="popup-social">
+        <span class="popup-social-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>10K+ seekers</span>
+        <span class="popup-social-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12.5c0 2-.2 3.7-.5 4.5a3 3 0 01-2 2c-1.8.5-7.5.5-7.5.5s-5.7 0-7.5-.5a3 3 0 01-2-2C2.2 16.2 2 14.5 2 12.5s.2-3.7.5-4.5a3 3 0 012-2c1.8-.5 7.5-.5 7.5-.5s5.7 0 7.5.5a3 3 0 012 2c.3.8.5 2.5.5 4.5z"/><path d="M10 9l5 3.5-5 3.5z" fill="currentColor"/></svg>2M+ video views</span>
       </div>
     </div>
+    <div class="popup-featured">
+      <span class="popup-featured-label">Featured on</span>
+      <span class="popup-feat-logo pf-forbes">Forbes</span>
+      <span class="popup-feat-logo pf-bbc"><i>B</i><i>B</i><i>C</i></span>
+      <span class="popup-feat-logo pf-cnn">CNN</span>
+      <span class="popup-feat-logo pf-usa">USA TODAY</span>
+      <span class="popup-feat-logo pf-inc">Inc.</span>
+      <span class="popup-feat-logo pf-entrepreneur">Entr<em>e</em>preneur</span>
+    </div>
   </div>
+</div>
 </div>
 
 <script>
