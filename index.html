@@ -2080,6 +2080,8 @@ svg.mv-mq-geo{display:none !important;visibility:hidden !important;opacity:0 !im
 /* C7 — Sticky bottom advisor CTA bubble */
 .te-advisor{position:fixed;bottom:1.5rem;right:1.5rem;background:linear-gradient(135deg,#8C3645,#5D1F2C);color:#fff;border-radius:9999px;padding:0.85rem 1.4rem 0.85rem 1rem;display:inline-flex;align-items:center;gap:0.65rem;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;text-decoration:none;box-shadow:0 14px 30px rgba(140,54,69,0.35),0 0 0 1px rgba(255,255,255,0.08) inset;z-index:9100;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);transform:translateY(0)}
 .te-advisor:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(140,54,69,0.5)}
+/* Advisor bubble lifts above sticky CTA when it's visible */
+body:has(.home-sticky-cta.visible) .te-advisor{bottom:6rem !important}
 .te-advisor-icon{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:1rem}
 .te-advisor-pulse{position:absolute;top:8px;right:14px;width:8px;height:8px;border-radius:50%;background:#1EFF8E;box-shadow:0 0 0 0 rgba(30,255,142,0.7);animation:te-advisor-pulse 2s infinite}
 @keyframes te-advisor-pulse{0%{box-shadow:0 0 0 0 rgba(30,255,142,0.7)}70%{box-shadow:0 0 0 12px rgba(30,255,142,0)}100%{box-shadow:0 0 0 0 rgba(30,255,142,0)}}
@@ -2166,7 +2168,7 @@ svg.mv-mq-geo{display:none !important;visibility:hidden !important;opacity:0 !im
 <section class="hero">
   <div class="hero-content">
     <span class="hero-eyebrow">A Path of Tantra &middot; Since 1973</span>
-    <h1 class="te-split"><span class="te-split-letter">A</span><span class="te-split-letter">w</span><span class="te-split-letter">a</span><span class="te-split-letter">k</span><span class="te-split-letter">e</span><span class="te-split-letter">n</span><span class="te-split-letter">&nbsp;</span><span class="te-split-letter">y</span><span class="te-split-letter">o</span><span class="te-split-letter">u</span><span class="te-split-letter">r</span><br><span class="te-split-letter">t</span><span class="te-split-letter">r</span><span class="te-split-letter">u</span><span class="te-split-letter">e</span><span class="te-split-letter">&nbsp;</span><em><span class="te-split-letter">e</span><span class="te-split-letter">s</span><span class="te-split-letter">s</span><span class="te-split-letter">e</span><span class="te-split-letter">n</span><span class="te-split-letter">c</span><span class="te-split-letter">e</span></em></h1>
+    <h1>Awaken your<br>true <em>essence</em></h1>
     <p class="hero-lead">53 years of teaching, distilled into self-paced quests, retreats in Bali, and a worldwide community guided by Ma Ananda Sarita.</p>
     <div class="hero-ctas">
       <a href="signup.html" class="btn-pill btn-pill-primary">Become a Member</a>
