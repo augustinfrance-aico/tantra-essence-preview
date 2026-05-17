@@ -1850,6 +1850,12 @@ svg.mv-mq-geo{display:none !important;visibility:hidden !important;opacity:0 !im
   .mv-marquee-track{height:185px !important}
   .mv-mq-title{font-size:1.2rem !important}
 }
+
+/* Updated logo to match real Tantra Essence brand */
+.logo-lotus{width:54px !important;height:44px !important;flex-shrink:0 !important;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.08))}
+.logo-tantra{font-family:'DM Serif Display',serif !important;font-size:1.6rem !important;letter-spacing:0.1em !important;color:#D63E5C !important;line-height:1}
+.logo-essence{font-family:'DM Serif Display',serif !important;font-size:0.78rem !important;letter-spacing:0.42em !important;color:#D63E5C !important;text-transform:uppercase;display:block;margin-top:3px;font-weight:400}
+.logo{display:inline-flex !important;align-items:center !important;gap:0.85rem !important}
 </style>
 </head>
 <body class="has-live-bar">
@@ -1863,20 +1869,28 @@ svg.mv-mq-geo{display:none !important;visibility:hidden !important;opacity:0 !im
 <nav id="nav">
   <div class="nav-inner">
     <a href="#" class="logo">
-      <svg class="logo-lotus" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <svg class="logo-lotus" viewBox="0 0 80 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs>
-          <linearGradient id="lotusGrad" x1="0%" y1="0%" x2="50%" y2="100%">
-            <stop offset="0%" stop-color="#F7D560"/>
-            <stop offset="55%" stop-color="#E9A93C"/>
-            <stop offset="100%" stop-color="#C9A35E"/>
+          <linearGradient id="lotusYellow" x1="0%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#FFD93D"/>
+            <stop offset="50%" stop-color="#F7B928"/>
+            <stop offset="100%" stop-color="#E89B00"/>
           </linearGradient>
         </defs>
-        <path d="M32 56 C 14 50 6 32 14 18 C 22 28 26 38 32 56 Z" fill="#E8D4A2" opacity="0.85"/>
-        <path d="M32 56 C 50 50 58 32 50 18 C 42 28 38 38 32 56 Z" fill="#E8D4A2" opacity="0.85"/>
-        <path d="M32 58 C 18 54 10 38 16 24 C 24 32 28 44 32 58 Z" fill="url(#lotusGrad)"/>
-        <path d="M32 58 C 46 54 54 38 48 24 C 40 32 36 44 32 58 Z" fill="url(#lotusGrad)"/>
-        <path d="M32 58 C 28 50 28 38 32 22 C 36 38 36 50 32 58 Z" fill="#F7D560"/>
-        <ellipse cx="32" cy="58" rx="14" ry="2" fill="#9E7F47" opacity="0.4"/>
+        <!-- Outer petals lighter -->
+        <path d="M40 60 C 24 56 14 42 18 28 C 24 36 30 46 40 60 Z" fill="#FFD93D" opacity="0.85"/>
+        <path d="M40 60 C 56 56 66 42 62 28 C 56 36 50 46 40 60 Z" fill="#FFD93D" opacity="0.85"/>
+        <!-- Mid petals -->
+        <path d="M40 62 C 28 58 18 46 22 30 C 28 38 34 50 40 62 Z" fill="url(#lotusYellow)"/>
+        <path d="M40 62 C 52 58 62 46 58 30 C 52 38 46 50 40 62 Z" fill="url(#lotusYellow)"/>
+        <!-- Center petal -->
+        <path d="M40 62 C 36 56 36 42 40 22 C 44 42 44 56 40 62 Z" fill="#FFC107"/>
+        <!-- Small flame petals on top -->
+        <path d="M40 22 C 38 20 38 16 40 8 C 42 16 42 20 40 22 Z" fill="#FFD93D"/>
+        <path d="M32 28 C 28 22 26 18 30 12 C 32 18 33 22 32 28 Z" fill="#FFD93D" opacity="0.7"/>
+        <path d="M48 28 C 52 22 54 18 50 12 C 48 18 47 22 48 28 Z" fill="#FFD93D" opacity="0.7"/>
+        <!-- Base shadow -->
+        <ellipse cx="40" cy="62" rx="18" ry="2" fill="#9E7F47" opacity="0.3"/>
       </svg>
       <span class="logo-text">
         <span class="logo-tantra">TANTRA</span>
@@ -1996,14 +2010,168 @@ svg.mv-mq-geo{display:none !important;visibility:hidden !important;opacity:0 !im
     <div class="mv-marquee-track">
       <a href="program-goddess-unveiled.html" class="mv-mq-card">
         <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"></div>
-        <svg class="mv-mq-geo" viewBox="0 0 460 287"><polygon points="350,20 440,143 350,266 230,266 140,143 230,20" fill="none" stroke="#FF5566" stroke-width="2"/><polygon points="350,55 410,143 350,231 270,231 210,143 270,55" fill="none" stroke="#FF5566" stroke-width="1.5"/></svg>
+        <span class="mv-pop-badge">POPULAR</span>
         <div class="mv-mq-content"><div class="mv-mq-eyebrow">Bestseller</div><div class="mv-mq-title">UNVEIL THE<em>Goddess Within</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="program-master-lover.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/7a573f-45a7-d643-877b-b148047c036_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-01.jpg')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Most loved</div><div class="mv-mq-title">MASTER<em>The Tantric Path</em></div><div class="mv-mq-author">SARITA & GEHO</div></div>
+      </a>
+      <a href="program-tantra-massage-7-chakras.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/13a338b-4a7f-4f58-7fd4-54088ab646d_tantra-essence-event-tantra-massage-practitioner-training-14.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Bodywork</div><div class="mv-mq-title">SACRED<em>Massage of 7 Chakras</em></div><div class="mv-mq-author">SARITA & MODESTAS</div></div>
+      </a>
+      <a href="tantra-teacher-training.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5b6a5e7-aa9e-7e3-d7a-aab14d2cd56e_tantra-essence-event-tantra-massage-practitioner-training-1.png')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Flagship · Bali</div><div class="mv-mq-title">BECOME A<em>Tantra Teacher</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="tantra-for-couples.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/8d4d2c2-cb3-fe54-6c08-65f3d24aebab_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-02.jpg')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">For couples</div><div class="mv-mq-title">SACRED<em>Union of Two Souls</em></div><div class="mv-mq-author">SARITA & GEHO</div></div>
+      </a>
+      <a href="tantra-for-women.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-essence-events.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">For women</div><div class="mv-mq-title">DIVINE<em>Feminine Awakening</em></div><div class="mv-mq-author">USHA DEVI</div></div>
+      </a>
+      <a href="meditations.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-portrait-orange.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">21 days</div><div class="mv-mq-title">WOMB<em>Wisdom Meditations</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="masterclass.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-online-courses.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">90 min · free</div><div class="mv-mq-title">HIDDEN<em>Science of Awakening</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="program-goddess-unveiled.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"></div>
+        <span class="mv-pop-badge">POPULAR</span>
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Bestseller</div><div class="mv-mq-title">UNVEIL THE<em>Goddess Within</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="program-master-lover.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/7a573f-45a7-d643-877b-b148047c036_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-01.jpg')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Most loved</div><div class="mv-mq-title">MASTER<em>The Tantric Path</em></div><div class="mv-mq-author">SARITA & GEHO</div></div>
+      </a>
+      <a href="program-tantra-massage-7-chakras.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/13a338b-4a7f-4f58-7fd4-54088ab646d_tantra-essence-event-tantra-massage-practitioner-training-14.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Bodywork</div><div class="mv-mq-title">SACRED<em>Massage of 7 Chakras</em></div><div class="mv-mq-author">SARITA & MODESTAS</div></div>
+      </a>
+      <a href="tantra-teacher-training.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5b6a5e7-aa9e-7e3-d7a-aab14d2cd56e_tantra-essence-event-tantra-massage-practitioner-training-1.png')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Flagship · Bali</div><div class="mv-mq-title">BECOME A<em>Tantra Teacher</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="tantra-for-couples.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/8d4d2c2-cb3-fe54-6c08-65f3d24aebab_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-02.jpg')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">For couples</div><div class="mv-mq-title">SACRED<em>Union of Two Souls</em></div><div class="mv-mq-author">SARITA & GEHO</div></div>
+      </a>
+      <a href="tantra-for-women.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-essence-events.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">For women</div><div class="mv-mq-title">DIVINE<em>Feminine Awakening</em></div><div class="mv-mq-author">USHA DEVI</div></div>
+      </a>
+      <a href="meditations.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-portrait-orange.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">21 days</div><div class="mv-mq-title">WOMB<em>Wisdom Meditations</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="masterclass.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-online-courses.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">90 min · free</div><div class="mv-mq-title">HIDDEN<em>Science of Awakening</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+    </div></div>
 <div class="mv-marquee-track-wrap" style="margin-top:1.2rem">
   <div class="mv-marquee-track mv-marquee-track-2">
-    <a href="meditations.html" class="mv-mq-card">
-      <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"></div>
-      <svg class="mv-mq-geo" viewBox="0 0 460 287"><polygon points="350,20 440,143 350,266 230,266 140,143 230,20" fill="none" stroke="#7A3CFF" stroke-width="2"/></svg>
-      <div class="mv-mq-content"><div class="mv-mq-eyebrow">Daily practice</div><div class="mv-mq-title">CHAKRA<em>Cleanse</em></div><div class="mv-mq-author">SARITA</div></div>
+      <a href="meditations.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-portraits-2.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Daily practice</div><div class="mv-mq-title">CHAKRA<em>Cleanse</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="program-master-lover.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/7a573f-45a7-d643-877b-b148047c036_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-01.jpg')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Couples</div><div class="mv-mq-title">POLARITY<em>In Tantric Union</em></div><div class="mv-mq-author">GEHO</div></div>
+      </a>
+      <a href="program-goddess-unveiled.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Online</div><div class="mv-mq-title">SACRED<em>Sexuality for Women</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="webinar-signup.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-essence-events.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Live</div><div class="mv-mq-title">MONTHLY<em>Sangha Circle</em></div><div class="mv-mq-author">KAULA FACULTY</div></div>
+      </a>
+      <a href="tantra-for-men.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/8d4d2c2-cb3-fe54-6c08-65f3d24aebab_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-02.jpg')"></div>
+        <span class="mv-pop-badge">POPULAR</span>
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">For men</div><div class="mv-mq-title">MULTI-ORGASMIC<em>Man Practice</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="program-tantra-massage-7-chakras.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/13a338b-4a7f-4f58-7fd4-54088ab646d_tantra-essence-event-tantra-massage-practitioner-training-14.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Certification</div><div class="mv-mq-title">PRACTITIONER<em>Massage Training</em></div><div class="mv-mq-author">MODESTAS</div></div>
+      </a>
+      <a href="apply-bali.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5b6a5e7-aa9e-7e3-d7a-aab14d2cd56e_tantra-essence-event-tantra-massage-practitioner-training-1.png')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Apply now</div><div class="mv-mq-title">BALI<em>July 2026 Cohort</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="meditations.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-portrait-orange.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Audio</div><div class="mv-mq-title">HEART<em>Opening Mantra</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="meditations.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-portraits-2.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Daily practice</div><div class="mv-mq-title">CHAKRA<em>Cleanse</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="program-master-lover.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/7a573f-45a7-d643-877b-b148047c036_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-01.jpg')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Couples</div><div class="mv-mq-title">POLARITY<em>In Tantric Union</em></div><div class="mv-mq-author">GEHO</div></div>
+      </a>
+      <a href="program-goddess-unveiled.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Online</div><div class="mv-mq-title">SACRED<em>Sexuality for Women</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="webinar-signup.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-essence-events.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Live</div><div class="mv-mq-title">MONTHLY<em>Sangha Circle</em></div><div class="mv-mq-author">KAULA FACULTY</div></div>
+      </a>
+      <a href="tantra-for-men.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/8d4d2c2-cb3-fe54-6c08-65f3d24aebab_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-02.jpg')"></div>
+        <span class="mv-pop-badge">POPULAR</span>
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">For men</div><div class="mv-mq-title">MULTI-ORGASMIC<em>Man Practice</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="program-tantra-massage-7-chakras.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/13a338b-4a7f-4f58-7fd4-54088ab646d_tantra-essence-event-tantra-massage-practitioner-training-14.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Certification</div><div class="mv-mq-title">PRACTITIONER<em>Massage Training</em></div><div class="mv-mq-author">MODESTAS</div></div>
+      </a>
+      <a href="apply-bali.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5b6a5e7-aa9e-7e3-d7a-aab14d2cd56e_tantra-essence-event-tantra-massage-practitioner-training-1.png')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Apply now</div><div class="mv-mq-title">BALI<em>July 2026 Cohort</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+      <a href="meditations.html" class="mv-mq-card">
+        <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-portrait-orange.webp')"></div>
+        
+        <div class="mv-mq-content"><div class="mv-mq-eyebrow">Audio</div><div class="mv-mq-title">HEART<em>Opening Mantra</em></div><div class="mv-mq-author">SARITA</div></div>
+      </a>
+    </div></div>
     </a>
     <a href="meditations.html" class="mv-mq-card">
       <div class="mv-mq-img" style="background-image:url('sarita-photos/sarita-essence-events.webp')"></div>
