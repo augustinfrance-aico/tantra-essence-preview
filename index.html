@@ -1158,8 +1158,8 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
 .mv-marquee-title{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.5vw,3rem);color:#1A0D11;line-height:1.1;max-width:780px;margin:0 auto 0.8rem;letter-spacing:-0.01em}
 .mv-marquee-title em{font-style:italic;color:#8C3645}
 .mv-marquee-sub{font-family:'Inter',sans-serif;font-size:1.05rem;color:#5E4A4E;max-width:620px;margin:0 auto;line-height:1.6}
-.mv-marquee-track-wrap{position:relative;width:100%;overflow:hidden;mask-image:linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%)}
-.mv-marquee-track{display:flex;gap:1.5rem;width:max-content;animation:mv-scroll-x 60s linear infinite;will-change:transform}
+.mv-marquee-track-wrap{position:relative;width:100%;overflow:hidden;padding:1rem 0}
+.mv-marquee-track{display:flex;gap:1.5rem;width:max-content;min-height:290px;animation:mv-scroll-x 60s linear infinite;will-change:transform}
 .mv-marquee-track:hover{animation-play-state:paused}
 @keyframes mv-scroll-x{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 0.75rem))}}
 .mv-mq-card{flex:0 0 460px;aspect-ratio:16/10;border-radius:22px;overflow:hidden;position:relative;cursor:pointer;text-decoration:none;color:#fff;display:block;box-shadow:0 12px 36px rgba(45,26,30,0.18);transition:transform 0.6s cubic-bezier(0.16,1,0.3,1),box-shadow 0.6s cubic-bezier(0.16,1,0.3,1)}
@@ -1484,7 +1484,7 @@ body{font-feature-settings:'kern','liga'}
 .mv-compare-table{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 14px 40px rgba(45,26,30,0.06);border:1px solid rgba(140,54,69,0.08)}
 .mv-compare-row{display:grid;grid-template-columns:1.6fr 1fr 1fr;align-items:center;padding:1.4rem 2rem;border-bottom:1px solid rgba(0,0,0,0.05);font-family:'Inter',sans-serif;font-size:0.98rem;color:#1A0D11}
 .mv-compare-row:last-child{border-bottom:0}
-.mv-compare-row.head{background:linear-gradient(135deg,#1A0D11,#5D1F2C);color:#fff;font-family:'DM Serif Display',serif;font-size:1.2rem;padding:1.8rem 2rem}
+.mv-compare-row.head{background:linear-gradient(135deg,#1A0D11,#5D1F2C);color:#fff;font-family:'DM Serif Display',serif;font-size:1.2rem;padding:1.8rem 2rem;min-height:auto;max-height:84px;height:auto;line-height:1.2}
 .mv-compare-row.head .mv-compare-cell{color:#fff}
 .mv-compare-row.head .mv-compare-cell.featured{color:#F7D560;font-style:italic;position:relative}
 .mv-compare-row.head .mv-compare-cell.featured::after{content:'POPULAR';position:absolute;top:-12px;right:0;background:linear-gradient(135deg,#F7D560,#E9A93C);color:#5D1F2C;font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:900;letter-spacing:0.18em;padding:0.3rem 0.6rem;border-radius:9999px}
@@ -1495,6 +1495,14 @@ body{font-feature-settings:'kern','liga'}
 .mv-compare-cell.featured{background:rgba(247,213,96,0.06)}
 @media (max-width:680px){.mv-compare-row{grid-template-columns:2fr 1fr 1fr;padding:1rem 1rem;font-size:0.88rem}}
 
+
+/* === BUG FIX === */
+.mv-compare-row,.mv-compare-row.head,.mv-compare-row .mv-compare-cell{aspect-ratio:auto !important;min-height:auto;flex:initial}
+.mv-mq-card{aspect-ratio:16/10 !important;min-height:290px}
+.mv-marquee-track-wrap{min-height:300px}
+
+.mv-mq-card{opacity:1 !important;visibility:visible !important;display:block !important}
+.mv-mq-img{background-color:#3d1a23}
 </style>
 </head>
 <body class="has-live-bar">
