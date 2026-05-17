@@ -165,9 +165,32 @@ nav.scrolled{background:rgba(244,241,232,0.95);box-shadow:0 1px 16px rgba(45,42,
 
 /* PRICE BOX */
 .price-section{padding:6rem 0;background:var(--ivoire)}
-.price-box{max-width:560px;margin:0 auto;background:var(--paper);border-radius:var(--radius-lg);padding:3rem 2.5rem;text-align:center;box-shadow:var(--shadow-lg);border:2px solid var(--gold-soft);position:relative}
-.price-box-badge{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.5rem 1.2rem;border-radius:var(--radius-full);font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;box-shadow:0 4px 14px rgba(201,163,94,0.4)}
-.price-box h2{font-size:clamp(1.8rem,3vw,2.3rem);margin-bottom:1.5rem;color:var(--maroon)}
+.price-box{max-width:720px;margin:0 auto;background:linear-gradient(180deg,#3a1820,#1f0d12);color:#fff;border-radius:24px;padding:3rem 2.5rem;text-align:left;box-shadow:0 30px 80px rgba(31,13,18,0.5);border:1px solid rgba(247,213,96,0.15);position:relative;overflow:hidden}
+.price-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,rgba(247,213,96,0.12) 0%,transparent 40%);pointer-events:none}
+.price-box-badge{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);padding:0.5rem 1.2rem;border-radius:var(--radius-full);font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;box-shadow:0 4px 14px rgba(201,163,94,0.4);z-index:2}
+.price-box h2{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4vw,3.2rem);margin-bottom:1.2rem;color:#fff;font-weight:400;line-height:1.05;position:relative}
+.price-box h2 em{font-style:italic;background:linear-gradient(135deg,#F7D560 0%,#C9A35E 50%,#8C3645 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.price-box-lead{font-size:1.05rem;color:rgba(255,255,255,0.78);line-height:1.6;margin-bottom:1.6rem;position:relative;max-width:540px}
+.price-box-stats{display:flex;gap:2rem;padding:1.4rem 0;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:1.8rem;flex-wrap:wrap;position:relative}
+.price-box-stat strong{display:block;font-family:'DM Serif Display',serif;font-size:1.7rem;color:#fff;font-weight:400;line-height:1}
+.price-box-stat span{display:block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-top:0.4rem}
+.price-box-stat em{font-style:italic;color:var(--gold-bright)}
+.price-row{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.8rem;flex-wrap:wrap;position:relative}
+.price-row .pmv-current{font-family:'DM Serif Display',serif;font-size:3.2rem;color:#fff;line-height:1;font-weight:400}
+.price-row .pmv-was{font-size:1.6rem;color:rgba(255,255,255,0.45);text-decoration:line-through;font-family:'DM Serif Display',serif;line-height:1}
+.price-row .pmv-save{background:#10D4A0;color:#0A2018;padding:0.55rem 1.1rem;border-radius:9999px;font-size:0.9rem;font-weight:700;letter-spacing:0.02em}
+.price-countdown{margin-bottom:1.8rem;position:relative}
+.price-countdown-label{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:0.8rem;display:block}
+.price-countdown-grid{display:flex;gap:0.6rem;flex-wrap:wrap}
+.pcd-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:0.7rem 0.6rem;min-width:62px;text-align:center}
+.pcd-num{font-family:'DM Serif Display',serif;font-size:1.5rem;color:#fff;line-height:1;font-weight:400}
+.pcd-lbl{font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-top:0.3rem;display:block}
+.price-box .price-features{list-style:none;margin:1.6rem 0;padding:0;position:relative;color:rgba(255,255,255,0.85);font-size:0.95rem}
+.price-box .price-features li{padding:0.5rem 0 0.5rem 1.8rem;position:relative}
+.price-box .price-features li::before{content:'✓';position:absolute;left:0;top:0.5rem;color:var(--gold-bright);font-weight:700}
+.price-box .price-guarantee{color:rgba(255,255,255,0.55);font-size:0.85rem;margin-top:1rem;text-align:center;position:relative}
+.btn-pill-checkout{display:flex;align-items:center;justify-content:center;width:100%;padding:1.25rem 2rem;background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);border-radius:9999px;font-family:'DM Serif Display',serif;font-size:1.2rem;text-decoration:none;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);position:relative;box-shadow:0 8px 26px rgba(247,213,96,0.35);font-weight:400;letter-spacing:0.01em}
+.btn-pill-checkout:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(247,213,96,0.55)}
 .price-was{color:var(--ink-muted);text-decoration:line-through;font-size:1.05rem;margin-bottom:0.3rem}
 .price-now{font-family:'DM Serif Display',serif;font-size:3.5rem;color:var(--maroon);line-height:1;margin-bottom:0.5rem}
 .price-plan{color:var(--ink-sub);font-size:0.95rem;margin-bottom:2rem}
@@ -362,13 +385,14 @@ footer a:hover{color:var(--gold-bright)}
 </style>
 <script>
 (function(){
-  var end=Date.now()+47*3600*1000+53*60*1000+12*1000;
+  var end=Date.now()+3*86400000+6*3600000+52*60000+52*1000;
   var el=document.getElementById('countdown');
-  if(!el)return;
+  var pd=document.getElementById('pcd-d'),ph=document.getElementById('pcd-h'),pm=document.getElementById('pcd-m'),ps=document.getElementById('pcd-s');
   function tick(){
     var d=end-Date.now();if(d<0)d=0;
-    var h=Math.floor(d/3600000),m=Math.floor((d%3600000)/60000),s=Math.floor((d%60000)/1000);
-    el.textContent=String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+    var dd=Math.floor(d/86400000),hh=Math.floor((d%86400000)/3600000),mm=Math.floor((d%3600000)/60000),ss=Math.floor((d%60000)/1000);
+    if(el){var totalH=Math.floor(d/3600000);el.textContent=String(totalH).padStart(2,'0')+':'+String(mm).padStart(2,'0')+':'+String(ss).padStart(2,'0');}
+    if(pd){pd.textContent=String(dd).padStart(2,'0');ph.textContent=String(hh).padStart(2,'0');pm.textContent=String(mm).padStart(2,'0');ps.textContent=String(ss).padStart(2,'0');}
   }
   tick();setInterval(tick,1000);
 })();
@@ -705,22 +729,38 @@ footer a:hover{color:var(--gold-bright)}
   <div class="container">
     <div class="price-box">
       <span class="price-box-badge">Most loved program</span>
-      <h2>Goddess Unveiled</h2>
-      <div style="margin:1.2rem 0 0.6rem;font-size:0.9rem;color:var(--ink-sub)">Program <strong style="color:var(--ink)">$1,200</strong> &nbsp;+&nbsp; Bonuses <strong style="color:var(--ink)">$938</strong></div>
-      <div class="price-was">Total value: $2,138</div>
-      <div class="price-now">$599</div>
-      <div class="price-plan">or 3 monthly payments of $229</div>
+      <h2>Goddess <em>Unveiled</em></h2>
+      <p class="price-box-lead">A 12-module sacred journey to rediscover your inner divine feminine nature, embody self-love, and reclaim the goddess within. Created by Ma Ananda Sarita from 53 years of teaching.</p>
+      <div class="price-box-stats">
+        <div class="price-box-stat"><strong>12</strong><span>Modules</span></div>
+        <div class="price-box-stat"><strong>40+ <em>hrs</em></strong><span>Teaching</span></div>
+        <div class="price-box-stat"><strong>4.9★</strong><span>2,847 reviews</span></div>
+        <div class="price-box-stat"><strong>10K+</strong><span>Students</span></div>
+      </div>
+      <div class="price-row">
+        <span class="pmv-current">$399</span>
+        <span class="pmv-was">$1,200</span>
+        <span class="pmv-save">SAVE 67%</span>
+      </div>
+      <div class="price-countdown">
+        <span class="price-countdown-label">Offer ends in</span>
+        <div class="price-countdown-grid">
+          <div class="pcd-box"><span class="pcd-num" id="pcd-d">03</span><span class="pcd-lbl">Days</span></div>
+          <div class="pcd-box"><span class="pcd-num" id="pcd-h">06</span><span class="pcd-lbl">Hrs</span></div>
+          <div class="pcd-box"><span class="pcd-num" id="pcd-m">52</span><span class="pcd-lbl">Min</span></div>
+          <div class="pcd-box"><span class="pcd-num" id="pcd-s">52</span><span class="pcd-lbl">Sec</span></div>
+        </div>
+      </div>
       <ul class="price-features">
         <li>12 video modules · 40+ hours of teaching</li>
         <li>Guided meditations &amp; embodiment practices</li>
         <li>Private community of women on the same path</li>
         <li>Monthly live Q&amp;A with Sarita</li>
         <li>Lifetime access — yours forever</li>
-        <li>Certificate of completion</li>
-        <li>🎁 4 free bonuses ($938 value)</li>
+        <li>4 free bonuses ($938 value)</li>
       </ul>
-      <a href="/checkout/goddess-unveiled" class="btn btn-gold" style="width:100%;justify-content:center;padding:1.2rem">Reserve my spot →</a>
-      <div class="price-guarantee">14-day money-back guarantee · Secure checkout · Lifetime access</div>
+      <a href="/checkout/goddess-unveiled" class="btn-pill-checkout">Reserve my spot →</a>
+      <div class="price-guarantee">14-day money-back guarantee · Secure Stripe checkout · Lifetime access</div>
     </div>
     <div class="trust-badges">
       <div class="trust-badge">

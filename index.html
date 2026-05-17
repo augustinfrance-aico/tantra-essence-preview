@@ -7,7 +7,7 @@
 <meta name="description" content="Reconnect with your innate divine nature through Tantra. Online programs, retreats in Bali, and a worldwide community of teachers — guided by Ma Ananda Sarita, disciple of Osho since 1973.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500;700&family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Bodoni+Moda:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --ivoire:#FAF5EC; --ivoire-deep:#F2E9D6; --paper:#FEFBF4;
@@ -92,7 +92,20 @@ nav.scrolled{background:rgba(244,241,232,0.95);box-shadow:0 1px 16px rgba(45,42,
 .hero h1{font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.05;margin-bottom:1.5rem;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,0.3);max-width:920px}
 .hero h1 em{font-style:italic;color:#FFE793}
 .hero-lead{font-size:clamp(1.1rem,1.6vw,1.35rem);max-width:620px;color:rgba(255,255,255,0.92);margin-bottom:2.5rem;line-height:1.6;text-shadow:0 2px 12px rgba(0,0,0,0.4)}
-.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-ctas{display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:0.5rem}
+/* === MINDVALLEY ROUNDED PILL CTA === */
+.btn-pill{display:inline-flex;align-items:center;justify-content:center;padding:1.05rem 2.2rem;border-radius:9999px;font-family:'Inter',sans-serif;font-size:1.02rem;font-weight:600;letter-spacing:0.005em;text-decoration:none;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);cursor:pointer;min-width:175px;text-align:center;line-height:1;border:0;position:relative;overflow:hidden}
+.btn-pill-primary{background:#fff;color:var(--maroon-deep);box-shadow:0 8px 26px rgba(0,0,0,0.22);font-weight:700;letter-spacing:0.01em}
+.btn-pill-primary:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(0,0,0,0.32);background:#FAF5EC}
+.btn-pill-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.55)}
+.btn-pill-outline:hover{background:rgba(255,255,255,0.12);border-color:#fff;transform:translateY(-2px)}
+.btn-pill-gold{background:linear-gradient(135deg,#F7D560,#E9A93C);color:var(--maroon-deep);box-shadow:0 6px 22px rgba(201,163,94,0.45)}
+.btn-pill-gold:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(201,163,94,0.6)}
+.btn-pill-bali{background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.25);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-weight:500;padding:0.95rem 1.7rem;min-width:auto;font-size:0.95rem}
+.btn-pill-bali:hover{background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.5);transform:translateY(-2px)}
+.btn-pill-bali span{transition:transform 0.4s ease;display:inline-block;margin-left:0.4rem}
+.btn-pill-bali:hover span{transform:translateX(4px)}
+
 .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1.1rem 2rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.1rem;text-decoration:none;transition:var(--transition);cursor:pointer;border:0}
 .btn-gold{background:linear-gradient(135deg,#F7D560 0%,#E9A93C 100%);color:var(--maroon-deep);box-shadow:0 8px 24px rgba(201,163,94,0.4)}
 .btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(201,163,94,0.55);background:linear-gradient(135deg,#FFE793 0%,#F0B544 100%)}
@@ -166,6 +179,29 @@ nav.scrolled{background:rgba(244,241,232,0.95);box-shadow:0 1px 16px rgba(45,42,
    ============================================ */
 .programs{padding:6rem 0;background:var(--ivoire-deep)}
 .programs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+
+/* === MINDVALLEY-STYLE PROGRAM CAROUSEL === */
+.programs-mv-wrap{position:relative;margin-top:2.5rem}
+.programs-mv{display:flex;gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 0 2.5rem;scrollbar-width:thin;scrollbar-color:var(--maroon) transparent;-webkit-overflow-scrolling:touch;scroll-padding-left:1rem}
+.programs-mv::-webkit-scrollbar{height:6px}
+.programs-mv::-webkit-scrollbar-track{background:rgba(140,54,69,0.08);border-radius:9999px}
+.programs-mv::-webkit-scrollbar-thumb{background:var(--maroon);border-radius:9999px}
+.prog-mv-card{flex:0 0 380px;max-width:380px;scroll-snap-align:start;aspect-ratio:16/10;position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;text-decoration:none;color:#fff;display:block;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);box-shadow:0 10px 32px rgba(45,26,30,0.18)}
+.prog-mv-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(45,26,30,0.32)}
+.prog-mv-card .prog-mv-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1.2s cubic-bezier(0.16,1,0.3,1);z-index:0}
+.prog-mv-card:hover .prog-mv-img{transform:scale(1.08)}
+.prog-mv-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.15) 0%,transparent 40%,rgba(45,26,30,0.85) 100%);z-index:1;pointer-events:none}
+.prog-mv-hex{position:absolute;top:1.4rem;right:1.4rem;width:90px;height:100px;z-index:2;opacity:0.6;transition:transform 0.9s cubic-bezier(0.16,1,0.3,1);pointer-events:none}
+.prog-mv-card:hover .prog-mv-hex{transform:rotate(20deg) scale(1.08);opacity:0.85}
+.prog-mv-tag{position:absolute;top:1.4rem;left:1.4rem;z-index:3;display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--maroon-deep);background:rgba(255,255,255,0.95);padding:0.4rem 0.9rem;border-radius:9999px;backdrop-filter:blur(8px)}
+.prog-mv-body{position:absolute;bottom:0;left:0;right:0;padding:1.6rem 1.5rem 1.4rem;z-index:2}
+.prog-mv-body h3{font-family:'DM Serif Display',serif;font-size:1.7rem;line-height:1.08;color:#fff;margin-bottom:0.5rem;text-shadow:0 2px 14px rgba(0,0,0,0.4)}
+.prog-mv-body h3 em{font-style:italic;color:var(--gold-bright)}
+.prog-mv-trainer{font-size:0.72rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-bright);margin-top:0.3rem;text-shadow:0 1px 8px rgba(0,0,0,0.5)}
+.programs-mv-controls{display:flex;justify-content:center;gap:0.8rem;margin-top:0.5rem}
+.programs-mv-btn{width:44px;height:44px;border-radius:50%;background:var(--paper);border:1px solid var(--border-soft);color:var(--maroon-deep);font-size:1.2rem;cursor:pointer;transition:var(--transition);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.programs-mv-btn:hover{background:var(--maroon-deep);color:#fff;transform:scale(1.08)}
+@media (max-width:760px){.prog-mv-card{flex:0 0 300px;max-width:300px}.prog-mv-body h3{font-size:1.4rem}}
 .program-card{background:var(--paper);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);transition:var(--transition);border:1px solid var(--border-soft);position:relative;text-decoration:none;color:inherit}
 .program-card *{text-decoration:none}
 .event-card *,.podcast-card *,.story-card *{text-decoration:none}
@@ -664,38 +700,60 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
 .popup-overlay.open .popup-card{transform:scale(1) translateY(0)}
 .popup-close{position:absolute;top:1rem;right:1rem;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.85);border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--maroon);transition:var(--transition);z-index:2}
 .popup-close:hover{background:#fff;transform:scale(1.1)}
-.popup-img{position:relative;background:linear-gradient(135deg,#E8D4A2 0%,#9E7F47 100%);overflow:hidden;min-height:360px}
+.popup-img{position:relative;background:linear-gradient(135deg,#E8D4A2 0%,#9E7F47 100%);overflow:hidden;min-height:380px}
+.popup-img img{width:100%;height:100%;object-fit:cover;object-position:center 25%;position:absolute;inset:0}
 .popup-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%}
 .popup-img::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(140,54,69,0.25) 0%,transparent 50%,rgba(140,54,69,0.35) 100%)}
-.popup-content{padding:2.8rem 2.6rem;display:flex;flex-direction:column;justify-content:center}
-.popup-eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--maroon);margin-bottom:1rem}
-.popup-content h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.1;margin-bottom:1rem;color:var(--ink)}
+.popup-content{padding:2.4rem 2.4rem 2rem;display:flex;flex-direction:column;justify-content:center;font-size:0.95rem}
+.popup-eyebrow{display:inline-block;font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.28em;color:var(--maroon);background:rgba(140,54,69,0.08);padding:0.4rem 0.9rem;border-radius:9999px;margin-bottom:0.85rem;text-transform:uppercase;align-self:flex-start}
+.popup-content h2{font-family:'DM Serif Display',serif;font-size:clamp(1.7rem,2.6vw,2rem);line-height:1.15;margin-bottom:0.6rem;color:var(--maroon-deep);font-weight:400}
 .popup-content h2 em{font-style:italic;color:var(--maroon)}
-.popup-content p{color:var(--ink-sub);font-size:1rem;margin-bottom:1.6rem;line-height:1.6}
-.popup-form{display:flex;flex-direction:column;gap:0.8rem;margin-bottom:1rem}
-.popup-form input[type="email"]{padding:0.95rem 1.2rem;border:1px solid var(--border);border-radius:var(--radius-full);font-family:'Inter',sans-serif;font-size:0.98rem;background:#fff;color:var(--ink);transition:var(--transition);outline:0}
-.popup-form input[type="email"]:focus{border-color:var(--maroon);box-shadow:0 0 0 3px rgba(140,54,69,0.1)}
-.popup-form button{background:linear-gradient(135deg,#F7D560 0%,#E9A93C 100%);color:var(--maroon-deep);padding:1.05rem 1.7rem;border-radius:var(--radius-full);font-family:'DM Serif Display',serif;font-size:1.08rem;border:0;cursor:pointer;transition:var(--transition);box-shadow:0 4px 14px rgba(201,163,94,0.35)}
-.popup-form button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,163,94,0.5)}
-.popup-trust{font-size:0.78rem;color:var(--ink-muted);text-align:center}
-.popup-trust strong{color:var(--maroon);font-weight:600}
+.popup-greeting{font-size:0.92rem;color:var(--ink);margin-bottom:0.8rem;font-weight:500}
+.popup-content p{color:var(--ink-sub);font-size:0.92rem;margin-bottom:0.7rem;line-height:1.55}
+.popup-content p a{color:var(--maroon);text-decoration:underline;text-decoration-color:rgba(140,54,69,0.4);text-underline-offset:2px;font-weight:500}
+.popup-content p:last-of-type{margin-bottom:1.2rem}
+.popup-signature{margin-top:1rem;padding-top:1rem;border-top:1px dashed rgba(140,54,69,0.18)}
+.popup-sig-line{display:block;font-family:'Caveat',cursive;font-size:1.6rem;color:var(--maroon-deep);line-height:1;letter-spacing:0.02em;font-weight:500}
+.popup-sig-title{display:block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);margin-top:0.3rem}
+.popup-form{display:flex;flex-direction:column;gap:0.7rem;margin-bottom:0.4rem}
+.popup-form-row{display:grid;grid-template-columns:1fr 1.3fr;gap:0.6rem}
+.popup-form input{padding:0.85rem 1rem;border:1px solid rgba(0,0,0,0.12);border-radius:10px;font-family:'Inter',sans-serif;font-size:0.92rem;background:#fff;color:var(--ink);transition:var(--transition);outline:0;width:100%}
+.popup-form input:focus{border-color:var(--maroon);box-shadow:0 0 0 3px rgba(140,54,69,0.1)}
+.popup-form button{background:linear-gradient(135deg,#5D1F2C 0%,#8C3645 100%);color:#fff;padding:1.05rem 1.5rem;border-radius:9999px;font-family:'Inter',sans-serif;font-size:1rem;font-weight:700;border:0;cursor:pointer;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);box-shadow:0 6px 20px rgba(93,31,44,0.3);letter-spacing:0.02em;position:relative;overflow:hidden}
+.popup-form button::after{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transition:left 0.7s cubic-bezier(0.16,1,0.3,1)}
+.popup-form button:hover::after{left:150%}
+.popup-form button:hover{background:var(--maroon);transform:translateY(-1px);box-shadow:0 8px 24px rgba(93,31,44,0.4)}
 @media (max-width:760px){
   .popup-card{grid-template-columns:1fr;max-width:440px}
-  .popup-img{min-height:200px}
-  .popup-content{padding:2rem 1.6rem}
+  .popup-img{min-height:240px}
+  .popup-content{padding:1.8rem 1.5rem 1.6rem}
   .popup-img img{object-position:center 30%}
+  .popup-form-row{grid-template-columns:1fr}
 }
 
 /* ============================================
    FEATURED ON bar
    ============================================ */
-.featured-on{padding:3.5rem 0 3rem;background:var(--ivoire-deep);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft)}
-.featured-on-label{text-align:center;font-size:0.72rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1.8rem}
-.featured-on-grid{display:flex;align-items:center;justify-content:center;gap:3.5rem;flex-wrap:wrap;max-width:1100px;margin:0 auto;padding:0 2rem}
-.featured-on-logo{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--maroon-deep);opacity:0.55;letter-spacing:0.05em;transition:var(--transition);white-space:nowrap;font-style:italic}
-.featured-on-logo:hover{opacity:0.85;transform:scale(1.03)}
-.featured-on-logo strong{font-weight:400;font-style:normal}
-@media (max-width:720px){.featured-on-grid{gap:1.8rem}.featured-on-logo{font-size:1.05rem}}
+.featured-on{padding:4rem 0 3.5rem;background:#FFFFFF;border-top:1px solid rgba(0,0,0,0.06);border-bottom:1px solid rgba(0,0,0,0.06)}
+.featured-on-label{text-align:center;font-size:0.78rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:#1a1a1a;margin-bottom:2.4rem;font-family:'Inter',sans-serif}
+.featured-on-grid{display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;max-width:1180px;margin:0 auto;padding:0 2rem}
+.featured-on-logo{color:#0a0a0a;opacity:0.78;transition:opacity 0.4s ease,transform 0.4s ease;white-space:nowrap;display:inline-flex;align-items:center;line-height:1;filter:grayscale(0.15)}
+.featured-on-logo:hover{opacity:1;transform:translateY(-2px);filter:grayscale(0)}
+.flo-nyt{font-family:'UnifrakturMaguntia','Old English Text MT',serif;font-size:1.9rem;letter-spacing:-0.005em;font-weight:400;color:#000}
+.flo-forbes{font-family:'Playfair Display','Times New Roman',serif;font-size:1.85rem;font-weight:900;color:#1a5490;letter-spacing:-0.02em;font-style:italic}
+.flo-usatoday{font-family:'Inter',sans-serif;font-size:1.25rem;font-weight:900;color:#0a0a0a;letter-spacing:-0.005em;text-transform:uppercase;gap:0.5rem}
+.flo-usatoday::before{content:'';width:26px;height:26px;border-radius:50%;background:#009BCE;display:inline-block;flex-shrink:0}
+.flo-guardian{font-family:'Playfair Display','Georgia',serif;font-size:1.55rem;font-weight:900;color:#052962;letter-spacing:-0.01em}
+.flo-guardian em{font-style:normal;color:#C70000;font-weight:900}
+.flo-vogue{font-family:'Bodoni Moda','Didot',serif;font-size:1.95rem;font-weight:900;letter-spacing:0.04em;color:#000;text-transform:uppercase}
+.flo-entrepreneur{font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:900;color:#000;text-transform:uppercase;letter-spacing:0.06em}
+.flo-entrepreneur em{font-style:normal;color:#D7202A}
+.flo-bbc{gap:3px}
+.flo-bbc i{background:#000;color:#fff;font-family:'Inter',sans-serif;font-style:normal;font-weight:900;font-size:1rem;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center}
+.flo-inc{font-family:'Playfair Display',serif;font-size:1.85rem;font-weight:900;color:#E11636;letter-spacing:-0.04em;font-style:italic}
+.flo-cnn{font-family:'Inter',sans-serif;font-size:1.5rem;font-weight:900;color:#CC0000;letter-spacing:-0.05em;font-style:italic}
+.flo-elephant{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#000;letter-spacing:0.02em;text-transform:uppercase}
+@media (max-width:720px){.featured-on-grid{gap:1.6rem}.flo-nyt,.flo-forbes,.flo-vogue,.flo-inc{font-size:1.3rem}.flo-usatoday,.flo-guardian,.flo-cnn{font-size:1.05rem}.flo-usatoday::before{width:20px;height:20px}.flo-bbc i{width:22px;height:22px;font-size:0.78rem}}
 
 /* ============================================
    SCROLL ANIMATIONS + FLUIDITY (Mindvalley-grade)
@@ -917,6 +975,43 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
 .podcast-meta{font-size:0.82rem;color:var(--ink-muted);margin-top:auto;display:flex;align-items:center;gap:0.7rem}
 .podcast-meta span{display:flex;align-items:center;gap:0.3rem}
 @media (max-width:880px){.podcast-grid{grid-template-columns:1fr;gap:1.2rem}.podcast-cover-number{font-size:3.6rem}}
+
+/* ============================================
+   MEGA-MENU NAV — Mindvalley-style premium dropdown
+   ============================================ */
+.nav-item-mega{position:static}
+.nav-trigger{background:transparent;border:0;color:var(--ink);font-family:'DM Serif Display',serif;font-size:1.1rem;letter-spacing:0.02em;padding:0.55rem 1rem;border-radius:9999px;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem;transition:all 0.3s ease;line-height:1;font-weight:400}
+.nav-trigger:hover,.nav-trigger[aria-expanded="true"]{background:rgba(140,54,69,0.05);border:1px solid var(--maroon);padding:calc(0.55rem - 1px) calc(1rem - 1px)}
+.nav-trigger .nav-caret{width:11px;height:7px;color:currentColor;transition:transform 0.3s ease}
+.nav-trigger[aria-expanded="true"] .nav-caret{transform:rotate(180deg)}
+.nav-simple{color:var(--ink);text-decoration:none;font-family:'DM Serif Display',serif;font-size:1.1rem;padding:0.55rem 1rem;border-radius:9999px;transition:all 0.3s ease;border:1px solid transparent;display:inline-block;line-height:1}
+.nav-simple:hover{border-color:var(--maroon);background:rgba(140,54,69,0.04)}
+.nav-links{gap:0.4rem !important}
+.mega-panel{position:absolute;top:calc(100% + 0.5rem);left:0;right:0;background:#FFFFFF;border-radius:18px;box-shadow:0 20px 60px rgba(45,26,30,0.18),0 4px 14px rgba(0,0,0,0.06);padding:2.4rem;max-width:1100px;margin:0 auto;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity 0.35s ease,transform 0.35s ease,visibility 0.35s;z-index:200;pointer-events:none;border:1px solid rgba(0,0,0,0.04)}
+.mega-panel.open{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.mega-grid{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:2.4rem}
+.mega-grid.mega-grid-2{grid-template-columns:1.4fr 1fr}
+.mega-col-label{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:#9C8A8E;margin-bottom:1.2rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(0,0,0,0.06)}
+.mega-item{display:flex;align-items:flex-start;gap:0.9rem;padding:0.7rem 0.6rem;border-radius:12px;text-decoration:none;color:var(--ink);transition:background 0.25s ease,transform 0.25s ease;margin-left:-0.6rem}
+.mega-item:hover{background:#FAF5EC;transform:translateX(2px)}
+.mega-item strong{display:block;font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--ink);font-weight:400;line-height:1.2;margin-bottom:0.18rem}
+.mega-item span:not(.mega-ico){display:block;font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--ink-muted);line-height:1.4}
+.mega-ico{width:42px;height:42px;border-radius:10px;background:#F4F0E6;display:inline-flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--maroon-deep);flex-shrink:0;font-weight:400;transition:all 0.3s ease}
+.mega-item:hover .mega-ico{background:var(--maroon);color:#fff;transform:rotate(-4deg)}
+.mega-item-cta .mega-ico{background:var(--maroon);color:#fff}
+.mega-item-cta strong{color:var(--maroon-deep)}
+.mega-col-feature .mega-feature-card{display:block;border-radius:14px;overflow:hidden;text-decoration:none;color:var(--ink);background:#FAF5EC;transition:transform 0.4s ease,box-shadow 0.4s ease}
+.mega-col-feature .mega-feature-card:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(45,26,30,0.15)}
+.mega-feature-img{width:100%;height:160px;background-size:cover;background-position:center;position:relative}
+.mega-feature-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,0.35) 100%)}
+.mega-feature-body{padding:1rem 1.2rem 1.2rem}
+.mega-feature-tag{display:inline-block;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--maroon);background:rgba(140,54,69,0.08);padding:0.25rem 0.65rem;border-radius:9999px;margin-bottom:0.5rem}
+.mega-feature-body strong{display:block;font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--ink);font-weight:400;line-height:1.2;margin-bottom:0.25rem}
+.mega-feature-body span:last-child{font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--ink-muted)}
+.mega-overlay{position:fixed;inset:0;background:rgba(45,26,30,0.0);backdrop-filter:blur(0);-webkit-backdrop-filter:blur(0);z-index:99;opacity:0;pointer-events:none;transition:opacity 0.35s ease,backdrop-filter 0.35s ease}
+.mega-overlay.active{opacity:1;pointer-events:auto;background:rgba(45,26,30,0.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+@media (max-width:980px){.mega-panel{display:none !important}.nav-trigger,.nav-simple{font-size:1.05rem;padding:0.5rem 0.8rem}}
+
 </style>
 </head>
 <body class="has-live-bar">
@@ -951,9 +1046,57 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       </span>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="events.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>Events</a></li>
-      <li><a href="programs.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.6 6.7 7.4.6-5.5 4.8 1.9 6.9L12 17.3 5.6 21.5l1.9-6.9L2 9.8l7.4-.6z"/><circle cx="12" cy="13" r="1.2" fill="currentColor"/></svg>Programs</a></li>
-      <li><a href="community.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12c4-3 5-3 9-3s5 0 9 3M3 12c4 3 5 3 9 3s5 0 9-3M12 3c-3 4-3 5-3 9s0 5 3 9M12 3c3 4 3 5 3 9s0 5-3 9"/></svg>Community</a></li>
+      <li class="nav-item-mega"><button class="nav-trigger" data-mega="programs" aria-expanded="false">Programs <svg class="nav-caret" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="mega-panel" data-mega-panel="programs">
+          <div class="mega-grid">
+            <div class="mega-col">
+              <div class="mega-col-label">Featured programs</div>
+              <a href="program-goddess-unveiled.html" class="mega-item"><span class="mega-ico mi-goddess">G</span><div><strong>Goddess Unveiled</strong><span>12-module journey for women</span></div></a>
+              <a href="program-master-lover.html" class="mega-item"><span class="mega-ico mi-master">M</span><div><strong>Master Lover</strong><span>Tantric mastery for men</span></div></a>
+              <a href="program-tantra-massage-7-chakras.html" class="mega-item"><span class="mega-ico mi-massage">7</span><div><strong>Tantra Massage 7 Chakras</strong><span>Sacred bodywork training</span></div></a>
+              <a href="tantra-teacher-training.html" class="mega-item"><span class="mega-ico mi-teacher">T</span><div><strong>Tantra Teacher Training</strong><span>Become a certified teacher</span></div></a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-col-label">Browse by path</div>
+              <a href="tantra-for-women.html" class="mega-item"><span class="mega-ico mi-women">♀</span><div><strong>For Women</strong><span>Reclaim your inner goddess</span></div></a>
+              <a href="tantra-for-men.html" class="mega-item"><span class="mega-ico mi-men">♂</span><div><strong>For Men</strong><span>Master the sacred masculine</span></div></a>
+              <a href="tantra-for-couples.html" class="mega-item"><span class="mega-ico mi-couples">∞</span><div><strong>For Couples</strong><span>Deepen intimacy together</span></div></a>
+              <a href="programs.html" class="mega-item mega-item-cta"><span class="mega-ico mi-all">→</span><div><strong>All 24 programs</strong><span>Explore the full library</span></div></a>
+            </div>
+            <div class="mega-col mega-col-feature">
+              <div class="mega-col-label">Quest of the month</div>
+              <a href="program-goddess-unveiled.html" class="mega-feature-card">
+                <div class="mega-feature-img" style="background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&auto=format&fit=crop&q=80')"></div>
+                <div class="mega-feature-body"><span class="mega-feature-tag">$399 · save 67%</span><strong>Goddess Unveiled</strong><span>12 modules · 40+ hours · 4.9★</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item-mega"><button class="nav-trigger" data-mega="events" aria-expanded="false">Events <svg class="nav-caret" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="mega-panel" data-mega-panel="events">
+          <div class="mega-grid mega-grid-2">
+            <div class="mega-col">
+              <div class="mega-col-label">Our best events</div>
+              <a href="events.html" class="mega-item"><span class="mega-ico mi-calendar">⌖</span><div><strong>Calendar of events</strong><span>Explore all Tantra Essence live events</span></div></a>
+              <a href="bali-retreat.html" class="mega-item"><span class="mega-ico mi-bali">B</span><div><strong>Bali Retreat 2026</strong><span>The ultimate immersive experience</span></div></a>
+              <a href="masterclass.html" class="mega-item"><span class="mega-ico mi-masterclass">M</span><div><strong>Free Masterclass with Sarita</strong><span>Live online · 90 min</span></div></a>
+              <a href="webinar-signup.html" class="mega-item"><span class="mega-ico mi-webinar">W</span><div><strong>Upcoming Webinars</strong><span>Free monthly transmissions</span></div></a>
+              <a href="community.html" class="mega-item"><span class="mega-ico mi-community">∞</span><div><strong>Our Community</strong><span>Connect with practitioners worldwide</span></div></a>
+            </div>
+            <div class="mega-col mega-col-feature">
+              <div class="mega-col-label">Upcoming event</div>
+              <a href="bali-retreat.html" class="mega-feature-card">
+                <div class="mega-feature-img" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&auto=format&fit=crop&q=80')"></div>
+                <div class="mega-feature-body"><span class="mega-feature-tag">Sept 12-19, 2026</span><strong>Bali Retreat — Awakening</strong><span>Ubud, Bali · Limited to 24</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="academy.html" class="nav-simple">Academy</a></li>
+      <li><a href="teachers.html" class="nav-simple">Teachers</a></li>
+      <li><a href="community.html" class="nav-simple">Community</a></li>
       <li class="nav-mobile-cta-wrap">
         <a href="login.html" class="nav-login">Login</a>
         <a href="signup.html" class="nav-cta">Get Started</a>
@@ -966,6 +1109,8 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div class="mega-overlay" id="megaOverlay" aria-hidden="true"></div>
+
 
 <!-- ============= HERO (Kling-ready) ============= -->
 <section class="hero">
@@ -987,9 +1132,9 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       <span><strong style="color:var(--maroon);font-weight:600">10,000+ seekers</strong> already walking this path in 36 countries</span>
     </div>
     <div class="hero-ctas">
-      <a href="apply-bali.html" class="btn btn-gold">Apply for Bali Retreat →</a>
-      <a href="programs.html" class="btn btn-ghost">Explore Programs</a>
-      <a href="events.html" class="btn btn-ghost">All Events</a>
+      <a href="signup.html" class="btn-pill btn-pill-primary">Become a Member</a>
+      <a href="programs.html" class="btn-pill btn-pill-outline">Explore programs</a>
+      <a href="apply-bali.html" class="btn-pill btn-pill-bali">Apply for Bali <span aria-hidden="true">→</span></a>
     </div>
   </div>
   <div class="hero-badges">
@@ -1008,12 +1153,14 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
 <section class="featured-on">
   <div class="featured-on-label">As featured in</div>
   <div class="featured-on-grid">
-    <span class="featured-on-logo">The <strong>New York Times</strong></span>
-    <span class="featured-on-logo"><strong>Forbes</strong></span>
-    <span class="featured-on-logo"><strong>USA Today</strong></span>
-    <span class="featured-on-logo">The <strong>Guardian</strong></span>
-    <span class="featured-on-logo"><strong>Vogue</strong></span>
-    <span class="featured-on-logo"><strong>Elephant Journal</strong></span>
+    <span class="featured-on-logo flo-nyt" title="The New York Times">The New York Times</span>
+    <span class="featured-on-logo flo-forbes" title="Forbes">Forbes</span>
+    <span class="featured-on-logo flo-usatoday" title="USA Today">USA Today</span>
+    <span class="featured-on-logo flo-guardian" title="The Guardian">The <em>Guardian</em></span>
+    <span class="featured-on-logo flo-vogue" title="Vogue">Vogue</span>
+    <span class="featured-on-logo flo-bbc" title="BBC"><i>B</i><i>B</i><i>C</i></span>
+    <span class="featured-on-logo flo-entrepreneur" title="Entrepreneur">Entr<em>e</em>preneur</span>
+    <span class="featured-on-logo flo-cnn" title="CNN">CNN</span>
   </div>
 </section>
 
@@ -1316,58 +1463,67 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
   </div>
 </section>
 
-<!-- ============= PROGRAMS ============= -->
+<!-- ============= PROGRAMS — MINDVALLEY-STYLE CAROUSEL ============= -->
 <section class="programs" id="programs">
   <div class="container">
     <div class="section-header">
       <span class="eyebrow">Online Programs</span>
-      <h2>Transformative journeys you can begin today</h2>
-      <p>Self-paced online programs crafted from decades of teaching. Lifetime access. Begin whenever your soul is ready.</p>
+      <h2>Forge lasting transformations</h2>
+      <p>Self-paced online programs crafted from decades of teaching by world-renowned Tantra masters. Lifetime access. Begin whenever your soul is ready.</p>
     </div>
-    <div class="programs-grid">
-      <a href="program-goddess-unveiled.html" class="program-card">
-        <div class="program-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png');background-size:cover;background-position:center"></div>
-        <div class="program-body">
-          <span class="program-tag">For Women</span>
-          <h3>Goddess Unveiled</h3>
-          <p class="program-desc">Rediscover your inner divine feminine nature. 12 modules to embrace authentic beauty, embody self-love, and reclaim your essence.</p>
-          <div class="program-price">
-            <div class="price-was">$1,200</div>
-            <div class="price-now">$599</div>
-            <div class="price-plan">or 3 payments of $229</div>
+    <div class="programs-mv-wrap">
+      <div class="programs-mv" id="programsMv">
+        <a href="program-goddess-unveiled.html" class="prog-mv-card">
+          <div class="prog-mv-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/3dc2f35-c04b-60da-e53f-a2188c285776_tantra-essence-goddess-essence-retreat-28.png')"></div>
+          <svg class="prog-mv-hex" viewBox="0 0 100 100" fill="none" stroke="#F7D560" stroke-width="1.5"><polygon points="50,5 90,28 90,72 50,95 10,72 10,28"/><polygon points="50,18 78,33 78,67 50,82 22,67 22,33"/></svg>
+          <span class="prog-mv-tag">For Women</span>
+          <div class="prog-mv-body">
+            <h3>Goddess <em>Unveiled</em></h3>
+            <div class="prog-mv-trainer">With Ma Ananda Sarita</div>
           </div>
-          <span class="program-cta">Join the Program</span>
-        </div>
-      </a>
-      <a href="program-master-lover.html" class="program-card featured-program">
-        <span class="program-badge">Most Loved</span>
-        <div class="program-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/7a573f-45a7-d643-877b-b148047c036_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-01.jpg');background-size:cover;background-position:center"></div>
-        <div class="program-body">
-          <span class="program-tag">For Men &amp; Couples</span>
-          <h3>Master Lover</h3>
-          <p class="program-desc">A journey that will forever change the way you approach love, pleasure, orgasms, and human connection. 7 modules · 37 lessons.</p>
-          <div class="program-price">
-            <div class="price-was">$1,200</div>
-            <div class="price-now">$799</div>
-            <div class="price-plan">or 3 payments of $299</div>
+        </a>
+        <a href="program-master-lover.html" class="prog-mv-card">
+          <div class="prog-mv-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/7a573f-45a7-d643-877b-b148047c036_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-01.jpg')"></div>
+          <svg class="prog-mv-hex" viewBox="0 0 100 100" fill="none" stroke="#F7D560" stroke-width="1.5"><polygon points="50,5 90,28 90,72 50,95 10,72 10,28"/><polygon points="50,18 78,33 78,67 50,82 22,67 22,33"/></svg>
+          <span class="prog-mv-tag">Most Loved</span>
+          <div class="prog-mv-body">
+            <h3>Master <em>Lover</em></h3>
+            <div class="prog-mv-trainer">With Sarita &amp; Geho</div>
           </div>
-          <span class="program-cta">Join the Program</span>
-        </div>
-      </a>
-      <a href="program-tantra-massage-7-chakras.html" class="program-card">
-        <div class="program-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/13a338b-4a7f-4f58-7fd4-54088ab646d_tantra-essence-event-tantra-massage-practitioner-training-14.webp');background-size:cover;background-position:center"></div>
-        <div class="program-body">
-          <span class="program-tag">For All</span>
-          <h3>Tantra Massage Through 7 Chakras</h3>
-          <p class="program-desc">Sacred touch as a path of awakening. Learn to channel love, presence, and energy through the 7 chakras of the body.</p>
-          <div class="program-price">
-            <div class="price-was">$1,299</div>
-            <div class="price-now">$799</div>
-            <div class="price-plan">or 3 payments of $299</div>
+        </a>
+        <a href="program-tantra-massage-7-chakras.html" class="prog-mv-card">
+          <div class="prog-mv-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/13a338b-4a7f-4f58-7fd4-54088ab646d_tantra-essence-event-tantra-massage-practitioner-training-14.webp')"></div>
+          <svg class="prog-mv-hex" viewBox="0 0 100 100" fill="none" stroke="#F7D560" stroke-width="1.5"><polygon points="50,5 90,28 90,72 50,95 10,72 10,28"/><polygon points="50,18 78,33 78,67 50,82 22,67 22,33"/></svg>
+          <span class="prog-mv-tag">Bodywork</span>
+          <div class="prog-mv-body">
+            <h3>Tantra Massage <em>7 Chakras</em></h3>
+            <div class="prog-mv-trainer">With Ma Ananda Sarita</div>
           </div>
-          <span class="program-cta">Join the Program</span>
-        </div>
-      </a>
+        </a>
+        <a href="programs.html" class="prog-mv-card">
+          <div class="prog-mv-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/5b6a5e7-aa9e-7e3-d7a-aab14d2cd56e_tantra-essence-event-tantra-massage-practitioner-training-1.png')"></div>
+          <svg class="prog-mv-hex" viewBox="0 0 100 100" fill="none" stroke="#F7D560" stroke-width="1.5"><polygon points="50,5 90,28 90,72 50,95 10,72 10,28"/><polygon points="50,18 78,33 78,67 50,82 22,67 22,33"/></svg>
+          <span class="prog-mv-tag">For Couples</span>
+          <div class="prog-mv-body">
+            <h3>Sacred <em>Union</em></h3>
+            <div class="prog-mv-trainer">With Sarita &amp; Geho</div>
+          </div>
+        </a>
+        <a href="programs.html" class="prog-mv-card">
+          <div class="prog-mv-img" style="background-image:url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153002033/settings_images/8d4d2c2-cb3-fe54-6c08-65f3d24aebab_ma-ananda-sarita-tantra-essence-online-courses-master-lover-program-02.jpg')"></div>
+          <svg class="prog-mv-hex" viewBox="0 0 100 100" fill="none" stroke="#F7D560" stroke-width="1.5"><polygon points="50,5 90,28 90,72 50,95 10,72 10,28"/><polygon points="50,18 78,33 78,67 50,82 22,67 22,33"/></svg>
+          <span class="prog-mv-tag">Trainings</span>
+          <div class="prog-mv-body">
+            <h3>Teacher <em>Training</em></h3>
+            <div class="prog-mv-trainer">With Ma Ananda Sarita</div>
+          </div>
+        </a>
+      </div>
+      <div class="programs-mv-controls">
+        <button class="programs-mv-btn" onclick="document.getElementById('programsMv').scrollBy({left:-420,behavior:'smooth'})" aria-label="Previous">←</button>
+        <button class="programs-mv-btn" onclick="document.getElementById('programsMv').scrollBy({left:420,behavior:'smooth'})" aria-label="Next">→</button>
+      </div>
+      <div style="text-align:center;margin-top:0.5rem"><a href="programs.html" class="btn-pill btn-pill-gold" style="color:var(--maroon-deep)">View all 18 programs →</a></div>
     </div>
   </div>
 </section>
@@ -1944,14 +2100,22 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
       <img loading="lazy" src="sarita-photos/sarita-portrait-orange.webp" alt="Ma Ananda Sarita">
     </div>
     <div class="popup-content">
-      <span class="popup-eyebrow">A gift for you</span>
-      <h2 id="popupTitle">Receive a <em>free Tantra meditation</em> from Sarita</h2>
-      <p>Join 10,000+ seekers receiving weekly wisdom letters, free guided meditations, and early access to Sarita's retreats — straight to your inbox.</p>
-      <form class="popup-form" id="popupForm" onsubmit="event.preventDefault();document.getElementById('popupOverlay').classList.remove('open');alert('Thank you! (Placeholder — wire to Kajabi opt-in form)');">
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit">Claim my free gift →</button>
+      <span class="popup-eyebrow">FREE GIFT · WELCOME</span>
+      <h2 id="popupTitle">A Gift from <em>Sarita</em></h2>
+      <p class="popup-greeting">Hey, Sarita here.</p>
+      <p>Before you explore Tantra Essence, <a href="#">I want to welcome you with a free gift</a>. Sign up below to get instant free access to a guided Tantra meditation and a sacred ritual that has shaped my own practice for 53 years.</p>
+      <p>You'll also get my weekly wisdom letters with real teachings, insights, and early access to retreats. Big things are coming.</p>
+      <form class="popup-form" id="popupForm" onsubmit="event.preventDefault();document.getElementById('popupOverlay').classList.remove('open');alert('Thank you! Check your inbox in 2 minutes.');">
+        <div class="popup-form-row">
+          <input type="text" placeholder="First name" required>
+          <input type="email" placeholder="Email address" required>
+        </div>
+        <button type="submit">Claim Your Free Gift</button>
       </form>
-      <div class="popup-trust"><strong>No spam.</strong> Unsubscribe anytime. We respect your privacy.</div>
+      <div class="popup-signature">
+        <span class="popup-sig-line">Ma Ananda Sarita</span>
+        <span class="popup-sig-title">Founder of Tantra Essence</span>
+      </div>
     </div>
   </div>
 </div>
@@ -2096,5 +2260,63 @@ a,button,.btn,.nav-cta,.nav-login{transition:all 0.45s cubic-bezier(0.16,1,0.3,1
   }
 })();
 </script>
+<!-- mega-menu JS marker -->
+
+<script>
+(function(){
+  var triggers=document.querySelectorAll('.nav-trigger[data-mega]');
+  var panels=document.querySelectorAll('.mega-panel[data-mega-panel]');
+  var overlay=document.getElementById('megaOverlay');
+  var openName=null;
+  function closeAll(){
+    triggers.forEach(function(t){t.setAttribute('aria-expanded','false');});
+    panels.forEach(function(p){p.classList.remove('open');});
+    if(overlay){overlay.classList.remove('active');}
+    openName=null;
+  }
+  function openPanel(name){
+    closeAll();
+    var trig=document.querySelector('.nav-trigger[data-mega="'+name+'"]');
+    var pan=document.querySelector('.mega-panel[data-mega-panel="'+name+'"]');
+    if(trig)trig.setAttribute('aria-expanded','true');
+    if(pan)pan.classList.add('open');
+    if(overlay)overlay.classList.add('active');
+    openName=name;
+  }
+  triggers.forEach(function(t){
+    t.addEventListener('click',function(e){
+      e.preventDefault();e.stopPropagation();
+      var name=t.dataset.mega;
+      if(openName===name){closeAll();}else{openPanel(name);}
+    });
+    t.addEventListener('mouseenter',function(){
+      if(window.matchMedia('(min-width:980px)').matches){
+        var name=t.dataset.mega;
+        openPanel(name);
+      }
+    });
+  });
+  // Close when leaving the nav area entirely (with delay)
+  var nav=document.getElementById('nav');
+  var closeTimer=null;
+  if(nav){
+    nav.addEventListener('mouseleave',function(){
+      if(closeTimer)clearTimeout(closeTimer);
+      closeTimer=setTimeout(closeAll,200);
+    });
+    nav.addEventListener('mouseenter',function(){if(closeTimer)clearTimeout(closeTimer);});
+    panels.forEach(function(p){
+      p.addEventListener('mouseenter',function(){if(closeTimer)clearTimeout(closeTimer);});
+      p.addEventListener('mouseleave',function(){
+        if(closeTimer)clearTimeout(closeTimer);
+        closeTimer=setTimeout(closeAll,200);
+      });
+    });
+  }
+  if(overlay)overlay.addEventListener('click',closeAll);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll();});
+})();
+</script>
+
 </body>
 </html>
